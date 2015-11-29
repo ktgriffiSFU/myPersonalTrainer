@@ -7,14 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		27158D931C0A9A1A0002272B /* Exercises.plist in Resources */ = {isa = PBXBuildFile; fileRef = 27158D921C0A9A1A0002272B /* Exercises.plist */; };
+		27158D951C0A9DA40002272B /* LateralRaises.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 27158D941C0A9DA40002272B /* LateralRaises.jpg */; };
+		27158D991C0AA8670002272B /* SimpleTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 27158D981C0AA8670002272B /* SimpleTableCell.m */; };
+		27158D9B1C0AA8BE0002272B /* SimpleTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27158D9A1C0AA8BE0002272B /* SimpleTableCell.xib */; };
+		2720DB7D1C05346E00B7F7CD /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2720DB7C1C05346E00B7F7CD /* TableViewController.m */; };
+		27764C981C055F8D002F9122 /* ExerciseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 27764C971C055F8D002F9122 /* ExerciseTableViewCell.m */; };
 		27E116981C03ABB800E8E2AF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E116971C03ABB800E8E2AF /* main.m */; };
 		27E1169B1C03ABB800E8E2AF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E1169A1C03ABB800E8E2AF /* AppDelegate.m */; };
-		27E1169E1C03ABB800E8E2AF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E1169D1C03ABB800E8E2AF /* ViewController.m */; };
+		27E1169E1C03ABB800E8E2AF /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E1169D1C03ABB800E8E2AF /* MainViewController.m */; };
 		27E116A11C03ABB800E8E2AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27E1169F1C03ABB800E8E2AF /* Main.storyboard */; };
 		27E116A31C03ABB800E8E2AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27E116A21C03ABB800E8E2AF /* Assets.xcassets */; };
 		27E116A61C03ABB800E8E2AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27E116A41C03ABB800E8E2AF /* LaunchScreen.storyboard */; };
 		27E116B11C03ABB900E8E2AF /* myPersonalTrainerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E116B01C03ABB900E8E2AF /* myPersonalTrainerTests.m */; };
 		27E116BC1C03ABB900E8E2AF /* myPersonalTrainerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E116BB1C03ABB900E8E2AF /* myPersonalTrainerUITests.m */; };
+		27E116CB1C03AE4000E8E2AF /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27E116CA1C03AE4000E8E2AF /* FBSDKCoreKit.framework */; };
+		27E116CD1C03B5D100E8E2AF /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27E116CC1C03B5D100E8E2AF /* FBSDKLoginKit.framework */; };
+		27E116CF1C03D19300E8E2AF /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E116CE1C03D19300E8E2AF /* LoginViewController.m */; };
+		27E116D31C03D2C000E8E2AF /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E116D21C03D2C000E8E2AF /* Settings.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,12 +45,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		27158D921C0A9A1A0002272B /* Exercises.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Exercises.plist; sourceTree = "<group>"; };
+		27158D941C0A9DA40002272B /* LateralRaises.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = LateralRaises.jpg; sourceTree = "<group>"; };
+		27158D971C0AA84B0002272B /* SimpleTableCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleTableCell.h; sourceTree = "<group>"; };
+		27158D981C0AA8670002272B /* SimpleTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleTableCell.m; sourceTree = "<group>"; };
+		27158D9A1C0AA8BE0002272B /* SimpleTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SimpleTableCell.xib; sourceTree = "<group>"; };
+		2720DB7B1C05341300B7F7CD /* TableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		2720DB7C1C05346E00B7F7CD /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
+		27764C961C055F8D002F9122 /* ExerciseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExerciseTableViewCell.h; sourceTree = "<group>"; };
+		27764C971C055F8D002F9122 /* ExerciseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExerciseTableViewCell.m; sourceTree = "<group>"; };
 		27E116931C03ABB800E8E2AF /* myPersonalTrainer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myPersonalTrainer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27E116971C03ABB800E8E2AF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		27E116991C03ABB800E8E2AF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		27E1169A1C03ABB800E8E2AF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		27E1169C1C03ABB800E8E2AF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		27E1169D1C03ABB800E8E2AF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		27E1169C1C03ABB800E8E2AF /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		27E1169D1C03ABB800E8E2AF /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		27E116A01C03ABB800E8E2AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		27E116A21C03ABB800E8E2AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		27E116A51C03ABB800E8E2AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +70,12 @@
 		27E116B71C03ABB900E8E2AF /* myPersonalTrainerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = myPersonalTrainerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		27E116BB1C03ABB900E8E2AF /* myPersonalTrainerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = myPersonalTrainerUITests.m; sourceTree = "<group>"; };
 		27E116BD1C03ABB900E8E2AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27E116CA1C03AE4000E8E2AF /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = "../../../../Downloads/FacebookSDKs-iOS-20151111/FBSDKCoreKit.framework"; sourceTree = "<group>"; };
+		27E116CC1C03B5D100E8E2AF /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = ../../../FacebookSDK/FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		27E116CE1C03D19300E8E2AF /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		27E116D01C03D1A600E8E2AF /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		27E116D11C03D29700E8E2AF /* Settings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
+		27E116D21C03D2C000E8E2AF /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Settings.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +83,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27E116CD1C03B5D100E8E2AF /* FBSDKLoginKit.framework in Frameworks */,
+				27E116CB1C03AE4000E8E2AF /* FBSDKCoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +112,7 @@
 				27E116AF1C03ABB900E8E2AF /* myPersonalTrainerTests */,
 				27E116BA1C03ABB900E8E2AF /* myPersonalTrainerUITests */,
 				27E116941C03ABB800E8E2AF /* Products */,
+				27E116C91C03AD0700E8E2AF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,12 +131,22 @@
 			children = (
 				27E116991C03ABB800E8E2AF /* AppDelegate.h */,
 				27E1169A1C03ABB800E8E2AF /* AppDelegate.m */,
-				27E1169C1C03ABB800E8E2AF /* ViewController.h */,
-				27E1169D1C03ABB800E8E2AF /* ViewController.m */,
-				27E1169F1C03ABB800E8E2AF /* Main.storyboard */,
+				27158D941C0A9DA40002272B /* LateralRaises.jpg */,
+				2720DB7B1C05341300B7F7CD /* TableViewController.h */,
+				27E1169C1C03ABB800E8E2AF /* MainViewController.h */,
+				27158D921C0A9A1A0002272B /* Exercises.plist */,
+				2720DB7C1C05346E00B7F7CD /* TableViewController.m */,
+				27E1169D1C03ABB800E8E2AF /* MainViewController.m */,
 				27E116A21C03ABB800E8E2AF /* Assets.xcassets */,
+				27E116CE1C03D19300E8E2AF /* LoginViewController.m */,
+				27E116D11C03D29700E8E2AF /* Settings.h */,
+				27E116D01C03D1A600E8E2AF /* LoginViewController.h */,
+				27E116D21C03D2C000E8E2AF /* Settings.m */,
 				27E116A41C03ABB800E8E2AF /* LaunchScreen.storyboard */,
 				27E116A71C03ABB800E8E2AF /* Info.plist */,
+				27E1169F1C03ABB800E8E2AF /* Main.storyboard */,
+				27764C971C055F8D002F9122 /* ExerciseTableViewCell.m */,
+				27764C961C055F8D002F9122 /* ExerciseTableViewCell.h */,
 				27E116961C03ABB800E8E2AF /* Supporting Files */,
 			);
 			path = myPersonalTrainer;
@@ -118,6 +156,9 @@
 			isa = PBXGroup;
 			children = (
 				27E116971C03ABB800E8E2AF /* main.m */,
+				27158D981C0AA8670002272B /* SimpleTableCell.m */,
+				27158D971C0AA84B0002272B /* SimpleTableCell.h */,
+				27158D9A1C0AA8BE0002272B /* SimpleTableCell.xib */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -138,6 +179,16 @@
 				27E116BD1C03ABB900E8E2AF /* Info.plist */,
 			);
 			path = myPersonalTrainerUITests;
+			sourceTree = "<group>";
+		};
+		27E116C91C03AD0700E8E2AF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				27E116CC1C03B5D100E8E2AF /* FBSDKLoginKit.framework */,
+				27E116CA1C03AE4000E8E2AF /* FBSDKCoreKit.framework */,
+			);
+			name = Frameworks;
+			path = myPersonalTrainer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,8 +294,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27158D951C0A9DA40002272B /* LateralRaises.jpg in Resources */,
 				27E116A61C03ABB800E8E2AF /* LaunchScreen.storyboard in Resources */,
 				27E116A31C03ABB800E8E2AF /* Assets.xcassets in Resources */,
+				27158D931C0A9A1A0002272B /* Exercises.plist in Resources */,
+				27158D9B1C0AA8BE0002272B /* SimpleTableCell.xib in Resources */,
 				27E116A11C03ABB800E8E2AF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -270,8 +324,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27E1169E1C03ABB800E8E2AF /* ViewController.m in Sources */,
+				27E116CF1C03D19300E8E2AF /* LoginViewController.m in Sources */,
+				27764C981C055F8D002F9122 /* ExerciseTableViewCell.m in Sources */,
+				2720DB7D1C05346E00B7F7CD /* TableViewController.m in Sources */,
+				27E1169E1C03ABB800E8E2AF /* MainViewController.m in Sources */,
+				27E116D31C03D2C000E8E2AF /* Settings.m in Sources */,
 				27E1169B1C03ABB800E8E2AF /* AppDelegate.m in Sources */,
+				27158D991C0AA8670002272B /* SimpleTableCell.m in Sources */,
 				27E116981C03ABB800E8E2AF /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -411,6 +470,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = /Users/kyle/Documents/FacebookSDK;
 				INFOPLIST_FILE = myPersonalTrainer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Griffith.myPersonalTrainer;
@@ -422,6 +482,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = /Users/kyle/Documents/FacebookSDK;
 				INFOPLIST_FILE = myPersonalTrainer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Griffith.myPersonalTrainer;
@@ -496,6 +557,7 @@
 				27E116C21C03ABB900E8E2AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		27E116C31C03ABB900E8E2AF /* Build configuration list for PBXNativeTarget "myPersonalTrainerTests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +566,7 @@
 				27E116C51C03ABB900E8E2AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		27E116C61C03ABB900E8E2AF /* Build configuration list for PBXNativeTarget "myPersonalTrainerUITests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +575,7 @@
 				27E116C81C03ABB900E8E2AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

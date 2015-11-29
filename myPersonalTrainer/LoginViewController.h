@@ -1,3 +1,4 @@
+
 //
 //  LoginViewController.h
 //  myPersonalTrainer
@@ -6,8 +7,16 @@
 //  Copyright © 2015 Kyle Griffith. All rights reserved.
 //
 
-#ifndef LoginViewController_h
-#define LoginViewController_h
 
+#import <UIKit/UIKit.h>
 
-#endif /* LoginViewController_h */
+#import <FBSDKLoginKit/FBSDKLoginKit.h>
+
+@interface SCLoginViewController : UIViewController <FBSDKLoginButtonDelegate>
+
+@property (nonatomic, strong) IBOutlet FBSDKLoginButton *loginButton;
+@property (nonatomic, strong) IBOutlet UIButton *continueButton;
+
+- (IBAction)showLogin:(UIStoryboardSegue *)segue;
+
+@end

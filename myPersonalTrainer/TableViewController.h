@@ -6,8 +6,8 @@
 //  Copyright © 2015 Kyle Griffith. All rights reserved.
 //
 
-#ifndef TableViewController_h
-#define TableViewController_h
+#import <UIKit/UIKit.h>
 
+@interface TableViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
-#endif /* TableViewController_h */
+@end

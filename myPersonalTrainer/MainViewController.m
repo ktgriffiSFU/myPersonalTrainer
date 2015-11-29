@@ -1,26 +1,23 @@
 //
-//  ViewController.m
+//  MainViewController.m
 //  myPersonalTrainer
 //
 //  Created by Kyle Griffith on 2015-11-23.
 //  Copyright © 2015 Kyle Griffith. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "MainViewController.h"
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
-@interface ViewController ()
+@interface MainViewController ()
 
 @end
 
-@implementation ViewController
+@implementation MainViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    FBSDKLoginButton *loginButton = [[FBSDKLoginButton alloc] init];
-    // Optional: Place the button in the center of your view.
-    loginButton.center = self.view.center;
-    [self.view addSubview:loginButton];
+
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -28,5 +25,17 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (IBAction)workoutButton:(UIButton *)sender {
+}
+- (IBAction)exerciseButton:(UIButton *)sender {
+    [self performSegueWithIdentifier:@"ShowTable" sender:self];
+    
+}
+- (IBAction)friendsButton:(UIButton *)sender {
+}
+- (IBAction)statisticsButton:(UIButton *)sender {
+}
+
 
 @end

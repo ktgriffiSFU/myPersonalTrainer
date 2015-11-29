@@ -10,6 +10,10 @@
 
 @implementation ExerciseTableViewCell
 
+
+//MARK: Properties
+
+
 - (void)awakeFromNib {
     // Initialization code
 }

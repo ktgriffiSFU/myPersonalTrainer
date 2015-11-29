@@ -1,13 +1,17 @@
 //
 //  SimpleTableCell.h
-//  myPersonalTrainer
+//  SimpleTable
 //
-//  Created by Kyle Griffith on 2015-11-28.
-//  Copyright © 2015 Kyle Griffith. All rights reserved.
+//  Created by Simon Ng on 28/4/12.
+//  Copyright (c) 2012 Appcoda. All rights reserved.
 //
 
-#ifndef SimpleTableCell_h
-#define SimpleTableCell_h
+#import <UIKit/UIKit.h>
 
+@interface SimpleTableCell : UITableViewCell
 
-#endif /* SimpleTableCell_h */
+@property (nonatomic, weak) IBOutlet UILabel *nameLabel;
+@property (nonatomic, weak) IBOutlet UILabel *muscleLabel;
+@property (nonatomic, weak) IBOutlet UIImageView *thumbnailImageView;
+
+@end
