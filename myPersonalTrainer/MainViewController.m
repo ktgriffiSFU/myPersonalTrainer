@@ -29,8 +29,8 @@
 - (IBAction)workoutButton:(UIButton *)sender {
 }
 - (IBAction)exerciseButton:(UIButton *)sender {
-    [self performSegueWithIdentifier:@"ShowTable" sender:self];
-    
+   
+
 }
 - (IBAction)friendsButton:(UIButton *)sender {
 }

@@ -10,18 +10,21 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import "TableViewController.h"
+#import "ExerciseViewController.h"
 #import "SimpleTableCell.h"
 
 @interface TableViewController ()
 
 @end
 
-@implementation TableViewController 
+@implementation TableViewController
 {
     NSArray *tableData;
     NSArray *thumbnails;
     NSArray *targetedMuscle;
 }
+@synthesize tableView; // Add this line of code
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -33,7 +36,18 @@
     NSDictionary *dict = [[NSDictionary alloc] initWithContentsOfFile:path];
     tableData = [dict objectForKey:@"ExerciseName"];
     thumbnails = [dict objectForKey:@"Thumbnail"];
-    targetedMuscle = [dict objectForKey:@"TargetedMuscle"];}
+    targetedMuscle = [dict objectForKey:@"TargetedMuscle"];
+}
+- (void)viewDidUnload
+{
+    [super viewDidUnload];
+    // Release any retained subviews of the main view.
+}
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
+    return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
+}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -46,8 +60,6 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
-    
     static NSString *simpleTableIdentifier = @"SimpleTableCell";
     
     SimpleTableCell *cell = (SimpleTableCell *)[tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
@@ -67,12 +79,12 @@
     NSLog(@"didSelectRowAtIndexPath");
     /*UIAlertView *messageAlert = [[UIAlertView alloc]
      initWithTitle:@"Row Selected" message:@"You've selected a row" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];*/
-    UIAlertView *messageAlert = [[UIAlertView alloc]
-                                 initWithTitle:@"Row Selected" message:[tableData objectAtIndex:indexPath.row] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-    
+//    UIAlertView *messageAlert = [[UIAlertView alloc]
+//                                 initWithTitle:@"Row Selected" message:[tableData objectAtIndex:indexPath.row] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+//    
     // Display the Hello World Message
-    [messageAlert show];
-    
+   // [messageAlert show];
+    [self performSegueWithIdentifier:@"showExercisePhoto" sender:self];
     // Checked the selected row
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     cell.accessoryType = UITableViewCellAccessoryCheckmark;
@@ -83,11 +95,22 @@
 - (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSLog(@"willSelectRowAtIndexPath");
-    if (indexPath.row == 0) {
-        return nil;
-    }
-    
+//    if (indexPath.row == 0) {
+//        return nil;
+//    }
+//    
     return indexPath;
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    if ([segue.identifier isEqualToString:@"showExercisePhoto"]) {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        ExerciseViewController *destViewController = segue.destinationViewController;
+        destViewController.exerciseImageName = [tableData objectAtIndex:indexPath.row];
+        destViewController.exerciseImageView = [thumbnails objectAtIndex:indexPath.row];
+
+    }
 }
 
 @end

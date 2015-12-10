@@ -11,6 +11,8 @@
 		27158D951C0A9DA40002272B /* LateralRaises.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 27158D941C0A9DA40002272B /* LateralRaises.jpg */; };
 		27158D991C0AA8670002272B /* SimpleTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 27158D981C0AA8670002272B /* SimpleTableCell.m */; };
 		27158D9B1C0AA8BE0002272B /* SimpleTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27158D9A1C0AA8BE0002272B /* SimpleTableCell.xib */; };
+		27158D9D1C0ABB4F0002272B /* benchPress.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 27158D9C1C0ABB4F0002272B /* benchPress.jpg */; };
+		27158D9F1C0AC1C00002272B /* ExerciseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27158D9E1C0AC1C00002272B /* ExerciseViewController.m */; };
 		2720DB7D1C05346E00B7F7CD /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2720DB7C1C05346E00B7F7CD /* TableViewController.m */; };
 		27764C981C055F8D002F9122 /* ExerciseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 27764C971C055F8D002F9122 /* ExerciseTableViewCell.m */; };
 		27E116981C03ABB800E8E2AF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E116971C03ABB800E8E2AF /* main.m */; };
@@ -50,6 +52,9 @@
 		27158D971C0AA84B0002272B /* SimpleTableCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleTableCell.h; sourceTree = "<group>"; };
 		27158D981C0AA8670002272B /* SimpleTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleTableCell.m; sourceTree = "<group>"; };
 		27158D9A1C0AA8BE0002272B /* SimpleTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SimpleTableCell.xib; sourceTree = "<group>"; };
+		27158D9C1C0ABB4F0002272B /* benchPress.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = benchPress.jpg; sourceTree = "<group>"; };
+		27158D9E1C0AC1C00002272B /* ExerciseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExerciseViewController.m; sourceTree = "<group>"; };
+		27158DA01C0AC1D40002272B /* ExerciseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExerciseViewController.h; sourceTree = "<group>"; };
 		2720DB7B1C05341300B7F7CD /* TableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
 		2720DB7C1C05346E00B7F7CD /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 		27764C961C055F8D002F9122 /* ExerciseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExerciseTableViewCell.h; sourceTree = "<group>"; };
@@ -105,6 +110,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2798C0931C0D75EF0007D3BF /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				27158D9C1C0ABB4F0002272B /* benchPress.jpg */,
+				27158D941C0A9DA40002272B /* LateralRaises.jpg */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 		27E1168A1C03ABB800E8E2AF = {
 			isa = PBXGroup;
 			children = (
@@ -131,9 +145,11 @@
 			children = (
 				27E116991C03ABB800E8E2AF /* AppDelegate.h */,
 				27E1169A1C03ABB800E8E2AF /* AppDelegate.m */,
-				27158D941C0A9DA40002272B /* LateralRaises.jpg */,
+				2798C0931C0D75EF0007D3BF /* Images */,
 				2720DB7B1C05341300B7F7CD /* TableViewController.h */,
 				27E1169C1C03ABB800E8E2AF /* MainViewController.h */,
+				27158DA01C0AC1D40002272B /* ExerciseViewController.h */,
+				27158D9E1C0AC1C00002272B /* ExerciseViewController.m */,
 				27158D921C0A9A1A0002272B /* Exercises.plist */,
 				2720DB7C1C05346E00B7F7CD /* TableViewController.m */,
 				27E1169D1C03ABB800E8E2AF /* MainViewController.m */,
@@ -297,6 +313,7 @@
 				27158D951C0A9DA40002272B /* LateralRaises.jpg in Resources */,
 				27E116A61C03ABB800E8E2AF /* LaunchScreen.storyboard in Resources */,
 				27E116A31C03ABB800E8E2AF /* Assets.xcassets in Resources */,
+				27158D9D1C0ABB4F0002272B /* benchPress.jpg in Resources */,
 				27158D931C0A9A1A0002272B /* Exercises.plist in Resources */,
 				27158D9B1C0AA8BE0002272B /* SimpleTableCell.xib in Resources */,
 				27E116A11C03ABB800E8E2AF /* Main.storyboard in Resources */,
@@ -324,6 +341,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27158D9F1C0AC1C00002272B /* ExerciseViewController.m in Sources */,
 				27E116CF1C03D19300E8E2AF /* LoginViewController.m in Sources */,
 				27764C981C055F8D002F9122 /* ExerciseTableViewCell.m in Sources */,
 				2720DB7D1C05346E00B7F7CD /* TableViewController.m in Sources */,

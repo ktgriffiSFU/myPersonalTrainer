@@ -5,14 +5,17 @@
 	<key>Thumbnail</key>
 	<array>
 		<string>LateralRaises.jpg</string>
+		<string>benchPress.jpg</string>
 	</array>
 	<key>TargetedMuscle</key>
 	<array>
 		<string>Shoulders</string>
+		<string>Chest</string>
 	</array>
 	<key>ExerciseName</key>
 	<array>
 		<string>Lateral Raises</string>
+		<string>Barbell Bench Press</string>
 	</array>
 </dict>
 </plist>
