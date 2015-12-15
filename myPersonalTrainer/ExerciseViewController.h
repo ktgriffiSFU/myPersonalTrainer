@@ -12,7 +12,8 @@
 @interface ExerciseViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UIImageView *exerciseImageView;
-@property (weak, nonatomic) NSString *exerciseImageName;
-- (IBAction)close:(id)sender;
+@property (weak, nonatomic) IBOutlet UILabel *exerciseImageName;
+@property (weak, nonatomic) IBOutlet UILabel *exerciseDetails;
+@property int rowNumber;
 
 @end

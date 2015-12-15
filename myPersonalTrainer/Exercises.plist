@@ -2,20 +2,29 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>Details</key>
+	<array>
+		<string>How to do lateral raises</string>
+		<string>How to do bench press</string>
+		<string>How to do lat pulldown. How to do lat pulldown. How to do lat pulldown How to do lat pulldownHow to do lat pulldownHow to do lat pulldownHow to do lat pulldownHow to do lat pulldownHow to do lat pulldownHow to do lat pulldownHow to do lat pulldownHow to do lat pulldownHow to do lat pulldown</string>
+	</array>
 	<key>Thumbnail</key>
 	<array>
 		<string>LateralRaises.jpg</string>
 		<string>benchPress.jpg</string>
+		<string>LatPulldown.jpg</string>
 	</array>
 	<key>TargetedMuscle</key>
 	<array>
 		<string>Shoulders</string>
 		<string>Chest</string>
+		<string>Back</string>
 	</array>
 	<key>ExerciseName</key>
 	<array>
 		<string>Lateral Raises</string>
 		<string>Barbell Bench Press</string>
+		<string>Lat Pulldown</string>
 	</array>
 </dict>
 </plist>

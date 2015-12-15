@@ -15,10 +15,10 @@
 		27158D9F1C0AC1C00002272B /* ExerciseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27158D9E1C0AC1C00002272B /* ExerciseViewController.m */; };
 		2720DB7D1C05346E00B7F7CD /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2720DB7C1C05346E00B7F7CD /* TableViewController.m */; };
 		27764C981C055F8D002F9122 /* ExerciseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 27764C971C055F8D002F9122 /* ExerciseTableViewCell.m */; };
+		27B0B52A1C1CA4040086D9CF /* LatPulldown.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 27B0B5291C1CA4040086D9CF /* LatPulldown.jpg */; };
 		27E116981C03ABB800E8E2AF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E116971C03ABB800E8E2AF /* main.m */; };
 		27E1169B1C03ABB800E8E2AF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E1169A1C03ABB800E8E2AF /* AppDelegate.m */; };
 		27E1169E1C03ABB800E8E2AF /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E1169D1C03ABB800E8E2AF /* MainViewController.m */; };
-		27E116A11C03ABB800E8E2AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27E1169F1C03ABB800E8E2AF /* Main.storyboard */; };
 		27E116A31C03ABB800E8E2AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27E116A21C03ABB800E8E2AF /* Assets.xcassets */; };
 		27E116A61C03ABB800E8E2AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27E116A41C03ABB800E8E2AF /* LaunchScreen.storyboard */; };
 		27E116B11C03ABB900E8E2AF /* myPersonalTrainerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E116B01C03ABB900E8E2AF /* myPersonalTrainerTests.m */; };
@@ -59,13 +59,13 @@
 		2720DB7C1C05346E00B7F7CD /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 		27764C961C055F8D002F9122 /* ExerciseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExerciseTableViewCell.h; sourceTree = "<group>"; };
 		27764C971C055F8D002F9122 /* ExerciseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExerciseTableViewCell.m; sourceTree = "<group>"; };
+		27B0B5291C1CA4040086D9CF /* LatPulldown.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = LatPulldown.jpg; sourceTree = SOURCE_ROOT; };
 		27E116931C03ABB800E8E2AF /* myPersonalTrainer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myPersonalTrainer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27E116971C03ABB800E8E2AF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		27E116991C03ABB800E8E2AF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		27E1169A1C03ABB800E8E2AF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		27E1169C1C03ABB800E8E2AF /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		27E1169D1C03ABB800E8E2AF /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
-		27E116A01C03ABB800E8E2AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		27E116A21C03ABB800E8E2AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		27E116A51C03ABB800E8E2AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		27E116A71C03ABB800E8E2AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -113,6 +113,7 @@
 		2798C0931C0D75EF0007D3BF /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				27B0B5291C1CA4040086D9CF /* LatPulldown.jpg */,
 				27158D9C1C0ABB4F0002272B /* benchPress.jpg */,
 				27158D941C0A9DA40002272B /* LateralRaises.jpg */,
 			);
@@ -160,7 +161,6 @@
 				27E116D21C03D2C000E8E2AF /* Settings.m */,
 				27E116A41C03ABB800E8E2AF /* LaunchScreen.storyboard */,
 				27E116A71C03ABB800E8E2AF /* Info.plist */,
-				27E1169F1C03ABB800E8E2AF /* Main.storyboard */,
 				27764C971C055F8D002F9122 /* ExerciseTableViewCell.m */,
 				27764C961C055F8D002F9122 /* ExerciseTableViewCell.h */,
 				27E116961C03ABB800E8E2AF /* Supporting Files */,
@@ -314,9 +314,9 @@
 				27E116A61C03ABB800E8E2AF /* LaunchScreen.storyboard in Resources */,
 				27E116A31C03ABB800E8E2AF /* Assets.xcassets in Resources */,
 				27158D9D1C0ABB4F0002272B /* benchPress.jpg in Resources */,
+				27B0B52A1C1CA4040086D9CF /* LatPulldown.jpg in Resources */,
 				27158D931C0A9A1A0002272B /* Exercises.plist in Resources */,
 				27158D9B1C0AA8BE0002272B /* SimpleTableCell.xib in Resources */,
-				27E116A11C03ABB800E8E2AF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,14 +385,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		27E1169F1C03ABB800E8E2AF /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				27E116A01C03ABB800E8E2AF /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		27E116A41C03ABB800E8E2AF /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

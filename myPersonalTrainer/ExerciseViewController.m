@@ -18,13 +18,16 @@
 
 {
     NSArray *exercises;
-    NSArray *thumbnails;
+    NSArray *pictures;
     NSArray *targetedMuscle;
+    NSArray *details;
 }
 
 
 @synthesize exerciseImageView;
 @synthesize exerciseImageName;
+@synthesize exerciseDetails;
+@synthesize rowNumber;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -34,13 +37,10 @@
     return self;
 }
 
-- (IBAction)close:(id)sender {
-    [self dismissViewControllerAnimated:YES completion:NULL];
-}
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.exerciseImageView.image = [UIImage imageNamed:self.exerciseImageName];
+    NSLog(@"Exercise viewcontroller loaded");
     // Do any additional setup after loading the view, typically from a nib.
     
     NSString *path = [[NSBundle mainBundle] pathForResource:@"Exercises" ofType:@"plist"];
@@ -48,8 +48,18 @@
     // Load the file content and read the data into arrays
     NSDictionary *dict = [[NSDictionary alloc] initWithContentsOfFile:path];
     exercises = [dict objectForKey:@"ExerciseName"];
-    thumbnails = [dict objectForKey:@"Thumbnail"];
+    pictures = [dict objectForKey:@"Thumbnail"];
     targetedMuscle = [dict objectForKey:@"TargetedMuscle"];
+    details = [dict objectForKey:@"Details"];
+    
+   
+    NSString *rowstring = [NSString stringWithFormat:@"%d", rowNumber];
+    printf("Row is:%s", [rowstring UTF8String]);
+
+    self.exerciseImageView.image = [UIImage imageNamed:[pictures objectAtIndex:rowNumber]];
+    self.exerciseImageName.text =[exercises objectAtIndex:rowNumber];
+    self.exerciseDetails.text =[details objectAtIndex:rowNumber];
+    NSLog(@"Exercise is: %@",exerciseImageName);
 }
 
 - (void)didReceiveMemoryWarning {

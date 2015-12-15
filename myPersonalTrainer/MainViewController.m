@@ -30,12 +30,12 @@
 }
 - (IBAction)exerciseButton:(UIButton *)sender {
    
-
 }
 - (IBAction)friendsButton:(UIButton *)sender {
 }
 - (IBAction)statisticsButton:(UIButton *)sender {
 }
+
 
 
 @end

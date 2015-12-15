@@ -22,6 +22,7 @@
     NSArray *tableData;
     NSArray *thumbnails;
     NSArray *targetedMuscle;
+    int rowNumber;
 }
 @synthesize tableView; // Add this line of code
 
@@ -84,17 +85,20 @@
 //    
     // Display the Hello World Message
    // [messageAlert show];
-    [self performSegueWithIdentifier:@"showExercisePhoto" sender:self];
+ 
     // Checked the selected row
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-    cell.accessoryType = UITableViewCellAccessoryCheckmark;
-    
+    //cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    rowNumber = indexPath.row;
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    [self performSegueWithIdentifier:@"showExercisePhoto" sender:self];
 }
 
 - (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSLog(@"willSelectRowAtIndexPath");
+
+    
 //    if (indexPath.row == 0) {
 //        return nil;
 //    }
@@ -109,7 +113,8 @@
         ExerciseViewController *destViewController = segue.destinationViewController;
         destViewController.exerciseImageName = [tableData objectAtIndex:indexPath.row];
         destViewController.exerciseImageView = [thumbnails objectAtIndex:indexPath.row];
-
+        destViewController.rowNumber = rowNumber;
+        NSLog(@"Row is: %d",indexPath.row);
     }
 }
 
