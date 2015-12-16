@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="WorkoutTableCell" rowHeight="131" id="2" customClass="WorkoutTableCell">
+            <rect key="frame" x="0.0" y="0.0" width="321" height="131"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2" id="aEe-cl-D2V">
+                <rect key="frame" x="0.0" y="0.0" width="321" height="130.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="WorkoutName" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="17" id="5">
+                        <rect key="frame" x="8" y="0.0" width="313" height="33"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </label>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Time" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" id="6">
+                        <rect key="frame" x="105" y="35" width="208" height="21"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </label>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="muscleTargeted" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" id="XWJ-GZ-b3r">
+                        <rect key="frame" x="105" y="55" width="208" height="21"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </label>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="difficultyLevel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" id="pcR-m2-VHp">
+                        <rect key="frame" x="105" y="101" width="208" height="21"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="WIH-kB-Xnn">
+                        <rect key="frame" x="8" y="35" width="89" height="87"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </imageView>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="equipmentRequired" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" id="B2R-ZU-hmc">
+                        <rect key="frame" x="105" y="79" width="208" height="21"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </label>
+                </subviews>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="difficultyLevel" destination="pcR-m2-VHp" id="Grg-q3-jAd"/>
+                <outlet property="equipmentRequired" destination="B2R-ZU-hmc" id="J8Z-gN-1zL"/>
+                <outlet property="muscleTargeted" destination="XWJ-GZ-b3r" id="HbB-ST-DrF"/>
+                <outlet property="thumbnail" destination="WIH-kB-Xnn" id="ykS-Cj-hf1"/>
+                <outlet property="time" destination="6" id="nDK-vY-lD8"/>
+                <outlet property="workoutName" destination="5" id="aXI-gM-B6w"/>
+            </connections>
+            <point key="canvasLocation" x="353.5" y="232.5"/>
+        </tableViewCell>
+    </objects>
+</document>

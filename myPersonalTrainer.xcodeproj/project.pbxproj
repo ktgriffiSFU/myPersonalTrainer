@@ -14,6 +14,12 @@
 		27158D9D1C0ABB4F0002272B /* benchPress.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 27158D9C1C0ABB4F0002272B /* benchPress.jpg */; };
 		27158D9F1C0AC1C00002272B /* ExerciseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27158D9E1C0AC1C00002272B /* ExerciseViewController.m */; };
 		2720DB7D1C05346E00B7F7CD /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2720DB7C1C05346E00B7F7CD /* TableViewController.m */; };
+		272A3EFC1C20262300AAF185 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 272A3EFB1C20262300AAF185 /* Main.storyboard */; };
+		272A3EFE1C2178CB00AAF185 /* WorkoutViewContoller.m in Sources */ = {isa = PBXBuildFile; fileRef = 272A3EFD1C2178CB00AAF185 /* WorkoutViewContoller.m */; };
+		272A3F011C217C6C00AAF185 /* Workouts.plist in Resources */ = {isa = PBXBuildFile; fileRef = 272A3F001C217C6C00AAF185 /* Workouts.plist */; };
+		272A3F031C217F7700AAF185 /* WorkoutTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 272A3F021C217F7700AAF185 /* WorkoutTableCell.m */; };
+		272A3F061C217FCA00AAF185 /* WorkoutTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 272A3F051C217FCA00AAF185 /* WorkoutTableCell.xib */; };
+		272A3F081C2186D100AAF185 /* legs.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 272A3F071C2186D100AAF185 /* legs.jpg */; };
 		27764C981C055F8D002F9122 /* ExerciseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 27764C971C055F8D002F9122 /* ExerciseTableViewCell.m */; };
 		27B0B52A1C1CA4040086D9CF /* LatPulldown.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 27B0B5291C1CA4040086D9CF /* LatPulldown.jpg */; };
 		27E116981C03ABB800E8E2AF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E116971C03ABB800E8E2AF /* main.m */; };
@@ -57,6 +63,14 @@
 		27158DA01C0AC1D40002272B /* ExerciseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExerciseViewController.h; sourceTree = "<group>"; };
 		2720DB7B1C05341300B7F7CD /* TableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
 		2720DB7C1C05346E00B7F7CD /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
+		272A3EFB1C20262300AAF185 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../../../../.Trash/Main.storyboard; sourceTree = "<group>"; };
+		272A3EFD1C2178CB00AAF185 /* WorkoutViewContoller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkoutViewContoller.m; sourceTree = "<group>"; };
+		272A3EFF1C2178DD00AAF185 /* WorkoutViewContoller.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WorkoutViewContoller.h; sourceTree = "<group>"; };
+		272A3F001C217C6C00AAF185 /* Workouts.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Workouts.plist; sourceTree = "<group>"; };
+		272A3F021C217F7700AAF185 /* WorkoutTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkoutTableCell.m; sourceTree = "<group>"; };
+		272A3F041C217F8600AAF185 /* WorkoutTableCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WorkoutTableCell.h; sourceTree = "<group>"; };
+		272A3F051C217FCA00AAF185 /* WorkoutTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WorkoutTableCell.xib; sourceTree = "<group>"; };
+		272A3F071C2186D100AAF185 /* legs.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = legs.jpg; sourceTree = SOURCE_ROOT; };
 		27764C961C055F8D002F9122 /* ExerciseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExerciseTableViewCell.h; sourceTree = "<group>"; };
 		27764C971C055F8D002F9122 /* ExerciseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExerciseTableViewCell.m; sourceTree = "<group>"; };
 		27B0B5291C1CA4040086D9CF /* LatPulldown.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = LatPulldown.jpg; sourceTree = SOURCE_ROOT; };
@@ -113,6 +127,7 @@
 		2798C0931C0D75EF0007D3BF /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				272A3F071C2186D100AAF185 /* legs.jpg */,
 				27B0B5291C1CA4040086D9CF /* LatPulldown.jpg */,
 				27158D9C1C0ABB4F0002272B /* benchPress.jpg */,
 				27158D941C0A9DA40002272B /* LateralRaises.jpg */,
@@ -152,6 +167,7 @@
 				27158DA01C0AC1D40002272B /* ExerciseViewController.h */,
 				27158D9E1C0AC1C00002272B /* ExerciseViewController.m */,
 				27158D921C0A9A1A0002272B /* Exercises.plist */,
+				272A3F001C217C6C00AAF185 /* Workouts.plist */,
 				2720DB7C1C05346E00B7F7CD /* TableViewController.m */,
 				27E1169D1C03ABB800E8E2AF /* MainViewController.m */,
 				27E116A21C03ABB800E8E2AF /* Assets.xcassets */,
@@ -159,6 +175,9 @@
 				27E116D11C03D29700E8E2AF /* Settings.h */,
 				27E116D01C03D1A600E8E2AF /* LoginViewController.h */,
 				27E116D21C03D2C000E8E2AF /* Settings.m */,
+				272A3EFF1C2178DD00AAF185 /* WorkoutViewContoller.h */,
+				272A3EFD1C2178CB00AAF185 /* WorkoutViewContoller.m */,
+				272A3EFB1C20262300AAF185 /* Main.storyboard */,
 				27E116A41C03ABB800E8E2AF /* LaunchScreen.storyboard */,
 				27E116A71C03ABB800E8E2AF /* Info.plist */,
 				27764C971C055F8D002F9122 /* ExerciseTableViewCell.m */,
@@ -174,6 +193,9 @@
 				27E116971C03ABB800E8E2AF /* main.m */,
 				27158D981C0AA8670002272B /* SimpleTableCell.m */,
 				27158D971C0AA84B0002272B /* SimpleTableCell.h */,
+				272A3F021C217F7700AAF185 /* WorkoutTableCell.m */,
+				272A3F051C217FCA00AAF185 /* WorkoutTableCell.xib */,
+				272A3F041C217F8600AAF185 /* WorkoutTableCell.h */,
 				27158D9A1C0AA8BE0002272B /* SimpleTableCell.xib */,
 			);
 			name = "Supporting Files";
@@ -311,12 +333,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				27158D951C0A9DA40002272B /* LateralRaises.jpg in Resources */,
+				272A3F011C217C6C00AAF185 /* Workouts.plist in Resources */,
 				27E116A61C03ABB800E8E2AF /* LaunchScreen.storyboard in Resources */,
 				27E116A31C03ABB800E8E2AF /* Assets.xcassets in Resources */,
+				272A3EFC1C20262300AAF185 /* Main.storyboard in Resources */,
 				27158D9D1C0ABB4F0002272B /* benchPress.jpg in Resources */,
 				27B0B52A1C1CA4040086D9CF /* LatPulldown.jpg in Resources */,
 				27158D931C0A9A1A0002272B /* Exercises.plist in Resources */,
+				272A3F061C217FCA00AAF185 /* WorkoutTableCell.xib in Resources */,
 				27158D9B1C0AA8BE0002272B /* SimpleTableCell.xib in Resources */,
+				272A3F081C2186D100AAF185 /* legs.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,12 +368,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				27158D9F1C0AC1C00002272B /* ExerciseViewController.m in Sources */,
+				272A3EFE1C2178CB00AAF185 /* WorkoutViewContoller.m in Sources */,
 				27E116CF1C03D19300E8E2AF /* LoginViewController.m in Sources */,
 				27764C981C055F8D002F9122 /* ExerciseTableViewCell.m in Sources */,
 				2720DB7D1C05346E00B7F7CD /* TableViewController.m in Sources */,
 				27E1169E1C03ABB800E8E2AF /* MainViewController.m in Sources */,
 				27E116D31C03D2C000E8E2AF /* Settings.m in Sources */,
 				27E1169B1C03ABB800E8E2AF /* AppDelegate.m in Sources */,
+				272A3F031C217F7700AAF185 /* WorkoutTableCell.m in Sources */,
 				27158D991C0AA8670002272B /* SimpleTableCell.m in Sources */,
 				27E116981C03ABB800E8E2AF /* main.m in Sources */,
 			);

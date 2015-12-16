@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>WorkoutName</key>
+	<array>
+		<string>Classic Lower Body</string>
+	</array>
+	<key>Time</key>
+	<array>
+		<string>20 minutes</string>
+	</array>
+	<key>DifficultyLevel</key>
+	<array>
+		<string>Moderate</string>
+	</array>
+	<key>MusclesTargeted</key>
+	<array>
+		<string>Legs</string>
+	</array>
+	<key>EquipmentRequired</key>
+	<array>
+		<string>Barbell, dumbells, squat rack</string>
+	</array>
+	<key>Thumbnail</key>
+	<array>
+		<string>legs.jpg</string>
+	</array>
+</dict>
+</plist>

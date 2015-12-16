@@ -36,7 +36,7 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="muscleLabel" destination="6" id="ijV-CW-RUf"/>
-                <outlet property="nameLabel" destination="5" id="19"/>
+                <outlet property="nameLabel" destination="5" id="MLe-n7-9m8"/>
                 <outlet property="thumbnailImageView" destination="4" id="21"/>
             </connections>
         </tableViewCell>
