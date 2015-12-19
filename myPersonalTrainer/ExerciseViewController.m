@@ -9,7 +9,6 @@
 
 #import <Foundation/Foundation.h>
 #import "ExerciseViewController.h"
-#import "TableViewController.h"
 @interface ExerciseViewController ()
 
 @end

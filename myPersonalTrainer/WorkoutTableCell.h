@@ -9,10 +9,12 @@
 #import <UIKit/UIKit.h>
 
 @interface WorkoutTableCell: UITableViewCell
+
 @property (nonatomic, weak) IBOutlet UILabel *workoutName;
 @property (nonatomic, weak) IBOutlet UILabel *time;
 @property (weak, nonatomic) IBOutlet UILabel *muscleTargeted;
 @property (weak, nonatomic) IBOutlet UILabel *equipmentRequired;
 @property (weak, nonatomic) IBOutlet UILabel *difficultyLevel;
 @property (weak, nonatomic) IBOutlet UIImageView *thumbnail;
+
 @end

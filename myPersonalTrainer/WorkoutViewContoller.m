@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "WorkoutViewContoller.h"
 #import "WorkoutTableCell.h"
+#import "Workout.h"
+#import "DetailWorkoutViewController.h"
 
 @interface WorkoutViewContoller ()
 
@@ -22,10 +24,26 @@
     NSArray *difficultyLevel;
     NSArray *equipmentRequired;
     NSArray *thumbnail;
+    NSArray *searchResults;
     int rowNumber;
 }
 @synthesize tableView; // Add this line of code
 
+- (void)filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope
+{
+    NSPredicate *resultPredicate = [NSPredicate predicateWithFormat:@"self contains[c] %@", searchText];
+    searchResults = [workoutName filteredArrayUsingPredicate:resultPredicate];
+}
+-(BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString
+{
+
+    [self filterContentForSearchText:searchString
+                               scope:[[self.searchDisplayController.searchBar scopeButtonTitles]
+                                      objectAtIndex:[self.searchDisplayController.searchBar
+                                                     selectedScopeButtonIndex]]];
+    
+    return YES;
+}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -56,7 +74,12 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [workoutName count];
+    if (self.searchDisplayController.active) {
+        return [searchResults count];
+    } else {
+    
+        return [workoutName count];
+    }
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -67,13 +90,21 @@
 {
     static NSString *simpleTableIdentifier = @"WorkoutTableCell";
     
-    WorkoutTableCell *cell = (WorkoutTableCell *)[tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+    WorkoutTableCell *cell = (WorkoutTableCell *)[self.tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
     if (cell == nil)
     {
         NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"WorkoutTableCell" owner:self options:nil];
         cell = [nib objectAtIndex:0];
+       // cell = [[WorkoutTableCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
     }
-    
+    Workout *workout = nil;
+    if (self.searchDisplayController.active) {
+        workout= [searchResults objectAtIndex:indexPath.row];
+    } else {
+        workout = [workoutName objectAtIndex:indexPath.row];
+    }
+    cell.accessoryType  = UITableViewCellAccessoryDisclosureIndicator;
+
     cell.workoutName.text = [workoutName objectAtIndex:indexPath.row];
     cell.thumbnail.image = [UIImage imageNamed:[thumbnail objectAtIndex:indexPath.row]];
     cell.muscleTargeted.text = [musclesTargeted objectAtIndex:indexPath.row];
@@ -95,11 +126,12 @@
     // [messageAlert show];
     
     // Checked the selected row
-    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
     //cell.accessoryType = UITableViewCellAccessoryCheckmark;
     rowNumber = indexPath.row;
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    [self performSegueWithIdentifier:@"showExercisePhoto" sender:self];
+    NSLog(@"rownumber is %d", rowNumber);
+    [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
+    [self performSegueWithIdentifier:@"showWorkout" sender:self];
 }
 
 - (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -119,11 +151,30 @@
 //    if ([segue.identifier isEqualToString:@"showExercisePhoto"]) {
 //        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
 //        ExerciseViewController *destViewController = segue.destinationViewController;
-//        destViewController.exerciseImageName = [tableData objectAtIndex:indexPath.row];
+//
+//if (self.searchDisplayController.active) {
+//    indexPath = [self.searchDisplayController.searchResultsTableView indexPathForSelectedRow];
+//    recipe = [searchResults objectAtIndex:indexPath.row];
+//} else {
+//    indexPath = [self.tableView indexPathForSelectedRow];
+//    recipe = [recipes objectAtIndex:indexPath.row];
+//}
+
+     //   destViewController.exerciseImageName = [tableData objectAtIndex:indexPath.row];
 //        destViewController.exerciseImageView = [thumbnails objectAtIndex:indexPath.row];
 //        destViewController.rowNumber = rowNumber;
 //        NSLog(@"Row is: %d",indexPath.row);
 //    }
 //}
-
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    if ([segue.identifier isEqualToString:@"showWorkout"]) {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        DetailWorkoutViewController *destViewController = segue.destinationViewController;
+//        destViewController.exerciseImageName = [workoutName objectAtIndex:indexPath.row];
+//        destViewController.exerciseImageView = [thumbnail objectAtIndex:indexPath.row];
+        destViewController.workoutName =[workoutName objectAtIndex:indexPath.row];
+        destViewController.rowNumber = rowNumber;
+    }
+}
 @end

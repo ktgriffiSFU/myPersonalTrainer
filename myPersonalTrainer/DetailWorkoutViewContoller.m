@@ -1,6 +1,6 @@
 
 //
-//  TableViewController.m
+//  DetailWorkoutViewController.m
 //  myPersonalTrainer
 //
 //  Created by Kyle Griffith on 2015-11-24.
@@ -9,35 +9,52 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import "TableViewController.h"
-#import "ExerciseViewController.h"
+#import "DetailWorkoutViewController.h"
 #import "SimpleTableCell.h"
 
-@interface TableViewController ()
+@interface DetailWorkoutViewController ()
 
 @end
 
-@implementation TableViewController
+@implementation DetailWorkoutViewController
 {
-    NSArray *tableData;
+    NSArray *exerciseName;
     NSArray *thumbnails;
     NSArray *targetedMuscle;
+    NSArray *workoutNameP;
+    NSDictionary *workoutArray;
+    NSArray *exercisesforWorkout;
     int rowNumber;
 }
 @synthesize tableView; // Add this line of code
+@synthesize rowNumber;
+@synthesize workoutName;
+
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    NSString *path1 = [[NSBundle mainBundle] pathForResource:@"Exercises" ofType:@"plist"];
+    NSString *path2 = [[NSBundle mainBundle] pathForResource:@"Workouts" ofType:@"plist"];
+    // Load the file content and read the data into arrays
+    NSDictionary *dict1 = [[NSDictionary alloc] initWithContentsOfFile:path1];
+    NSDictionary *dict2 = [[NSDictionary alloc] initWithContentsOfFile:path2];
+    workoutNameP = [dict2 objectForKey:@"WorkoutName"];
+    self.workoutName.text =[workoutNameP objectAtIndex:rowNumber];
     // Initialize table data
     // Find out the path of recipes.plist
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"Exercises" ofType:@"plist"];
+    exerciseName = [dict1 objectForKey:@"ExerciseName"];
+    thumbnails = [dict1 objectForKey:@"Thumbnail"];
+    targetedMuscle = [dict1 objectForKey:@"TargetedMuscle"];
+    workoutArray= [dict2 objectForKey:@"WorkoutArray"];
+    exercisesforWorkout =[workoutArray objectForKey:workoutNameP[rowNumber]];
     
-    // Load the file content and read the data into arrays
-    NSDictionary *dict = [[NSDictionary alloc] initWithContentsOfFile:path];
-    tableData = [dict objectForKey:@"ExerciseName"];
-    thumbnails = [dict objectForKey:@"Thumbnail"];
-    targetedMuscle = [dict objectForKey:@"TargetedMuscle"];
+    NSLog(@"%@",workoutNameP[rowNumber]);
+    NSLog(@"%@",[workoutArray objectForKey:workoutNameP[rowNumber]]);
+    for (int i =0 ; i<workoutArray.count; i++) {
+       
+        printf(":\n");
+    }
 }
 - (void)viewDidUnload
 {
@@ -52,7 +69,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [tableData count];
+    return [exerciseName count];
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -70,7 +87,7 @@
         cell = [nib objectAtIndex:0];
     }
     cell.accessoryType  = UITableViewCellAccessoryDisclosureIndicator;
-    cell.nameLabel.text = [tableData objectAtIndex:indexPath.row];
+    cell.nameLabel.text = [exercisesforWorkout objectAtIndex:indexPath.row];
     cell.thumbnailImageView.image = [UIImage imageNamed:[thumbnails objectAtIndex:indexPath.row]];
     cell.muscleLabel.text = [targetedMuscle objectAtIndex:indexPath.row];
     return cell;
@@ -80,12 +97,12 @@
     NSLog(@"didSelectRowAtIndexPath");
     /*UIAlertView *messageAlert = [[UIAlertView alloc]
      initWithTitle:@"Row Selected" message:@"You've selected a row" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];*/
-//    UIAlertView *messageAlert = [[UIAlertView alloc]
-//                                 initWithTitle:@"Row Selected" message:[tableData objectAtIndex:indexPath.row] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-//    
+    //    UIAlertView *messageAlert = [[UIAlertView alloc]
+    //                                 initWithTitle:@"Row Selected" message:[tableData objectAtIndex:indexPath.row] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    //
     // Display the Hello World Message
-   // [messageAlert show];
- 
+    // [messageAlert show];
+    
     // Checked the selected row
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     //cell.accessoryType = UITableViewCellAccessoryCheckmark;
@@ -97,24 +114,24 @@
 - (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSLog(@"willSelectRowAtIndexPath");
-
     
-//    if (indexPath.row == 0) {
-//        return nil;
-//    }
-//    
+    
+    //    if (indexPath.row == 0) {
+    //        return nil;
+    //    }
+    //
     return indexPath;
 }
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    
-    if ([segue.identifier isEqualToString:@"showExercisePhoto"]) {
-        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        ExerciseViewController *destViewController = segue.destinationViewController;
-        destViewController.exerciseImageName = [tableData objectAtIndex:indexPath.row];
-        destViewController.exerciseImageView = [thumbnails objectAtIndex:indexPath.row];
-        destViewController.rowNumber = rowNumber;
-    }
-}
+//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+//    
+//    if ([segue.identifier isEqualToString:@"showExercisePhoto"]) {
+//        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+//        ExerciseViewController *destViewController = segue.destinationViewController;
+//        destViewController.exerciseImageName = [tableData objectAtIndex:indexPath.row];
+//        destViewController.exerciseImageView = [thumbnails objectAtIndex:indexPath.row];
+//        destViewController.rowNumber = rowNumber;
+//    }
+//}
 
 @end
