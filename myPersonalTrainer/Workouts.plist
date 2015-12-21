@@ -32,7 +32,7 @@
 		<string>Barbell, dumbells, squat rack</string>
 		<string>Barbell, dumbells</string>
 	</array>
-	<key>Thumbnail</key>
+	<key>ThumbnailWorkout</key>
 	<array>
 		<string>arms.jpg</string>
 		<string>legs.png</string>

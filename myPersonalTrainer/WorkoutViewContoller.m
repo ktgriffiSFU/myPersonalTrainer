@@ -58,7 +58,7 @@
     musclesTargeted = [dict objectForKey:@"MusclesTargeted"];
     difficultyLevel = [dict objectForKey:@"DifficultyLevel"];
     equipmentRequired = [dict objectForKey:@"EquipmentRequired"];
-    thumbnail = [dict objectForKey:@"Thumbnail"];
+    thumbnail = [dict objectForKey:@"ThumbnailWorkout"];
 
 }
 - (void)viewDidUnload

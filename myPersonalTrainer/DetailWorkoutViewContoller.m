@@ -24,6 +24,8 @@
     NSArray *workoutNameP;
     NSDictionary *workoutArray;
     NSArray *exercisesforWorkout;
+    NSMutableArray *targetedMuscleforWorkout;
+    NSMutableArray *thumbnailforWorkout;
     int rowNumber;
 }
 @synthesize tableView; // Add this line of code
@@ -48,14 +50,24 @@
     targetedMuscle = [dict1 objectForKey:@"TargetedMuscle"];
     workoutArray= [dict2 objectForKey:@"WorkoutArray"];
     exercisesforWorkout =[workoutArray objectForKey:workoutNameP[rowNumber]];
-    
-    NSLog(@"%@",workoutNameP[rowNumber]);
-    NSLog(@"%@",[workoutArray objectForKey:workoutNameP[rowNumber]]);
-    for (int i =0 ; i<workoutArray.count; i++) {
-       
-        printf(":\n");
+    targetedMuscleforWorkout = [[NSMutableArray alloc] init];
+    thumbnailforWorkout = [[NSMutableArray alloc] init];
+    //Need to do thumbnail, targeted muscle.
+    for (int j=0;j<exerciseName.count ; j++) {
+        for (int i=0; i <exercisesforWorkout.count; i++) {
+            if ([exercisesforWorkout[i] isEqualToString:exerciseName[j]]) {
+                NSLog(@"Exercise: %@",exercisesforWorkout[i]);
+                NSString *tempMuscle = [targetedMuscle objectAtIndex:j];
+                NSString *tempThumb = [thumbnails objectAtIndex:j];
+                [targetedMuscleforWorkout addObject:tempMuscle];
+                [thumbnailforWorkout addObject:tempThumb];
+                NSLog(@"target: %@",targetedMuscleforWorkout);
+
+            }
+        }
     }
 }
+
 - (void)viewDidUnload
 {
     [super viewDidUnload];
@@ -69,7 +81,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [exerciseName count];
+    return [exercisesforWorkout count];
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -88,8 +100,8 @@
     }
     cell.accessoryType  = UITableViewCellAccessoryDisclosureIndicator;
     cell.nameLabel.text = [exercisesforWorkout objectAtIndex:indexPath.row];
-    cell.thumbnailImageView.image = [UIImage imageNamed:[thumbnails objectAtIndex:indexPath.row]];
-    cell.muscleLabel.text = [targetedMuscle objectAtIndex:indexPath.row];
+    cell.thumbnailImageView.image = [UIImage imageNamed:[thumbnailforWorkout objectAtIndex:indexPath.row]];
+    cell.muscleLabel.text = [targetedMuscleforWorkout objectAtIndex:indexPath.row];
     return cell;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath

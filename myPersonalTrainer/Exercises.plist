@@ -7,24 +7,56 @@
 		<string>How to do lateral raises</string>
 		<string>How to do bench press</string>
 		<string>How to do lat pulldown. How to do lat pulldown. How to do lat pulldown How to do lat pulldownHow to do lat pulldownHow to do lat pulldownHow to do lat pulldownHow to do lat pulldownHow to do lat pulldownHow to do lat pulldownHow to do lat pulldownHow to do lat pulldownHow to do lat pulldown</string>
+		<string>How to do</string>
+		<string>How to do</string>
+		<string>How to do</string>
+		<string>How to do</string>
+		<string>How to do</string>
+		<string>How to do</string>
+		<string>How to do</string>
+		<string>How to do</string>
 	</array>
 	<key>Thumbnail</key>
 	<array>
 		<string>LateralRaises.jpg</string>
 		<string>benchPress.jpg</string>
 		<string>LatPulldown.jpg</string>
+		<string>lunges.jpg</string>
+		<string>squats.jpg</string>
+		<string>calfraises.jpg</string>
+		<string>bicepscurl.jpg</string>
+		<string>tricepextension.jpg</string>
+		<string>skullcrushers.jpg</string>
+		<string>concentratedcurls.jpg</string>
+		<string>deadlifts.jpg</string>
 	</array>
 	<key>TargetedMuscle</key>
 	<array>
 		<string>Shoulders</string>
 		<string>Chest</string>
 		<string>Back</string>
+		<string>Quadriceps, Hamstrings, Glutes</string>
+		<string>Quadriceps, Hamstrings, Glutes</string>
+		<string>Gastrocnemius, soleus</string>
+		<string>Biceps</string>
+		<string>Triceps</string>
+		<string>Triceps</string>
+		<string>Biceps</string>
+		<string>Quadriceps, Hamstrings, Glutes</string>
 	</array>
 	<key>ExerciseName</key>
 	<array>
 		<string>Lateral Raises</string>
 		<string>Barbell Bench Press</string>
 		<string>Lat Pulldown</string>
+		<string>Lunges</string>
+		<string>Squats</string>
+		<string>Calf Raises</string>
+		<string>Bicep Curls</string>
+		<string>Tricep Extensions</string>
+		<string>Skullcrushers</string>
+		<string>Concentrated Curls</string>
+		<string>Deadlifts</string>
 	</array>
 </dict>
 </plist>

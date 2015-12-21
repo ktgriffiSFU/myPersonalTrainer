@@ -26,7 +26,7 @@
                         <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </label>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Muscle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" id="6">
-                        <rect key="frame" x="92" y="52" width="66" height="21"/>
+                        <rect key="frame" x="92" y="52" width="196" height="21"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
