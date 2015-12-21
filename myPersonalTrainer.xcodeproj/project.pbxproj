@@ -26,6 +26,7 @@
 		27DAE1521C230F70002A03D5 /* chest.png in Resources */ = {isa = PBXBuildFile; fileRef = 27DAE1511C230F70002A03D5 /* chest.png */; };
 		27DAE1541C230F82002A03D5 /* legs.png in Resources */ = {isa = PBXBuildFile; fileRef = 27DAE1531C230F82002A03D5 /* legs.png */; };
 		27DAE1561C25475E002A03D5 /* DetailWorkoutViewContoller.m in Sources */ = {isa = PBXBuildFile; fileRef = 27DAE1551C25475E002A03D5 /* DetailWorkoutViewContoller.m */; };
+		27DAE15A1C27D328002A03D5 /* DetailExerciseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27DAE1591C27D328002A03D5 /* DetailExerciseViewController.m */; };
 		27E116981C03ABB800E8E2AF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E116971C03ABB800E8E2AF /* main.m */; };
 		27E1169B1C03ABB800E8E2AF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E1169A1C03ABB800E8E2AF /* AppDelegate.m */; };
 		27E1169E1C03ABB800E8E2AF /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E1169D1C03ABB800E8E2AF /* MainViewController.m */; };
@@ -84,6 +85,8 @@
 		27DAE1531C230F82002A03D5 /* legs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = legs.png; sourceTree = SOURCE_ROOT; };
 		27DAE1551C25475E002A03D5 /* DetailWorkoutViewContoller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailWorkoutViewContoller.m; sourceTree = "<group>"; };
 		27DAE1571C2547AC002A03D5 /* DetailWorkoutViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailWorkoutViewController.h; sourceTree = "<group>"; };
+		27DAE1581C27D30C002A03D5 /* DetailExerciseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailExerciseViewController.h; sourceTree = "<group>"; };
+		27DAE1591C27D328002A03D5 /* DetailExerciseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailExerciseViewController.m; sourceTree = "<group>"; };
 		27E116931C03ABB800E8E2AF /* myPersonalTrainer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myPersonalTrainer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27E116971C03ABB800E8E2AF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		27E116991C03ABB800E8E2AF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -192,6 +195,8 @@
 				272A3EFB1C20262300AAF185 /* Main.storyboard */,
 				27DAE1571C2547AC002A03D5 /* DetailWorkoutViewController.h */,
 				27DAE1551C25475E002A03D5 /* DetailWorkoutViewContoller.m */,
+				27DAE1581C27D30C002A03D5 /* DetailExerciseViewController.h */,
+				27DAE1591C27D328002A03D5 /* DetailExerciseViewController.m */,
 				27E116A41C03ABB800E8E2AF /* LaunchScreen.storyboard */,
 				27E116A71C03ABB800E8E2AF /* Info.plist */,
 				27764C971C055F8D002F9122 /* ExerciseTableViewCell.m */,
@@ -398,6 +403,7 @@
 				27DAE1561C25475E002A03D5 /* DetailWorkoutViewContoller.m in Sources */,
 				27E116981C03ABB800E8E2AF /* main.m in Sources */,
 				27C6CB421C21D383009E5341 /* Workout.m in Sources */,
+				27DAE15A1C27D328002A03D5 /* DetailExerciseViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

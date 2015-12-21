@@ -10,6 +10,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import "DetailWorkoutViewController.h"
+#import "DetailExerciseViewController.h"
 #import "SimpleTableCell.h"
 
 @interface DetailWorkoutViewController ()
@@ -27,6 +28,7 @@
     NSMutableArray *targetedMuscleforWorkout;
     NSMutableArray *thumbnailforWorkout;
     int rowNumber;
+    int rowNumberOld;
 }
 @synthesize tableView; // Add this line of code
 @synthesize rowNumber;
@@ -36,6 +38,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    rowNumberOld = rowNumber;
     NSString *path1 = [[NSBundle mainBundle] pathForResource:@"Exercises" ofType:@"plist"];
     NSString *path2 = [[NSBundle mainBundle] pathForResource:@"Workouts" ofType:@"plist"];
     // Load the file content and read the data into arrays
@@ -120,7 +123,7 @@
     //cell.accessoryType = UITableViewCellAccessoryCheckmark;
     rowNumber = indexPath.row;
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    [self performSegueWithIdentifier:@"showExercisePhoto" sender:self];
+    [self performSegueWithIdentifier:@"showExercise" sender:self];
 }
 
 - (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -135,15 +138,16 @@
     return indexPath;
 }
 
-//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-//    
-//    if ([segue.identifier isEqualToString:@"showExercisePhoto"]) {
-//        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-//        ExerciseViewController *destViewController = segue.destinationViewController;
-//        destViewController.exerciseImageName = [tableData objectAtIndex:indexPath.row];
-//        destViewController.exerciseImageView = [thumbnails objectAtIndex:indexPath.row];
-//        destViewController.rowNumber = rowNumber;
-//    }
-//}
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    if ([segue.identifier isEqualToString:@"showExercise"]) {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        DetailExerciseViewController *destViewController = segue.destinationViewController;
+        destViewController.exerciseImageName = [exercisesforWorkout objectAtIndex:indexPath.row];
+//        destViewController.exerciseImageView = [thumbnailforWorkout objectAtIndex:indexPath.row];
+        destViewController.rowNumberNew = rowNumber;
+        destViewController.rowNumberWorkout = rowNumberOld;
+    }
+}
 
 @end
