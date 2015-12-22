@@ -2,61 +2,412 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>Details</key>
+	<key>ExerciseName</key>
 	<array>
-		<string>How to do lateral raises</string>
-		<string>How to do bench press</string>
-		<string>How to do lat pulldown. How to do lat pulldown. How to do lat pulldown How to do lat pulldownHow to do lat pulldownHow to do lat pulldownHow to do lat pulldownHow to do lat pulldownHow to do lat pulldownHow to do lat pulldownHow to do lat pulldownHow to do lat pulldownHow to do lat pulldown</string>
-		<string>How to do</string>
-		<string>How to do</string>
-		<string>How to do</string>
-		<string>How to do</string>
-		<string>How to do</string>
-		<string>How to do</string>
-		<string>How to do</string>
-		<string>How to do</string>
-	</array>
-	<key>Thumbnail</key>
-	<array>
-		<string>LateralRaises.jpg</string>
-		<string>benchPress.jpg</string>
-		<string>LatPulldown.jpg</string>
-		<string>lunges.jpg</string>
-		<string>squats.jpg</string>
-		<string>calfraises.jpg</string>
-		<string>bicepscurl.jpg</string>
-		<string>tricepextension.jpg</string>
-		<string>skullcrushers.jpg</string>
-		<string>concentratedcurls.jpg</string>
-		<string>deadlifts.jpg</string>
+		<string>Barbell Chest Press</string>
+		<string>Machine Chest Press</string>
+		<string>Incline Barbell Chest Press</string>
+		<string>Decline Dumbell Chest Press</string>
+		<string>Dumbell Chest Fly</string>
+		<string>Machine Chest Fly</string>
+		<string>Decline Dumbell Chest Fly</string>
+		<string>Incline Cable Crossover</string>
+		<string>Push Up 
+(Hands and Toes)</string>
+		<string>Push Up 
+(on Knees)</string>
+		<string>Push Up 
+(Standing, against Wall)</string>
+		<string>Cable Lat Pulldown (Wide Grip)</string>
+		<string>Cable Lat Pulldown (Narrow Grip)</string>
+		<string>Cable Lat Pulldown (Medium Grip)</string>
+		<string>Double Cable Lat Pulldown</string>
+		<string>Cable Lat Row (Seated with V-Bar)</string>
+		<string>Cable Lat Row (Wide Pronated Grip)</string>
+		<string>Cable Lat Row (Single Arm)</string>
+		<string>Barbell Lat Row (Bent Over)</string>
+		<string>T-Bar Lat Row (Standing)</string>
+		<string>Dumbell Lat Row (One Arm on Bench)</string>
+		<string>Dumbell Trap Shrug (Seated)</string>
+		<string>Barbell Trap Shrug (Standing)</string>
+		<string>Cable Trap Shrug (Seated)</string>
+		<string>Dumbell Shoulder Press (Seated)</string>
+		<string>Barbell Shoulder Press (Standing)</string>
+		<string>Machine Shoulder Press</string>
+		<string>Dumbell Shoulder Raise</string>
+		<string>Dumbell Shoulder Raise (Prone)</string>
+		<string>Cable Shoulder Raise (Standing, Lateral)</string>
+		<string>Barbell Biceps Curl</string>
+		<string>Cable Biceps Curl</string>
+		<string>Preacher Biceps Curl</string>
+		<string>Dumbell Biceps Curl</string>
+		<string>Dumbell Biceps Concentration Curl</string>
+		<string>Cable Biceps Single Arm Curl</string>
+		<string>Cable Triceps Extension</string>
+		<string>Dumbell Triceps Kickback</string>
+		<string>Barbell Triceps Extension (Supine)</string>
+		<string>Dumbell Triceps Extension (Supine)</string>
+		<string>Bench Triceps Dip</string>
+		<string>Barbell Triceps Press</string>
+		<string>Barbell Squat</string>
+		<string>Barbell Deadlift</string>
+		<string>Dumbell Lunge</string>
+		<string>Machine Leg Extension</string>
+		<string>Machine Leg Curl</string>
+		<string>Dumbell Stiffed Legged Deadlift</string>
+		<string>Machine Hip Adduction</string>
+		<string>Machine Hip Abduction</string>
+		<string>Dumbell Heel Raise</string>
+		<string>Machine Heel Raise</string>
+		<string>Back Extension</string>
+		<string>Roman Chair Back Extension</string>
+		<string>Shoulder to Knee Curl-Up</string>
+		<string>Dumbell Oblique Lateral Flexion</string>
+		<string>Partial Abdominal Curl-Up</string>
+		<string>Reverse Abdominal Curl</string>
+		<string>Plank</string>
+		<string>Side Plank</string>
 	</array>
 	<key>TargetedMuscle</key>
 	<array>
-		<string>Shoulders</string>
-		<string>Chest</string>
-		<string>Back</string>
-		<string>Quadriceps, Hamstrings, Glutes</string>
-		<string>Quadriceps, Hamstrings, Glutes</string>
-		<string>Gastrocnemius, soleus</string>
-		<string>Biceps</string>
-		<string>Triceps</string>
-		<string>Triceps</string>
-		<string>Biceps</string>
-		<string>Quadriceps, Hamstrings, Glutes</string>
+		<string>pectoralis major, anterior deltoid, triceps group</string>
+		<string>pectoralis major, anterior deltoid, triceps group</string>
+		<string>pectoralis major, anterior deltoid, triceps group</string>
+		<string>pectoralis major, anterior deltoid, triceps group</string>
+		<string>pectoralis major, anterior deltoid</string>
+		<string>pectoralis major, anterior deltoid</string>
+		<string>pectoralis major, anterior deltoid</string>
+		<string>pectoralis major, anterior deltoid</string>
+		<string>pectoralis major, anterior deltoid, triceps group</string>
+		<string>pectoralis major, anterior deltoid, triceps group</string>
+		<string>pectoralis major, anterior deltoid, triceps group</string>
+		<string>latissimus dorsi, teres major, posterior deltoid, rhomboids</string>
+		<string>latissimus dorsi, teres major, posterior deltoid, rhomboids</string>
+		<string>latissimus dorsi, teres major, posterior deltoid, rhomboids</string>
+		<string>latissimus dorsi, teres major, posterior deltoid, rhomboids</string>
+		<string>rhomboids, mid-trapezius, latissimus dorsi, teres major</string>
+		<string>rhomboids, mid-trapezius, latissimus dorsi, teres major</string>
+		<string>rhomboids, mid-trapezius, latissimus dorsi, teres major</string>
+		<string>latissimus dorsi, teres major, posterior deltoid, rhomboids</string>
+		<string>latissimus dorsi, teres major, posterior deltoid, rhomboids</string>
+		<string>latissimus dorsi, teres major, posterior deltoid, rhomboids</string>
+		<string>levator scapulae, upper trapezius, mid-trapezius, rhomboids</string>
+		<string>levator scapulae, upper trapezius, mid-trapezius, rhomboids</string>
+		<string>levator scapulae, upper trapezius, mid-trapezius, rhomboids</string>
+		<string>anterior deltoids, pectoralis major, triceps group, trapezius</string>
+		<string>anterior deltoids, pectoralis major, triceps group, trapezius</string>
+		<string>anterior deltoids, pectoralis major, triceps group, trapezius</string>
+		<string>deltoid, trapezius</string>
+		<string>deltoid, trapezius</string>
+		<string>deltoid, trapezius</string>
+		<string>biceps group, wrist flexors</string>
+		<string>biceps group, wrist flexors</string>
+		<string>biceps group, wrist flexors</string>
+		<string>biceps group, wrist flexors</string>
+		<string>biceps group, wrist flexors</string>
+		<string>biceps group, wrist flexors</string>
+		<string>triceps group</string>
+		<string>triceps group</string>
+		<string>triceps group</string>
+		<string>triceps group</string>
+		<string>triceps group</string>
+		<string>triceps group</string>
+		<string>quadriceps, hamstrings, glutes</string>
+		<string>quadriceps, hamstrings, glutes</string>
+		<string>quadriceps, hamstrings, glutes</string>
+		<string>quadriceps</string>
+		<string>hamstrings</string>
+		<string>hamstrings</string>
+		<string>hip adductors</string>
+		<string>hip abductors</string>
+		<string>gastrocnemius, soleus</string>
+		<string>gastrocnemius, soleus</string>
+		<string>erector spinae</string>
+		<string>erector spinae</string>
+		<string>rectus abdominus, obliques</string>
+		<string>rectus abdominus, obliques</string>
+		<string>rectus abdominus</string>
+		<string>rectus abdominus</string>
+		<string>core, hip extensors, sholder flexors, erector spinae</string>
+		<string>core, hip extensors, sholder flexors, erector spinae</string>
 	</array>
-	<key>ExerciseName</key>
+	<key>Details</key>
 	<array>
-		<string>Lateral Raises</string>
-		<string>Barbell Bench Press</string>
-		<string>Lat Pulldown</string>
-		<string>Lunges</string>
-		<string>Squats</string>
-		<string>Calf Raises</string>
-		<string>Bicep Curls</string>
-		<string>Tricep Extensions</string>
-		<string>Skullcrushers</string>
-		<string>Concentrated Curls</string>
-		<string>Deadlifts</string>
+		<string>•Hold the bar with a common grip, so that elbow is at approximately 90 degrees and upper arm is parallel to the ground
+•While lying supine eyes should be roughly in line with barbell
+•Ensure 5 points of contact (left and right foot, lower back, upper back and back of head) while keeping natural arc in back
+•Actively depress the shoulder blades and hold throughout movement
+•Lift bar straight up
+•Bend elbows and lower bar so that upper arm is approximately parallel to the ground
+•Push the arms back to start position, straightening arms but not locking them out and without rotating the shoulders</string>
+		<string>•Hold the handles with a common grip
+•Seat should be at height so bar is inline with armpit.
+•Push bar straight away from your chest
+•Extend arms untill elbows are slightly bent
+•Return to start position</string>
+		<string>•Hold the bar with a common grip, so that elbow is at approximately 90 degrees and upper arm is parallel to the ground
+•While lying supine eyes should be roughly in line with barbell
+•Ensure 5 points of contact (left and right foot, lower back, upper back and back of head) while keeping natural arc in back
+•Actively depress the shoulder blades and hold throughout movement
+•Lift bar straight up
+•Bend elbows and lower bar so that upper arm is approximately parallel to the ground
+•Push the arms back to start position, straightening arms but not locking them out and without rotating the shoulders</string>
+		<string>•Hold the dumbells with a common grip, so that elbow is at approximately 90 degrees and upper arm is parallel to the ground
+•While lying supine eyes should be roughly in line with dumbells
+•Ensure 5 points of contact (left and right foot, lower back, upper back and back of head) while keeping natural arc in back
+•Actively depress the shoulder blades throughout movement
+•Lift bar straight up
+•Bend elbows and lower bar so that upper arm is approximately parallel to the ground
+•Push the arms back to start position, straightening arms but not locking them out and without rotating the shoulders</string>
+		<string>•Actively depress the shoulder blades
+•Hold dumbells with a pronated grip
+•Align the arms straight up from the shoulders
+•Arms should be slightly bent at the elbows with wrists in a stable position
+•Lower the arms down to about parallel to the floor, keeping them slightly bent throughout the entire movement
+•Pull the arms up and together while contracting the chest
+•Bring the arms back to the original starting position without extending the arms or rotating the shoulders</string>
+		<string></string>
+		<string>•Actively depress the shoulder blades
+•Hold dumbells with a pronated grip
+•Align the arms straight up from the shoulders
+•Arms should be slightly bent at the elbows with wrists in a stable position
+•Lower the arms down to about parallel to the floor, keeping them slightly bent throughout the entire movement
+•Pull the arms up and together while contracting the chest
+•Bring the arms back to the original starting position without extending the arms or rotating the shoulders</string>
+		<string>•Actively depress the shoulder blades
+•Hold dumbells with a pronated grip
+•Align the arms straight up from the shoulders
+•Arms should be slightly bent at the elbows with wrists in a stable position
+•Lower the arms down to about parallel to the floor, keeping them slightly bent throughout the entire movement
+•Pull the arms up and together while contracting the chest
+•Bring the arms back to the original starting position without extending the arms or rotating the shoulders</string>
+		<string>•In a prone position, with torso and legs off the floor, hands should be wider than shoulder width and feet should be about hip width
+•Push up with your hands while maintaining good posture throughout
+•Push up until elbows are fully extended
+•Lower back to original position, nose should be slightly above the floor while maintaining proper alignment</string>
+		<string>•In a prone position, with knees on the floor, hands should be wider than shoulder width and feet should be about hip width
+•Push up with your hands while maintaining good posture throughout
+•Push up until elbows are fully extended
+•Lower back to original position, nose should be slightly above the floor while maintaining proper alignment</string>
+		<string></string>
+		<string>•Wide, pronated grip, so that when the upper arms are prallel to the ground they form an approximately 90 degree angle
+•Knees should be secure under pad
+•Pull the bar toward chest until arms are about parallel to the ground
+•Depress shoulder blades, creating a natural arch in the lower bck
+•Let the arms back up slowly to original starting position while keeping tension on the lats</string>
+		<string>•Narrow, supinated grip, so that when the upper arms are prallel to the ground they form an approximately 90 degree angle
+•Knees should be secure under pad
+•Pull the bar toward chest until arms are about parallel to the ground
+•Depress shoulder blades, creating a natural arch in the lower bck
+•Let the arms back up slowly to original starting position while keeping tension on the lats</string>
+		<string>•Pronated grip, so that when the upper arms are prallel to the ground they form an approximately 90 degree angle
+•Knees should be secure under pad
+•Pull the bar toward chest until arms are about parallel to the ground
+•Depress shoulder blades, creating a natural arch in the lower bck
+•Let the arms back up slowly to original starting position while keeping tension on the lats</string>
+		<string></string>
+		<string>•Plant feet firmly against machine with knees slightly bent
+•Lean back slightly and keep natural arch in lower back
+•While holding handles, keep wrists in a neutral position and elbows slightly bent
+•Keeping the arms slightly bent, contract the rhomboids and pull the shoulder blades together and down
+•Pull the arms back, keeping them close to the side of the body until the elbows are about straight down from the shoulders
+•Slowly return the arms and lats back to the original position, keeping shoulder blades depressed</string>
+		<string>•Plant feet firmly against machine with knees slightly bent
+•Lean back slightly and keep natural arch in lower back
+•While holding bar, keep wrists in a neutral position and elbows slightly bent
+•Keeping the arms slightly bent, contract the rhomboids and pull the shoulder blades together and down
+•Pull the arms back, keeping them close to the side of the body until the elbows are about straight down from the shoulders
+•Slowly return the arms and lats back to the original position, keeping shoulder blades depressed</string>
+		<string></string>
+		<string>•Hold barbell with a pronated grip, hands wider than shoulder width
+•Lean forward about 45 degrees, keeping the back and neck in a neutral position at all times
+•Knees should be slightly bent and feet shoulder-width apart
+•Pull the bar into lower sternum until elbows make a 90 degree angle
+•Shoulder blades should be depressed
+•Lower the weight back to the starting position</string>
+		<string>•Hold T-bar with a neutral grip
+•Lean forward about 45 degrees, keeping the back and neck in a neutral position at all times
+•Knees should be slightly bent and feet shoulder-width apart
+•Pull the bar into lower sternum until elbows make a 90 degree angle
+•Shoulder blades should be depressed
+•Lower the weight back to the starting position</string>
+		<string></string>
+		<string>•Sit with feet firmly on floor
+•Shoulder blades should be actively depressed
+•Dumbells will be at sides with palms facing inward
+•Elbows should be extended but not locked
+•Pull the arms up by contracting the upper trapezius
+•Lower weight to starting position</string>
+		<string></string>
+		<string></string>
+		<string>•Sit with feet firmly on the ground and knees at 90 degrees with a natural arch in the back
+•Bring the arms up and out to the side with upper arm parallel to the floor and elbows at about 90 degrees
+•Press the arms up and over the head until they are directly over the shoulders
+•Attempt to elevate the shoulder blades as they rotate upward while maintaining proper posture
+•Lower the weight back to the starting position</string>
+		<string>•Bring the arms up and out to the side with upper arm parallel to the floor and elbows at about 90 degrees
+•Press the arms up and over the head until they are directly over the shoulders
+•Attempt to elevate the shoulder blades as they rotate upward while maintaining proper posture
+•Lower the weight back to the starting position</string>
+		<string></string>
+		<string>•Sit with feet firmly on the ground
+•Dumbells should be toward outer part of the upper leg palms facing inward
+•Elbows at approximately 90 degrees
+•Lift dumbells by abducting the shoulder while keeping 90 degree angle at elbow
+•Lift weight until dumbell and elbow are parallel to the ground and in line with one another
+•Lower weight to starting position </string>
+		<string></string>
+		<string></string>
+		<string>•Grasp barbell with a common supinated grip
+•While standing, maintain neutral spine, knees should be slightly flexed and shoulder blades actively depressed
+•Curl the bar up until elbows are fully flexed and barbell is in front of chest, keeping the elbows fixed against torso
+•Lower the bar to starting position until elbows are slightly bent</string>
+		<string>•Grasp bar with a common supinated grip
+•While standing, maintain neutral spine, knees should be slightly flexed and shoulder blades actively depressed
+•Curl the bar up until elbows are fully flexed and bar is in front of chest, keeping the elbows fixed against torso
+•Lower the bar to starting position until elbows are slightly bent</string>
+		<string></string>
+		<string>•Sit with feet firmly on the ground
+•Grasp dumbells with a pronated grip and hold them at your side wirth palms facing in
+•Sit with an upright posture
+•Raise the dumbells while slowly supinating the wrist
+•Lift the dumbells until elbows are fully flexed and the weight is in front of the anterior deltoid
+•Lower the weight back to the starting position so that the palms are facing inward</string>
+		<string></string>
+		<string></string>
+		<string>•Stand with feet shoulder-width apart and knees slightly flexed
+•Grasp bar with a pronated grip so that elbows are against torso
+•Forearms should be approximately parallel to the ground and elbows should be at 90 degrees
+•Push down, fully extending elbows but not locking them out
+•Return bar back to starting position finishing with approximately a 90 degree angle at the elbows
+•Maintain upright posture throughout movement</string>
+		<string></string>
+		<string>•Lying supine on a bench with both feet firmly on the ground, hold barbell using pronted grip over the front of the face
+•Elbows should be aligned with wrists and shoulders. There may be variations in hand positioning based on preference
+•To start lower barbell to the forehead or behind the head, depending on experience
+•Lift barbell so that elbows are fully extended
+•There should be no other movement at the shoulder or back</string>
+		<string></string>
+		<string>•Place the body so that the hands are on the edge of a bench and the legs are extended out in front with heels on the ground and no bend in the knee
+•Lower the torso so that the upper arms are about parallel to the ground
+•Raise the torso by fully extending the elbows
+•Lower the torso to starting position</string>
+		<string></string>
+		<string>•Place the bar just above the scapulae with the hands placed comfortably on the bar and elbows pointed down
+•Feet should be outside of shoulder width and angled out slightly
+•Knees and hips should be slightly flexed, while the spine and neck are held in a neutral position
+•Push the hips back, allow the knees to bend naturally and let the trunk learn forward slightly
+•Lower the body until the upper legs are parallel to the ground or as far down as your client can comfortably go
+•Maintain proper posture throughout movement
+•Eyes should be forward throughout movement
+•WEight should be on heels of the feet
+•Be careful that the knees do not come too far beyond the front of the toes
+•Return to starting position by maintaining posture and pushing from the balls of the feet, keeping eyes looking forward</string>
+		<string></string>
+		<string></string>
+		<string>•Sit so that the knee joints are aligned with the axis of the machine
+•Lower back should be firm against the seat
+•Pad should be pressing against lower shins
+•Sit upright, with a natural arch in lower back
+•Raise the pad up until the legs are almost fully extended while maintaining good posture throughout the movement •Lower the legs to the starting position</string>
+		<string>•Lie prone on bench so that the knee joints are in line with axis of machine and pad is below the gastrocnemius but above the Achilles tendon
+•Position trunk and neck in proper posture
+•Press the pelvis against the bench and raise the weight until the knees form approximately a 90 degree angle
+•Lower the weight to the starting position</string>
+		<string></string>
+		<string>s</string>
+		<string>s</string>
+		<string>•Stand with toes on theedge of the platform
+•Hold dumbell in one hand with opposite hand holding bar of machine for support
+•Begin with slight knee bend and heels close to floor
+•Raise up by extending the ankles, keeping the weight over the balls of the feet
+•Extend the ankles as far as possible, while maintaining good posture
+•Lower the body down to the starting position</string>
+		<string>s</string>
+		<string>•Prone position on the floor with hands next to ears on the floor, elbows at torso and head slightly off the ground
+•Move up slowly by lifting the upper torso off the ground and retracting the scapulae
+•Extend off the floor, without hyperextending the lower back
+•Maintain head alignment throughout movement
+•Lower body to start position</string>
+		<string>s</string>
+		<string>•In a supine position, with 1 leg flat on the floor and other leg at a 90 degree angle at the knee, place both hands behind the head
+•Bring the opposite elbow to the opposing knee by flexing the toso and pulling the ribs toward the pelvis
+•Keep the neck in a neutral and relaxed position throughout the movement
+•Return to starting position by lowering torso
+•Continue movement by alternating sides</string>
+		<string>s</string>
+		<string>•In a supine position, with arms fully extended along the torso, bend the knees so that the eet are flat on the floor •Curl the torso up by bringing the ribs toward the pelvis and moving the hands along the floor straight down toward the feet
+•Curl the torso until the torso is fully flexed
+•Return to starting position</string>
+		<string>s</string>
+		<string>•In a prone position, with neck and back in proper alignment, place the elbows at a 90 degree angle along the torso
+•Toes should be pointing down
+•Lift the upper and lower body up by pushing up from the elbows and toes
+•Lower body back to starting position</string>
+		<string>s</string>
+	</array>
+	<key>Thumbnail</key>
+	<array>
+		<string>s</string>
+		<string>s</string>
+		<string>s</string>
+		<string>s</string>
+		<string>ss</string>
+		<string>s</string>
+		<string>ss</string>
+		<string>s</string>
+		<string>s</string>
+		<string>s</string>
+		<string>s</string>
+		<string>s</string>
+		<string>ss</string>
+		<string>s</string>
+		<string>s</string>
+		<string>s</string>
+		<string>s</string>
+		<string>s</string>
+		<string>ss</string>
+		<string>s</string>
+		<string>s</string>
+		<string>s</string>
+		<string>ss</string>
+		<string>s</string>
+		<string>s</string>
+		<string>ss</string>
+		<string>s</string>
+		<string>s</string>
+		<string>ss</string>
+		<string>s</string>
+		<string>s</string>
+		<string>ss</string>
+		<string>s</string>
+		<string>s</string>
+		<string>s</string>
+		<string>s</string>
+		<string>s</string>
+		<string>ss</string>
+		<string>s</string>
+		<string>s</string>
+		<string>s</string>
+		<string>ss</string>
+		<string>s</string>
+		<string>s</string>
+		<string>s</string>
+		<string>s</string>
+		<string>s</string>
+		<string>s</string>
+		<string>s</string>
+		<string>s</string>
+		<string>s</string>
+		<string>s</string>
+		<string>s</string>
+		<string>ss</string>
+		<string>s</string>
+		<string>s</string>
+		<string>s</string>
+		<string>s</string>
+		<string>s</string>
+		<string>s</string>
 	</array>
 </dict>
 </plist>

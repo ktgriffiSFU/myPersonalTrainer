@@ -27,6 +27,7 @@
     NSArray *exercisesforWorkout;
     NSMutableArray *targetedMuscleforWorkout;
     NSMutableArray *thumbnailforWorkout;
+    NSMutableArray *exerciseforWorkoutNew;
     int rowNumber;
     int rowNumberOld;
 }
@@ -55,15 +56,18 @@
     exercisesforWorkout =[workoutArray objectForKey:workoutNameP[rowNumber]];
     targetedMuscleforWorkout = [[NSMutableArray alloc] init];
     thumbnailforWorkout = [[NSMutableArray alloc] init];
+    exerciseforWorkoutNew =[[NSMutableArray alloc] init];
     //Need to do thumbnail, targeted muscle.
     for (int j=0;j<exerciseName.count ; j++) {
         for (int i=0; i <exercisesforWorkout.count; i++) {
             if ([exercisesforWorkout[i] isEqualToString:exerciseName[j]]) {
                 NSLog(@"Exercise: %@",exercisesforWorkout[i]);
+                NSString *tempExercise = [exercisesforWorkout objectAtIndex:i];
                 NSString *tempMuscle = [targetedMuscle objectAtIndex:j];
                 NSString *tempThumb = [thumbnails objectAtIndex:j];
                 [targetedMuscleforWorkout addObject:tempMuscle];
                 [thumbnailforWorkout addObject:tempThumb];
+                [exerciseforWorkoutNew addObject:tempExercise];
                 NSLog(@"target: %@",targetedMuscleforWorkout);
 
             }
@@ -88,7 +92,7 @@
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 78;
+    return 100;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -102,7 +106,7 @@
         cell = [nib objectAtIndex:0];
     }
     cell.accessoryType  = UITableViewCellAccessoryDisclosureIndicator;
-    cell.nameLabel.text = [exercisesforWorkout objectAtIndex:indexPath.row];
+    cell.nameLabel.text = [exerciseforWorkoutNew objectAtIndex:indexPath.row];
     cell.thumbnailImageView.image = [UIImage imageNamed:[thumbnailforWorkout objectAtIndex:indexPath.row]];
     cell.muscleLabel.text = [targetedMuscleforWorkout objectAtIndex:indexPath.row];
     return cell;

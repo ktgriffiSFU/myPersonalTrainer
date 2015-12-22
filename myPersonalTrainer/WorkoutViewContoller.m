@@ -24,26 +24,11 @@
     NSArray *difficultyLevel;
     NSArray *equipmentRequired;
     NSArray *thumbnail;
-    NSArray *searchResults;
     int rowNumber;
 }
 @synthesize tableView; // Add this line of code
 
-- (void)filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope
-{
-    NSPredicate *resultPredicate = [NSPredicate predicateWithFormat:@"self contains[c] %@", searchText];
-    searchResults = [workoutName filteredArrayUsingPredicate:resultPredicate];
-}
--(BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString
-{
 
-    [self filterContentForSearchText:searchString
-                               scope:[[self.searchDisplayController.searchBar scopeButtonTitles]
-                                      objectAtIndex:[self.searchDisplayController.searchBar
-                                                     selectedScopeButtonIndex]]];
-    
-    return YES;
-}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -74,12 +59,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    if (self.searchDisplayController.active) {
-        return [searchResults count];
-    } else {
-    
-        return [workoutName count];
-    }
+    return [workoutName count];
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -97,12 +77,6 @@
         cell = [nib objectAtIndex:0];
        // cell = [[WorkoutTableCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
     }
-    Workout *workout = nil;
-    if (self.searchDisplayController.active) {
-        workout= [searchResults objectAtIndex:indexPath.row];
-    } else {
-        workout = [workoutName objectAtIndex:indexPath.row];
-    }
     cell.accessoryType  = UITableViewCellAccessoryDisclosureIndicator;
 
     cell.workoutName.text = [workoutName objectAtIndex:indexPath.row];
@@ -117,17 +91,6 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSLog(@"didSelectRowAtIndexPath");
-    /*UIAlertView *messageAlert = [[UIAlertView alloc]
-     initWithTitle:@"Row Selected" message:@"You've selected a row" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];*/
-    //    UIAlertView *messageAlert = [[UIAlertView alloc]
-    //                                 initWithTitle:@"Row Selected" message:[tableData objectAtIndex:indexPath.row] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-    //
-    // Display the Hello World Message
-    // [messageAlert show];
-    
-    // Checked the selected row
-    UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
-    //cell.accessoryType = UITableViewCellAccessoryCheckmark;
     rowNumber = indexPath.row;
     NSLog(@"rownumber is %d", rowNumber);
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
@@ -137,35 +100,9 @@
 - (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSLog(@"willSelectRowAtIndexPath");
-    
-    
-    //    if (indexPath.row == 0) {
-    //        return nil;
-    //    }
-    //
     return indexPath;
 }
-//
-//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-//    
-//    if ([segue.identifier isEqualToString:@"showExercisePhoto"]) {
-//        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-//        ExerciseViewController *destViewController = segue.destinationViewController;
-//
-//if (self.searchDisplayController.active) {
-//    indexPath = [self.searchDisplayController.searchResultsTableView indexPathForSelectedRow];
-//    recipe = [searchResults objectAtIndex:indexPath.row];
-//} else {
-//    indexPath = [self.tableView indexPathForSelectedRow];
-//    recipe = [recipes objectAtIndex:indexPath.row];
-//}
 
-     //   destViewController.exerciseImageName = [tableData objectAtIndex:indexPath.row];
-//        destViewController.exerciseImageView = [thumbnails objectAtIndex:indexPath.row];
-//        destViewController.rowNumber = rowNumber;
-//        NSLog(@"Row is: %d",indexPath.row);
-//    }
-//}
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
     if ([segue.identifier isEqualToString:@"showWorkout"]) {

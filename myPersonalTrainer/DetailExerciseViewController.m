@@ -29,6 +29,8 @@
     NSMutableArray *targetedMuscleforWorkout;
     NSMutableArray *thumbnailforWorkout;
     NSMutableArray *detailsforWorkout;
+    NSMutableArray *exerciseforWorkoutNew;
+
     int rowNumberNew;
 }
 
@@ -69,6 +71,8 @@
     targetedMuscleforWorkout = [[NSMutableArray alloc] init];
     thumbnailforWorkout = [[NSMutableArray alloc] init];
     detailsforWorkout = [[NSMutableArray alloc] init];
+    exerciseforWorkoutNew =[[NSMutableArray alloc] init];
+
     //Need to do thumbnail, targeted muscle.
     for (int j=0;j<exerciseName.count ; j++) {
         for (int i=0; i <exercisesforWorkout.count; i++) {
@@ -77,8 +81,10 @@
                 NSString *tempMuscle = [targetedMuscle objectAtIndex:j];
                 NSString *tempThumb = [thumbnails objectAtIndex:j];
                 NSString *tempDetail= [details objectAtIndex:j];
+                NSString *tempExercise = [exercisesforWorkout objectAtIndex:i];
                 [targetedMuscleforWorkout addObject:tempMuscle];
                 [thumbnailforWorkout addObject:tempThumb];
+                [exerciseforWorkoutNew addObject:tempExercise];
                 [detailsforWorkout addObject:tempDetail];
                // NSLog(@"target: %@",targetedMuscleforWorkout);
                 
@@ -90,7 +96,7 @@
     printf("Row is:%s", [rowstring UTF8String]);
 
     self.exerciseImageView.image = [UIImage imageNamed:[thumbnailforWorkout objectAtIndex:rowNumberNew]];
-    self.exerciseImageName.text =[exercisesforWorkout objectAtIndex:rowNumberNew];
+    self.exerciseImageName.text =[exerciseforWorkoutNew objectAtIndex:rowNumberNew];
     self.exerciseDetails.text =[detailsforWorkout objectAtIndex:rowNumberNew];
    // NSLog(@"Exercise is: %@",exerciseImageName);
 }
