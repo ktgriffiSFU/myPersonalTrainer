@@ -8,8 +8,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <iAd/iAd.h>
 
-@interface ExerciseViewController : UIViewController
+@interface ExerciseViewController : UIViewController <ADBannerViewDelegate>
+
+@property (weak, nonatomic) IBOutlet ADBannerView *adBanner;
 
 @property (weak, nonatomic) IBOutlet UIImageView *exerciseImageView;
 @property (weak, nonatomic) IBOutlet UILabel *exerciseImageName;

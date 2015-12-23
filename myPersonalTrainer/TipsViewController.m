@@ -1,47 +1,28 @@
 //
-//  MainViewController.m
+//  TipsViewController.m
 //  myPersonalTrainer
 //
-//  Created by Kyle Griffith on 2015-11-23.
+//  Created by Kyle Griffith on 2015-12-24.
 //  Copyright © 2015 Kyle Griffith. All rights reserved.
 //
 
-#import "MainViewController.h"
-#import <FBSDKCoreKit/FBSDKCoreKit.h>
-#import <FBSDKLoginKit/FBSDKLoginKit.h>
-@interface MainViewController ()
-@property (nonatomic) int secondsElapsed;
+#import <Foundation/Foundation.h>
+#import "TipsViewController.h"
+@interface TipsViewController ()
+
 @end
 
-@implementation MainViewController
+@implementation TipsViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-
     // Do any additional setup after loading the view, typically from a nib.
-    // Set the initial value for the elapsed seconds.
-    self.secondsElapsed = 0;
     // Make self the delegate of the ad banner.
     self.adBanner.delegate = self;
     
     // Initially hide the ad banner.
     self.adBanner.alpha = 0.0;
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-    
-}
-
-- (IBAction)workoutButton:(UIButton *)sender {
-}
-- (IBAction)exerciseButton:(UIButton *)sender {
-   
-}
-- (IBAction)friendsButton:(UIButton *)sender {
-}
-- (IBAction)statisticsButton:(UIButton *)sender {
 }
 -(void)bannerViewWillLoadAd:(ADBannerView *)banner{
     NSLog(@"Ad Banner will load ad.");

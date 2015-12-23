@@ -19,6 +19,8 @@
 		272A3F011C217C6C00AAF185 /* Workouts.plist in Resources */ = {isa = PBXBuildFile; fileRef = 272A3F001C217C6C00AAF185 /* Workouts.plist */; };
 		272A3F031C217F7700AAF185 /* WorkoutTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 272A3F021C217F7700AAF185 /* WorkoutTableCell.m */; };
 		272A3F061C217FCA00AAF185 /* WorkoutTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 272A3F051C217FCA00AAF185 /* WorkoutTableCell.xib */; };
+		2741FD5E1C2B0FF100D15A94 /* TipsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2741FD5D1C2B0FF100D15A94 /* TipsViewController.m */; };
+		2741FD611C2B105E00D15A94 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2741FD601C2B105E00D15A94 /* iAd.framework */; };
 		27764C981C055F8D002F9122 /* ExerciseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 27764C971C055F8D002F9122 /* ExerciseTableViewCell.m */; };
 		27B0B52A1C1CA4040086D9CF /* LatPulldown.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 27B0B5291C1CA4040086D9CF /* LatPulldown.jpg */; };
 		27C6CB421C21D383009E5341 /* Workout.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C6CB411C21D383009E5341 /* Workout.m */; };
@@ -75,6 +77,9 @@
 		272A3F021C217F7700AAF185 /* WorkoutTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkoutTableCell.m; sourceTree = "<group>"; };
 		272A3F041C217F8600AAF185 /* WorkoutTableCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WorkoutTableCell.h; sourceTree = "<group>"; };
 		272A3F051C217FCA00AAF185 /* WorkoutTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WorkoutTableCell.xib; sourceTree = "<group>"; };
+		2741FD5D1C2B0FF100D15A94 /* TipsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TipsViewController.m; sourceTree = "<group>"; };
+		2741FD5F1C2B100100D15A94 /* TipsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TipsViewController.h; sourceTree = "<group>"; };
+		2741FD601C2B105E00D15A94 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		27764C961C055F8D002F9122 /* ExerciseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExerciseTableViewCell.h; sourceTree = "<group>"; };
 		27764C971C055F8D002F9122 /* ExerciseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExerciseTableViewCell.m; sourceTree = "<group>"; };
 		27B0B5291C1CA4040086D9CF /* LatPulldown.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = LatPulldown.jpg; sourceTree = SOURCE_ROOT; };
@@ -115,6 +120,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2741FD611C2B105E00D15A94 /* iAd.framework in Frameworks */,
 				27E116CD1C03B5D100E8E2AF /* FBSDKLoginKit.framework in Frameworks */,
 				27E116CB1C03AE4000E8E2AF /* FBSDKCoreKit.framework in Frameworks */,
 			);
@@ -177,9 +183,9 @@
 				27E116991C03ABB800E8E2AF /* AppDelegate.h */,
 				27E1169A1C03ABB800E8E2AF /* AppDelegate.m */,
 				2798C0931C0D75EF0007D3BF /* Images */,
-				27E1169C1C03ABB800E8E2AF /* MainViewController.h */,
 				27158D921C0A9A1A0002272B /* Exercises.plist */,
 				272A3F001C217C6C00AAF185 /* Workouts.plist */,
+				27E1169C1C03ABB800E8E2AF /* MainViewController.h */,
 				27E1169D1C03ABB800E8E2AF /* MainViewController.m */,
 				27E116A21C03ABB800E8E2AF /* Assets.xcassets */,
 				27E116D11C03D29700E8E2AF /* Settings.h */,
@@ -188,6 +194,8 @@
 				27E116CE1C03D19300E8E2AF /* LoginViewController.m */,
 				27158DA01C0AC1D40002272B /* ExerciseViewController.h */,
 				27158D9E1C0AC1C00002272B /* ExerciseViewController.m */,
+				2741FD5F1C2B100100D15A94 /* TipsViewController.h */,
+				2741FD5D1C2B0FF100D15A94 /* TipsViewController.m */,
 				2720DB7B1C05341300B7F7CD /* TableViewController.h */,
 				2720DB7C1C05346E00B7F7CD /* TableViewController.m */,
 				272A3EFF1C2178DD00AAF185 /* WorkoutViewContoller.h */,
@@ -243,6 +251,7 @@
 		27E116C91C03AD0700E8E2AF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2741FD601C2B105E00D15A94 /* iAd.framework */,
 				27E116CC1C03B5D100E8E2AF /* FBSDKLoginKit.framework */,
 				27E116CA1C03AE4000E8E2AF /* FBSDKCoreKit.framework */,
 			);
@@ -396,6 +405,7 @@
 				27764C981C055F8D002F9122 /* ExerciseTableViewCell.m in Sources */,
 				2720DB7D1C05346E00B7F7CD /* TableViewController.m in Sources */,
 				27E1169E1C03ABB800E8E2AF /* MainViewController.m in Sources */,
+				2741FD5E1C2B0FF100D15A94 /* TipsViewController.m in Sources */,
 				27E116D31C03D2C000E8E2AF /* Settings.m in Sources */,
 				27E1169B1C03ABB800E8E2AF /* AppDelegate.m in Sources */,
 				272A3F031C217F7700AAF185 /* WorkoutTableCell.m in Sources */,

@@ -4,58 +4,37 @@
 <dict>
 	<key>WorkoutName</key>
 	<array>
-		<string>Freeweight Arms</string>
-		<string>Classic Lower Body</string>
-		<string>Freeweight Chest and Triceps</string>
+		<string>Barbell Arms</string>
 	</array>
 	<key>Time</key>
 	<array>
 		<string>20 minutes</string>
-		<string>20 minutes</string>
-		<string>20 minutes</string>
 	</array>
 	<key>DifficultyLevel</key>
 	<array>
-		<string>Moderate</string>
-		<string>Moderate</string>
-		<string>Hard</string>
+		<string>Novice</string>
 	</array>
 	<key>MusclesTargeted</key>
 	<array>
 		<string>Biceps, Triceps</string>
-		<string>Legs</string>
-		<string>Pectoralis, Triceps</string>
 	</array>
 	<key>EquipmentRequired</key>
 	<array>
-		<string>Dumbells</string>
-		<string>Barbell, dumbells, squat rack</string>
-		<string>Barbell, dumbells</string>
+		<string>Barbells</string>
 	</array>
 	<key>ThumbnailWorkout</key>
 	<array>
 		<string>arms.jpg</string>
-		<string>legs.png</string>
-		<string>chest.png</string>
 	</array>
 	<key>WorkoutArray</key>
 	<dict>
-		<key>Freeweight Arms</key>
+		<key>Barbell Arms</key>
 		<array>
-			<string>Bicep Curls</string>
-			<string>Concentrated Curls</string>
-			<string>Skullcrushers</string>
-			<string>Tricep Extensions</string>
+			<string>Barbell Biceps Curl</string>
+			<string>Barbell Triceps Extension (Supine)</string>
+			<string>Preacher Biceps Curl</string>
+			<string>Barbell Triceps Press</string>
 		</array>
-		<key>Classic Lower Body</key>
-		<array>
-			<string>Squats</string>
-			<string>Deadlifts</string>
-			<string>Calf Raises</string>
-			<string>Lunges</string>
-		</array>
-		<key>Freeweight Chest and Triceps</key>
-		<array/>
 	</dict>
 </dict>
 </plist>

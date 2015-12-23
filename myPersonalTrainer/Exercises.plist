@@ -160,22 +160,28 @@
 •Bend elbows and lower bar so that upper arm is approximately parallel to the ground
 •Push the arms back to start position, straightening arms but not locking them out and without rotating the shoulders</string>
 		<string>•Actively depress the shoulder blades
-•Hold dumbells with a pronated grip
+•Hold dumbbells with a pronated grip
 •Align the arms straight up from the shoulders
 •Arms should be slightly bent at the elbows with wrists in a stable position
 •Lower the arms down to about parallel to the floor, keeping them slightly bent throughout the entire movement
 •Pull the arms up and together while contracting the chest
 •Bring the arms back to the original starting position without extending the arms or rotating the shoulders</string>
-		<string></string>
+		<string>•Actively depress shoulder blades
+•Hold bars with a pronated grip
+•Align the arms straight up from the shoulders
+•Arms should be slightly bent at the elbows with wrists in a stable position
+•Bring arms until they are about parallel to the back pad, keeping them slightly bent throughout the entire movement
+•Pull the arms up and together while contracting the chest
+•Bring the arms back to the original starting position without extending the arms or rotating the shoulders</string>
 		<string>•Actively depress the shoulder blades
-•Hold dumbells with a pronated grip
+•Hold dumbbells with a pronated grip
 •Align the arms straight up from the shoulders
 •Arms should be slightly bent at the elbows with wrists in a stable position
 •Lower the arms down to about parallel to the floor, keeping them slightly bent throughout the entire movement
 •Pull the arms up and together while contracting the chest
 •Bring the arms back to the original starting position without extending the arms or rotating the shoulders</string>
 		<string>•Actively depress the shoulder blades
-•Hold dumbells with a pronated grip
+•Hold dumbbells with a pronated grip
 •Align the arms straight up from the shoulders
 •Arms should be slightly bent at the elbows with wrists in a stable position
 •Lower the arms down to about parallel to the floor, keeping them slightly bent throughout the entire movement
@@ -189,23 +195,30 @@
 •Push up with your hands while maintaining good posture throughout
 •Push up until elbows are fully extended
 •Lower back to original position, nose should be slightly above the floor while maintaining proper alignment</string>
-		<string></string>
-		<string>•Wide, pronated grip, so that when the upper arms are prallel to the ground they form an approximately 90 degree angle
+		<string>•In a prone position, body bending at feet, with hands on wall and feet firmly on ground, hands should be wider than shoulder width and feet should be about hip width
+•Push up with your hands while maintaining good posture throughout
+•Push up until elbows are fully extended
+•Lower back to original position, nose should be slightly above the floor while maintaining proper alignment</string>
+		<string>•Wide, pronated grip, so that when the upper arms are parallel to the ground they form an approximately 90 degree angle
 •Knees should be secure under pad
 •Pull the bar toward chest until arms are about parallel to the ground
-•Depress shoulder blades, creating a natural arch in the lower bck
+•Depress shoulder blades, creating a natural arch in the lower back
 •Let the arms back up slowly to original starting position while keeping tension on the lats</string>
-		<string>•Narrow, supinated grip, so that when the upper arms are prallel to the ground they form an approximately 90 degree angle
+		<string>•Narrow, supinated grip, so that when the upper arms are parallel to the ground they form an approximately 90 degree angle
 •Knees should be secure under pad
 •Pull the bar toward chest until arms are about parallel to the ground
-•Depress shoulder blades, creating a natural arch in the lower bck
+•Depress shoulder blades, creating a natural arch in the lower back
 •Let the arms back up slowly to original starting position while keeping tension on the lats</string>
-		<string>•Pronated grip, so that when the upper arms are prallel to the ground they form an approximately 90 degree angle
+		<string>•Pronated grip, so that when the upper arms are parallel to the ground they form an approximately 90 degree angle
 •Knees should be secure under pad
 •Pull the bar toward chest until arms are about parallel to the ground
-•Depress shoulder blades, creating a natural arch in the lower bck
+•Depress shoulder blades, creating a natural arch in the lower back
 •Let the arms back up slowly to original starting position while keeping tension on the lats</string>
-		<string></string>
+		<string>•Pronated grip, so that when the upper arms are parallel to the ground they form an approximately 90 degree angle
+•Stand in kneeling lunge position
+•Pull cables down towards chest until arms make 90 degree angle
+•Depress shoulder blades, creating a natural arch in the lower back
+•Let the arms back up slowly to original starting position while keeping tension on the lats</string>
 		<string>•Plant feet firmly against machine with knees slightly bent
 •Lean back slightly and keep natural arch in lower back
 •While holding handles, keep wrists in a neutral position and elbows slightly bent
@@ -218,7 +231,13 @@
 •Keeping the arms slightly bent, contract the rhomboids and pull the shoulder blades together and down
 •Pull the arms back, keeping them close to the side of the body until the elbows are about straight down from the shoulders
 •Slowly return the arms and lats back to the original position, keeping shoulder blades depressed</string>
-		<string></string>
+		<string>•Plant feet firmly against machine with knees slightly bent
+•Lean back slightly and keep natural arch in lower back
+•While holding handle, keep wrist in a neutral position and elbow slightly bent
+•Keeping the arm slightly bent, contract the rhomboids and pull the shoulder blades together and down
+•Pull the arm back, keeping it close to the side of the body until the elbow is about straight down from the shoulder
+•Slowly return the arm and lats back to the original position, keeping shoulder blades depressed
+</string>
 		<string>•Hold barbell with a pronated grip, hands wider than shoulder width
 •Lean forward about 45 degrees, keeping the back and neck in a neutral position at all times
 •Knees should be slightly bent and feet shoulder-width apart
@@ -231,15 +250,30 @@
 •Pull the bar into lower sternum until elbows make a 90 degree angle
 •Shoulder blades should be depressed
 •Lower the weight back to the starting position</string>
-		<string></string>
+		<string>•Hold dumbbell with a neutral grip
+•Lean forward about 90 degrees, keeping the back and neck in a neutral position at all times
+•One knee should be on bench while other foot is firmly on the ground
+•Pull the weight into side until elbow make a 90 degree angle
+•Shoulder blades should be depressed
+•Lower the weight back to the starting position</string>
 		<string>•Sit with feet firmly on floor
 •Shoulder blades should be actively depressed
-•Dumbells will be at sides with palms facing inward
+•Dumbbells will be at sides with palms facing inward
 •Elbows should be extended but not locked
 •Pull the arms up by contracting the upper trapezius
 •Lower weight to starting position</string>
-		<string></string>
-		<string></string>
+		<string>•Stand with feet shoulder width apart
+•Shoulder blades should be actively depressed
+•Hold bar with supinated grip at shoulder width apart
+•Elbows should be extended but not locked
+•Pull the arms up by contracting the upper trapezius
+•Lower weight to starting position</string>
+		<string>•Sit with feet firmly on the ground or machine
+•Shoulder blades should be actively depressed
+•Hold bar with supinated grip at shoulder width apart
+•Elbows should be extended but not locked
+•Pull the arms up by contracting the upper trapezius
+•Lower weight to starting position</string>
 		<string>•Sit with feet firmly on the ground and knees at 90 degrees with a natural arch in the back
 •Bring the arms up and out to the side with upper arm parallel to the floor and elbows at about 90 degrees
 •Press the arms up and over the head until they are directly over the shoulders
@@ -249,15 +283,30 @@
 •Press the arms up and over the head until they are directly over the shoulders
 •Attempt to elevate the shoulder blades as they rotate upward while maintaining proper posture
 •Lower the weight back to the starting position</string>
-		<string></string>
+		<string>•Sit with feet firmly on the ground and knees at 90 degrees with a natural arch in the back
+•Bring the arms up and grab bars so that arms are comfortable
+•Press the arms up and over the head until they are directly over the shoulders
+•Attempt to elevate the shoulder blades as they rotate upward while maintaining proper posture
+•Lower the weight back to the starting position</string>
 		<string>•Sit with feet firmly on the ground
-•Dumbells should be toward outer part of the upper leg palms facing inward
+•Dumbbells should be toward outer part of the upper leg palms facing inward
 •Elbows at approximately 90 degrees
-•Lift dumbells by abducting the shoulder while keeping 90 degree angle at elbow
-•Lift weight until dumbell and elbow are parallel to the ground and in line with one another
+•Lift dumbbells by abducting the shoulder while keeping 90 degree angle at elbow
+•Lift weight until dumbbell and elbow are parallel to the ground and in line with one another
 •Lower weight to starting position </string>
-		<string></string>
-		<string></string>
+		<string>•Sit with feet firmly on the ground
+•Bend over so that back makes 45 degree angle with legs
+•Dumbbells should be toward outer part of the upper leg palms facing inward
+•Elbows at approximately 90 degrees
+•Lift dumbbells by abducting the shoulder keeping slight bend in elbow
+•Lift weight until dumbbell and elbow are parallel to the ground and in line with one another
+•Lower weight to starting position </string>
+		<string>•Stand with feet wider than shoulder width apart
+•With one arm grasp cable, the other hold onto machine
+•Stand so that cables path can go across the body
+•Lift cable by abducting the shoulder keeping slight bend in elbow
+•Lift weight until elbow is parallel to the ground and in line with shoulder
+•Lower weight to starting position </string>
 		<string>•Grasp barbell with a common supinated grip
 •While standing, maintain neutral spine, knees should be slightly flexed and shoulder blades actively depressed
 •Curl the bar up until elbows are fully flexed and barbell is in front of chest, keeping the elbows fixed against torso
@@ -266,33 +315,60 @@
 •While standing, maintain neutral spine, knees should be slightly flexed and shoulder blades actively depressed
 •Curl the bar up until elbows are fully flexed and bar is in front of chest, keeping the elbows fixed against torso
 •Lower the bar to starting position until elbows are slightly bent</string>
-		<string></string>
+		<string>•Grasp bar with a common supinated grip
+•While sitting, maintain neutral spine, shoulder blades actively depressed and feet firmly on ground
+•Curl the bar up until elbows are fully flexed and bar is in front of chest, keeping the elbows fixed against torso
+•Lower the bar to starting position until elbows are slightly bent</string>
 		<string>•Sit with feet firmly on the ground
-•Grasp dumbells with a pronated grip and hold them at your side wirth palms facing in
+•Grasp dumbbells with a pronated grip and hold them at your side with palms facing in
 •Sit with an upright posture
-•Raise the dumbells while slowly supinating the wrist
-•Lift the dumbells until elbows are fully flexed and the weight is in front of the anterior deltoid
+•Raise the dumbbells while slowly supinating the wrist
+•Lift the dumbbells until elbows are fully flexed and the weight is in front of the shoulder
 •Lower the weight back to the starting position so that the palms are facing inward</string>
-		<string></string>
-		<string></string>
+		<string>•Sit with feet firmly on the ground
+•Grasp dumbbell with a supinated grip and hold weight inside leg so that arm just above elbow rests
+•Place other hand on other leg
+•Raise the dumbbell while maintaining supinated grip
+•Lift the dumbbell until elbow is fully flexed and the weight is in front of the shoulder
+•Lower the weight back to the starting position </string>
+		<string>•Stand with feet shoulder width apart
+•Grasp cable with a supinated grip and maintain neutral posture
+•Place other hand on other leg
+•Raise the cable while maintaining supinated grip
+•Lift the cable until elbow is fully flexed and the weight is in front of the shoulder
+•Lower the weight back to the starting position</string>
 		<string>•Stand with feet shoulder-width apart and knees slightly flexed
 •Grasp bar with a pronated grip so that elbows are against torso
 •Forearms should be approximately parallel to the ground and elbows should be at 90 degrees
 •Push down, fully extending elbows but not locking them out
 •Return bar back to starting position finishing with approximately a 90 degree angle at the elbows
 •Maintain upright posture throughout movement</string>
-		<string></string>
-		<string>•Lying supine on a bench with both feet firmly on the ground, hold barbell using pronted grip over the front of the face
+		<string>•Stand with one foot ahead and slight bend in the knees
+•Grasp dumbbell with palm facing towards body and bend down to just above 90 degrees with the floor
+•Forearms should be approximately perpendicular to the ground and elbows should be at 90 degrees
+•Push down, fully extending elbows but not locking out
+•Return dumbbell back to starting position finishing with approximately a 90 degree angle at the elbow</string>
+		<string>•Lying supine on a bench with both feet firmly on the ground, hold barbell using pronated grip over the front of the face
 •Elbows should be aligned with wrists and shoulders. There may be variations in hand positioning based on preference
 •To start lower barbell to the forehead or behind the head, depending on experience
 •Lift barbell so that elbows are fully extended
 •There should be no other movement at the shoulder or back</string>
-		<string></string>
+		<string>•Lying supine on a bench with both feet firmly on the ground, hold dumbbells using neutral grip to the side of the face
+•Elbows should be aligned with wrists and shoulders. There may be variations in hand positioning based on preference
+•To start lower barbell to the forehead or behind the head, depending on experience
+•Lift barbell so that elbows are fully extended
+•There should be no other movement at the shoulder or back</string>
 		<string>•Place the body so that the hands are on the edge of a bench and the legs are extended out in front with heels on the ground and no bend in the knee
 •Lower the torso so that the upper arms are about parallel to the ground
 •Raise the torso by fully extending the elbows
 •Lower the torso to starting position</string>
-		<string></string>
+		<string>•Hold the bar with a narrow grip so that hands are shoulder width apart
+•While lying supine eyes should be roughly in line with barbell
+•Ensure 5 points of contact (left and right foot, lower back, upper back and back of head) while keeping natural arc in back
+•Actively depress the shoulder blades and hold throughout movement
+•Lift bar straight up
+•Bend elbows and lower bar so that upper arm is approximately parallel to the ground
+•Push the arms back to start position, straightening arms but not locking them out and without rotating the shoulders</string>
 		<string>•Place the bar just above the scapulae with the hands placed comfortably on the bar and elbows pointed down
 •Feet should be outside of shoulder width and angled out slightly
 •Knees and hips should be slightly flexed, while the spine and neck are held in a neutral position
@@ -300,11 +376,26 @@
 •Lower the body until the upper legs are parallel to the ground or as far down as your client can comfortably go
 •Maintain proper posture throughout movement
 •Eyes should be forward throughout movement
-•WEight should be on heels of the feet
+•Weight should be on heels of the feet
+•Be careful that the knees do not come too far beyond the front of the toes
+•Return to starting position by maintaining posture and pushing from the balls of the feet</string>
+		<string>•Hold the bar so that hands are outside of knees and arm makes straight line from shoulder
+•Feet should be shoulder width apart
+•Knees and hips should be slightly flexed, while the spine and neck are held in a neutral position
+•Push the hips back, allow the knees to bend naturally and let the trunk learn forward slightly
+•Lower the body until the bar is just beneath the knee
+•Maintain proper posture throughout movement
+•Eyes should be forward throughout movement
 •Be careful that the knees do not come too far beyond the front of the toes
 •Return to starting position by maintaining posture and pushing from the balls of the feet, keeping eyes looking forward</string>
-		<string></string>
-		<string></string>
+		<string>•Hold dumbbells at sides with neutral grip
+•Start with feet should be shoulder width apart
+•Extend foot forward as if you are taking a large step
+•Bend knees downwards until lower knee is just above ground and both legs make 90 degree angles
+•Maintain proper posture throughout movement
+•Eyes should be forward throughout movement
+•Be careful that the knee does not come too far beyond the front of the toe
+•Return to starting position by maintaining posture and pushing from the ball of the foot, keeping eyes looking forward</string>
 		<string>•Sit so that the knee joints are aligned with the axis of the machine
 •Lower back should be firm against the seat
 •Pad should be pressing against lower shins
@@ -314,37 +405,65 @@
 •Position trunk and neck in proper posture
 •Press the pelvis against the bench and raise the weight until the knees form approximately a 90 degree angle
 •Lower the weight to the starting position</string>
-		<string></string>
-		<string>s</string>
-		<string>s</string>
-		<string>•Stand with toes on theedge of the platform
-•Hold dumbell in one hand with opposite hand holding bar of machine for support
+		<string>•Hold the dumbbells so that hands are in front of knees and arm makes straight line from shoulder
+•Feet should be shoulder width apart
+•Knees and hips should be slightly flexed, while the spine and neck are held in a neutral position
+•Push the hips back, allow the knees to bend naturally and let the trunk learn forward slightly
+•Lower the body until the dumbbells are just beneath the knee
+•Maintain proper posture throughout movement
+•Eyes should be forward throughout movement
+•Be careful that the knees do not come too far beyond the front of the toes
+•Return to starting position by maintaining posture and pushing from the balls of the feet, keeping eyes looking forward</string>
+		<string>•Sit in the machine with legs spread apart, hands holding onto handles
+•Close legs while in machine as far as machine will go
+•Return to starting position</string>
+		<string>•Sit in the machine with legs closed, hands holding onto handles
+•Open legs while in machine as far as you are comfortable
+•Return to starting position</string>
+		<string>•Stand with toes on the edge of the platform
+•Hold dumbbell in one hand with opposite hand holding bar of machine for support
 •Begin with slight knee bend and heels close to floor
 •Raise up by extending the ankles, keeping the weight over the balls of the feet
 •Extend the ankles as far as possible, while maintaining good posture
 •Lower the body down to the starting position</string>
-		<string>s</string>
+		<string>•Sit down in machine with knees under pads and hands holding handles
+•Raise up by extending the ankles, keeping the weight over the balls of the feet
+•Extend the ankles as far as possible, while maintaining good posture
+•Lower the body down to the starting position</string>
 		<string>•Prone position on the floor with hands next to ears on the floor, elbows at torso and head slightly off the ground
 •Move up slowly by lifting the upper torso off the ground and retracting the scapulae
 •Extend off the floor, without hyperextending the lower back
 •Maintain head alignment throughout movement
 •Lower body to start position</string>
-		<string>s</string>
+		<string>•Position feet beneath rolling pads, rest upper legs on pad and curl torso over machine 
+•Move up slowly by lifting the upper torso off the ground and retracting the scapulae
+•Extend off the floor, without hyperextending the lower back
+•Maintain head alignment throughout movement
+•Lower body to start position</string>
 		<string>•In a supine position, with 1 leg flat on the floor and other leg at a 90 degree angle at the knee, place both hands behind the head
-•Bring the opposite elbow to the opposing knee by flexing the toso and pulling the ribs toward the pelvis
+•Bring the opposite elbow to the opposing knee by flexing the torso and pulling the ribs toward the pelvis
 •Keep the neck in a neutral and relaxed position throughout the movement
 •Return to starting position by lowering torso
 •Continue movement by alternating sides</string>
-		<string>s</string>
+		<string>•Standing with feet slightly apart hold dumbbell on one side with neutral grip
+•While holding weight shift torso to opposite side of dumbbell carrying side effectively moving upper body from the waist to the side
+•Keep the neck in a neutral and relaxed position throughout the movement
+•Return to starting position by lowering torso
+•Switch weight and do on other side</string>
 		<string>•In a supine position, with arms fully extended along the torso, bend the knees so that the eet are flat on the floor •Curl the torso up by bringing the ribs toward the pelvis and moving the hands along the floor straight down toward the feet
 •Curl the torso until the torso is fully flexed
 •Return to starting position</string>
-		<string>s</string>
+		<string>•Lay on back with feet on ground and hands at side
+•Lift legs up with slight bend in the knee until body makes 90 degree angle
+•Return to starting position</string>
 		<string>•In a prone position, with neck and back in proper alignment, place the elbows at a 90 degree angle along the torso
 •Toes should be pointing down
 •Lift the upper and lower body up by pushing up from the elbows and toes
 •Lower body back to starting position</string>
-		<string>s</string>
+		<string>•Lay on side with elbow on ground and lower body resting on floor
+•Toes should be pointing parallel to the floor
+•Lift the upper and lower body up by pushing up from the elbow and sides of feet
+•Lower body back to starting position</string>
 	</array>
 	<key>Thumbnail</key>
 	<array>
