@@ -11,7 +11,6 @@
 #import <UIKit/UIKit.h>
 
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
-
 @interface SCLoginViewController : UIViewController <FBSDKLoginButtonDelegate>
 
 @property (nonatomic, strong) IBOutlet FBSDKLoginButton *loginButton;

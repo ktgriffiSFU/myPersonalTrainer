@@ -8,12 +8,16 @@
 
 #import <Foundation/Foundation.h>
 #import "TipsViewController.h"
+#include <stdlib.h>
 @interface TipsViewController ()
 
 @end
 
 @implementation TipsViewController
-
+{
+    NSArray *tips;
+    int tipIndex;
+}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -23,6 +27,7 @@
     
     // Initially hide the ad banner.
     self.adBanner.alpha = 0.0;
+    [self RandomTipGenerator];
 }
 -(void)bannerViewWillLoadAd:(ADBannerView *)banner{
     NSLog(@"Ad Banner will load ad.");
@@ -48,6 +53,15 @@
     [UIView animateWithDuration:0.5 animations:^{
         self.adBanner.alpha = 0.0;
     }];
+}
+-(void)RandomTipGenerator{
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"Tips" ofType:@"plist"];
+    // Load the file content and read the data into arrays
+    NSDictionary *dict = [[NSDictionary alloc] initWithContentsOfFile:path];
+    tips = [dict objectForKey:@"Tips"];
+    tipIndex = arc4random() %7;
+    self.tipLabel.text = [tips objectAtIndex:tipIndex];
+    
 }
 
 

@@ -11,6 +11,6 @@
 @interface TipsViewController : UIViewController <ADBannerViewDelegate>
 
 @property (weak, nonatomic) IBOutlet ADBannerView *adBanner;
-
+@property (weak, nonatomic) IBOutlet UILabel *tipLabel;
 
 @end

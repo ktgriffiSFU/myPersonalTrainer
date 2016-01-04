@@ -9,7 +9,7 @@
 
 #import <UIKit/UIKit.h>
 #import <iAd/iAd.h>
-
+#import "CorePlot-CocoaTouch.h"
 @interface ExerciseViewController : UIViewController <ADBannerViewDelegate>
 
 @property (weak, nonatomic) IBOutlet ADBannerView *adBanner;

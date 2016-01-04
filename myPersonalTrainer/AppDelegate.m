@@ -72,6 +72,8 @@
             [[UIApplication sharedApplication] openURL:url];
         }
     }];
+    
+
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
