@@ -5,17 +5,13 @@
 //  Created by Kyle Griffith on 2015-12-21.
 //  Copyright © 2015 Kyle Griffith. All rights reserved.
 //
-@class DetailExerciseViewController;
-@protocol DetailExerciseViewControllerDelegate <NSObject>
-- (void)addItemViewController:(DetailExerciseViewController *)controller didFinishEnteringItem:(NSString *)item;
-@end
+
 #import <UIKit/UIKit.h>
 #import <iAd/iAd.h>
 #import "StatisticsViewController.h"
 @interface DetailExerciseViewController : UIViewController <ADBannerViewDelegate>
 
 
-@property (nonatomic, weak) id <DetailExerciseViewControllerDelegate> delegate;
 @property (weak, nonatomic) IBOutlet UIImageView *exerciseImageView;
 @property (weak, nonatomic) IBOutlet UILabel *exerciseImageName;
 @property (weak, nonatomic) IBOutlet UILabel *exerciseDetails;
@@ -28,6 +24,6 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *repsText;
 @property (weak, nonatomic) IBOutlet UITextField *setsText;
-@property (weak, nonatomic) IBOutlet UIButton *submitButton;
+//@property (weak, nonatomic) IBOutlet UIButton *submitButton;
 
 @end

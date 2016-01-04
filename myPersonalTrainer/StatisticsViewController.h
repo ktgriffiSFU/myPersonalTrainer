@@ -9,9 +9,24 @@
 
 
 #import <UIKit/UIKit.h>
-#import "DetailExerciseViewController.h"
+@protocol StatisticsViewControllerDelegate <NSObject>
 
-@interface StatisticsViewController : UIViewController <DetailExerciseViewControllerDelegate>
+@required
+- (void)dataFromController:(NSString *)arms :(bool)newData :(NSString *)shoulders :(NSString *)chest :(NSString *)back :(NSString *)core :(NSString *)legs;
+
+@end
+@interface StatisticsViewController : UIViewController
+
+@property (nonatomic, retain) NSString *arms;
+@property (nonatomic, retain) NSString *shoulders;
+@property (nonatomic, retain) NSString *chest;
+@property (nonatomic, retain) NSString *back;
+@property (nonatomic, retain) NSString *core;
+@property (nonatomic, retain) NSString *legs;
+@property (nonatomic) bool newData;
+@property (nonatomic, weak) id<StatisticsViewControllerDelegate> delegate;
+
+
 @property (nonatomic) NSString* shoulderScore;
 @property (nonatomic) NSString* chestScore;
 @property (nonatomic) NSString* backScore;

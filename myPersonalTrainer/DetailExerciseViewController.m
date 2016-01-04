@@ -10,8 +10,13 @@
 
 #import <Foundation/Foundation.h>
 #import "DetailExerciseViewController.h"
+#import "StatisticsViewController.h"
 #import "ExerciseViewController.h"
-@interface DetailExerciseViewController ()
+@interface DetailExerciseViewController ()<StatisticsViewControllerDelegate>
+{
+    UILabel *_label;
+    UIButton *_button;
+}
 
 @end
 
@@ -41,6 +46,7 @@
     NSInteger rowNumberDetails[8];
     NSDate *methodStart;
     NSDate *methodEnd;
+    bool newScore;
     
 }
 
@@ -60,8 +66,49 @@
         
     }
     return self;
+}- (void)createViews
+{
+    CGRect top, bottom;
+    CGRectDivide(self.view.bounds, &top, &bottom, self.view.bounds.size.height / 2, CGRectMinYEdge);
+
+    _label = [[UILabel alloc] initWithFrame:CGRectInset(top, 5, 5)];
+    _label.autoresizingMask = UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth|
+    UIViewAutoresizingFlexibleBottomMargin;
+    _label.textAlignment = NSTextAlignmentCenter;
+    _label.text = armsString;
+    [self.view addSubview:_label];
+
+    _button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    _button.frame = CGRectMake(0, 0, 300, 100);
+    _button.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight|
+    UIViewAutoresizingFlexibleBottomMargin|UIViewAutoresizingFlexibleLeftMargin|
+    UIViewAutoresizingFlexibleRightMargin|UIViewAutoresizingFlexibleTopMargin;
+    [_button setTitle:@"Send Data Forward" forState:UIControlStateNormal];
+    _button.center = CGPointMake(CGRectGetMidX(bottom), CGRectGetMidY(bottom));
+    [self.view addSubview:_button];
+    
+    [_button addTarget:self action:@selector(passDataForward) forControlEvents:UIControlEventTouchUpInside];
 }
-- (IBAction)submitButton:(id)sender {
+- (void)passDataForward
+{
+    [self submitButton];
+    newScore = YES;
+    StatisticsViewController *secondViewController = [[StatisticsViewController alloc] init];
+    secondViewController.arms = armsString;
+    secondViewController.newData = &(newScore);
+    secondViewController.delegate = self;
+    [self.navigationController pushViewController:secondViewController animated:YES];
+}
+
+- (void)dataFromController:(NSString *)arms :(bool)newData :(NSString *)shoulders :(NSString *)chest :(NSString *)back :(NSString *)core :(NSString *)legs;
+{
+    _label.text = arms;
+    newData= newScore;
+    _button.enabled = NO;
+}
+
+- (void)submitButton {
+    newScore = NO;
     NSInteger repsInt = [repsText.text integerValue];
     NSInteger setsInt = [setsText.text integerValue];
     NSInteger scoreInt = setsInt*repsInt;
@@ -92,7 +139,6 @@
         totalScore +=scoreLegs;
     }
     armsString = [@(scoreArms) stringValue];
-    
     [[NSUserDefaults standardUserDefaults] setObject:armsString forKey:@"arms"];
     shouldersString = [@(scoreShoulders) stringValue];
     [[NSUserDefaults standardUserDefaults] setObject:shouldersString forKey:@"shoulders"];
@@ -106,10 +152,7 @@
     [[NSUserDefaults standardUserDefaults] setObject:backString forKey:@"legs"];
     totalString = [@(totalScore) stringValue];
     [[NSUserDefaults standardUserDefaults] setObject:totalString forKey:@"total"];
-    
-    NSString *itemToPassBack = @"Pass this value back to StatisticsVC";
-    NSLog(@"!!:%@",itemToPassBack);
-    [self.delegate addItemViewController:self didFinishEnteringItem:itemToPassBack];
+
    
 
 }
@@ -147,7 +190,7 @@
     
     NSTimeInterval executionTime = [methodEnd timeIntervalSinceDate:methodStart];
     NSLog(@"executionTime = %f", executionTime);
-    if (executionTime >50) {
+    if (executionTime >199999) {
         reset=0;
         methodStart = [NSDate date];
         armsString = [@(reset) stringValue];
@@ -219,6 +262,8 @@
     self.exerciseImageName.text =[exerciseforWorkoutNew objectAtIndex:rowNumberNew];
     self.exerciseDetails.text =[detailsforWorkout objectAtIndex:rowNumberNew];
    // NSLog(@"Exercise is: %@",exerciseImageName);
+    [self createViews];
+
 }
 
 - (void)didReceiveMemoryWarning {
