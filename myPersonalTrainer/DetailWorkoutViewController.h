@@ -10,6 +10,7 @@
 
 @interface DetailWorkoutViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource>
 @property(nonatomic, strong) IBOutlet UITableView *tableView;
-@property (weak, nonatomic) IBOutlet UILabel *workoutName;
+//@property (weak, nonatomic) IBOutlet UILabel *workoutName;
 @property int rowNumber;
+@property(strong)  NSIndexPath* lastIndexPath;
 @end

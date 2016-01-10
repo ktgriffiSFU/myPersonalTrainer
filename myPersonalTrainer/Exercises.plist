@@ -450,7 +450,7 @@
 •Keep the neck in a neutral and relaxed position throughout the movement
 •Return to starting position by lowering torso
 •Switch weight and do on other side</string>
-		<string>•In a supine position, with arms fully extended along the torso, bend the knees so that the eet are flat on the floor •Curl the torso up by bringing the ribs toward the pelvis and moving the hands along the floor straight down toward the feet
+		<string>•In a supine position, with arms fully extended along the torso, bend the knees so that the feet are flat on the floor •Curl the torso up by bringing the ribs toward the pelvis and moving the hands along the floor straight down toward the feet
 •Curl the torso until the torso is fully flexed
 •Return to starting position</string>
 		<string>•Lay on back with feet on ground and hands at side
@@ -467,56 +467,44 @@
 	</array>
 	<key>Thumbnail</key>
 	<array>
+		<string></string>
+		<string>IMG_1115.png</string>
+		<string>IMG_1121.png</string>
 		<string>s</string>
-		<string>s</string>
-		<string>s</string>
-		<string>s</string>
-		<string>ss</string>
-		<string>s</string>
-		<string>ss</string>
-		<string>s</string>
-		<string>s</string>
-		<string>s</string>
-		<string>s</string>
+		<string>IMG_1127.png</string>
 		<string>s</string>
 		<string>ss</string>
 		<string>s</string>
 		<string>s</string>
 		<string>s</string>
 		<string>s</string>
+		<string>IMG_1139.png</string>
+		<string>IMG_1141.png</string>
+		<string>IMG_1143.png</string>
+		<string>IMG_1132.png</string>
+		<string>IMG_1145.png</string>
+		<string>IMG_1150.png</string>
+		<string>IMG_1154.png</string>
+		<string>IMG_1163.png</string>
+		<string>s</string>
+		<string>s</string>
+		<string>IMG_1165.png</string>
+		<string>IMG_1172.png</string>
+		<string>s</string>
+		<string>IMG_1174.png</string>
+		<string>IMG_1178.png</string>
+		<string>s</string>
+		<string>IMG_1182.png</string>
+		<string>IMG_1189.png</string>
+		<string>IMG_1195.png</string>
 		<string>s</string>
 		<string>ss</string>
 		<string>s</string>
-		<string>s</string>
-		<string>s</string>
-		<string>ss</string>
-		<string>s</string>
-		<string>s</string>
-		<string>ss</string>
-		<string>s</string>
-		<string>s</string>
-		<string>ss</string>
-		<string>s</string>
-		<string>s</string>
-		<string>ss</string>
-		<string>s</string>
-		<string>s</string>
+		<string>IMG_1235.png</string>
 		<string>s</string>
 		<string>s</string>
 		<string>s</string>
 		<string>ss</string>
-		<string>s</string>
-		<string>s</string>
-		<string>s</string>
-		<string>ss</string>
-		<string>s</string>
-		<string>s</string>
-		<string>s</string>
-		<string>s</string>
-		<string>s</string>
-		<string>s</string>
-		<string>s</string>
-		<string>s</string>
 		<string>s</string>
 		<string>s</string>
 		<string>s</string>
@@ -525,8 +513,83 @@
 		<string>s</string>
 		<string>s</string>
 		<string>s</string>
+		<string>IMG_1204.png</string>
+		<string>s</string>
+		<string>IMG_1198.png</string>
+		<string>IMG_1200.png</string>
 		<string>s</string>
 		<string>s</string>
+		<string>s</string>
+		<string>ss</string>
+		<string>s</string>
+		<string>s</string>
+		<string>s</string>
+		<string>IMG_1230.png</string>
+		<string>s</string>
+		<string>sidePlank1.png</string>
+	</array>
+	<key>Thumbnail2</key>
+	<array>
+		<string></string>
+		<string>IMG_1117.png</string>
+		<string>IMG_1125.png</string>
+		<string></string>
+		<string>IMG_1129.png</string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string>IMG_1140.png</string>
+		<string>IMG_1142.png</string>
+		<string>IMG_1144.png</string>
+		<string>IMG_1133.png</string>
+		<string>IMG_1148.png</string>
+		<string>IMG_1152.png</string>
+		<string>IMG_1156.png</string>
+		<string>IMG_1161.png</string>
+		<string></string>
+		<string></string>
+		<string>IMG_1169.png</string>
+		<string>IMG_1171.png</string>
+		<string></string>
+		<string>IMG_1176.png</string>
+		<string>IMG_1180.png</string>
+		<string></string>
+		<string>IMG_1184.png</string>
+		<string>IMG_1191.png</string>
+		<string>IMG_1197.png</string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string>IMG_1236.png</string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string>IMG_1206.png</string>
+		<string></string>
+		<string>IMG_1199.png</string>
+		<string>IMG_1202.png</string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string>shoulderToKneeCurlUp2.png</string>
+		<string></string>
+		<string>partialAbdominalCurlUp2.png</string>
+		<string>IMG_1231.png</string>
+		<string></string>
+		<string>sidePlank2.png</string>
 	</array>
 </dict>
 </plist>

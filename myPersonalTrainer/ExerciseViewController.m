@@ -18,13 +18,15 @@
 {
     NSArray *exercises;
     NSArray *pictures;
+    NSArray *pictures2;
     NSArray *targetedMuscle;
     NSArray *details;
 }
 
 
 @synthesize exerciseImageView;
-@synthesize exerciseImageName;
+@synthesize exerciseImageView2;
+//@synthesize exerciseImageName;
 @synthesize exerciseDetails;
 @synthesize rowNumber;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -38,8 +40,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+   
     
-    NSLog(@"Exercise viewcontroller loaded");
     // Do any additional setup after loading the view, typically from a nib.
     
     NSString *path = [[NSBundle mainBundle] pathForResource:@"Exercises" ofType:@"plist"];
@@ -48,14 +50,19 @@
     NSDictionary *dict = [[NSDictionary alloc] initWithContentsOfFile:path];
     exercises = [dict objectForKey:@"ExerciseName"];
     pictures = [dict objectForKey:@"Thumbnail"];
+    pictures2 = [dict objectForKey:@"Thumbnail2"];
     targetedMuscle = [dict objectForKey:@"TargetedMuscle"];
     details = [dict objectForKey:@"Details"];
     
    
 
+
     self.exerciseImageView.image = [UIImage imageNamed:[pictures objectAtIndex:rowNumber]];
-    self.exerciseImageName.text =[exercises objectAtIndex:rowNumber];
+    self.exerciseImageView2.image = [UIImage imageNamed:[pictures2 objectAtIndex:rowNumber]];
+//    self.exerciseImageName.text =[exercises objectAtIndex:rowNumber];
     self.exerciseDetails.text =[details objectAtIndex:rowNumber];
+    self.title = [exercises objectAtIndex:rowNumber];
+
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     // Make self the delegate of the ad banner.

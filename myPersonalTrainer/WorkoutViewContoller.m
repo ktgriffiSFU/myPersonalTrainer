@@ -110,7 +110,7 @@
         DetailWorkoutViewController *destViewController = segue.destinationViewController;
 //        destViewController.exerciseImageName = [workoutName objectAtIndex:indexPath.row];
 //        destViewController.exerciseImageView = [thumbnail objectAtIndex:indexPath.row];
-        destViewController.workoutName =[workoutName objectAtIndex:indexPath.row];
+ //       destViewController.workoutName =[workoutName objectAtIndex:indexPath.row];
         destViewController.rowNumber = rowNumber;
     }
 }

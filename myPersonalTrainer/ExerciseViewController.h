@@ -9,13 +9,14 @@
 
 #import <UIKit/UIKit.h>
 #import <iAd/iAd.h>
-#import "CorePlot-CocoaTouch.h"
 @interface ExerciseViewController : UIViewController <ADBannerViewDelegate>
 
 @property (weak, nonatomic) IBOutlet ADBannerView *adBanner;
 
 @property (weak, nonatomic) IBOutlet UIImageView *exerciseImageView;
-@property (weak, nonatomic) IBOutlet UILabel *exerciseImageName;
+@property (weak, nonatomic) IBOutlet UIImageView *exerciseImageView2;
+
+//@property (weak, nonatomic) IBOutlet UILabel *exerciseImageName;
 @property (weak, nonatomic) IBOutlet UILabel *exerciseDetails;
 @property int rowNumber;
 

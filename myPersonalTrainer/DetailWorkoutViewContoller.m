@@ -33,12 +33,13 @@
 }
 @synthesize tableView; // Add this line of code
 @synthesize rowNumber;
-@synthesize workoutName;
+//@synthesize workoutName;
 
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
     rowNumberOld = rowNumber;
     NSString *path1 = [[NSBundle mainBundle] pathForResource:@"Exercises" ofType:@"plist"];
     NSString *path2 = [[NSBundle mainBundle] pathForResource:@"Workouts" ofType:@"plist"];
@@ -46,7 +47,7 @@
     NSDictionary *dict1 = [[NSDictionary alloc] initWithContentsOfFile:path1];
     NSDictionary *dict2 = [[NSDictionary alloc] initWithContentsOfFile:path2];
     workoutNameP = [dict2 objectForKey:@"WorkoutName"];
-    self.workoutName.text =[workoutNameP objectAtIndex:rowNumber];
+//    self.workoutName.text =[workoutNameP objectAtIndex:rowNumber];
     // Initialize table data
     // Find out the path of recipes.plist
     exerciseName = [dict1 objectForKey:@"ExerciseName"];
@@ -54,6 +55,8 @@
     targetedMuscle = [dict1 objectForKey:@"TargetedMuscle"];
     workoutArray= [dict2 objectForKey:@"WorkoutArray"];
     exercisesforWorkout =[workoutArray objectForKey:workoutNameP[rowNumber]];
+    self.title = [workoutNameP objectAtIndex:rowNumber];
+
     targetedMuscleforWorkout = [[NSMutableArray alloc] init];
     thumbnailforWorkout = [[NSMutableArray alloc] init];
     exerciseforWorkoutNew =[[NSMutableArray alloc] init];
@@ -105,6 +108,8 @@
         NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"SimpleTableCell" owner:self options:nil];
         cell = [nib objectAtIndex:0];
     }
+  
+    
     cell.accessoryType  = UITableViewCellAccessoryDisclosureIndicator;
     cell.nameLabel.text = [exerciseforWorkoutNew objectAtIndex:indexPath.row];
     cell.thumbnailImageView.image = [UIImage imageNamed:[thumbnailforWorkout objectAtIndex:indexPath.row]];
@@ -114,6 +119,8 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSLog(@"didSelectRowAtIndexPath");
+
+    
     /*UIAlertView *messageAlert = [[UIAlertView alloc]
      initWithTitle:@"Row Selected" message:@"You've selected a row" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];*/
     //    UIAlertView *messageAlert = [[UIAlertView alloc]
@@ -124,7 +131,7 @@
     
     // Checked the selected row
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-    //cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    cell.accessoryType = UITableViewCellAccessoryCheckmark;
     rowNumber = indexPath.row;
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     [self performSegueWithIdentifier:@"showExercise" sender:self];

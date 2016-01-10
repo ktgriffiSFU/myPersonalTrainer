@@ -88,7 +88,7 @@
  
     // Checked the selected row
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-    //cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    cell.accessoryType = UITableViewCellAccessoryCheckmark;
     rowNumber = indexPath.row;
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     [self performSegueWithIdentifier:@"showExercisePhoto" sender:self];
@@ -109,10 +109,7 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
     if ([segue.identifier isEqualToString:@"showExercisePhoto"]) {
-        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         ExerciseViewController *destViewController = segue.destinationViewController;
-        destViewController.exerciseImageName = [tableData objectAtIndex:indexPath.row];
-        destViewController.exerciseImageView = [thumbnails objectAtIndex:indexPath.row];
         destViewController.rowNumber = rowNumber;
     }
 }

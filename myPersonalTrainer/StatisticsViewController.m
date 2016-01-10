@@ -11,6 +11,13 @@
 #import "StatisticsViewController.h"
 
 @interface StatisticsViewController()
+{
+    UILabel *_label;
+
+    
+}
+@property (nonatomic, strong) NSTimer *timer;
+
 
 @end
 
@@ -21,21 +28,39 @@
 @synthesize backScore;
 @synthesize coreScore;
 @synthesize legsScore;
+@synthesize armsImage;
+@synthesize shoulderImage;
+@synthesize chestImage;
+@synthesize legsImage;
+@synthesize coreImage;
+@synthesize backImage;
+@synthesize daysToGo;
+@synthesize daysScore;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    self.title = @"2nd Controller";
+
+    self.title = @"Weekly Statistics";
     self.view.backgroundColor = [UIColor whiteColor];
-    [self createViews];
+    [self gatherData];
 
 }
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
   
-    NSLog(@"Arms : %@",armsScore);
+
+    NSLog(@"Core : %@",coreScore);
+    shoulderImage.image = [self determineStars:shoulderScore];
+    armsImage.image = [self determineStars:armsScore];
+    backImage.image = [self determineStars:backScore];
+    chestImage.image= [self determineStars:chestScore];
+    legsImage.image = [self determineStars:legsScore];
+    coreImage.image = [self determineStars:coreScore];
+    [self.daysToGo setText:[NSString stringWithFormat:@"Days until reset: %@",daysScore]];
+
+
     
 }
 - (void)viewDidUnload
@@ -43,43 +68,73 @@
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
-- (void)createViews
+
+- (void)gatherData
 {
-    CGRect top, bottom;
-    CGRectDivide(self.view.bounds, &top, &bottom, self.view.bounds.size.height / 2, CGRectMinYEdge);
-    
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectInset(top, 5, 5)];
-    label.autoresizingMask = UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth|
-    UIViewAutoresizingFlexibleBottomMargin;
-    label.textAlignment = NSTextAlignmentCenter;
-
-
-    label.text = [NSString stringWithFormat:@"Your data: %@", _arms];
-    [self.view addSubview:label];
     if (_newData) {
+        CGRect top, bottom;
+        CGRectDivide(self.view.bounds, &top, &bottom, self.view.bounds.size.height / 2, CGRectMinYEdge);
+        
+        _label = [[UILabel alloc] initWithFrame:CGRectInset(top, 5, 5)];
+        _label.autoresizingMask = UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth|
+        UIViewAutoresizingFlexibleBottomMargin;
+        _label.textAlignment = NSTextAlignmentCenter;
+        _label.text = @"Good Work, Keep on working out.";
+        [self.view addSubview:_label];
         [[NSUserDefaults standardUserDefaults] setObject:_arms forKey:@"ARMS"];
-
+        [[NSUserDefaults standardUserDefaults] setObject:_legs forKey:@"LEGS"];
+        [[NSUserDefaults standardUserDefaults] setObject:_chest forKey:@"CHEST"];
+        [[NSUserDefaults standardUserDefaults] setObject:_core forKey:@"CORE"];
+        [[NSUserDefaults standardUserDefaults] setObject:_shoulders forKey:@"SHOULDERS"];
+        [[NSUserDefaults standardUserDefaults] setObject:_back forKey:@"BACK"];
+        [[NSUserDefaults standardUserDefaults] setObject:_daysLeft forKey:@"DAYS"];
     }
     armsScore = [[NSUserDefaults standardUserDefaults] stringForKey:@"ARMS"];
-    
-//
-//    UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-//    button.frame = CGRectMake(0, 0, 300, 100);
-//    button.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight|
-//    UIViewAutoresizingFlexibleBottomMargin|UIViewAutoresizingFlexibleLeftMargin|
-//    UIViewAutoresizingFlexibleRightMargin|UIViewAutoresizingFlexibleTopMargin;
-//    [button setTitle:@"Send Data Back" forState:UIControlStateNormal];
-//    button.center = CGPointMake(CGRectGetMidX(bottom), CGRectGetMidY(bottom));
-//    [self.view addSubview:button];
-    
+    legsScore = [[NSUserDefaults standardUserDefaults] stringForKey:@"LEGS"];
+    chestScore = [[NSUserDefaults standardUserDefaults] stringForKey:@"CHEST"];
+    coreScore = [[NSUserDefaults standardUserDefaults] stringForKey:@"CORE"];
+    shoulderScore = [[NSUserDefaults standardUserDefaults] stringForKey:@"SHOULDERS"];
+    backScore = [[NSUserDefaults standardUserDefaults] stringForKey:@"BACK"];
+    daysScore = [[NSUserDefaults standardUserDefaults] stringForKey:@"DAYS"];
 }
-//- (void)passDataBack
-//{
-//    if ([_delegate respondsToSelector:@selector(dataFromController:)])
-//    {
-//        [_delegate dataFromController:@"This data is from the second view controller."]:;
-//    }
-////    
-//    [self.navigationController popViewControllerAnimated:YES];
-//}
+- (NSString *)determineStatus: (NSString*) score
+{
+    NSString *status;
+     int scoreInt = [score integerValue];
+    if (scoreInt == 0) {
+        status =@" No Results";
+    }
+    if (scoreInt>0 && scoreInt < 29) {
+        status =@"Minimum";
+    }
+    if (scoreInt>29 && scoreInt<39) {
+        status =@"Moderate";
+    }
+    if (scoreInt>39 && scoreInt<59) {
+        status =@"Great";
+    }
+    if (scoreInt>60) {
+        status=@"Maximum";
+    }
+    return status;
+}
+- (UIImage *) determineStars: (NSString *) score
+{
+    UIImage *starValue;
+    int scoreInt = [score integerValue];
+    if (scoreInt==0) {
+        starValue =[UIImage imageNamed:@"0Stars.png"];
+    }if (scoreInt>0 &&scoreInt <29) {
+        starValue =[UIImage imageNamed:@"1Stars.png"];
+    }if (scoreInt>=29 &&scoreInt < 59) {
+        starValue =[UIImage imageNamed:@"2Stars.png"];
+    }if (scoreInt>=59 &&scoreInt < 99) {
+        starValue =[UIImage imageNamed:@"3Stars.png"];
+    }if (scoreInt>=99 &&scoreInt < 120) {
+        starValue =[UIImage imageNamed:@"4Stars.png"];
+    }if (scoreInt>=120 &&scoreInt < 150) {
+        starValue =[UIImage imageNamed:@"5Stars.png"];
+    }
+    return starValue;
+}
 @end

@@ -6,7 +6,6 @@
 //  Copyright © 2015 Kyle Griffith. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
 #import "TipsViewController.h"
 #include <stdlib.h>
 @interface TipsViewController ()
@@ -21,6 +20,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.title = @"Today's Tip";
+
     // Do any additional setup after loading the view, typically from a nib.
     // Make self the delegate of the ad banner.
     self.adBanner.delegate = self;

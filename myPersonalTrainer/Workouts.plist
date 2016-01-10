@@ -5,26 +5,50 @@
 	<key>WorkoutName</key>
 	<array>
 		<string>Barbell Arms</string>
+		<string>Free Weight Legs</string>
+		<string>Free Weight Chest and Triceps</string>
+		<string>Shoulders and Back</string>
+		<string>Upper Body</string>
 	</array>
 	<key>Time</key>
 	<array>
 		<string>20 minutes</string>
+		<string>30 minutes</string>
+		<string>20 minutes</string>
+		<string>30 minutes</string>
+		<string>50 minutes</string>
 	</array>
 	<key>DifficultyLevel</key>
 	<array>
 		<string>Novice</string>
+		<string>Advanced</string>
+		<string>Novice</string>
+		<string>Novice</string>
+		<string>Advanced</string>
 	</array>
 	<key>MusclesTargeted</key>
 	<array>
-		<string>Biceps, Triceps</string>
+		<string>Arms</string>
+		<string>Legs</string>
+		<string>Chest, Arms</string>
+		<string>Back, Shoulders</string>
+		<string>Arms, Shoulders, Chest, Back</string>
 	</array>
 	<key>EquipmentRequired</key>
 	<array>
 		<string>Barbells</string>
+		<string>Barbells, Dumbells</string>
+		<string>Barbells, Dumbells</string>
+		<string>Cables, Dumbells</string>
+		<string>Barbells, Dumbells, Cables</string>
 	</array>
 	<key>ThumbnailWorkout</key>
 	<array>
 		<string>arms.jpg</string>
+		<string>legs.png</string>
+		<string>chest.png</string>
+		<string>back.png</string>
+		<string>chest.png</string>
 	</array>
 	<key>WorkoutArray</key>
 	<dict>
@@ -34,6 +58,40 @@
 			<string>Barbell Triceps Extension (Supine)</string>
 			<string>Preacher Biceps Curl</string>
 			<string>Barbell Triceps Press</string>
+		</array>
+		<key>Free Weight Legs</key>
+		<array>
+			<string>Barbell Deadlift</string>
+			<string>Barbell Squat</string>
+			<string>Dumbell Lunge</string>
+			<string>Dumbell Heel Raise</string>
+		</array>
+		<key>Free Weight Chest and Triceps</key>
+		<array>
+			<string>Barbell Chest Press</string>
+			<string>Dumbell Chest Fly</string>
+			<string>Dumbell Triceps Extension (Supine)</string>
+			<string>Push Up 
+(Hands and Toes)</string>
+		</array>
+		<key>Shoulders and Back</key>
+		<array>
+			<string>Cable Lat Pulldown (Wide Grip)</string>
+			<string>Dumbell Shoulder Press (Seated)</string>
+			<string>Cable Lat Row (Seated with V-Bar)</string>
+			<string>Dumbell Shoulder Raise</string>
+		</array>
+		<key>Upper Body</key>
+		<array>
+			<string>Barbell Chest Press</string>
+			<string>Push Up 
+(Hands and Toes)</string>
+			<string>Cable Lat Pulldown (Wide Grip)</string>
+			<string>Cable Lat Row (Seated with V-Bar)</string>
+			<string>Barbell Biceps Curl</string>
+			<string>Barbell Triceps Extension (Supine)</string>
+			<string>Dumbell Shoulder Press (Seated)</string>
+			<string>Dumbell Shoulder Raise</string>
 		</array>
 	</dict>
 </dict>
