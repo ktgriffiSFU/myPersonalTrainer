@@ -9,6 +9,8 @@
 
 
 #import <UIKit/UIKit.h>
+#import <FBSDKShareKit/FBSDKShareKit.h>
+
 @protocol StatisticsViewControllerDelegate <NSObject>
 
 @required

@@ -34,6 +34,12 @@
     
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+
+}
 - (IBAction)workoutButton:(UIButton *)sender {
 }
 - (IBAction)exerciseButton:(UIButton *)sender {

@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import <iAd/iAd.h>
+
 @interface MainViewController : UIViewController <ADBannerViewDelegate>
 
 @property (weak, nonatomic) IBOutlet ADBannerView *adBanner;
+
 @end
 

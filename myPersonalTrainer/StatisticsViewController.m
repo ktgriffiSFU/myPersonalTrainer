@@ -58,8 +58,11 @@
     chestImage.image= [self determineStars:chestScore];
     legsImage.image = [self determineStars:legsScore];
     coreImage.image = [self determineStars:coreScore];
-    [self.daysToGo setText:[NSString stringWithFormat:@"Days until reset: %@",daysScore]];
-
+    if (daysScore== nil){
+        [self.daysToGo setText:[NSString stringWithFormat:@"Your statistics reset every week"]];
+    }else{
+        [self.daysToGo setText:[NSString stringWithFormat:@"Days until reset: %@",daysScore]];
+    }
 
     
 }
@@ -97,27 +100,7 @@
     backScore = [[NSUserDefaults standardUserDefaults] stringForKey:@"BACK"];
     daysScore = [[NSUserDefaults standardUserDefaults] stringForKey:@"DAYS"];
 }
-- (NSString *)determineStatus: (NSString*) score
-{
-    NSString *status;
-     int scoreInt = [score integerValue];
-    if (scoreInt == 0) {
-        status =@" No Results";
-    }
-    if (scoreInt>0 && scoreInt < 29) {
-        status =@"Minimum";
-    }
-    if (scoreInt>29 && scoreInt<39) {
-        status =@"Moderate";
-    }
-    if (scoreInt>39 && scoreInt<59) {
-        status =@"Great";
-    }
-    if (scoreInt>60) {
-        status=@"Maximum";
-    }
-    return status;
-}
+
 - (UIImage *) determineStars: (NSString *) score
 {
     UIImage *starValue;
@@ -130,9 +113,9 @@
         starValue =[UIImage imageNamed:@"2Stars.png"];
     }if (scoreInt>=59 &&scoreInt < 99) {
         starValue =[UIImage imageNamed:@"3Stars.png"];
-    }if (scoreInt>=99 &&scoreInt < 120) {
+    }if (scoreInt>=99 &&scoreInt < 200) {
         starValue =[UIImage imageNamed:@"4Stars.png"];
-    }if (scoreInt>=120 &&scoreInt < 150) {
+    }if (scoreInt>=200) {
         starValue =[UIImage imageNamed:@"5Stars.png"];
     }
     return starValue;

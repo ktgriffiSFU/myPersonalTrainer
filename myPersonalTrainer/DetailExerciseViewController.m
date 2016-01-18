@@ -77,7 +77,7 @@
     CGRectDivide(self.view.bounds, &top, &bottom, self.view.bounds.size.height / 2, CGRectMinYEdge);
 
     _button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    _button.frame = CGRectMake(0, 0, 100, 100);
+    _button.frame = CGRectMake(0, 0, 200, 20);
     _button.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight|
     UIViewAutoresizingFlexibleBottomMargin|UIViewAutoresizingFlexibleLeftMargin|
     UIViewAutoresizingFlexibleRightMargin|UIViewAutoresizingFlexibleTopMargin;

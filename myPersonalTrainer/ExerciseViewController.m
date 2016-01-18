@@ -53,13 +53,8 @@
     pictures2 = [dict objectForKey:@"Thumbnail2"];
     targetedMuscle = [dict objectForKey:@"TargetedMuscle"];
     details = [dict objectForKey:@"Details"];
-    
-   
-
-
     self.exerciseImageView.image = [UIImage imageNamed:[pictures objectAtIndex:rowNumber]];
     self.exerciseImageView2.image = [UIImage imageNamed:[pictures2 objectAtIndex:rowNumber]];
-//    self.exerciseImageName.text =[exercises objectAtIndex:rowNumber];
     self.exerciseDetails.text =[details objectAtIndex:rowNumber];
     self.title = [exercises objectAtIndex:rowNumber];
 
