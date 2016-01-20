@@ -10,7 +10,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import "TableViewController.h"
-#import "ExerciseViewController.h"
+#import "ViewController.h"
 #import "SimpleTableCell.h"
 
 @interface TableViewController ()
@@ -91,7 +91,7 @@
     cell.accessoryType = UITableViewCellAccessoryCheckmark;
     rowNumber = indexPath.row;
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
-    [self performSegueWithIdentifier:@"showExercisePhoto" sender:self];
+    [self performSegueWithIdentifier:@"showView" sender:self];
 }
 
 - (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -108,9 +108,10 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
-    if ([segue.identifier isEqualToString:@"showExercisePhoto"]) {
-        ExerciseViewController *destViewController = segue.destinationViewController;
+    if ([segue.identifier isEqualToString:@"showView"]) {
+        ViewController *destViewController = segue.destinationViewController;
         destViewController.rowNumber = rowNumber;
+
     }
 }
 

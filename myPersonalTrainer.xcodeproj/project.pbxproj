@@ -10,13 +10,13 @@
 		27158D931C0A9A1A0002272B /* Exercises.plist in Resources */ = {isa = PBXBuildFile; fileRef = 27158D921C0A9A1A0002272B /* Exercises.plist */; };
 		27158D991C0AA8670002272B /* SimpleTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 27158D981C0AA8670002272B /* SimpleTableCell.m */; };
 		27158D9B1C0AA8BE0002272B /* SimpleTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27158D9A1C0AA8BE0002272B /* SimpleTableCell.xib */; };
-		27158D9F1C0AC1C00002272B /* ExerciseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27158D9E1C0AC1C00002272B /* ExerciseViewController.m */; };
 		2720DB7D1C05346E00B7F7CD /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2720DB7C1C05346E00B7F7CD /* TableViewController.m */; };
 		272A3EFC1C20262300AAF185 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 272A3EFB1C20262300AAF185 /* Main.storyboard */; };
 		272A3EFE1C2178CB00AAF185 /* WorkoutViewContoller.m in Sources */ = {isa = PBXBuildFile; fileRef = 272A3EFD1C2178CB00AAF185 /* WorkoutViewContoller.m */; };
 		272A3F011C217C6C00AAF185 /* Workouts.plist in Resources */ = {isa = PBXBuildFile; fileRef = 272A3F001C217C6C00AAF185 /* Workouts.plist */; };
 		272A3F031C217F7700AAF185 /* WorkoutTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 272A3F021C217F7700AAF185 /* WorkoutTableCell.m */; };
 		272A3F061C217FCA00AAF185 /* WorkoutTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 272A3F051C217FCA00AAF185 /* WorkoutTableCell.xib */; };
+		272BD16C1C4F31840006519D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 272BD16B1C4F31840006519D /* ViewController.m */; };
 		273E48BB1C4C9B5600F56D57 /* IMG_1111.png in Resources */ = {isa = PBXBuildFile; fileRef = 273E48891C4C9B5600F56D57 /* IMG_1111.png */; };
 		273E48BC1C4C9B5600F56D57 /* IMG_1115.png in Resources */ = {isa = PBXBuildFile; fileRef = 273E488A1C4C9B5600F56D57 /* IMG_1115.png */; };
 		273E48BD1C4C9B5600F56D57 /* IMG_1117.png in Resources */ = {isa = PBXBuildFile; fileRef = 273E488B1C4C9B5600F56D57 /* IMG_1117.png */; };
@@ -126,8 +126,6 @@
 		27158D971C0AA84B0002272B /* SimpleTableCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleTableCell.h; sourceTree = "<group>"; };
 		27158D981C0AA8670002272B /* SimpleTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleTableCell.m; sourceTree = "<group>"; };
 		27158D9A1C0AA8BE0002272B /* SimpleTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SimpleTableCell.xib; sourceTree = "<group>"; };
-		27158D9E1C0AC1C00002272B /* ExerciseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExerciseViewController.m; sourceTree = "<group>"; };
-		27158DA01C0AC1D40002272B /* ExerciseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExerciseViewController.h; sourceTree = "<group>"; };
 		2720DB7B1C05341300B7F7CD /* TableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
 		2720DB7C1C05346E00B7F7CD /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 		272A3EFB1C20262300AAF185 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../../../../.Trash/Main.storyboard; sourceTree = "<group>"; };
@@ -137,6 +135,8 @@
 		272A3F021C217F7700AAF185 /* WorkoutTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkoutTableCell.m; sourceTree = "<group>"; };
 		272A3F041C217F8600AAF185 /* WorkoutTableCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WorkoutTableCell.h; sourceTree = "<group>"; };
 		272A3F051C217FCA00AAF185 /* WorkoutTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WorkoutTableCell.xib; sourceTree = "<group>"; };
+		272BD16B1C4F31840006519D /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		272BD16D1C4F31910006519D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		273E48891C4C9B5600F56D57 /* IMG_1111.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = IMG_1111.png; path = PhotosPNG/IMG_1111.png; sourceTree = SOURCE_ROOT; };
 		273E488A1C4C9B5600F56D57 /* IMG_1115.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = IMG_1115.png; path = PhotosPNG/IMG_1115.png; sourceTree = SOURCE_ROOT; };
 		273E488B1C4C9B5600F56D57 /* IMG_1117.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = IMG_1117.png; path = PhotosPNG/IMG_1117.png; sourceTree = SOURCE_ROOT; };
@@ -378,12 +378,12 @@
 				27E116CE1C03D19300E8E2AF /* LoginViewController.m */,
 				27E1169C1C03ABB800E8E2AF /* MainViewController.h */,
 				27E1169D1C03ABB800E8E2AF /* MainViewController.m */,
-				27158DA01C0AC1D40002272B /* ExerciseViewController.h */,
-				27158D9E1C0AC1C00002272B /* ExerciseViewController.m */,
 				27D694D21C4324FE00987C66 /* FriendsViewController.m */,
 				27D694D41C43250B00987C66 /* FriendsViewController.h */,
 				2741FD5F1C2B100100D15A94 /* TipsViewController.h */,
 				2741FD5D1C2B0FF100D15A94 /* TipsViewController.m */,
+				272BD16B1C4F31840006519D /* ViewController.m */,
+				272BD16D1C4F31910006519D /* ViewController.h */,
 				2720DB7B1C05341300B7F7CD /* TableViewController.h */,
 				2720DB7C1C05346E00B7F7CD /* TableViewController.m */,
 				272A3EFF1C2178DD00AAF185 /* WorkoutViewContoller.h */,
@@ -649,7 +649,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27158D9F1C0AC1C00002272B /* ExerciseViewController.m in Sources */,
+				272BD16C1C4F31840006519D /* ViewController.m in Sources */,
 				272A3EFE1C2178CB00AAF185 /* WorkoutViewContoller.m in Sources */,
 				27E116CF1C03D19300E8E2AF /* LoginViewController.m in Sources */,
 				27764C981C055F8D002F9122 /* ExerciseTableViewCell.m in Sources */,

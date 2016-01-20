@@ -11,7 +11,7 @@
 #import <Foundation/Foundation.h>
 #import "DetailExerciseViewController.h"
 #import "StatisticsViewController.h"
-#import "ExerciseViewController.h"
+#import "ViewController.h"
 @interface DetailExerciseViewController ()<StatisticsViewControllerDelegate>
 {
     UILabel *_label;
@@ -168,7 +168,7 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"showDetail"]) {
-        ExerciseViewController *destViewController = segue.destinationViewController;
+        ViewController *destViewController = segue.destinationViewController;
         destViewController.rowNumber = rowNumberDetails[rowNumberNew];
 
     }

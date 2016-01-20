@@ -1,49 +1,43 @@
-
 //
-//  ExerciseViewController.m
+//  ViewController.m
 //  myPersonalTrainer
 //
-//  Created by Kyle Griffith on 2015-11-28.
-//  Copyright © 2015 Kyle Griffith. All rights reserved.
+//  Created by Kyle Griffith on 2016-01-19.
+//  Copyright © 2016 Kyle Griffith. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
-#import "ExerciseViewController.h"
-@interface ExerciseViewController ()
+
+#import "ViewController.h"
+@interface ViewController ()
 
 @end
 
-@implementation ExerciseViewController
-
+@implementation ViewController
 {
     NSArray *exercises;
     NSArray *pictures;
     NSArray *pictures2;
-    NSArray *targetedMuscle;
     NSArray *details;
 }
-
-
 @synthesize exerciseImageView;
 @synthesize exerciseImageView2;
-//@synthesize exerciseImageName;
 @synthesize exerciseDetails;
 @synthesize rowNumber;
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    [self initView];
+}
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
     }
     return self;
 }
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-   
-    
-    // Do any additional setup after loading the view, typically from a nib.
-    
+-(void)initView
+{
     NSString *path = [[NSBundle mainBundle] pathForResource:@"Exercises" ofType:@"plist"];
     
     // Load the file content and read the data into arrays
@@ -51,25 +45,11 @@
     exercises = [dict objectForKey:@"ExerciseName"];
     pictures = [dict objectForKey:@"Thumbnail"];
     pictures2 = [dict objectForKey:@"Thumbnail2"];
-    targetedMuscle = [dict objectForKey:@"TargetedMuscle"];
     details = [dict objectForKey:@"Details"];
     self.exerciseImageView.image = [UIImage imageNamed:[pictures objectAtIndex:rowNumber]];
     self.exerciseImageView2.image = [UIImage imageNamed:[pictures2 objectAtIndex:rowNumber]];
     self.exerciseDetails.text =[details objectAtIndex:rowNumber];
     self.title = [exercises objectAtIndex:rowNumber];
-
-    [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-    // Make self the delegate of the ad banner.
-    self.adBanner.delegate = self;
-    
-    // Initially hide the ad banner.
-    self.adBanner.alpha = 0.0;
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 -(void)bannerViewWillLoadAd:(ADBannerView *)banner{
     NSLog(@"Ad Banner will load ad.");
@@ -96,7 +76,5 @@
         self.adBanner.alpha = 0.0;
     }];
 }
-
-
-
 @end
+
