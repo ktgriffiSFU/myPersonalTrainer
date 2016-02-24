@@ -38,10 +38,12 @@
 
 - (void)viewDidLoad
 {
+
     [super viewDidLoad];
     FBSDKLoginButton *loginButton = [[FBSDKLoginButton alloc] init];
     // Optional: Place the button in the center of your view.
-    loginButton.center = self.view.center;
+    loginButton.center =CGPointMake(160.0, 392.0);
+    //self.view.center;
     [self.view addSubview:loginButton];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(observeProfileChange:) name:FBSDKProfileDidChangeNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(observeTokenChange:) name:FBSDKAccessTokenDidChangeNotification object:nil];

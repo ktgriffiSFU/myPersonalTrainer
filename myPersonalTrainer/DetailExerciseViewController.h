@@ -16,7 +16,6 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *exerciseImageView2;
 @property (weak, nonatomic) IBOutlet UILabel *exerciseImageName;
-@property (weak, nonatomic) IBOutlet UILabel *exerciseDetails;
 @property(nonatomic, strong) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UILabel *workoutName;
 @property (weak, nonatomic) IBOutlet ADBannerView *adBanner;

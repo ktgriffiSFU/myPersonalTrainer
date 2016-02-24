@@ -9,6 +9,7 @@
 		<string>Free Weight Chest and Triceps</string>
 		<string>Shoulders and Back</string>
 		<string>Upper Body</string>
+		<string>Core</string>
 	</array>
 	<key>Time</key>
 	<array>
@@ -17,6 +18,7 @@
 		<string>20 minutes</string>
 		<string>30 minutes</string>
 		<string>50 minutes</string>
+		<string>20 minutes</string>
 	</array>
 	<key>DifficultyLevel</key>
 	<array>
@@ -25,6 +27,7 @@
 		<string>Novice</string>
 		<string>Novice</string>
 		<string>Advanced</string>
+		<string>Beginner</string>
 	</array>
 	<key>MusclesTargeted</key>
 	<array>
@@ -33,6 +36,7 @@
 		<string>Chest, Arms</string>
 		<string>Back, Shoulders</string>
 		<string>Arms, Shoulders, Chest, Back</string>
+		<string>Abdominals, Lower Back</string>
 	</array>
 	<key>EquipmentRequired</key>
 	<array>
@@ -41,6 +45,7 @@
 		<string>Barbells, Dumbells</string>
 		<string>Cables, Dumbells</string>
 		<string>Barbells, Dumbells, Cables</string>
+		<string>Mat</string>
 	</array>
 	<key>ThumbnailWorkout</key>
 	<array>
@@ -49,6 +54,7 @@
 		<string>chest.png</string>
 		<string>back.png</string>
 		<string>chest.png</string>
+		<string>core.png</string>
 	</array>
 	<key>WorkoutArray</key>
 	<dict>
@@ -92,6 +98,13 @@
 			<string>Barbell Triceps Extension (Supine)</string>
 			<string>Dumbell Shoulder Press (Seated)</string>
 			<string>Dumbell Shoulder Raise</string>
+		</array>
+		<key>Core</key>
+		<array>
+			<string>Shoulder to Knee Curl-Up</string>
+			<string>Partial Abdominal Curl-Up</string>
+			<string>Plank</string>
+			<string>Side Plank</string>
 		</array>
 	</dict>
 </dict>

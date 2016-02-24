@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		27117ED21C5859AC00EF4516 /* mPT1.png in Resources */ = {isa = PBXBuildFile; fileRef = 27117ED11C5859AC00EF4516 /* mPT1.png */; };
+		27117ED41C585A1800EF4516 /* mpt2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 27117ED31C585A1800EF4516 /* mpt2.jpg */; };
 		27158D931C0A9A1A0002272B /* Exercises.plist in Resources */ = {isa = PBXBuildFile; fileRef = 27158D921C0A9A1A0002272B /* Exercises.plist */; };
 		27158D991C0AA8670002272B /* SimpleTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 27158D981C0AA8670002272B /* SimpleTableCell.m */; };
 		27158D9B1C0AA8BE0002272B /* SimpleTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27158D9A1C0AA8BE0002272B /* SimpleTableCell.xib */; };
 		2720DB7D1C05346E00B7F7CD /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2720DB7C1C05346E00B7F7CD /* TableViewController.m */; };
-		272A3EFC1C20262300AAF185 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 272A3EFB1C20262300AAF185 /* Main.storyboard */; };
 		272A3EFE1C2178CB00AAF185 /* WorkoutViewContoller.m in Sources */ = {isa = PBXBuildFile; fileRef = 272A3EFD1C2178CB00AAF185 /* WorkoutViewContoller.m */; };
 		272A3F011C217C6C00AAF185 /* Workouts.plist in Resources */ = {isa = PBXBuildFile; fileRef = 272A3F001C217C6C00AAF185 /* Workouts.plist */; };
 		272A3F031C217F7700AAF185 /* WorkoutTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 272A3F021C217F7700AAF185 /* WorkoutTableCell.m */; };
@@ -77,6 +78,9 @@
 		27764C981C055F8D002F9122 /* ExerciseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 27764C971C055F8D002F9122 /* ExerciseTableViewCell.m */; };
 		27784A4E1C432C9F00363198 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27784A4D1C432C9F00363198 /* FBSDKShareKit.framework */; };
 		27784A501C432CD300363198 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27784A4F1C432CD300363198 /* FBSDKCoreKit.framework */; };
+		2799F7261C7BC1C30041079B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2799F7251C7BC1C30041079B /* Main.storyboard */; };
+		2799F7281C7BE5B80041079B /* StatTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 2799F7271C7BE5B80041079B /* StatTable.m */; };
+		2799F72B1C7BE6040041079B /* CheckInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2799F72A1C7BE6040041079B /* CheckInViewController.m */; };
 		279B70A91C3D1FE00042BD93 /* 5Stars.png in Resources */ = {isa = PBXBuildFile; fileRef = 279B70A81C3D1FE00042BD93 /* 5Stars.png */; };
 		279B70B11C3D3F0F0042BD93 /* 1Stars.png in Resources */ = {isa = PBXBuildFile; fileRef = 279B70AD1C3D3F0F0042BD93 /* 1Stars.png */; };
 		279B70B21C3D3F0F0042BD93 /* 2Stars.png in Resources */ = {isa = PBXBuildFile; fileRef = 279B70AE1C3D3F0F0042BD93 /* 2Stars.png */; };
@@ -122,13 +126,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		27117ED11C5859AC00EF4516 /* mPT1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mPT1.png; path = ../../../../Desktop/mPT1.png; sourceTree = "<group>"; };
+		27117ED31C585A1800EF4516 /* mpt2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = mpt2.jpg; path = ../../../../Downloads/mpt2.jpg; sourceTree = "<group>"; };
 		27158D921C0A9A1A0002272B /* Exercises.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Exercises.plist; sourceTree = "<group>"; };
 		27158D971C0AA84B0002272B /* SimpleTableCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleTableCell.h; sourceTree = "<group>"; };
 		27158D981C0AA8670002272B /* SimpleTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleTableCell.m; sourceTree = "<group>"; };
 		27158D9A1C0AA8BE0002272B /* SimpleTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SimpleTableCell.xib; sourceTree = "<group>"; };
 		2720DB7B1C05341300B7F7CD /* TableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
 		2720DB7C1C05346E00B7F7CD /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
-		272A3EFB1C20262300AAF185 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../../../../.Trash/Main.storyboard; sourceTree = "<group>"; };
 		272A3EFD1C2178CB00AAF185 /* WorkoutViewContoller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkoutViewContoller.m; sourceTree = "<group>"; };
 		272A3EFF1C2178DD00AAF185 /* WorkoutViewContoller.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WorkoutViewContoller.h; sourceTree = "<group>"; };
 		272A3F001C217C6C00AAF185 /* Workouts.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Workouts.plist; sourceTree = "<group>"; };
@@ -200,6 +205,11 @@
 		27764C971C055F8D002F9122 /* ExerciseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExerciseTableViewCell.m; sourceTree = "<group>"; };
 		27784A4D1C432C9F00363198 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = ../../../FacebookSDK/FBSDKShareKit.framework; sourceTree = "<group>"; };
 		27784A4F1C432CD300363198 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = ../../../FacebookSDK/FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		2799F7251C7BC1C30041079B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2799F7271C7BE5B80041079B /* StatTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatTable.m; sourceTree = "<group>"; };
+		2799F7291C7BE5C00041079B /* StatTable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StatTable.h; sourceTree = "<group>"; };
+		2799F72A1C7BE6040041079B /* CheckInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckInViewController.m; sourceTree = "<group>"; };
+		2799F72C1C7BE60E0041079B /* CheckInViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CheckInViewController.h; sourceTree = "<group>"; };
 		279B70A81C3D1FE00042BD93 /* 5Stars.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 5Stars.png; path = ../../../../Downloads/5Stars.png; sourceTree = "<group>"; };
 		279B70AD1C3D3F0F0042BD93 /* 1Stars.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 1Stars.png; path = ../../../../Downloads/1Stars.png; sourceTree = "<group>"; };
 		279B70AE1C3D3F0F0042BD93 /* 2Stars.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 2Stars.png; path = ../../../../Downloads/2Stars.png; sourceTree = "<group>"; };
@@ -219,7 +229,7 @@
 		27DAE1571C2547AC002A03D5 /* DetailWorkoutViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailWorkoutViewController.h; sourceTree = "<group>"; };
 		27DAE1581C27D30C002A03D5 /* DetailExerciseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailExerciseViewController.h; sourceTree = "<group>"; };
 		27DAE1591C27D328002A03D5 /* DetailExerciseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailExerciseViewController.m; sourceTree = "<group>"; };
-		27E116931C03ABB800E8E2AF /* myPersonalTrainer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myPersonalTrainer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		27E116931C03ABB800E8E2AF /* fitSFU.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fitSFU.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27E116971C03ABB800E8E2AF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		27E116991C03ABB800E8E2AF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		27E1169A1C03ABB800E8E2AF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -228,10 +238,10 @@
 		27E116A21C03ABB800E8E2AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		27E116A51C03ABB800E8E2AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		27E116A71C03ABB800E8E2AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		27E116AC1C03ABB900E8E2AF /* myPersonalTrainerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = myPersonalTrainerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		27E116AC1C03ABB900E8E2AF /* fitSFU.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = fitSFU.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		27E116B01C03ABB900E8E2AF /* myPersonalTrainerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = myPersonalTrainerTests.m; sourceTree = "<group>"; };
 		27E116B21C03ABB900E8E2AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		27E116B71C03ABB900E8E2AF /* myPersonalTrainerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = myPersonalTrainerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		27E116B71C03ABB900E8E2AF /* fitSFU.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = fitSFU.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		27E116BB1C03ABB900E8E2AF /* myPersonalTrainerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = myPersonalTrainerUITests.m; sourceTree = "<group>"; };
 		27E116BD1C03ABB900E8E2AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		27E116CC1C03B5D100E8E2AF /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = ../../../FacebookSDK/FBSDKLoginKit.framework; sourceTree = "<group>"; };
@@ -275,6 +285,8 @@
 		2798C0931C0D75EF0007D3BF /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				27117ED11C5859AC00EF4516 /* mPT1.png */,
+				27117ED31C585A1800EF4516 /* mpt2.jpg */,
 				279B70B71C3D3F290042BD93 /* 0Stars.png */,
 				279B70AD1C3D3F0F0042BD93 /* 1Stars.png */,
 				279B70AE1C3D3F0F0042BD93 /* 2Stars.png */,
@@ -354,9 +366,9 @@
 		27E116941C03ABB800E8E2AF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				27E116931C03ABB800E8E2AF /* myPersonalTrainer.app */,
-				27E116AC1C03ABB900E8E2AF /* myPersonalTrainerTests.xctest */,
-				27E116B71C03ABB900E8E2AF /* myPersonalTrainerUITests.xctest */,
+				27E116931C03ABB800E8E2AF /* fitSFU.app */,
+				27E116AC1C03ABB900E8E2AF /* fitSFU.xctest */,
+				27E116B71C03ABB900E8E2AF /* fitSFU.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -387,10 +399,14 @@
 				2720DB7B1C05341300B7F7CD /* TableViewController.h */,
 				2720DB7C1C05346E00B7F7CD /* TableViewController.m */,
 				272A3EFF1C2178DD00AAF185 /* WorkoutViewContoller.h */,
+				2799F7271C7BE5B80041079B /* StatTable.m */,
+				2799F7291C7BE5C00041079B /* StatTable.h */,
+				2799F72A1C7BE6040041079B /* CheckInViewController.m */,
+				2799F72C1C7BE60E0041079B /* CheckInViewController.h */,
 				272A3EFD1C2178CB00AAF185 /* WorkoutViewContoller.m */,
 				2741FD811C34028800D15A94 /* StatisticsViewController.h */,
 				2741FD7F1C34027500D15A94 /* StatisticsViewController.m */,
-				272A3EFB1C20262300AAF185 /* Main.storyboard */,
+				2799F7251C7BC1C30041079B /* Main.storyboard */,
 				27DAE1571C2547AC002A03D5 /* DetailWorkoutViewController.h */,
 				27DAE1551C25475E002A03D5 /* DetailWorkoutViewContoller.m */,
 				27DAE1581C27D30C002A03D5 /* DetailExerciseViewController.h */,
@@ -455,9 +471,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		27E116921C03ABB800E8E2AF /* myPersonalTrainer */ = {
+		27E116921C03ABB800E8E2AF /* fitSFU */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 27E116C01C03ABB900E8E2AF /* Build configuration list for PBXNativeTarget "myPersonalTrainer" */;
+			buildConfigurationList = 27E116C01C03ABB900E8E2AF /* Build configuration list for PBXNativeTarget "fitSFU" */;
 			buildPhases = (
 				27E1168F1C03ABB800E8E2AF /* Sources */,
 				27E116901C03ABB800E8E2AF /* Frameworks */,
@@ -467,14 +483,14 @@
 			);
 			dependencies = (
 			);
-			name = myPersonalTrainer;
+			name = fitSFU;
 			productName = myPersonalTrainer;
-			productReference = 27E116931C03ABB800E8E2AF /* myPersonalTrainer.app */;
+			productReference = 27E116931C03ABB800E8E2AF /* fitSFU.app */;
 			productType = "com.apple.product-type.application";
 		};
-		27E116AB1C03ABB900E8E2AF /* myPersonalTrainerTests */ = {
+		27E116AB1C03ABB900E8E2AF /* fitSFUTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 27E116C31C03ABB900E8E2AF /* Build configuration list for PBXNativeTarget "myPersonalTrainerTests" */;
+			buildConfigurationList = 27E116C31C03ABB900E8E2AF /* Build configuration list for PBXNativeTarget "fitSFUTests" */;
 			buildPhases = (
 				27E116A81C03ABB900E8E2AF /* Sources */,
 				27E116A91C03ABB900E8E2AF /* Frameworks */,
@@ -485,14 +501,14 @@
 			dependencies = (
 				27E116AE1C03ABB900E8E2AF /* PBXTargetDependency */,
 			);
-			name = myPersonalTrainerTests;
+			name = fitSFUTests;
 			productName = myPersonalTrainerTests;
-			productReference = 27E116AC1C03ABB900E8E2AF /* myPersonalTrainerTests.xctest */;
+			productReference = 27E116AC1C03ABB900E8E2AF /* fitSFU.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		27E116B61C03ABB900E8E2AF /* myPersonalTrainerUITests */ = {
+		27E116B61C03ABB900E8E2AF /* fitSFUUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 27E116C61C03ABB900E8E2AF /* Build configuration list for PBXNativeTarget "myPersonalTrainerUITests" */;
+			buildConfigurationList = 27E116C61C03ABB900E8E2AF /* Build configuration list for PBXNativeTarget "fitSFUUITests" */;
 			buildPhases = (
 				27E116B31C03ABB900E8E2AF /* Sources */,
 				27E116B41C03ABB900E8E2AF /* Frameworks */,
@@ -503,9 +519,9 @@
 			dependencies = (
 				27E116B91C03ABB900E8E2AF /* PBXTargetDependency */,
 			);
-			name = myPersonalTrainerUITests;
+			name = fitSFUUITests;
 			productName = myPersonalTrainerUITests;
-			productReference = 27E116B71C03ABB900E8E2AF /* myPersonalTrainerUITests.xctest */;
+			productReference = 27E116B71C03ABB900E8E2AF /* fitSFU.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -530,7 +546,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 27E1168E1C03ABB800E8E2AF /* Build configuration list for PBXProject "myPersonalTrainer" */;
+			buildConfigurationList = 27E1168E1C03ABB800E8E2AF /* Build configuration list for PBXProject "fitSFU" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -543,9 +559,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				27E116921C03ABB800E8E2AF /* myPersonalTrainer */,
-				27E116AB1C03ABB900E8E2AF /* myPersonalTrainerTests */,
-				27E116B61C03ABB900E8E2AF /* myPersonalTrainerUITests */,
+				27E116921C03ABB800E8E2AF /* fitSFU */,
+				27E116AB1C03ABB900E8E2AF /* fitSFUTests */,
+				27E116B61C03ABB900E8E2AF /* fitSFUUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -561,12 +577,14 @@
 				279B70B11C3D3F0F0042BD93 /* 1Stars.png in Resources */,
 				273E48C61C4C9B5600F56D57 /* IMG_1141.png in Resources */,
 				273E48E41C4C9B5600F56D57 /* IMG_1200.png in Resources */,
+				2799F7261C7BC1C30041079B /* Main.storyboard in Resources */,
 				272A3F011C217C6C00AAF185 /* Workouts.plist in Resources */,
 				273E48E01C4C9B5600F56D57 /* IMG_1195.png in Resources */,
 				279B70B81C3D3F290042BD93 /* 0Stars.png in Resources */,
 				273E48CF1C4C9B5600F56D57 /* IMG_1156.png in Resources */,
 				273E48C71C4C9B5600F56D57 /* IMG_1142.png in Resources */,
 				273E48CE1C4C9B5600F56D57 /* IMG_1154.png in Resources */,
+				27117ED21C5859AC00EF4516 /* mPT1.png in Resources */,
 				273E48D61C4C9B5600F56D57 /* IMG_1174.png in Resources */,
 				273E48BD1C4C9B5600F56D57 /* IMG_1117.png in Resources */,
 				27E116A61C03ABB800E8E2AF /* LaunchScreen.storyboard in Resources */,
@@ -590,7 +608,6 @@
 				273E48BE1C4C9B5600F56D57 /* IMG_1121.png in Resources */,
 				2741FD631C2B4F1900D15A94 /* Tips.plist in Resources */,
 				273E48CA1C4C9B5600F56D57 /* IMG_1145.png in Resources */,
-				272A3EFC1C20262300AAF185 /* Main.storyboard in Resources */,
 				273E48C41C4C9B5600F56D57 /* IMG_1139.png in Resources */,
 				273E48DE1C4C9B5600F56D57 /* IMG_1189.png in Resources */,
 				273E48D91C4C9B5600F56D57 /* IMG_1180.png in Resources */,
@@ -612,6 +629,7 @@
 				273E48C21C4C9B5600F56D57 /* IMG_1132.png in Resources */,
 				272A3F061C217FCA00AAF185 /* WorkoutTableCell.xib in Resources */,
 				27158D9B1C0AA8BE0002272B /* SimpleTableCell.xib in Resources */,
+				27117ED41C585A1800EF4516 /* mpt2.jpg in Resources */,
 				273E48D01C4C9B5600F56D57 /* IMG_1161.png in Resources */,
 				273E48C31C4C9B5600F56D57 /* IMG_1133.png in Resources */,
 				273E48C81C4C9B5600F56D57 /* IMG_1143.png in Resources */,
@@ -651,10 +669,12 @@
 			files = (
 				272BD16C1C4F31840006519D /* ViewController.m in Sources */,
 				272A3EFE1C2178CB00AAF185 /* WorkoutViewContoller.m in Sources */,
+				2799F7281C7BE5B80041079B /* StatTable.m in Sources */,
 				27E116CF1C03D19300E8E2AF /* LoginViewController.m in Sources */,
 				27764C981C055F8D002F9122 /* ExerciseTableViewCell.m in Sources */,
 				2720DB7D1C05346E00B7F7CD /* TableViewController.m in Sources */,
 				27E1169E1C03ABB800E8E2AF /* MainViewController.m in Sources */,
+				2799F72B1C7BE6040041079B /* CheckInViewController.m in Sources */,
 				2741FD5E1C2B0FF100D15A94 /* TipsViewController.m in Sources */,
 				27E116D31C03D2C000E8E2AF /* Settings.m in Sources */,
 				27E1169B1C03ABB800E8E2AF /* AppDelegate.m in Sources */,
@@ -690,12 +710,12 @@
 /* Begin PBXTargetDependency section */
 		27E116AE1C03ABB900E8E2AF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 27E116921C03ABB800E8E2AF /* myPersonalTrainer */;
+			target = 27E116921C03ABB800E8E2AF /* fitSFU */;
 			targetProxy = 27E116AD1C03ABB900E8E2AF /* PBXContainerItemProxy */;
 		};
 		27E116B91C03ABB900E8E2AF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 27E116921C03ABB800E8E2AF /* myPersonalTrainer */;
+			target = 27E116921C03ABB800E8E2AF /* fitSFU */;
 			targetProxy = 27E116B81C03ABB900E8E2AF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -805,7 +825,7 @@
 					"-all_load",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Griffith.myPersonalTrainer;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = fitSFU;
 			};
 			name = Debug;
 		};
@@ -822,7 +842,7 @@
 					"-all_load",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Griffith.myPersonalTrainer;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = fitSFU;
 			};
 			name = Release;
 		};
@@ -833,8 +853,8 @@
 				INFOPLIST_FILE = myPersonalTrainerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Griffith.myPersonalTrainerTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/myPersonalTrainer.app/myPersonalTrainer";
+				PRODUCT_NAME = fitSFU;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/fitSFU.app/fitSFU";
 			};
 			name = Debug;
 		};
@@ -845,8 +865,8 @@
 				INFOPLIST_FILE = myPersonalTrainerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Griffith.myPersonalTrainerTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/myPersonalTrainer.app/myPersonalTrainer";
+				PRODUCT_NAME = fitSFU;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/fitSFU.app/fitSFU";
 			};
 			name = Release;
 		};
@@ -856,7 +876,7 @@
 				INFOPLIST_FILE = myPersonalTrainerUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Griffith.myPersonalTrainerUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = fitSFU;
 				TEST_TARGET_NAME = myPersonalTrainer;
 				USES_XCTRUNNER = YES;
 			};
@@ -868,7 +888,7 @@
 				INFOPLIST_FILE = myPersonalTrainerUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Griffith.myPersonalTrainerUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = fitSFU;
 				TEST_TARGET_NAME = myPersonalTrainer;
 				USES_XCTRUNNER = YES;
 			};
@@ -877,7 +897,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		27E1168E1C03ABB800E8E2AF /* Build configuration list for PBXProject "myPersonalTrainer" */ = {
+		27E1168E1C03ABB800E8E2AF /* Build configuration list for PBXProject "fitSFU" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				27E116BE1C03ABB900E8E2AF /* Debug */,
@@ -886,7 +906,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		27E116C01C03ABB900E8E2AF /* Build configuration list for PBXNativeTarget "myPersonalTrainer" */ = {
+		27E116C01C03ABB900E8E2AF /* Build configuration list for PBXNativeTarget "fitSFU" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				27E116C11C03ABB900E8E2AF /* Debug */,
@@ -895,7 +915,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		27E116C31C03ABB900E8E2AF /* Build configuration list for PBXNativeTarget "myPersonalTrainerTests" */ = {
+		27E116C31C03ABB900E8E2AF /* Build configuration list for PBXNativeTarget "fitSFUTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				27E116C41C03ABB900E8E2AF /* Debug */,
@@ -904,7 +924,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		27E116C61C03ABB900E8E2AF /* Build configuration list for PBXNativeTarget "myPersonalTrainerUITests" */ = {
+		27E116C61C03ABB900E8E2AF /* Build configuration list for PBXNativeTarget "fitSFUUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				27E116C71C03ABB900E8E2AF /* Debug */,

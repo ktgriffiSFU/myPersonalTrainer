@@ -58,7 +58,7 @@
 @synthesize exerciseImageView;
 @synthesize exerciseImageView2;
 @synthesize exerciseImageName;
-@synthesize exerciseDetails;
+//@synthesize exerciseDetails;
 @synthesize rowNumberWorkout;
 @synthesize rowNumberNew;
 @synthesize workoutName;
@@ -282,7 +282,7 @@
     self.exerciseImageView.image = [UIImage imageNamed:[thumbnailforWorkout objectAtIndex:rowNumberNew]];
     self.exerciseImageView2.image= [UIImage imageNamed:[thumbnailforWorkout2 objectAtIndex:rowNumberNew]];
     self.exerciseImageName.text =[exerciseforWorkoutNew objectAtIndex:rowNumberNew];
-    self.exerciseDetails.text =[detailsforWorkout objectAtIndex:rowNumberNew];
+ //   self.exerciseDetails.text =[detailsforWorkout objectAtIndex:rowNumberNew];
    // NSLog(@"Exercise is: %@",exerciseImageName);
     [self createViews];
 
@@ -318,6 +318,9 @@
     int seconds = round(*timeElapsed);
     int daysPassed = seconds/86400;
     int days = 7-daysPassed;
+    if (days<=0) {
+        days=0;
+    }
     if (timeElapsed==nil) {
         dayString = @"Go Workout!";
     }else{

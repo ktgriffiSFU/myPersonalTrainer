@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "27E116921C03ABB800E8E2AF"
-               BuildableName = "myPersonalTrainer.app"
-               BlueprintName = "myPersonalTrainer"
-               ReferencedContainer = "container:myPersonalTrainer.xcodeproj">
+               BuildableName = "fitSFU.app"
+               BlueprintName = "fitSFU"
+               ReferencedContainer = "container:fitSFU.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "27E116AB1C03ABB900E8E2AF"
-               BuildableName = "myPersonalTrainerTests.xctest"
-               BlueprintName = "myPersonalTrainerTests"
-               ReferencedContainer = "container:myPersonalTrainer.xcodeproj">
+               BuildableName = "fitSFU.xctest"
+               BlueprintName = "fitSFUTests"
+               ReferencedContainer = "container:fitSFU.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "27E116B61C03ABB900E8E2AF"
-               BuildableName = "myPersonalTrainerUITests.xctest"
-               BlueprintName = "myPersonalTrainerUITests"
-               ReferencedContainer = "container:myPersonalTrainer.xcodeproj">
+               BuildableName = "fitSFU.xctest"
+               BlueprintName = "fitSFUUITests"
+               ReferencedContainer = "container:fitSFU.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -53,9 +53,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "27E116921C03ABB800E8E2AF"
-            BuildableName = "myPersonalTrainer.app"
-            BlueprintName = "myPersonalTrainer"
-            ReferencedContainer = "container:myPersonalTrainer.xcodeproj">
+            BuildableName = "fitSFU.app"
+            BlueprintName = "fitSFU"
+            ReferencedContainer = "container:fitSFU.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "27E116921C03ABB800E8E2AF"
-            BuildableName = "myPersonalTrainer.app"
-            BlueprintName = "myPersonalTrainer"
-            ReferencedContainer = "container:myPersonalTrainer.xcodeproj">
+            BuildableName = "fitSFU.app"
+            BlueprintName = "fitSFU"
+            ReferencedContainer = "container:fitSFU.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -95,9 +95,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "27E116921C03ABB800E8E2AF"
-            BuildableName = "myPersonalTrainer.app"
-            BlueprintName = "myPersonalTrainer"
-            ReferencedContainer = "container:myPersonalTrainer.xcodeproj">
+            BuildableName = "fitSFU.app"
+            BlueprintName = "fitSFU"
+            ReferencedContainer = "container:fitSFU.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

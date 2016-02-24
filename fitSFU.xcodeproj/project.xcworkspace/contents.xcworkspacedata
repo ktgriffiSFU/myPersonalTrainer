@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:myPersonalTrainer.xcodeproj">
+      location = "self:/Users/kyle/Documents/Xcode/myPersonalTrainer/fitSFU.xcodeproj">
    </FileRef>
 </Workspace>
