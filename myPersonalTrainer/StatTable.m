@@ -60,6 +60,11 @@
     
     cell.statName.text = [statOptions objectAtIndex:indexPath.row];
     //     cell.thumbnail.image = [UIImage imageNamed:[thumbnail objectAtIndex:indexPath.row]];
+    NSArray *identifierArray=[[NSArray alloc] initWithObjects:
+                 @"showView1",@"showView2",@"showView3",@"showView4", nil];
+    NSString *identifer =[identifierArray objectAtIndex:indexPath.row];
+    [self performSegueWithIdentifier:identifer sender:self];
+    
     
     return cell;
 }
@@ -73,7 +78,15 @@
 {
     return indexPath;
 }
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    if ([segue.identifier isEqualToString:@"showWorkout"]) {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        DetailWorkoutViewController *destViewController = segue.destinationViewController;
 
+        destViewController.rowNumber = rowNumber;
+    }
+}
 
 @end
 
