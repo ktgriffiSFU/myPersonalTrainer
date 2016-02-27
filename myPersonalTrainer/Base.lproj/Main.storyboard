@@ -591,7 +591,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="t6n-cD-ib3">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="WeeklyProgress" id="t6n-cD-ib3" customClass="StatTableCell">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="t6n-cD-ib3" id="WRo-wg-Lf9">
@@ -599,7 +599,40 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="hdO-IQ-bWW" kind="show" trigger="accessoryAction" id="Gvc-PK-5Vw"/>
+                                    <segue destination="zaa-H4-Nx2" kind="show" identifier="showView1" id="Cgi-in-a1e"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Rep-Set Bar Chart" id="O8r-tb-1cO" customClass="StatTableCell">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="O8r-tb-1cO" id="o8a-LN-F7Q">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="hdO-IQ-bWW" kind="show" id="83G-yf-8wu"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ConsistChallenge" id="Ak5-eV-NhO" customClass="StatTableCell">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ak5-eV-NhO" id="tUL-Sf-u0A">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="wUB-SK-zsr" kind="show" identifier="showView3" id="e0K-KI-WhH"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AskATrainer" id="I0j-0n-eNm" customClass="StatTableCell">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="I0j-0n-eNm" id="Kn6-G3-1UK">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="ggo-pN-acz" kind="show" identifier="showView4" id="zSZ-k4-68w"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -618,6 +651,23 @@
             <point key="canvasLocation" x="3537" y="868"/>
         </scene>
         <!--View Controller-->
+        <scene sceneID="14F-XB-NLw">
+            <objects>
+                <viewController id="zaa-H4-Nx2" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rKz-o1-dZ3"/>
+                        <viewControllerLayoutGuide type="bottom" id="vTT-87-KPF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6yp-ym-8Ax">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bXL-wH-YfK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4602" y="213"/>
+        </scene>
+        <!--View Controller-->
         <scene sceneID="xcf-gm-pbO">
             <objects>
                 <viewController id="hdO-IQ-bWW" sceneMemberID="viewController">
@@ -633,7 +683,41 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4YR-ro-M4W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4209" y="868"/>
+            <point key="canvasLocation" x="4584" y="868"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="gFA-Lu-Sum">
+            <objects>
+                <viewController id="ggo-pN-acz" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0Id-c9-jGP"/>
+                        <viewControllerLayoutGuide type="bottom" id="xgi-hV-Bez"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="V3c-09-zAT">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uia-MQ-3vt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5301" y="868"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="1IL-WQ-AXP">
+            <objects>
+                <viewController id="wUB-SK-zsr" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="D7b-Ny-IOy"/>
+                        <viewControllerLayoutGuide type="bottom" id="zPu-n6-NOS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="c8V-Tt-wM5">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9m1-N6-HgV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4611" y="1521"/>
         </scene>
         <!--Statistics-->
         <scene sceneID="Qn5-J1-aPI">

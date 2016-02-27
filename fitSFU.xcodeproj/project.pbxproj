@@ -107,6 +107,8 @@
 		27E116CF1C03D19300E8E2AF /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E116CE1C03D19300E8E2AF /* LoginViewController.m */; };
 		27E116D31C03D2C000E8E2AF /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E116D21C03D2C000E8E2AF /* Settings.m */; };
 		27FA78B01C811DC6002FEC0B /* SuggestionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27FA78AF1C811DC6002FEC0B /* SuggestionsViewController.m */; };
+		27FA78B71C8189C3002FEC0B /* StatTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27FA78B61C8189C3002FEC0B /* StatTableCell.xib */; };
+		27FA78BC1C819D5E002FEC0B /* StatTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 27FA78BB1C819D5E002FEC0B /* StatTableCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -252,6 +254,9 @@
 		27E116D21C03D2C000E8E2AF /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Settings.m; sourceTree = "<group>"; };
 		27FA78AE1C811DB9002FEC0B /* SuggestionsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SuggestionsViewController.h; sourceTree = "<group>"; };
 		27FA78AF1C811DC6002FEC0B /* SuggestionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuggestionsViewController.m; sourceTree = "<group>"; };
+		27FA78B61C8189C3002FEC0B /* StatTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StatTableCell.xib; sourceTree = "<group>"; };
+		27FA78BB1C819D5E002FEC0B /* StatTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatTableCell.m; sourceTree = "<group>"; };
+		27FA78BD1C819D68002FEC0B /* StatTableCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StatTableCell.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -431,8 +436,11 @@
 				27E116971C03ABB800E8E2AF /* main.m */,
 				27C6CB411C21D383009E5341 /* Workout.m */,
 				27158D981C0AA8670002272B /* SimpleTableCell.m */,
-				27158D971C0AA84B0002272B /* SimpleTableCell.h */,
 				27158D9A1C0AA8BE0002272B /* SimpleTableCell.xib */,
+				27158D971C0AA84B0002272B /* SimpleTableCell.h */,
+				27FA78B61C8189C3002FEC0B /* StatTableCell.xib */,
+				27FA78BB1C819D5E002FEC0B /* StatTableCell.m */,
+				27FA78BD1C819D68002FEC0B /* StatTableCell.h */,
 				27C6CB431C21D394009E5341 /* Workout.h */,
 				272A3F021C217F7700AAF185 /* WorkoutTableCell.m */,
 				272A3F051C217FCA00AAF185 /* WorkoutTableCell.xib */,
@@ -586,6 +594,7 @@
 				272A3F011C217C6C00AAF185 /* Workouts.plist in Resources */,
 				273E48E01C4C9B5600F56D57 /* IMG_1195.png in Resources */,
 				279B70B81C3D3F290042BD93 /* 0Stars.png in Resources */,
+				27FA78B71C8189C3002FEC0B /* StatTableCell.xib in Resources */,
 				273E48CF1C4C9B5600F56D57 /* IMG_1156.png in Resources */,
 				273E48C71C4C9B5600F56D57 /* IMG_1142.png in Resources */,
 				273E48CE1C4C9B5600F56D57 /* IMG_1154.png in Resources */,
@@ -689,6 +698,7 @@
 				27158D991C0AA8670002272B /* SimpleTableCell.m in Sources */,
 				27DAE1561C25475E002A03D5 /* DetailWorkoutViewContoller.m in Sources */,
 				27E116981C03ABB800E8E2AF /* main.m in Sources */,
+				27FA78BC1C819D5E002FEC0B /* StatTableCell.m in Sources */,
 				27C6CB421C21D383009E5341 /* Workout.m in Sources */,
 				27DAE15A1C27D328002A03D5 /* DetailExerciseViewController.m in Sources */,
 				2741FD801C34027500D15A94 /* StatisticsViewController.m in Sources */,
