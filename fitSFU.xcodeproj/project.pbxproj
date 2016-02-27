@@ -106,6 +106,7 @@
 		27E116CD1C03B5D100E8E2AF /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27E116CC1C03B5D100E8E2AF /* FBSDKLoginKit.framework */; };
 		27E116CF1C03D19300E8E2AF /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E116CE1C03D19300E8E2AF /* LoginViewController.m */; };
 		27E116D31C03D2C000E8E2AF /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E116D21C03D2C000E8E2AF /* Settings.m */; };
+		27FA78B01C811DC6002FEC0B /* SuggestionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27FA78AF1C811DC6002FEC0B /* SuggestionsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -249,6 +250,8 @@
 		27E116D01C03D1A600E8E2AF /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		27E116D11C03D29700E8E2AF /* Settings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
 		27E116D21C03D2C000E8E2AF /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Settings.m; sourceTree = "<group>"; };
+		27FA78AE1C811DB9002FEC0B /* SuggestionsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SuggestionsViewController.h; sourceTree = "<group>"; };
+		27FA78AF1C811DC6002FEC0B /* SuggestionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuggestionsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -399,14 +402,16 @@
 				2720DB7B1C05341300B7F7CD /* TableViewController.h */,
 				2720DB7C1C05346E00B7F7CD /* TableViewController.m */,
 				272A3EFF1C2178DD00AAF185 /* WorkoutViewContoller.h */,
+				272A3EFD1C2178CB00AAF185 /* WorkoutViewContoller.m */,
 				2799F7271C7BE5B80041079B /* StatTable.m */,
 				2799F7291C7BE5C00041079B /* StatTable.h */,
 				2799F72A1C7BE6040041079B /* CheckInViewController.m */,
 				2799F72C1C7BE60E0041079B /* CheckInViewController.h */,
-				272A3EFD1C2178CB00AAF185 /* WorkoutViewContoller.m */,
 				2741FD811C34028800D15A94 /* StatisticsViewController.h */,
 				2741FD7F1C34027500D15A94 /* StatisticsViewController.m */,
 				2799F7251C7BC1C30041079B /* Main.storyboard */,
+				27FA78AE1C811DB9002FEC0B /* SuggestionsViewController.h */,
+				27FA78AF1C811DC6002FEC0B /* SuggestionsViewController.m */,
 				27DAE1571C2547AC002A03D5 /* DetailWorkoutViewController.h */,
 				27DAE1551C25475E002A03D5 /* DetailWorkoutViewContoller.m */,
 				27DAE1581C27D30C002A03D5 /* DetailExerciseViewController.h */,
@@ -679,6 +684,7 @@
 				27E116D31C03D2C000E8E2AF /* Settings.m in Sources */,
 				27E1169B1C03ABB800E8E2AF /* AppDelegate.m in Sources */,
 				272A3F031C217F7700AAF185 /* WorkoutTableCell.m in Sources */,
+				27FA78B01C811DC6002FEC0B /* SuggestionsViewController.m in Sources */,
 				27D694D31C4324FE00987C66 /* FriendsViewController.m in Sources */,
 				27158D991C0AA8670002272B /* SimpleTableCell.m in Sources */,
 				27DAE1561C25475E002A03D5 /* DetailWorkoutViewContoller.m in Sources */,

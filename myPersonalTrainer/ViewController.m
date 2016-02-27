@@ -51,30 +51,6 @@
     self.exerciseDetails.text =[details objectAtIndex:rowNumber];
     self.title = [exercises objectAtIndex:rowNumber];
 }
--(void)bannerViewWillLoadAd:(ADBannerView *)banner{
-    NSLog(@"Ad Banner will load ad.");
-    
-    // Show the ad banner.
-    [UIView animateWithDuration:0.5 animations:^{
-        self.adBanner.alpha = 1.0;
-    }];
-}
--(void)bannerViewDidLoadAd:(ADBannerView *)banner{
-    NSLog(@"Ad Banner did load ad.");
-}
--(BOOL)bannerViewActionShouldBegin:(ADBannerView *)banner willLeaveApplication:(BOOL)willLeave{
-    NSLog(@"Ad Banner action is about to begin.");
-    return YES;
-}
--(void)bannerViewActionDidFinish:(ADBannerView *)banner{
-    NSLog(@"Ad Banner action did finish");
-}
--(void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error{
-    NSLog(@"Unable to show ads. Error: %@", [error localizedDescription]);
-    // Hide the ad banner.
-    [UIView animateWithDuration:0.5 animations:^{
-        self.adBanner.alpha = 0.0;
-    }];
-}
+
 @end
 

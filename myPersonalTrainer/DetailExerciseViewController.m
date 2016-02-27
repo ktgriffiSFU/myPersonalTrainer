@@ -23,8 +23,7 @@
 @implementation DetailExerciseViewController
 
 {
-    NSArray *exercises;
-    NSArray *pictures;
+    NSArray *exercises,*pictures;
     NSArray *targetedMuscle;
     NSArray *details;
     NSArray *exerciseName;
@@ -184,7 +183,6 @@
                                    action:@selector(dismissKeyboard)];
     
     [self.view addGestureRecognizer:tap];
-    self.adBanner.delegate = self;
 
     armsString = [[NSUserDefaults standardUserDefaults] stringForKey:@"arms"];
     shouldersString = [[NSUserDefaults standardUserDefaults] stringForKey:@"shoulders"];
@@ -231,7 +229,6 @@
     }
 
     // Initially hide the ad banner.
-    self.adBanner.alpha = 0.0;
     
     NSString *path1 = [[NSBundle mainBundle] pathForResource:@"Exercises" ofType:@"plist"];
     NSString *path2 = [[NSBundle mainBundle] pathForResource:@"Workouts" ofType:@"plist"];
@@ -281,7 +278,7 @@
 
     self.exerciseImageView.image = [UIImage imageNamed:[thumbnailforWorkout objectAtIndex:rowNumberNew]];
     self.exerciseImageView2.image= [UIImage imageNamed:[thumbnailforWorkout2 objectAtIndex:rowNumberNew]];
-    self.exerciseImageName.text =[exerciseforWorkoutNew objectAtIndex:rowNumberNew];
+    NSLog(@"%@",[exerciseforWorkoutNew objectAtIndex:rowNumberNew]);
  //   self.exerciseDetails.text =[detailsforWorkout objectAtIndex:rowNumberNew];
    // NSLog(@"Exercise is: %@",exerciseImageName);
     [self createViews];
@@ -292,27 +289,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
--(void)bannerViewWillLoadAd:(ADBannerView *)banner{
-    
-    // Show the ad banner.
-    [UIView animateWithDuration:0.5 animations:^{
-        self.adBanner.alpha = 1.0;
-    }];
-}
--(void)bannerViewDidLoadAd:(ADBannerView *)banner{
-}
--(BOOL)bannerViewActionShouldBegin:(ADBannerView *)banner willLeaveApplication:(BOOL)willLeave{
-    return YES;
-}
--(void)bannerViewActionDidFinish:(ADBannerView *)banner{
-}
--(void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error{
-    NSLog(@"Unable to show ads. Error: %@", [error localizedDescription]);
-    // Hide the ad banner.
-    [UIView animateWithDuration:0.5 animations:^{
-        self.adBanner.alpha = 0.0;
-    }];
-}
+
 -(NSString*)findDaysLeft:(NSTimeInterval *) timeElapsed{
     NSString *dayString;
     int seconds = round(*timeElapsed);

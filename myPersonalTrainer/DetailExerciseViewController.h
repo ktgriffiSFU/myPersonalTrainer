@@ -18,7 +18,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *exerciseImageName;
 @property(nonatomic, strong) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UILabel *workoutName;
-@property (weak, nonatomic) IBOutlet ADBannerView *adBanner;
 @property (weak, nonatomic) IBOutlet UIButton *detailButton;
 @property int rowNumberNew;
 @property int rowNumberWorkout;

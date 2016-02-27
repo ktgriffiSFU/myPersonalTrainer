@@ -6,8 +6,10 @@
 //  Copyright © 2016 Kyle Griffith. All rights reserved.
 //
 
-#ifndef StatTable_h
-#define StatTable_h
 
+#import <UIKit/UIKit.h>
 
-#endif /* StatTable_h */
+@interface StatTable : UITableViewController <UITableViewDelegate, UITableViewDataSource>
+@property(nonatomic, strong) IBOutlet UITableView *tableView;
+
+@end

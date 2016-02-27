@@ -12,6 +12,8 @@
 
 - (IBAction)submitButton:(UIButton *)sender;
 @property (weak, nonatomic) IBOutlet UITextField *signInCode;
-@property (weak, nonatomic) IBOutlet UILabel *serverResponse;
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UITextField *nameField;
+@property (weak, nonatomic) IBOutlet UILabel *welcomeLabel;
 
 @end
