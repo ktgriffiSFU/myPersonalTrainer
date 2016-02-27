@@ -18,13 +18,18 @@
 @implementation StatTable
 {
     NSArray *statOptions;
-
+    NSArray *detailOptions;
 }
 @synthesize tableView; // Add this line of code
 - (void)viewDidLoad{
     [super viewDidLoad];
     statOptions=[[NSArray alloc] initWithObjects:
-                 @"Weekly Progress",@"Rep-Set Bar Chart",@"Consistency Challenge",@"Ask A Trainer Answers", nil];
+                 @"Weekly Progress",@"Reps Bar Chart",@"Consistency Challenge",@"Ask A Trainer Answers", nil];
+    detailOptions=[[NSArray alloc] initWithObjects:
+                   @"Check your weekly activity",
+                   @"See how many reps you have done over the month",
+                   @"Find out who is winning the consistency challenge",
+                   @"See what we have to say about fitness", nil];
     //ArrayofIcons
 }
 - (void)viewDidUnload
@@ -44,7 +49,7 @@
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 40;
+    return 100;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -60,6 +65,7 @@
     cell.accessoryType  = UITableViewCellAccessoryDisclosureIndicator;
     
     cell.statName.text = [statOptions objectAtIndex:indexPath.row];
+    cell.detailLabel.text=[detailOptions objectAtIndex:indexPath.row];
     //     cell.thumbnail.image = [UIImage imageNamed:[thumbnail objectAtIndex:indexPath.row]];
 
     

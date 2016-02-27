@@ -10,6 +10,8 @@
 @interface StatTableCell: UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *statName;
 
+@property (weak, nonatomic) IBOutlet UILabel *detailLabel;
+
 @property (weak, nonatomic) IBOutlet UIImageView *statIcon;
 
 @end
