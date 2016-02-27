@@ -131,25 +131,25 @@
                                 <exclude reference="QQG-lc-ILM"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="9eZ-Rq-60b"/>
-                                <exclude reference="jDr-75-hxo"/>
-                                <exclude reference="EOX-U5-Cs3"/>
-                                <exclude reference="mm2-P8-Okb"/>
+                                <exclude reference="LKf-0Q-XNW"/>
+                                <exclude reference="NVq-Ee-D3X"/>
+                                <exclude reference="OLC-IE-c3f"/>
+                                <exclude reference="ONg-j5-zXm"/>
+                                <exclude reference="P7Z-yx-6tm"/>
+                                <exclude reference="kh3-VA-Gc5"/>
                                 <exclude reference="DUP-pt-JOA"/>
                                 <exclude reference="G0X-bV-jfy"/>
                                 <exclude reference="G9o-vP-I9G"/>
                                 <exclude reference="JFx-67-LtG"/>
                                 <exclude reference="TC7-Eo-pBI"/>
                                 <exclude reference="vSG-kY-Ox1"/>
+                                <exclude reference="EOX-U5-Cs3"/>
+                                <exclude reference="mm2-P8-Okb"/>
+                                <exclude reference="9eZ-Rq-60b"/>
+                                <exclude reference="jDr-75-hxo"/>
                                 <exclude reference="Hoh-HV-jyt"/>
                                 <exclude reference="JqE-ze-2rt"/>
                                 <exclude reference="Vsd-WQ-7VP"/>
-                                <exclude reference="NVq-Ee-D3X"/>
-                                <exclude reference="OLC-IE-c3f"/>
-                                <exclude reference="ONg-j5-zXm"/>
-                                <exclude reference="P7Z-yx-6tm"/>
-                                <exclude reference="kh3-VA-Gc5"/>
-                                <exclude reference="LKf-0Q-XNW"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -162,25 +162,25 @@
                                 <include reference="QQG-lc-ILM"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="9eZ-Rq-60b"/>
-                                <include reference="jDr-75-hxo"/>
-                                <include reference="EOX-U5-Cs3"/>
-                                <include reference="mm2-P8-Okb"/>
+                                <include reference="LKf-0Q-XNW"/>
+                                <include reference="NVq-Ee-D3X"/>
+                                <include reference="OLC-IE-c3f"/>
+                                <include reference="ONg-j5-zXm"/>
+                                <include reference="P7Z-yx-6tm"/>
+                                <include reference="kh3-VA-Gc5"/>
                                 <include reference="DUP-pt-JOA"/>
                                 <include reference="G0X-bV-jfy"/>
                                 <include reference="G9o-vP-I9G"/>
                                 <include reference="JFx-67-LtG"/>
                                 <include reference="TC7-Eo-pBI"/>
                                 <include reference="vSG-kY-Ox1"/>
+                                <include reference="EOX-U5-Cs3"/>
+                                <include reference="mm2-P8-Okb"/>
+                                <include reference="9eZ-Rq-60b"/>
+                                <include reference="jDr-75-hxo"/>
                                 <include reference="Hoh-HV-jyt"/>
                                 <include reference="JqE-ze-2rt"/>
                                 <include reference="Vsd-WQ-7VP"/>
-                                <include reference="NVq-Ee-D3X"/>
-                                <include reference="OLC-IE-c3f"/>
-                                <include reference="ONg-j5-zXm"/>
-                                <include reference="P7Z-yx-6tm"/>
-                                <include reference="kh3-VA-Gc5"/>
-                                <include reference="LKf-0Q-XNW"/>
                             </mask>
                         </variation>
                     </view>
@@ -541,6 +541,9 @@
                                 <exclude reference="Pre-Kg-g0P"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="uKK-fr-2xI"/>
+                                <exclude reference="1Og-zr-C1S"/>
+                                <exclude reference="8e2-35-bXq"/>
                                 <exclude reference="hYt-0V-KDy"/>
                                 <exclude reference="Fnm-FB-BUV"/>
                                 <exclude reference="JX5-6c-OvV"/>
@@ -548,9 +551,6 @@
                                 <exclude reference="bal-Dm-4X1"/>
                                 <exclude reference="f8H-cA-2Rc"/>
                                 <exclude reference="ivP-IV-xTy"/>
-                                <exclude reference="1Og-zr-C1S"/>
-                                <exclude reference="8e2-35-bXq"/>
-                                <exclude reference="uKK-fr-2xI"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -560,6 +560,9 @@
                                 <include reference="Pre-Kg-g0P"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="uKK-fr-2xI"/>
+                                <include reference="1Og-zr-C1S"/>
+                                <include reference="8e2-35-bXq"/>
                                 <include reference="hYt-0V-KDy"/>
                                 <include reference="Fnm-FB-BUV"/>
                                 <include reference="JX5-6c-OvV"/>
@@ -567,9 +570,6 @@
                                 <include reference="bal-Dm-4X1"/>
                                 <include reference="f8H-cA-2Rc"/>
                                 <include reference="ivP-IV-xTy"/>
-                                <include reference="1Og-zr-C1S"/>
-                                <include reference="8e2-35-bXq"/>
-                                <include reference="uKK-fr-2xI"/>
                             </mask>
                         </variation>
                     </view>
@@ -603,18 +603,18 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Rep-Set Bar Chart" id="O8r-tb-1cO" customClass="StatTableCell">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="136" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="O8r-tb-1cO" id="o8a-LN-F7Q">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="hdO-IQ-bWW" kind="show" id="83G-yf-8wu"/>
+                                    <segue destination="hdO-IQ-bWW" kind="show" identifier="showView2" id="83G-yf-8wu"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ConsistChallenge" id="Ak5-eV-NhO" customClass="StatTableCell">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="180" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ak5-eV-NhO" id="tUL-Sf-u0A">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
@@ -625,7 +625,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AskATrainer" id="I0j-0n-eNm" customClass="StatTableCell">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="224" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="I0j-0n-eNm" id="Kn6-G3-1UK">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
@@ -650,15 +650,16 @@
             </objects>
             <point key="canvasLocation" x="3537" y="868"/>
         </scene>
-        <!--View Controller-->
+        <!--Statistics View Controller-->
         <scene sceneID="14F-XB-NLw">
             <objects>
-                <viewController id="zaa-H4-Nx2" sceneMemberID="viewController">
+                <viewController id="zaa-H4-Nx2" customClass="StatisticsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rKz-o1-dZ3"/>
                         <viewControllerLayoutGuide type="bottom" id="vTT-87-KPF"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="6yp-ym-8Ax">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weekly Progress" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YSB-ba-jWO">
@@ -725,7 +726,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4YR-ro-M4W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4584" y="868"/>
+            <point key="canvasLocation" x="4602" y="868"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="gFA-Lu-Sum">
@@ -736,6 +737,7 @@
                         <viewControllerLayoutGuide type="bottom" id="xgi-hV-Bez"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="V3c-09-zAT">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ask A Trainer Answers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sj3-e9-1dx">
@@ -774,6 +776,7 @@
                         <viewControllerLayoutGuide type="bottom" id="zPu-n6-NOS"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="c8V-Tt-wM5">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Consistency Challenge" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="biv-Zb-ziQ">
