@@ -40,7 +40,6 @@
     answers =[[answersArray reverseObjectEnumerator]allObjects];
     questions =[[questionsArray reverseObjectEnumerator]allObjects];
     identitynumbers=[idArray copy];
-    NSLog(@"%@",answers);
     
 }
 - (void)viewDidUnload
@@ -86,8 +85,9 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
-    [self performSegueWithIdentifier:@"showAnswer" sender:self];
     rowNumber = indexPath.row;
+
+    [self performSegueWithIdentifier:@"showAnswer" sender:self];
 
 
 }
@@ -107,14 +107,12 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
     if ([segue.identifier isEqualToString:@"showAnswer"]) {
-        NSArray *answerArray =[[answers reverseObjectEnumerator]allObjects];
-        NSArray *questionArray =[[questions reverseObjectEnumerator]allObjects];
-        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+
         AnswerTrainerViewController *destViewController = segue.destinationViewController;
-        destViewController.questionString=[answerArray objectAtIndex:rowNumber];
-        destViewController.answerString=[questionArray objectAtIndex:rowNumber];
+        destViewController.answerString=[answers objectAtIndex:rowNumber];
+        destViewController.questionString=[questions objectAtIndex:rowNumber];
 
-
+        NSLog(@"%d",rowNumber);
 
     }
 }

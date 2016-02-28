@@ -621,7 +621,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="wUB-SK-zsr" kind="show" identifier="showView3" id="e0K-KI-WhH"/>
+                                    <segue destination="IFh-TG-wOV" kind="show" identifier="showView3" id="r6e-oC-wKs"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AskATrainer" id="I0j-0n-eNm" customClass="StatTableCell">
@@ -728,6 +728,34 @@
             </objects>
             <point key="canvasLocation" x="4602" y="861"/>
         </scene>
+        <!--Consistency View Controller-->
+        <scene sceneID="OEF-KN-0sg">
+            <objects>
+                <tableViewController id="IFh-TG-wOV" customClass="ConsistencyViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Hz1-dg-ECL">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="9hL-Zk-4Jo">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9hL-Zk-4Jo" id="V8d-Gd-soW">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="IFh-TG-wOV" id="0rv-br-tHl"/>
+                            <outlet property="delegate" destination="IFh-TG-wOV" id="37f-Fi-AmR"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="tableView" destination="Hz1-dg-ECL" id="8Sg-7B-JOf"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gc1-2H-mv1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4576.5" y="1514"/>
+        </scene>
         <!--Ask Trainer View Controller-->
         <scene sceneID="yZG-tB-hGU">
             <objects>
@@ -773,36 +801,70 @@
                     <view key="view" contentMode="scaleToFill" id="4ld-Fe-laR">
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mHv-cQ-HGP">
-                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="20" y="72" width="360" height="115"/>
-                                </variation>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dVb-Na-25K">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="20" y="219" width="360" height="292"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mHv-cQ-HGP">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="115" id="5PX-F7-inD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="5PX-F7-inD"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="5PX-F7-inD"/>
+                                    </mask>
                                 </variation>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dVb-Na-25K" firstAttribute="leading" secondItem="4ld-Fe-laR" secondAttribute="leadingMargin" id="4tH-CJ-ACz"/>
+                            <constraint firstItem="dVb-Na-25K" firstAttribute="trailing" secondItem="mHv-cQ-HGP" secondAttribute="trailing" id="9T0-Eh-Di0"/>
+                            <constraint firstItem="dVb-Na-25K" firstAttribute="top" secondItem="mHv-cQ-HGP" secondAttribute="bottom" constant="32" id="9TK-Pc-Hqo"/>
+                            <constraint firstItem="dVb-Na-25K" firstAttribute="leading" secondItem="mHv-cQ-HGP" secondAttribute="leading" id="ZfT-BQ-app"/>
+                            <constraint firstItem="dVb-Na-25K" firstAttribute="trailing" secondItem="4ld-Fe-laR" secondAttribute="trailingMargin" id="fag-Fm-pHH"/>
+                            <constraint firstItem="hwY-md-Fyg" firstAttribute="top" secondItem="dVb-Na-25K" secondAttribute="bottom" constant="40" id="fw9-Tl-po5"/>
+                            <constraint firstItem="mHv-cQ-HGP" firstAttribute="top" secondItem="sRU-h5-n1q" secondAttribute="bottom" constant="8" symbolic="YES" id="r1v-g6-2Ql"/>
+                        </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="mHv-cQ-HGP"/>
                                 <exclude reference="dVb-Na-25K"/>
+                                <exclude reference="mHv-cQ-HGP"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="r1v-g6-2Ql"/>
+                                <exclude reference="4tH-CJ-ACz"/>
+                                <exclude reference="9T0-Eh-Di0"/>
+                                <exclude reference="9TK-Pc-Hqo"/>
+                                <exclude reference="ZfT-BQ-app"/>
+                                <exclude reference="fag-Fm-pHH"/>
+                                <exclude reference="fw9-Tl-po5"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="mHv-cQ-HGP"/>
                                 <include reference="dVb-Na-25K"/>
+                                <include reference="mHv-cQ-HGP"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="r1v-g6-2Ql"/>
+                                <include reference="4tH-CJ-ACz"/>
+                                <include reference="9T0-Eh-Di0"/>
+                                <include reference="9TK-Pc-Hqo"/>
+                                <include reference="ZfT-BQ-app"/>
+                                <include reference="fag-Fm-pHH"/>
+                                <include reference="fw9-Tl-po5"/>
                             </mask>
                         </variation>
                     </view>
@@ -814,45 +876,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2O4-hc-MJo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6009" y="831"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="1IL-WQ-AXP">
-            <objects>
-                <viewController id="wUB-SK-zsr" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="D7b-Ny-IOy"/>
-                        <viewControllerLayoutGuide type="bottom" id="zPu-n6-NOS"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="c8V-Tt-wM5">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Consistency Challenge" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="biv-Zb-ziQ">
-                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="113" y="289" width="175" height="21"/>
-                                </variation>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="biv-Zb-ziQ"/>
-                            </mask>
-                        </variation>
-                        <variation key="widthClass=compact">
-                            <mask key="subviews">
-                                <include reference="biv-Zb-ziQ"/>
-                            </mask>
-                        </variation>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9m1-N6-HgV" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4611" y="1521"/>
         </scene>
         <!--Statistics-->
         <scene sceneID="Qn5-J1-aPI">

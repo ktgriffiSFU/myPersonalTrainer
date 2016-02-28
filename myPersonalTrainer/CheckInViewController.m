@@ -12,7 +12,7 @@
 
 @implementation CheckInViewController{
     NSDate *methodStart;
-    NSDate *methodEnd;
+    NSDate *methodEnd,*oldTime;
     NSString *userName;
     NSString *countString;
     NSString *oldDateString;
@@ -24,6 +24,7 @@
 @synthesize nameField,nameLabel,welcomeLabel;
 
 - (void)viewDidLoad {
+
     post=false;
     [super viewDidLoad];
     userName=[[NSUserDefaults standardUserDefaults] stringForKey:@"userName"];
@@ -39,6 +40,7 @@
     }
     [self CheckNewMonth];
     [self getCode];
+    NSLog(@"%@",signInKey);
 }
 - (IBAction)submitButton:(UIButton *)sender {
     BOOL newWorkout = [self checkIfNewDay];
@@ -51,7 +53,7 @@
         if (newWorkout) {
             [self findCount];
             NSLog(@"ToSend: %@",countString);
-            oldDateString = [NSDate date];
+            oldTime = [NSDate date];
             [self sendNameAndCount];
             [self Alert:@"Your signed in. Keep on signing in for chances to win the consistency challenge."];
         }else{
@@ -72,12 +74,13 @@
     [dateFormatter setDateFormat:@"MM"];
     NSDate *today = [NSDate date];
     NSString *todaysDateString = [dateFormatter stringFromDate:today];
-    NSInteger todayInt = [todaysDateString integerValue];
-    NSInteger oldDayInt = [oldDateString integerValue];
+    NSString *lastDayString =[dateFormatter stringFromDate:oldTime];
+    NSInteger todayMonthInt = [todaysDateString integerValue];
+    NSInteger lastDayMonthInt = [lastDayString integerValue];
 
-    if (oldDayInt==todayInt||countString!=nil) {
+    if (lastDayMonthInt==todayMonthInt && countString!=nil) {
         countString =[[NSUserDefaults standardUserDefaults] stringForKey:@"countIn"];
-    }else if (oldDayInt<todayInt){
+    }else{
         countInt=0;
         countString = [@(countInt) stringValue];
 
@@ -102,7 +105,7 @@
     oldDateString = [month stringFromDate:methodEnd];
     NSTimeInterval executionTime = [methodEnd timeIntervalSinceDate:methodStart];
     //
-    if (executionTime>5 || methodStart==nil) {
+    if (executionTime>10*60*60 || methodStart==nil) {
         methodStart = [NSDate date];
         NSString *stringDate = [dateFormatter stringFromDate:[NSDate date]];
         [[NSUserDefaults standardUserDefaults] setObject:stringDate forKey:@"timeIn"];
