@@ -728,10 +728,10 @@
             </objects>
             <point key="canvasLocation" x="4602" y="861"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Ask Trainer View Controller-->
         <scene sceneID="yZG-tB-hGU">
             <objects>
-                <tableViewController id="HOM-G4-W5f" sceneMemberID="viewController">
+                <tableViewController id="HOM-G4-W5f" customClass="AskTrainerViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="W31-zV-aF8">
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -748,6 +748,9 @@
                             <outlet property="delegate" destination="HOM-G4-W5f" id="vkd-oN-Xub"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="tableView" destination="W31-zV-aF8" id="Fnz-yY-He0"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aP0-dW-Riq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

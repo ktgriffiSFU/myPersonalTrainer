@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		270B88E01C8261F7009DE8B3 /* AskTrainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 270B88DF1C8261F7009DE8B3 /* AskTrainerViewController.m */; };
+		270B88E31C826390009DE8B3 /* AnswerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 270B88E21C826390009DE8B3 /* AnswerCell.xib */; };
+		270B88E61C8265C5009DE8B3 /* AnswerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 270B88E51C8265C5009DE8B3 /* AnswerCell.m */; };
 		27117ED21C5859AC00EF4516 /* mPT1.png in Resources */ = {isa = PBXBuildFile; fileRef = 27117ED11C5859AC00EF4516 /* mPT1.png */; };
 		27117ED41C585A1800EF4516 /* mpt2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 27117ED31C585A1800EF4516 /* mpt2.jpg */; };
 		27158D931C0A9A1A0002272B /* Exercises.plist in Resources */ = {isa = PBXBuildFile; fileRef = 27158D921C0A9A1A0002272B /* Exercises.plist */; };
@@ -129,6 +132,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		270B88DF1C8261F7009DE8B3 /* AskTrainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AskTrainerViewController.m; sourceTree = "<group>"; };
+		270B88E11C826206009DE8B3 /* AskTrainerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AskTrainerViewController.h; sourceTree = "<group>"; };
+		270B88E21C826390009DE8B3 /* AnswerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AnswerCell.xib; sourceTree = "<group>"; };
+		270B88E41C8265BB009DE8B3 /* AnswerCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnswerCell.h; sourceTree = "<group>"; };
+		270B88E51C8265C5009DE8B3 /* AnswerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnswerCell.m; sourceTree = "<group>"; };
 		27117ED11C5859AC00EF4516 /* mPT1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mPT1.png; path = ../../../../Desktop/mPT1.png; sourceTree = "<group>"; };
 		27117ED31C585A1800EF4516 /* mpt2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = mpt2.jpg; path = ../../../../Downloads/mpt2.jpg; sourceTree = "<group>"; };
 		27158D921C0A9A1A0002272B /* Exercises.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Exercises.plist; sourceTree = "<group>"; };
@@ -417,6 +425,8 @@
 				2799F7251C7BC1C30041079B /* Main.storyboard */,
 				27FA78AE1C811DB9002FEC0B /* SuggestionsViewController.h */,
 				27FA78AF1C811DC6002FEC0B /* SuggestionsViewController.m */,
+				270B88DF1C8261F7009DE8B3 /* AskTrainerViewController.m */,
+				270B88E11C826206009DE8B3 /* AskTrainerViewController.h */,
 				27DAE1571C2547AC002A03D5 /* DetailWorkoutViewController.h */,
 				27DAE1551C25475E002A03D5 /* DetailWorkoutViewContoller.m */,
 				27DAE1581C27D30C002A03D5 /* DetailExerciseViewController.h */,
@@ -441,6 +451,9 @@
 				27FA78B61C8189C3002FEC0B /* StatTableCell.xib */,
 				27FA78BB1C819D5E002FEC0B /* StatTableCell.m */,
 				27FA78BD1C819D68002FEC0B /* StatTableCell.h */,
+				270B88E21C826390009DE8B3 /* AnswerCell.xib */,
+				270B88E41C8265BB009DE8B3 /* AnswerCell.h */,
+				270B88E51C8265C5009DE8B3 /* AnswerCell.m */,
 				27C6CB431C21D394009E5341 /* Workout.h */,
 				272A3F021C217F7700AAF185 /* WorkoutTableCell.m */,
 				272A3F051C217FCA00AAF185 /* WorkoutTableCell.xib */,
@@ -636,6 +649,7 @@
 				279B70B21C3D3F0F0042BD93 /* 2Stars.png in Resources */,
 				273E48E31C4C9B5600F56D57 /* IMG_1199.png in Resources */,
 				273E48CC1C4C9B5600F56D57 /* IMG_1150.png in Resources */,
+				270B88E31C826390009DE8B3 /* AnswerCell.xib in Resources */,
 				27DAE1521C230F70002A03D5 /* chest.png in Resources */,
 				27D96C501C3FE31B0055ADAF /* sidePlank2.png in Resources */,
 				273E48DF1C4C9B5600F56D57 /* IMG_1191.png in Resources */,
@@ -691,7 +705,9 @@
 				2799F72B1C7BE6040041079B /* CheckInViewController.m in Sources */,
 				2741FD5E1C2B0FF100D15A94 /* TipsViewController.m in Sources */,
 				27E116D31C03D2C000E8E2AF /* Settings.m in Sources */,
+				270B88E01C8261F7009DE8B3 /* AskTrainerViewController.m in Sources */,
 				27E1169B1C03ABB800E8E2AF /* AppDelegate.m in Sources */,
+				270B88E61C8265C5009DE8B3 /* AnswerCell.m in Sources */,
 				272A3F031C217F7700AAF185 /* WorkoutTableCell.m in Sources */,
 				27FA78B01C811DC6002FEC0B /* SuggestionsViewController.m in Sources */,
 				27D694D31C4324FE00987C66 /* FriendsViewController.m in Sources */,
