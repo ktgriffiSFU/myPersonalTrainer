@@ -19,27 +19,23 @@
 {
     NSArray *names;
     NSArray *counts;
-    NSArray *identitynumbers;
-    int rowNumber;
+    NSMutableArray *place;
 }
 @synthesize tableView; // Add this line of code
 - (void)viewDidLoad{
     [super viewDidLoad];
     NSMutableDictionary *dictQA = [self getFromDatabase];
     [self getOrderedNamesAndCount:dictQA];
-    NSLog(@"%@%",names);
+    
 }
 -(void)getOrderedNamesAndCount:(NSMutableDictionary *) bigDick{
     NSMutableArray *userNameArray = [[NSMutableArray alloc] init];
     NSMutableArray *countArray = [[NSMutableArray alloc] init];
-    NSMutableArray *idArray = [[NSMutableArray alloc] init];
     for (NSDictionary *dict in bigDick) {
         NSString *nameString =[dict objectForKey:@"Name"];
         NSString *countString =[dict objectForKey:@"Count"];
-        NSString *idString =[dict objectForKey:@"Entry"];
         [userNameArray addObject:nameString];
         [countArray addObject:countString];
-        [idArray addObject:idString];
     }
     NSMutableDictionary *tempDict = [NSMutableDictionary dictionaryWithObjects: countArray forKeys: userNameArray];
     NSDictionary *dictionary=[tempDict copy];
@@ -51,6 +47,7 @@
     for (NSString *key in sortedKeys){
         [sortedDictionary setObject:dictionary[key] forKey:key];
     }
+
     names = [sortedDictionary allKeys];
     
     counts = [sortedDictionary allValues];
@@ -70,16 +67,16 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [identitynumbers count];
+    return [names count];
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 100;
+    return 30;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *simpleTableIdentifier = @"AnswerCell";
+    static NSString *simpleTableIdentifier = @"WinnerTableCell";
     
     WinnerTableCell *cell = (WinnerTableCell *)[self.tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
     if (cell == nil)
@@ -87,8 +84,11 @@
         NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"WinnerTableCell" owner:self options:nil];
         cell = [nib objectAtIndex:0];
     }
-    cell.accessoryType  = UITableViewCellAccessoryDisclosureIndicator;
+    cell.accessoryType  = UITableViewCellAccessoryNone;
     
+    cell.patronName.text =[names objectAtIndex:indexPath.row];
+    cell.countAtGym.text =[counts objectAtIndex:indexPath.row];
+    cell.placeLabel.text =[@(indexPath.row+1) stringValue];
     // cell.QuestionLabel.text = [questions objectAtIndex:indexPath.row];
     // cell.detailLabel.text=[detailOptions objectAtIndex:indexPath.row];
     //     cell.thumbnail.image = [UIImage imageNamed:[thumbnail objectAtIndex:indexPath.row]];
@@ -100,9 +100,6 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
-    rowNumber = indexPath.row;
-    
-    
     
 }
 

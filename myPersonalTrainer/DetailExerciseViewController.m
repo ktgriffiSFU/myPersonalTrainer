@@ -204,7 +204,7 @@
     NSTimeInterval executionTime = [methodEnd timeIntervalSinceDate:methodStart];
     daysToGo = [self findDaysLeft:&executionTime];
     NSLog(@"executionTime = %f", executionTime);
-    if (executionTime >604800 || methodStart == nil) {
+    if (executionTime >604800 || methodStart ==nil ) {
         reset=0;
         methodStart = [NSDate date];
         armsString = [@(reset) stringValue];
@@ -290,21 +290,6 @@
     // Dispose of any resources that can be recreated.
 }
 
--(NSString*)findDaysLeft:(NSTimeInterval *) timeElapsed{
-    NSString *dayString;
-    int seconds = round(*timeElapsed);
-    int daysPassed = seconds/86400;
-    int days = 7-daysPassed;
-    if (days<=0) {
-        days=0;
-    }
-    if (timeElapsed==nil) {
-        dayString = @"Go Workout!";
-    }else{
-        dayString= [@(days) stringValue];
-    }
-    return dayString;
-}
 
 
 @end
