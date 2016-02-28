@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "AskTrainerViewController.h"
+#import "AnswerTrainerViewController.h"
 #import "AnswerCell.h"
 @interface  AskTrainerViewController()
 
@@ -18,6 +19,7 @@
     NSArray *answers;
     NSArray *questions;
     NSArray *identitynumbers;
+    int rowNumber;
 }
 @synthesize tableView; // Add this line of code
 - (void)viewDidLoad{
@@ -37,9 +39,8 @@
     
     answers =[[answersArray reverseObjectEnumerator]allObjects];
     questions =[[questionsArray reverseObjectEnumerator]allObjects];
-    identitynumbers=[[idArray reverseObjectEnumerator]allObjects];
-
-    
+    identitynumbers=[idArray copy];
+    NSLog(@"%@",answers);
     
 }
 - (void)viewDidUnload
@@ -85,6 +86,9 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
+    [self performSegueWithIdentifier:@"showAnswer" sender:self];
+    rowNumber = indexPath.row;
+
 
 }
 
@@ -100,8 +104,20 @@
     return dictQA;
 
 }
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    if ([segue.identifier isEqualToString:@"showAnswer"]) {
+        NSArray *answerArray =[[answers reverseObjectEnumerator]allObjects];
+        NSArray *questionArray =[[questions reverseObjectEnumerator]allObjects];
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        AnswerTrainerViewController *destViewController = segue.destinationViewController;
+        destViewController.questionString=[answerArray objectAtIndex:rowNumber];
+        destViewController.answerString=[questionArray objectAtIndex:rowNumber];
 
 
+
+    }
+}
 
 
 @end

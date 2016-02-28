@@ -106,7 +106,6 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
     if ([segue.identifier isEqualToString:@"showWorkout"]) {
-        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         DetailWorkoutViewController *destViewController = segue.destinationViewController;
 //        destViewController.exerciseImageName = [workoutName objectAtIndex:indexPath.row];
 //        destViewController.exerciseImageView = [thumbnail objectAtIndex:indexPath.row];
