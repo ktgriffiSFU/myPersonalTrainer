@@ -20,7 +20,9 @@
 
 @end
 
+
 @implementation DetailExerciseViewController
+
 
 {
     NSArray *exercises,*pictures;
@@ -53,14 +55,11 @@
     
 }
 
-@synthesize tableView; // Add this line of code
 @synthesize exerciseImageView;
 @synthesize exerciseImageView2;
-@synthesize exerciseImageName;
 //@synthesize exerciseDetails;
 @synthesize rowNumberWorkout;
 @synthesize rowNumberNew;
-@synthesize workoutName;
 @synthesize repsText, setsText;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -97,7 +96,6 @@
     secondViewController.shoulders= shouldersString;
     secondViewController.core = coreString;
     secondViewController.newData=newScore;
-    secondViewController.daysLeft=daysToGo;
     secondViewController.delegate = self;
    [self.navigationController pushViewController:secondViewController animated:NO];
 }
@@ -202,7 +200,6 @@
     methodEnd= [NSDate date];
     
     NSTimeInterval executionTime = [methodEnd timeIntervalSinceDate:methodStart];
-    daysToGo = [self findDaysLeft:&executionTime];
     NSLog(@"executionTime = %f", executionTime);
     if (executionTime >604800 || methodStart ==nil ) {
         reset=0;
@@ -237,7 +234,6 @@
     NSDictionary *dict2 = [[NSDictionary alloc] initWithContentsOfFile:path2];
     workoutNameP = [dict2 objectForKey:@"WorkoutName"];
 
-    self.workoutName.text =[workoutNameP objectAtIndex:rowNumberWorkout];
     // Find out the path of recipes.plist
     exerciseName = [dict1 objectForKey:@"ExerciseName"];
     thumbnails = [dict1 objectForKey:@"Thumbnail"];

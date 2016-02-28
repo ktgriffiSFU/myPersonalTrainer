@@ -9,15 +9,13 @@
 #import <UIKit/UIKit.h>
 #import <iAd/iAd.h>
 #import "StatisticsViewController.h"
-@interface DetailExerciseViewController : UIViewController <ADBannerViewDelegate>
+@interface DetailExerciseViewController : UIViewController
 
 
 @property (weak, nonatomic) IBOutlet UIImageView *exerciseImageView;
 
 @property (weak, nonatomic) IBOutlet UIImageView *exerciseImageView2;
-@property (weak, nonatomic) IBOutlet UILabel *exerciseImageName;
-@property(nonatomic, strong) IBOutlet UITableView *tableView;
-@property (weak, nonatomic) IBOutlet UILabel *workoutName;
+
 @property (weak, nonatomic) IBOutlet UIButton *detailButton;
 @property int rowNumberNew;
 @property int rowNumberWorkout;

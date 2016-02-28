@@ -60,7 +60,6 @@
     targetedMuscleforWorkout = [[NSMutableArray alloc] init];
     thumbnailforWorkout = [[NSMutableArray alloc] init];
     exerciseforWorkoutNew =[[NSMutableArray alloc] init];
-    //Need to do thumbnail, targeted muscle.
     for (int j=0;j<exerciseName.count ; j++) {
         for (int i=0; i <exercisesforWorkout.count; i++) {
             if ([exercisesforWorkout[i] isEqualToString:exerciseName[j]]) {
@@ -154,7 +153,6 @@
     if ([segue.identifier isEqualToString:@"showExercise"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         DetailExerciseViewController *destViewController = segue.destinationViewController;
-        destViewController.exerciseImageName = [exercisesforWorkout objectAtIndex:indexPath.row];
 //        destViewController.exerciseImageView = [thumbnailforWorkout objectAtIndex:indexPath.row];
         destViewController.rowNumberNew = rowNumber;
         destViewController.rowNumberWorkout = rowNumberOld;

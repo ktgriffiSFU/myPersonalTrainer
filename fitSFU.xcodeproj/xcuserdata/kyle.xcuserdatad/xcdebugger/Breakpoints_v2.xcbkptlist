@@ -21,13 +21,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "myPersonalTrainer/DetailExerciseViewController.m"
-            timestampString = "478353994.306242"
+            filePath = "myPersonalTrainer/DetailWorkoutViewContoller.m"
+            timestampString = "478356845.146263"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "281"
-            endingLineNumber = "281"
-            landmarkName = "-viewDidLoad"
+            startingLineNumber = "112"
+            endingLineNumber = "112"
+            landmarkName = "-tableView:cellForRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
