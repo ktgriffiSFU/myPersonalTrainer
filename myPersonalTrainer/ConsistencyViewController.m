@@ -17,7 +17,7 @@
 
 @implementation ConsistencyViewController
 {
-    NSArray *names;
+    NSMutableArray *names;
     NSArray *counts;
     NSMutableArray *place;
 }
@@ -34,25 +34,32 @@
     for (NSDictionary *dict in bigDick) {
         NSString *nameString =[dict objectForKey:@"Name"];
         NSString *countString =[dict objectForKey:@"Count"];
+        NSInteger countInt = [countString integerValue];
+        NSNumber *countNumber =[NSNumber numberWithInt:countInt];
         [userNameArray addObject:nameString];
-        [countArray addObject:countString];
+        [countArray addObject:countNumber];
     }
-    NSMutableDictionary *tempDict = [NSMutableDictionary dictionaryWithObjects: countArray forKeys: userNameArray];
-    NSDictionary *dictionary=[tempDict copy];
-    
-    
-    NSArray *sortedKeys = [self sortKeysByIntValue:dictionary];
-    NSMutableDictionary *sortedDictionary = [[NSMutableDictionary alloc] init];
-    
-    for (NSString *key in sortedKeys){
-        [sortedDictionary setObject:dictionary[key] forKey:key];
+    NSArray *namesAscending =[[userNameArray reverseObjectEnumerator]allObjects];
+    NSArray *countsAscending=[[countArray reverseObjectEnumerator]allObjects];
+    // Put the two arrays into a dictionary as keys and values
+    NSDictionary *dictionary = [NSDictionary dictionaryWithObjects:countsAscending forKeys:namesAscending];
+    // Sort the first array
+    NSArray *sortedCountArray = [[dictionary allValues] sortedArrayUsingSelector:@selector(compare:)];
+    // Sort the second array based on the sorted first array
+  //  NSArray *sortedNameArray= [dictionary objectsForKeys:sortedCountArray notFoundMarker:[NSNull null]];
+    NSMutableArray *nameArray =[[NSMutableArray alloc] init];
+    for (int i=1; i<sortedCountArray.count; i++) {
+        
+        NSString *name = [dictionary allKeysForObject:sortedCountArray[i]];
+        if (sortedCountArray[i]!=sortedCountArray[i-1]) {
+            [nameArray addObject:name];
+
+        }
     }
-
-    names = [sortedDictionary allKeys];
     
-    counts = [sortedDictionary allValues];
+    names = [[NSMutableArray alloc] init];
 
-    
+    names =[nameArray copy];
 }
 - (void)viewDidUnload
 {
