@@ -11,29 +11,31 @@
 @end
 
 @implementation CheckInViewController{
-    NSDate *methodStart;
-    NSDate *methodEnd,*oldTime;
+
     NSString *userName;
     NSString *countString;
+    NSDate *oldDate;
     NSString *oldDateString;
     bool *post;
     NSString *signInKey;
     int countInt;
 }
 @synthesize signInCode;
-@synthesize nameField,nameLabel,welcomeLabel;
+@synthesize nameField,welcomeLabel;
 
 - (void)viewDidLoad {
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
+                                   initWithTarget:self
+                                   action:@selector(dismissKeyboard)];
+    [self.view addGestureRecognizer:tap];
 
     post=false;
     [super viewDidLoad];
     userName=[[NSUserDefaults standardUserDefaults] stringForKey:@"userName"];
     if (userName==nil) {
         nameField.hidden= NO;
-        nameLabel.hidden= NO;
     }else{
         nameField.hidden= YES;
-        nameLabel.hidden= YES;
         welcomeLabel.hidden=NO;
         NSString *welcomeText =[NSString stringWithFormat:@"Welcome back %@",userName];
         welcomeLabel.text=welcomeText;
@@ -43,6 +45,7 @@
     NSLog(@"%@",signInKey);
 }
 - (IBAction)submitButton:(UIButton *)sender {
+    oldDate= [[NSUserDefaults standardUserDefaults] objectForKey:@"CONSCIENCE_START_DATE"];
     BOOL newWorkout = [self checkIfNewDay];
     if (userName==nil) {
         [self getUserName];
@@ -53,9 +56,10 @@
         if (newWorkout) {
             [self findCount];
             NSLog(@"ToSend: %@",countString);
-            oldTime = [NSDate date];
             [self sendNameAndCount];
             [self Alert:@"Your signed in. Keep on signing in for chances to win the consistency challenge."];
+            oldDate=[NSDate date];
+            [[NSUserDefaults standardUserDefaults]setObject:oldDate forKey:@"CONSCIENCE_START_DATE"];
         }else{
             [self Alert:@"You already signed in today."];
         }
@@ -69,12 +73,16 @@
     userName= nameField.text;
     [[NSUserDefaults standardUserDefaults] setObject:userName forKey:@"userName"];
 }
+-(void)dismissKeyboard {
+    [signInCode resignFirstResponder];
+    [nameField resignFirstResponder];
+}
 -(void)CheckNewMonth{
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"MM"];
     NSDate *today = [NSDate date];
     NSString *todaysDateString = [dateFormatter stringFromDate:today];
-    NSString *lastDayString =[dateFormatter stringFromDate:oldTime];
+    NSString *lastDayString =[dateFormatter stringFromDate:oldDate];
     NSInteger todayMonthInt = [todaysDateString integerValue];
     NSInteger lastDayMonthInt = [lastDayString integerValue];
 
@@ -94,30 +102,22 @@
     
 }
 - (BOOL)checkIfNewDay{
+    NSDate * now = [NSDate date];
+
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateFormat:@"HH:mm:ss-dd-MM-yyyy"];
-    
-    NSString *dateString = [[NSUserDefaults standardUserDefaults] stringForKey:@"timeIn"];
-    
-    methodStart = [dateFormatter dateFromString:dateString];
-    methodEnd = [NSDate date];
-    NSDateFormatter *month = [[NSDateFormatter alloc] init];
-    oldDateString = [month stringFromDate:methodEnd];
-    NSTimeInterval executionTime = [methodEnd timeIntervalSinceDate:methodStart];
-    //
-    if (executionTime>10*60*60 || methodStart==nil) {
-        methodStart = [NSDate date];
-        NSString *stringDate = [dateFormatter stringFromDate:[NSDate date]];
-        [[NSUserDefaults standardUserDefaults] setObject:stringDate forKey:@"timeIn"];
+    [dateFormatter setDateFormat:@"MM dd"];
+    NSString *todaysDateString = [dateFormatter stringFromDate:now];
+    NSString *lastDayString =[dateFormatter stringFromDate:oldDate];
+
+    if (oldDate==nil||![todaysDateString isEqualToString:lastDayString]) {
         return true;
     }else{
         return false;
     }
-    
-    
+
+
     
 }
-
 
 - (void) findCount {
     int count;
@@ -174,7 +174,7 @@
     NSData *returnData = [NSURLConnection sendSynchronousRequest: request returningResponse: nil error: nil];
     // Log Response
     signInKey = [[NSString alloc] initWithBytes:[returnData bytes] length:[returnData length] encoding:NSUTF8StringEncoding];
-    NSLog(signInKey);
+    NSLog(@"%@",signInKey);
     
 }
 

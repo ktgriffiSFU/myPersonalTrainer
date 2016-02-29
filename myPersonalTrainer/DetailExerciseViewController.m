@@ -84,6 +84,8 @@
     [self.view addSubview:_button];
     
     [_button addTarget:self action:@selector(passDataForward) forControlEvents:UIControlEventTouchUpInside];
+    
+    
 }
 - (void)passDataForward
 {
@@ -270,7 +272,15 @@
             }
         }
     }
-   
+    CGFloat screenwidth = [UIScreen mainScreen].bounds.size.width;
+
+    CGFloat width = screenwidth/2;
+    UIImageView *image1 =[[UIImageView alloc] initWithFrame:CGRectMake(0,67,width,width)];
+    UIImageView *image2 =[[UIImageView alloc] initWithFrame:CGRectMake(width,67, width,width)];
+    image1.image=[UIImage imageNamed:[thumbnailforWorkout objectAtIndex:rowNumberNew]];
+    image2.image=[UIImage imageNamed:[thumbnailforWorkout2 objectAtIndex:rowNumberNew]];
+    [self.view addSubview:image1];
+    [self.view addSubview:image2];
 
     self.exerciseImageView.image = [UIImage imageNamed:[thumbnailforWorkout objectAtIndex:rowNumberNew]];
     self.exerciseImageView2.image= [UIImage imageNamed:[thumbnailforWorkout2 objectAtIndex:rowNumberNew]];

@@ -85,9 +85,11 @@
         cell = [nib objectAtIndex:0];
     }
     cell.accessoryType  = UITableViewCellAccessoryNone;
-    
-    cell.patronName.text =[names objectAtIndex:indexPath.row];
-    cell.countAtGym.text =[counts objectAtIndex:indexPath.row];
+    NSArray *namesArray =[[names reverseObjectEnumerator]allObjects];
+    NSArray *countArray =[[counts reverseObjectEnumerator]allObjects];
+
+    cell.patronName.text =[namesArray objectAtIndex:indexPath.row];
+    cell.countAtGym.text =[countArray objectAtIndex:indexPath.row];
     cell.placeLabel.text =[@(indexPath.row+1) stringValue];
     // cell.QuestionLabel.text = [questions objectAtIndex:indexPath.row];
     // cell.detailLabel.text=[detailOptions objectAtIndex:indexPath.row];
