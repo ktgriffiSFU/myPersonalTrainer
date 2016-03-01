@@ -11,7 +11,6 @@
 		270B88E31C826390009DE8B3 /* AnswerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 270B88E21C826390009DE8B3 /* AnswerCell.xib */; };
 		270B88E61C8265C5009DE8B3 /* AnswerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 270B88E51C8265C5009DE8B3 /* AnswerCell.m */; };
 		270B88E81C829F0F009DE8B3 /* AnswerTrainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 270B88E71C829F0F009DE8B3 /* AnswerTrainerViewController.m */; };
-		270B88EB1C82CE2B009DE8B3 /* ConsistencyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 270B88EA1C82CE2B009DE8B3 /* ConsistencyViewController.m */; };
 		270B88EF1C82D231009DE8B3 /* WinnerTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 270B88EE1C82D231009DE8B3 /* WinnerTableCell.m */; };
 		270B88F11C82D240009DE8B3 /* WinnerTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 270B88F01C82D240009DE8B3 /* WinnerTableCell.xib */; };
 		27117ED21C5859AC00EF4516 /* mPT1.png in Resources */ = {isa = PBXBuildFile; fileRef = 27117ED11C5859AC00EF4516 /* mPT1.png */; };
@@ -143,8 +142,6 @@
 		270B88E51C8265C5009DE8B3 /* AnswerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnswerCell.m; sourceTree = "<group>"; };
 		270B88E71C829F0F009DE8B3 /* AnswerTrainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnswerTrainerViewController.m; sourceTree = "<group>"; };
 		270B88E91C829F1C009DE8B3 /* AnswerTrainerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnswerTrainerViewController.h; sourceTree = "<group>"; };
-		270B88EA1C82CE2B009DE8B3 /* ConsistencyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConsistencyViewController.m; sourceTree = "<group>"; };
-		270B88EC1C82CE35009DE8B3 /* ConsistencyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConsistencyViewController.h; sourceTree = "<group>"; };
 		270B88ED1C82D227009DE8B3 /* WinnerTableCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WinnerTableCell.h; sourceTree = "<group>"; };
 		270B88EE1C82D231009DE8B3 /* WinnerTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WinnerTableCell.m; sourceTree = "<group>"; };
 		270B88F01C82D240009DE8B3 /* WinnerTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WinnerTableCell.xib; sourceTree = "<group>"; };
@@ -429,8 +426,6 @@
 				272A3EFD1C2178CB00AAF185 /* WorkoutViewContoller.m */,
 				2799F7271C7BE5B80041079B /* StatTable.m */,
 				2799F7291C7BE5C00041079B /* StatTable.h */,
-				270B88EA1C82CE2B009DE8B3 /* ConsistencyViewController.m */,
-				270B88EC1C82CE35009DE8B3 /* ConsistencyViewController.h */,
 				2799F72A1C7BE6040041079B /* CheckInViewController.m */,
 				2799F72C1C7BE60E0041079B /* CheckInViewController.h */,
 				2741FD811C34028800D15A94 /* StatisticsViewController.h */,
@@ -733,7 +728,6 @@
 				27D694D31C4324FE00987C66 /* FriendsViewController.m in Sources */,
 				27158D991C0AA8670002272B /* SimpleTableCell.m in Sources */,
 				27DAE1561C25475E002A03D5 /* DetailWorkoutViewContoller.m in Sources */,
-				270B88EB1C82CE2B009DE8B3 /* ConsistencyViewController.m in Sources */,
 				27E116981C03ABB800E8E2AF /* main.m in Sources */,
 				27FA78BC1C819D5E002FEC0B /* StatTableCell.m in Sources */,
 				270B88E81C829F0F009DE8B3 /* AnswerTrainerViewController.m in Sources */,

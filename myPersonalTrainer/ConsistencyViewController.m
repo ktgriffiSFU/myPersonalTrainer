@@ -15,54 +15,52 @@
 
 @end
 
-@implementation ConsistencyViewController
-{
-    NSMutableArray *names;
-    NSArray *counts;
-    NSMutableArray *place;
+@implementation ConsistencyViewController{
+    int *totalEntries;
+
 }
+
 @synthesize tableView; // Add this line of code
 - (void)viewDidLoad{
     [super viewDidLoad];
-    NSMutableDictionary *dictQA = [self getFromDatabase];
-    [self getOrderedNamesAndCount:dictQA];
-    
+    NSDictionary *dict = [self getFromDatabase];
+    NSMutableDictionary *highscores = [self getOrderedNamesAndCount:dict];
+    int mytotalEntries = [self getTotalEntries:highscores];
+    totalEntries = &mytotalEntries;
+    NSLog(@"%d",mytotalEntries);
+
 }
--(void)getOrderedNamesAndCount:(NSMutableDictionary *) bigDick{
-    NSMutableArray *userNameArray = [[NSMutableArray alloc] init];
-    NSMutableArray *countArray = [[NSMutableArray alloc] init];
-    for (NSDictionary *dict in bigDick) {
-        NSString *nameString =[dict objectForKey:@"Name"];
-        NSString *countString =[dict objectForKey:@"Count"];
-        NSInteger countInt = [countString integerValue];
-        NSNumber *countNumber =[NSNumber numberWithInt:countInt];
-        [userNameArray addObject:nameString];
-        [countArray addObject:countNumber];
-    }
-    NSArray *namesAscending =[[userNameArray reverseObjectEnumerator]allObjects];
-    NSArray *countsAscending=[[countArray reverseObjectEnumerator]allObjects];
-    // Put the two arrays into a dictionary as keys and values
-    NSDictionary *dictionary = [NSDictionary dictionaryWithObjects:countsAscending forKeys:namesAscending];
-    // Sort the first array
-    NSArray *sortedCountArray = [[dictionary allValues] sortedArrayUsingSelector:@selector(compare:)];
-    // Sort the second array based on the sorted first array
-  //  NSArray *sortedNameArray= [dictionary objectsForKeys:sortedCountArray notFoundMarker:[NSNull null]];
-    NSMutableArray *nameArray =[[NSMutableArray alloc] init];
-    for (int i=1; i<sortedCountArray.count; i++) {
-        
-        NSString *name = [dictionary allKeysForObject:sortedCountArray[i]];
-        if (sortedCountArray[i]!=sortedCountArray[i-1]) {
-            [nameArray addObject:name];
-
+-(int)getTotalEntries: (NSMutableDictionary *)myDict{
+    NSArray *allkeys=[myDict allKeys];
+    return allkeys.count;
+}
+-(NSMutableDictionary*)getOrderedNamesAndCount:(NSDictionary *) bigDict{
+        const NSString *kName = @"Name";
+        const NSString *kCount = @"Count";
+        NSMutableDictionary *highScores = [NSMutableDictionary new]; // a single dictionary rather than your two arrays
+        for (NSDictionary *dict in bigDict)                  // same loop as your code
+        {
+            NSString *nameString = dict[kName];               // same as your code, but using modern syntax
+            NSInteger countInt = [dict[kCount] integerValue]; // condense two lines of your code into one
+            NSNumber *currentScore = highScores[nameString];  // get current high score for user, if any
+            if (currentScore == nil                           // not seen user before, no high score
+                || currentScore.integerValue < countInt)      // seen user, countInt is greater
+            {
+                highScores[nameString] = @(countInt);          // add or update score for user
+            }
         }
-    }
+        NSLog(@"Output: %@", highScores);
     
-    names = [[NSMutableArray alloc] init];
+    return highScores;
+    
 
-    names =[nameArray copy];
+    
 }
 - (void)viewDidUnload
+
 {
+
+    
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
@@ -74,7 +72,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [names count];
+    return *(totalEntries);
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -92,11 +90,11 @@
         cell = [nib objectAtIndex:0];
     }
     cell.accessoryType  = UITableViewCellAccessoryNone;
-    NSArray *namesArray =[[names reverseObjectEnumerator]allObjects];
-    NSArray *countArray =[[counts reverseObjectEnumerator]allObjects];
 
-    cell.patronName.text =[namesArray objectAtIndex:indexPath.row];
-    cell.countAtGym.text =[countArray objectAtIndex:indexPath.row];
+    
+
+// cell.patronName.text =[namesArray objectAtIndex:indexPath.row];
+  //  cell.countAtGym.text =[countArray objectAtIndex:indexPath.row];
     cell.placeLabel.text =[@(indexPath.row+1) stringValue];
     // cell.QuestionLabel.text = [questions objectAtIndex:indexPath.row];
     // cell.detailLabel.text=[detailOptions objectAtIndex:indexPath.row];
@@ -125,18 +123,13 @@
     
     
 }
-- (NSArray *)sortKeysByIntValue:(NSDictionary *)dictionary {
-    
-    NSArray *sortedKeys = [dictionary keysSortedByValueUsingComparator:^NSComparisonResult(id obj1, id obj2) {
-        int v1 = [obj1 intValue];
-        int v2 = [obj2 intValue];
-        if (v1 < v2)
-            return NSOrderedAscending;
-        else if (v1 > v2)
-            return NSOrderedDescending;
-        else
-            return NSOrderedSame;
-    }];
-    return sortedKeys;
+-(void)sortHighScores:(NSDictionary *) dict{
+    NSArray *countArray = [[dict allKeys] sortedArrayUsingSelector: @selector(compare:)];
+    NSMutableArray *nameArray = [NSMutableArray array];
+    for (NSString *key in countArray){
+        [nameArray addObject: [dict objectForKey: key]];
+    }
+
+    NSLog(@"Output: %@  %@", nameArray, countArray);
 }
 @end
