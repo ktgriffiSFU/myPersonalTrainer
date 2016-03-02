@@ -43,27 +43,19 @@
 
     self.title = @"Weekly Statistics";
     self.view.backgroundColor = [UIColor whiteColor];
+    NSLog(@"This runs viedidlow");
     [self gatherData];
-
+    [self postData];
 }
-
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
   
 
     NSLog(@"Core : %@",coreScore);
-    shoulderImage.image = [self determineStars:shoulderScore];
-    armsImage.image = [self determineStars:armsScore];
-    backImage.image = [self determineStars:backScore];
-    chestImage.image= [self determineStars:chestScore];
-    legsImage.image = [self determineStars:legsScore];
-    coreImage.image = [self determineStars:coreScore];
-    if (daysScore== nil){
-        [self.daysToGo setText:[NSString stringWithFormat:@"Your statistics reset every week"]];
-    }else{
-        [self.daysToGo setText:[NSString stringWithFormat:@"Days until reset: %@",daysScore]];
-    }
+    NSLog(@"Legs : %@",legsScore);
+    [self gatherData];
+    [self postData];
 
     
 }
@@ -100,6 +92,15 @@
     shoulderScore = [[NSUserDefaults standardUserDefaults] stringForKey:@"SHOULDERS"];
     backScore = [[NSUserDefaults standardUserDefaults] stringForKey:@"BACK"];
     daysScore = [[NSUserDefaults standardUserDefaults] stringForKey:@"DAYS"];
+
+}
+-(void)postData{
+    shoulderImage.image = [self determineStars:shoulderScore];
+    armsImage.image = [self determineStars:armsScore];
+    backImage.image = [self determineStars:backScore];
+    chestImage.image= [self determineStars:chestScore];
+    legsImage.image = [self determineStars:legsScore];
+    coreImage.image = [self determineStars:coreScore];
 }
 
 - (UIImage *) determineStars: (NSString *) score

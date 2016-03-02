@@ -78,6 +78,8 @@
             countLabel.hidden=NO;
             signInField.hidden=YES;
             submitButton.hidden=YES;
+            NSString *welcomeText =[NSString stringWithFormat:@"%@'s count is",userName];
+            welcomeLabel.text=welcomeText;
         }else{
             [self Alert:@"You already signed in today."];
         }
@@ -130,7 +132,7 @@
     if (oldDate==nil||![todaysDateString isEqualToString:lastDayString]) {
         return true;
     }else{
-        return true;
+        return false;
     }
 
 

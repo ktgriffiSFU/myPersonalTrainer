@@ -48,8 +48,6 @@
     int totalScore;
     NSString *daysToGo;
     NSInteger rowNumberDetails[8];
-    NSDate *methodStart;
-    NSDate *methodEnd;
     bool newScore;
     NSTimeInterval  *elapsedTime;
     
@@ -198,19 +196,12 @@
     totalString =[[NSUserDefaults standardUserDefaults] stringForKey:@"total"];
     NSLog(@"Saved:%@",armsString);
     totalScore = [totalString integerValue];
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateFormat:@"HH:mm:ss-dd-MM-yyyy"];
-    /* ... Do whatever you need to do ... */
-    NSString *dateString = [[NSUserDefaults standardUserDefaults] stringForKey:@"startDate"];
-    methodStart = [dateFormatter dateFromString:dateString];
+
     
-    methodEnd= [NSDate date];
     
-    NSTimeInterval executionTime = [methodEnd timeIntervalSinceDate:methodStart];
-    NSLog(@"executionTime = %f", executionTime);
-    if (executionTime >604800 || methodStart ==nil ) {
+
+    if ([self checkIfNewWeek]) {
         reset=0;
-        methodStart = [NSDate date];
         armsString = [@(reset) stringValue];
         chestString =[@(reset) stringValue];
         shouldersString =[@(reset) stringValue];
@@ -226,13 +217,9 @@
         [[NSUserDefaults standardUserDefaults] setObject:legsString forKey:@"legs"];
         [[NSUserDefaults standardUserDefaults] setObject:totalString forKey:@"total"];
         [[NSUserDefaults standardUserDefaults] setObject:shouldersString forKey:@"shoulders"];
-
-        NSString *stringDate = [dateFormatter stringFromDate:[NSDate date]];
-        [[NSUserDefaults standardUserDefaults] setObject:stringDate forKey:@"startDate"];
-
+        
     }
 
-    // Initially hide the ad banner.
     
     NSString *path1 = [[NSBundle mainBundle] pathForResource:@"Exercises" ofType:@"plist"];
     NSString *path2 = [[NSBundle mainBundle] pathForResource:@"Workouts" ofType:@"plist"];
@@ -241,7 +228,6 @@
     NSDictionary *dict2 = [[NSDictionary alloc] initWithContentsOfFile:path2];
     workoutNameP = [dict2 objectForKey:@"WorkoutName"];
 
-    // Find out the path of recipes.plist
     exerciseName = [dict1 objectForKey:@"ExerciseName"];
     thumbnails = [dict1 objectForKey:@"Thumbnail"];
     thumbnails2= [dict1 objectForKey:@"Thumbnail2"];
@@ -295,7 +281,28 @@
     [self createViews];
 
 }
+- (BOOL)checkIfNewWeek{
+    NSString *dateString = [[NSUserDefaults standardUserDefaults] stringForKey:@"oldDate"];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
 
+    [dateFormatter setDateFormat:@"MMdd"];
+    NSDate *currentDate = [NSDate date];
+    NSDate *oldDate = [dateFormatter dateFromString:dateString];
+    NSDateComponents *comp = [[NSDateComponents alloc] init];
+    [comp setWeekday:7];
+    NSCalendar *calendar=[NSCalendar currentCalendar];
+    NSDate *resetDate=[calendar dateByAddingComponents:comp toDate:oldDate options:0];
+    NSString *lastDayString =[dateFormatter stringFromDate:currentDate];
+
+
+    if(resetDate<=currentDate ||dateString==nil){
+    [[NSUserDefaults standardUserDefaults] setObject:lastDayString forKey:@"oldDate"];
+        return true;
+    }else{
+        return false;
+    }
+ 
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
