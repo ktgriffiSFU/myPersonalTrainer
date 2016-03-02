@@ -46,6 +46,7 @@
     [self gatherData];
 
 }
+
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];

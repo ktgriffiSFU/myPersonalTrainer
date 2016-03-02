@@ -75,14 +75,19 @@
     CGRectDivide(self.view.bounds, &top, &bottom, self.view.bounds.size.height / 2, CGRectMinYEdge);
 
     _button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    _button.frame = CGRectMake(0, 0, 200, 20);
+    _button.frame = CGRectMake(0, 0, 340,60);
     _button.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight|
     UIViewAutoresizingFlexibleBottomMargin|UIViewAutoresizingFlexibleLeftMargin|
     UIViewAutoresizingFlexibleRightMargin|UIViewAutoresizingFlexibleTopMargin;
-    [_button setTitle:@"Submit" forState:UIControlStateNormal];
+    [_button setTitle:@"SUBMIT" forState:UIControlStateNormal];
     _button.center = CGPointMake(CGRectGetMidX(bottom), CGRectGetMidY(bottom));
+
+    _button.backgroundColor = [UIColor blackColor];
+
+    [_button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+
     [self.view addSubview:_button];
-    
+
     [_button addTarget:self action:@selector(passDataForward) forControlEvents:UIControlEventTouchUpInside];
     
     

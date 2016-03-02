@@ -23,5 +23,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *repsText;
 @property (weak, nonatomic) IBOutlet UITextField *setsText;
 //@property (weak, nonatomic) IBOutlet UIButton *submitButton;
+@property (weak, nonatomic) IBOutlet UIButton *submitButton;
 
 @end

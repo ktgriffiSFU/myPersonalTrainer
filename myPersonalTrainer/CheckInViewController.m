@@ -20,8 +20,8 @@
     NSString *signInKey;
     int countInt;
 }
-@synthesize signInCode;
-@synthesize nameField,welcomeLabel;
+@synthesize signInField,submitButton;
+@synthesize nameField,welcomeLabel,countLabel;
 
 - (void)viewDidLoad {
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
@@ -29,37 +29,55 @@
                                    action:@selector(dismissKeyboard)];
     [self.view addGestureRecognizer:tap];
 
-    post=false;
     [super viewDidLoad];
+    oldDate= [[NSUserDefaults standardUserDefaults] objectForKey:@"CONSCIENCE_START_DATE"];
+
     userName=[[NSUserDefaults standardUserDefaults] stringForKey:@"userName"];
     if (userName==nil) {
         nameField.hidden= NO;
     }else{
         nameField.hidden= YES;
+        }
+    if ([self checkIfNewDay]) {
+        signInField.hidden=NO;
+        countLabel.hidden=YES;
         welcomeLabel.hidden=NO;
         NSString *welcomeText =[NSString stringWithFormat:@"Welcome back %@",userName];
         welcomeLabel.text=welcomeText;
+
+    }else{
+        countString =[[NSUserDefaults standardUserDefaults] stringForKey:@"countIn"];
+        countLabel.text=countString;
+        countLabel.hidden=NO;
+        signInField.hidden=YES;
+        submitButton.hidden=YES;
+        welcomeLabel.hidden=NO;
+        NSString *welcomeText =[NSString stringWithFormat:@"%@'s count is",userName];
+        welcomeLabel.text=welcomeText;
+
     }
     [self CheckNewMonth];
     [self getCode];
     NSLog(@"%@",signInKey);
 }
 - (IBAction)submitButton:(UIButton *)sender {
-    oldDate= [[NSUserDefaults standardUserDefaults] objectForKey:@"CONSCIENCE_START_DATE"];
-    BOOL newWorkout = [self checkIfNewDay];
     if (userName==nil) {
         [self getUserName];
     }else{
-        userName=[[NSUserDefaults standardUserDefaults]stringForKey:@"userName"];
     }
-    if ([signInCode.text isEqualToString:signInKey]) {
-        if (newWorkout) {
+    if ([signInField.text isEqualToString:signInKey]) {
+        if ([self checkIfNewDay]) {
             [self findCount];
             NSLog(@"ToSend: %@",countString);
             [self sendNameAndCount];
             [self Alert:@"Your signed in. Keep on signing in for chances to win the consistency challenge."];
             oldDate=[NSDate date];
             [[NSUserDefaults standardUserDefaults]setObject:oldDate forKey:@"CONSCIENCE_START_DATE"];
+            countString =[[NSUserDefaults standardUserDefaults] stringForKey:@"countIn"];
+            countLabel.text=countString;
+            countLabel.hidden=NO;
+            signInField.hidden=YES;
+            submitButton.hidden=YES;
         }else{
             [self Alert:@"You already signed in today."];
         }
@@ -74,7 +92,7 @@
     [[NSUserDefaults standardUserDefaults] setObject:userName forKey:@"userName"];
 }
 -(void)dismissKeyboard {
-    [signInCode resignFirstResponder];
+    [signInField resignFirstResponder];
     [nameField resignFirstResponder];
 }
 -(void)CheckNewMonth{
@@ -112,7 +130,7 @@
     if (oldDate==nil||![todaysDateString isEqualToString:lastDayString]) {
         return true;
     }else{
-        return false;
+        return true;
     }
 
 
@@ -157,7 +175,7 @@
 }
 - (void) getCode{
     // Create your request string with parameter name as defined in PHP file
-    NSString *myRequestString = [NSString stringWithFormat:@"string=%@&",signInCode.text];
+    NSString *myRequestString = [NSString stringWithFormat:@"string=%@&",signInField.text];
     
     // Create Data from request
     NSData *myRequestData = [NSData dataWithBytes: [myRequestString UTF8String] length: [myRequestString length]];

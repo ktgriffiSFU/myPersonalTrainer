@@ -46,6 +46,17 @@
     pictures = [dict objectForKey:@"Thumbnail"];
     pictures2 = [dict objectForKey:@"Thumbnail2"];
     details = [dict objectForKey:@"Details"];
+    
+    CGFloat screenwidth = [UIScreen mainScreen].bounds.size.width;
+    
+    CGFloat width = screenwidth/2;
+    UIImageView *image1 =[[UIImageView alloc] initWithFrame:CGRectMake(0,67,width,width)];
+    UIImageView *image2 =[[UIImageView alloc] initWithFrame:CGRectMake(width,67, width,width)];
+    image1.image=[UIImage imageNamed:[pictures objectAtIndex:rowNumber]];
+    image2.image=[UIImage imageNamed:[pictures2 objectAtIndex:rowNumber]];
+    [self.view addSubview:image1];
+    [self.view addSubview:image2];
+    
     self.exerciseImageView.image = [UIImage imageNamed:[pictures objectAtIndex:rowNumber]];
     self.exerciseImageView2.image = [UIImage imageNamed:[pictures2 objectAtIndex:rowNumber]];
     self.exerciseDetails.text =[details objectAtIndex:rowNumber];

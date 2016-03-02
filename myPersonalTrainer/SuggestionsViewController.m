@@ -19,6 +19,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
+                                   initWithTarget:self
+                                   action:@selector(dismissKeyboard)];
+    [self.view addGestureRecognizer:tap];
+}
+-(void)dismissKeyboard {
+    [suggestionField resignFirstResponder];
 }
 - (IBAction)submitButton:(UIButton *)sender {
     if (suggestionField.text.length==0) {
@@ -26,7 +33,9 @@
     }else{
     [self sendSuggestion];
     [self Alert:@"Your suggestion has been sent":@"Thank you"];
+            suggestionField.text=@"";
     }
+
 }
 - (void) sendSuggestion{
     NSString *usersSuggestion=suggestionField.text;
