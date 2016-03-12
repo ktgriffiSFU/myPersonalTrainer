@@ -15,7 +15,6 @@
 @interface DetailExerciseViewController ()<StatisticsViewControllerDelegate>
 {
     UILabel *_label;
-    UIButton *_button;
 }
 
 @end
@@ -67,28 +66,6 @@
         
     }
     return self;
-}- (void)createViews
-{
-    CGRect top, bottom;
-    CGRectDivide(self.view.bounds, &top, &bottom, self.view.bounds.size.height / 2, CGRectMinYEdge);
-
-    _button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    _button.frame = CGRectMake(0, 0, 340,60);
-    _button.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight|
-    UIViewAutoresizingFlexibleBottomMargin|UIViewAutoresizingFlexibleLeftMargin|
-    UIViewAutoresizingFlexibleRightMargin|UIViewAutoresizingFlexibleTopMargin;
-    [_button setTitle:@"SUBMIT" forState:UIControlStateNormal];
-    _button.center = CGPointMake(CGRectGetMidX(bottom), CGRectGetMidY(bottom));
-
-    _button.backgroundColor = [UIColor blackColor];
-
-    [_button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-
-    [self.view addSubview:_button];
-
-    [_button addTarget:self action:@selector(passDataForward) forControlEvents:UIControlEventTouchUpInside];
-    
-    
 }
 - (void)passDataForward
 {
@@ -108,7 +85,6 @@
 - (void)dataFromController:(NSString *)arms :(bool)newData :(NSString *)shoulders :(NSString *)chest :(NSString *)back :(NSString *)core :(NSString *)legs :(NSString *) daysLeft;
 {
     newData=newScore;
-    _button.enabled = NO;
 }
 
 - (void)submitButton {
@@ -278,7 +254,6 @@
     NSLog(@"%@",[exerciseforWorkoutNew objectAtIndex:rowNumberNew]);
  //   self.exerciseDetails.text =[detailsforWorkout objectAtIndex:rowNumberNew];
    // NSLog(@"Exercise is: %@",exerciseImageName);
-    [self createViews];
 
 }
 - (BOOL)checkIfNewWeek{
@@ -310,5 +285,8 @@
 
 
 
+- (IBAction)sendButton:(UIButton *)sender {
+    [self passDataForward];
+}
 @end
 

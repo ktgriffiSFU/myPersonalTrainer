@@ -7,23 +7,30 @@
 //
 
 #import "SuggestionsViewController.h"
+#import <QuartzCore/QuartzCore.h>
+
 #import <Foundation/Foundation.h>
 @interface SuggestionsViewController ()
 
 @end
 
-@implementation SuggestionsViewController{
+@implementation SuggestionsViewController
 
-}
+
 @synthesize suggestionField;
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
                                    initWithTarget:self
                                    action:@selector(dismissKeyboard)];
     [self.view addGestureRecognizer:tap];
+    
+
 }
+
 -(void)dismissKeyboard {
     [suggestionField resignFirstResponder];
 }
@@ -37,6 +44,8 @@
     }
 
 }
+
+
 - (void) sendSuggestion{
     NSString *usersSuggestion=suggestionField.text;
     NSURL *url = [NSURL URLWithString:@"https://docs.google.com/forms/d/1R3ACuURjGV8u1Z2N5AJ1b8Icdoi5XWxLlJR-23ihqsM/formResponse"];
@@ -67,4 +76,12 @@
     [alert show];
     
 }
+-(void)viewDidAppear:(BOOL)animated {
+    suggestionField.layer.borderColor=[[UIColor redColor]CGColor];
+    suggestionField.layer.borderWidth=1.0f;
+    suggestionField.contentInset = UIEdgeInsetsMake(-7.0,0.0,0,0.0);
+
+}
+
+
 @end

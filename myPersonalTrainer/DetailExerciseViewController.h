@@ -19,6 +19,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *detailButton;
 @property int rowNumberNew;
 @property int rowNumberWorkout;
+- (IBAction)sendButton:(UIButton *)sender;
 
 @property (weak, nonatomic) IBOutlet UITextField *repsText;
 @property (weak, nonatomic) IBOutlet UITextField *setsText;
