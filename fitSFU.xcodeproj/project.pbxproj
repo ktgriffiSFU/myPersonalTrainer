@@ -104,6 +104,7 @@
 		275433871C938477001B5687 /* IMG_1385.png in Resources */ = {isa = PBXBuildFile; fileRef = 2754336E1C938477001B5687 /* IMG_1385.png */; };
 		275433881C938477001B5687 /* IMG_1386.png in Resources */ = {isa = PBXBuildFile; fileRef = 2754336F1C938477001B5687 /* IMG_1386.png */; };
 		2754338A1C951A0E001B5687 /* WorkoutChoiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 275433891C951A0E001B5687 /* WorkoutChoiceViewController.m */; };
+		2754338D1C95286B001B5687 /* PowerLiftChoiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2754338C1C95286B001B5687 /* PowerLiftChoiceViewController.m */; };
 		27764C981C055F8D002F9122 /* ExerciseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 27764C971C055F8D002F9122 /* ExerciseTableViewCell.m */; };
 		27784A4E1C432C9F00363198 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27784A4D1C432C9F00363198 /* FBSDKShareKit.framework */; };
 		27784A501C432CD300363198 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27784A4F1C432CD300363198 /* FBSDKCoreKit.framework */; };
@@ -117,6 +118,7 @@
 		279B70B41C3D3F0F0042BD93 /* 4Stars.png in Resources */ = {isa = PBXBuildFile; fileRef = 279B70B01C3D3F0F0042BD93 /* 4Stars.png */; };
 		279B70B81C3D3F290042BD93 /* 0Stars.png in Resources */ = {isa = PBXBuildFile; fileRef = 279B70B71C3D3F290042BD93 /* 0Stars.png */; };
 		27C6CB421C21D383009E5341 /* Workout.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C6CB411C21D383009E5341 /* Workout.m */; };
+		27C9F0291C952B8B0006261B /* DetailWorkoutPowerLiftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C9F0281C952B8B0006261B /* DetailWorkoutPowerLiftViewController.m */; };
 		27D694D31C4324FE00987C66 /* FriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D694D21C4324FE00987C66 /* FriendsViewController.m */; };
 		27D96C4F1C3FE31B0055ADAF /* sidePlank1.png in Resources */ = {isa = PBXBuildFile; fileRef = 27D96C4D1C3FE31B0055ADAF /* sidePlank1.png */; };
 		27D96C501C3FE31B0055ADAF /* sidePlank2.png in Resources */ = {isa = PBXBuildFile; fileRef = 27D96C4E1C3FE31B0055ADAF /* sidePlank2.png */; };
@@ -267,6 +269,8 @@
 		2754336F1C938477001B5687 /* IMG_1386.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMG_1386.png; sourceTree = "<group>"; };
 		275433891C951A0E001B5687 /* WorkoutChoiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkoutChoiceViewController.m; sourceTree = "<group>"; };
 		2754338B1C951A1A001B5687 /* WorkoutChoiceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WorkoutChoiceViewController.h; sourceTree = "<group>"; };
+		2754338C1C95286B001B5687 /* PowerLiftChoiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PowerLiftChoiceViewController.m; sourceTree = "<group>"; };
+		2754338E1C95287A001B5687 /* PowerLiftChoiceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PowerLiftChoiceViewController.h; sourceTree = "<group>"; };
 		27764C961C055F8D002F9122 /* ExerciseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExerciseTableViewCell.h; sourceTree = "<group>"; };
 		27764C971C055F8D002F9122 /* ExerciseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExerciseTableViewCell.m; sourceTree = "<group>"; };
 		27784A4D1C432C9F00363198 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = ../../../FacebookSDK/FBSDKShareKit.framework; sourceTree = "<group>"; };
@@ -284,6 +288,8 @@
 		279B70B71C3D3F290042BD93 /* 0Stars.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 0Stars.png; path = ../../../../Downloads/0Stars.png; sourceTree = "<group>"; };
 		27C6CB411C21D383009E5341 /* Workout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Workout.m; sourceTree = "<group>"; };
 		27C6CB431C21D394009E5341 /* Workout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Workout.h; sourceTree = "<group>"; };
+		27C9F0281C952B8B0006261B /* DetailWorkoutPowerLiftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailWorkoutPowerLiftViewController.m; sourceTree = "<group>"; };
+		27C9F02A1C952B940006261B /* DetailWorkoutPowerLiftViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailWorkoutPowerLiftViewController.h; sourceTree = "<group>"; };
 		27D694D21C4324FE00987C66 /* FriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsViewController.m; sourceTree = "<group>"; };
 		27D694D41C43250B00987C66 /* FriendsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FriendsViewController.h; sourceTree = "<group>"; };
 		27D96C4D1C3FE31B0055ADAF /* sidePlank1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sidePlank1.png; path = Photo/sidePlank1.png; sourceTree = SOURCE_ROOT; };
@@ -502,6 +508,10 @@
 				27FA78AF1C811DC6002FEC0B /* SuggestionsViewController.m */,
 				27FA78AE1C811DB9002FEC0B /* SuggestionsViewController.h */,
 				2799F7251C7BC1C30041079B /* Main.storyboard */,
+				2754338C1C95286B001B5687 /* PowerLiftChoiceViewController.m */,
+				27C9F0281C952B8B0006261B /* DetailWorkoutPowerLiftViewController.m */,
+				27C9F02A1C952B940006261B /* DetailWorkoutPowerLiftViewController.h */,
+				2754338E1C95287A001B5687 /* PowerLiftChoiceViewController.h */,
 				275433891C951A0E001B5687 /* WorkoutChoiceViewController.m */,
 				2754338B1C951A1A001B5687 /* WorkoutChoiceViewController.h */,
 				270B88E71C829F0F009DE8B3 /* AnswerTrainerViewController.m */,
@@ -817,6 +827,7 @@
 				270B88E01C8261F7009DE8B3 /* AskTrainerViewController.m in Sources */,
 				27E1169B1C03ABB800E8E2AF /* AppDelegate.m in Sources */,
 				270B88E61C8265C5009DE8B3 /* AnswerCell.m in Sources */,
+				27C9F0291C952B8B0006261B /* DetailWorkoutPowerLiftViewController.m in Sources */,
 				272A3F031C217F7700AAF185 /* WorkoutTableCell.m in Sources */,
 				27FA78B01C811DC6002FEC0B /* SuggestionsViewController.m in Sources */,
 				27D694D31C4324FE00987C66 /* FriendsViewController.m in Sources */,
@@ -824,6 +835,7 @@
 				27158D991C0AA8670002272B /* SimpleTableCell.m in Sources */,
 				27DAE1561C25475E002A03D5 /* DetailWorkoutViewContoller.m in Sources */,
 				27E116981C03ABB800E8E2AF /* main.m in Sources */,
+				2754338D1C95286B001B5687 /* PowerLiftChoiceViewController.m in Sources */,
 				27FA78BC1C819D5E002FEC0B /* StatTableCell.m in Sources */,
 				270B88E81C829F0F009DE8B3 /* AnswerTrainerViewController.m in Sources */,
 				27C6CB421C21D383009E5341 /* Workout.m in Sources */,
