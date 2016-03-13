@@ -8,7 +8,7 @@
 
 
 #import <UIKit/UIKit.h>
-@interface CheckInViewController : UIViewController <NSURLSessionDelegate>
+@interface CheckInViewController : UIViewController <NSURLSessionDelegate, UITextFieldDelegate>
 
 - (IBAction)submitButton:(UIButton *)sender;
 @property (weak, nonatomic) IBOutlet UITextField *signInField;

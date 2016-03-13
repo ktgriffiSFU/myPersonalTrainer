@@ -28,6 +28,9 @@
                                    initWithTarget:self
                                    action:@selector(dismissKeyboard)];
     [self.view addGestureRecognizer:tap];
+    
+    [signInField setDelegate:self];
+    [nameField setDelegate:self ];
 
     [super viewDidLoad];
     oldDate= [[NSUserDefaults standardUserDefaults] objectForKey:@"CONSCIENCE_START_DATE"];
@@ -35,31 +38,42 @@
     userName=[[NSUserDefaults standardUserDefaults] stringForKey:@"userName"];
     if (userName==nil) {
         nameField.hidden= NO;
+        NSString *firstCheckIn = [NSString stringWithFormat:@"Hello, please enter your name and the sign in code"];
+        welcomeLabel.text=firstCheckIn;
     }else{
         nameField.hidden= YES;
+    }
+    if (userName!=nil) {
+        if ([self checkIfNewDay]) {
+            signInField.hidden=NO;
+            countLabel.hidden=YES;
+            welcomeLabel.hidden=NO;
+            NSString *welcomeText =[NSString stringWithFormat:@"Welcome back %@",userName];
+            welcomeLabel.text=welcomeText;
+            
+        }else{
+            countString =[[NSUserDefaults standardUserDefaults] stringForKey:@"countIn"];
+            countLabel.text=countString;
+            countLabel.hidden=NO;
+            signInField.hidden=YES;
+            submitButton.hidden=YES;
+            welcomeLabel.hidden=NO;
+            NSString *welcomeText =[NSString stringWithFormat:@"%@'s count is",userName];
+            welcomeLabel.text=welcomeText;
+            
         }
-    if ([self checkIfNewDay]) {
-        signInField.hidden=NO;
-        countLabel.hidden=YES;
-        welcomeLabel.hidden=NO;
-        NSString *welcomeText =[NSString stringWithFormat:@"Welcome back %@",userName];
-        welcomeLabel.text=welcomeText;
-
-    }else{
-        countString =[[NSUserDefaults standardUserDefaults] stringForKey:@"countIn"];
-        countLabel.text=countString;
-        countLabel.hidden=NO;
-        signInField.hidden=YES;
-        submitButton.hidden=YES;
-        welcomeLabel.hidden=NO;
-        NSString *welcomeText =[NSString stringWithFormat:@"%@'s count is",userName];
-        welcomeLabel.text=welcomeText;
 
     }
-    [self CheckNewMonth];
+        [self CheckNewMonth];
     [self getCode];
     NSLog(@"%@",signInKey);
 }
+-(BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return YES;
+}
+
 - (IBAction)submitButton:(UIButton *)sender {
     if (userName==nil) {
         [self getUserName];
@@ -92,6 +106,9 @@
 -(void)getUserName{
     userName= nameField.text;
     [[NSUserDefaults standardUserDefaults] setObject:userName forKey:@"userName"];
+    if (userName !=nil) {
+        nameField.hidden=YES;
+    }
 }
 -(void)dismissKeyboard {
     [signInField resignFirstResponder];

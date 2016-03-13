@@ -21,8 +21,13 @@
 
 
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
+    
 
+    [suggestionField setDelegate:self];
+    
+    
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
                                    initWithTarget:self
                                    action:@selector(dismissKeyboard)];
@@ -30,8 +35,15 @@
     
 
 }
-
--(void)dismissKeyboard {
+- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
+    
+    if([text isEqualToString:@"\n"]) {
+        [textView resignFirstResponder];
+        return NO;
+    }
+    
+    return YES;
+}-(void)dismissKeyboard {
     [suggestionField resignFirstResponder];
 }
 - (IBAction)submitButton:(UIButton *)sender {
