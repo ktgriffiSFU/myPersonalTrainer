@@ -15,12 +15,13 @@
 @interface DetailExerciseViewController ()<StatisticsViewControllerDelegate>
 {
     UILabel *_label;
-    UIButton *_button;
 }
 
 @end
 
+
 @implementation DetailExerciseViewController
+
 
 {
     NSArray *exercises,*pictures;
@@ -46,21 +47,16 @@
     int totalScore;
     NSString *daysToGo;
     NSInteger rowNumberDetails[8];
-    NSDate *methodStart;
-    NSDate *methodEnd;
     bool newScore;
     NSTimeInterval  *elapsedTime;
     
 }
 
-@synthesize tableView; // Add this line of code
 @synthesize exerciseImageView;
 @synthesize exerciseImageView2;
-@synthesize exerciseImageName;
 //@synthesize exerciseDetails;
 @synthesize rowNumberWorkout;
 @synthesize rowNumberNew;
-@synthesize workoutName;
 @synthesize repsText, setsText;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -70,21 +66,6 @@
         
     }
     return self;
-}- (void)createViews
-{
-    CGRect top, bottom;
-    CGRectDivide(self.view.bounds, &top, &bottom, self.view.bounds.size.height / 2, CGRectMinYEdge);
-
-    _button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    _button.frame = CGRectMake(0, 0, 200, 20);
-    _button.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight|
-    UIViewAutoresizingFlexibleBottomMargin|UIViewAutoresizingFlexibleLeftMargin|
-    UIViewAutoresizingFlexibleRightMargin|UIViewAutoresizingFlexibleTopMargin;
-    [_button setTitle:@"Submit" forState:UIControlStateNormal];
-    _button.center = CGPointMake(CGRectGetMidX(bottom), CGRectGetMidY(bottom));
-    [self.view addSubview:_button];
-    
-    [_button addTarget:self action:@selector(passDataForward) forControlEvents:UIControlEventTouchUpInside];
 }
 - (void)passDataForward
 {
@@ -97,7 +78,6 @@
     secondViewController.shoulders= shouldersString;
     secondViewController.core = coreString;
     secondViewController.newData=newScore;
-    secondViewController.daysLeft=daysToGo;
     secondViewController.delegate = self;
    [self.navigationController pushViewController:secondViewController animated:NO];
 }
@@ -105,7 +85,6 @@
 - (void)dataFromController:(NSString *)arms :(bool)newData :(NSString *)shoulders :(NSString *)chest :(NSString *)back :(NSString *)core :(NSString *)legs :(NSString *) daysLeft;
 {
     newData=newScore;
-    _button.enabled = NO;
 }
 
 - (void)submitButton {
@@ -193,20 +172,12 @@
     totalString =[[NSUserDefaults standardUserDefaults] stringForKey:@"total"];
     NSLog(@"Saved:%@",armsString);
     totalScore = [totalString integerValue];
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateFormat:@"HH:mm:ss-dd-MM-yyyy"];
-    /* ... Do whatever you need to do ... */
-    NSString *dateString = [[NSUserDefaults standardUserDefaults] stringForKey:@"startDate"];
-    methodStart = [dateFormatter dateFromString:dateString];
+
     
-    methodEnd= [NSDate date];
     
-    NSTimeInterval executionTime = [methodEnd timeIntervalSinceDate:methodStart];
-    daysToGo = [self findDaysLeft:&executionTime];
-    NSLog(@"executionTime = %f", executionTime);
-    if (executionTime >604800 || methodStart == nil) {
+
+    if ([self checkIfNewWeek]) {
         reset=0;
-        methodStart = [NSDate date];
         armsString = [@(reset) stringValue];
         chestString =[@(reset) stringValue];
         shouldersString =[@(reset) stringValue];
@@ -222,13 +193,9 @@
         [[NSUserDefaults standardUserDefaults] setObject:legsString forKey:@"legs"];
         [[NSUserDefaults standardUserDefaults] setObject:totalString forKey:@"total"];
         [[NSUserDefaults standardUserDefaults] setObject:shouldersString forKey:@"shoulders"];
-
-        NSString *stringDate = [dateFormatter stringFromDate:[NSDate date]];
-        [[NSUserDefaults standardUserDefaults] setObject:stringDate forKey:@"startDate"];
-
+        
     }
 
-    // Initially hide the ad banner.
     
     NSString *path1 = [[NSBundle mainBundle] pathForResource:@"Exercises" ofType:@"plist"];
     NSString *path2 = [[NSBundle mainBundle] pathForResource:@"Workouts" ofType:@"plist"];
@@ -237,8 +204,6 @@
     NSDictionary *dict2 = [[NSDictionary alloc] initWithContentsOfFile:path2];
     workoutNameP = [dict2 objectForKey:@"WorkoutName"];
 
-    self.workoutName.text =[workoutNameP objectAtIndex:rowNumberWorkout];
-    // Find out the path of recipes.plist
     exerciseName = [dict1 objectForKey:@"ExerciseName"];
     thumbnails = [dict1 objectForKey:@"Thumbnail"];
     thumbnails2= [dict1 objectForKey:@"Thumbnail2"];
@@ -274,38 +239,54 @@
             }
         }
     }
-   
+    CGFloat screenwidth = [UIScreen mainScreen].bounds.size.width;
+
+    CGFloat width = screenwidth/2;
+    UIImageView *image1 =[[UIImageView alloc] initWithFrame:CGRectMake(0,67,width,width)];
+    UIImageView *image2 =[[UIImageView alloc] initWithFrame:CGRectMake(width,67, width,width)];
+    image1.image=[UIImage imageNamed:[thumbnailforWorkout objectAtIndex:rowNumberNew]];
+    image2.image=[UIImage imageNamed:[thumbnailforWorkout2 objectAtIndex:rowNumberNew]];
+    [self.view addSubview:image1];
+    [self.view addSubview:image2];
 
     self.exerciseImageView.image = [UIImage imageNamed:[thumbnailforWorkout objectAtIndex:rowNumberNew]];
     self.exerciseImageView2.image= [UIImage imageNamed:[thumbnailforWorkout2 objectAtIndex:rowNumberNew]];
     NSLog(@"%@",[exerciseforWorkoutNew objectAtIndex:rowNumberNew]);
  //   self.exerciseDetails.text =[detailsforWorkout objectAtIndex:rowNumberNew];
    // NSLog(@"Exercise is: %@",exerciseImageName);
-    [self createViews];
 
 }
+- (BOOL)checkIfNewWeek{
+    NSString *dateString = [[NSUserDefaults standardUserDefaults] stringForKey:@"oldDate"];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
 
+    [dateFormatter setDateFormat:@"MMdd"];
+    NSDate *currentDate = [NSDate date];
+    NSDate *oldDate = [dateFormatter dateFromString:dateString];
+    NSDateComponents *comp = [[NSDateComponents alloc] init];
+    [comp setWeekday:7];
+    NSCalendar *calendar=[NSCalendar currentCalendar];
+    NSDate *resetDate=[calendar dateByAddingComponents:comp toDate:oldDate options:0];
+    NSString *lastDayString =[dateFormatter stringFromDate:currentDate];
+
+
+    if(resetDate<=currentDate ||dateString==nil){
+    [[NSUserDefaults standardUserDefaults] setObject:lastDayString forKey:@"oldDate"];
+        return true;
+    }else{
+        return false;
+    }
+ 
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
--(NSString*)findDaysLeft:(NSTimeInterval *) timeElapsed{
-    NSString *dayString;
-    int seconds = round(*timeElapsed);
-    int daysPassed = seconds/86400;
-    int days = 7-daysPassed;
-    if (days<=0) {
-        days=0;
-    }
-    if (timeElapsed==nil) {
-        dayString = @"Go Workout!";
-    }else{
-        dayString= [@(days) stringValue];
-    }
-    return dayString;
+
+
+- (IBAction)sendButton:(UIButton *)sender {
+    [self passDataForward];
 }
-
-
 @end
 

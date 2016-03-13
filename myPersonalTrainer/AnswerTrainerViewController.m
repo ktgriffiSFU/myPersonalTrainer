@@ -24,7 +24,6 @@
     questionLabel.text = questionString;
     answerLabel.text = answerString;
     
-    NSLog(@"%@",answerString);
 }
     
 @end

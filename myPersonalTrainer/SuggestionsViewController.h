@@ -9,7 +9,9 @@
 
 
 #import <UIKit/UIKit.h>
-@interface SuggestionsViewController: UIViewController <NSURLSessionDelegate>
+@interface SuggestionsViewController: UIViewController <NSURLSessionDelegate, UITextViewDelegate>
+
+
 - (IBAction)submitButton:(UIButton *)sender;
 @property (weak, nonatomic) IBOutlet UITextView *suggestionField;
 @end
