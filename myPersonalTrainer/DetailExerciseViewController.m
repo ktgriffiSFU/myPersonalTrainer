@@ -15,6 +15,8 @@
 @interface DetailExerciseViewController ()<StatisticsViewControllerDelegate>
 {
     UILabel *_label;
+    UITextField *repsField;
+    UITextField *setsField;
 }
 
 @end
@@ -79,6 +81,7 @@
     secondViewController.core = coreString;
     secondViewController.newData=newScore;
     secondViewController.delegate = self;
+    secondViewController.rowNumber =&(rowNumberNew);
    [self.navigationController pushViewController:secondViewController animated:NO];
 }
 
@@ -88,8 +91,8 @@
 }
 
 - (void)submitButton {
-    NSInteger repsInt = [repsText.text integerValue];
-    NSInteger setsInt = [setsText.text integerValue];
+    NSInteger repsInt = [repsField.text integerValue];
+    NSInteger setsInt = [setsField.text integerValue];
     NSInteger scoreInt = setsInt*repsInt;
 
 
@@ -239,22 +242,12 @@
             }
         }
     }
-    CGFloat screenwidth = [UIScreen mainScreen].bounds.size.width;
 
-    CGFloat width = screenwidth/2;
-    UIImageView *image1 =[[UIImageView alloc] initWithFrame:CGRectMake(0,67,width,width)];
-    UIImageView *image2 =[[UIImageView alloc] initWithFrame:CGRectMake(width,67, width,width)];
-    image1.image=[UIImage imageNamed:[thumbnailforWorkout objectAtIndex:rowNumberNew]];
-    image2.image=[UIImage imageNamed:[thumbnailforWorkout2 objectAtIndex:rowNumberNew]];
-    [self.view addSubview:image1];
-    [self.view addSubview:image2];
+    [self createViews];
 
-    self.exerciseImageView.image = [UIImage imageNamed:[thumbnailforWorkout objectAtIndex:rowNumberNew]];
-    self.exerciseImageView2.image= [UIImage imageNamed:[thumbnailforWorkout2 objectAtIndex:rowNumberNew]];
-    NSLog(@"%@",[exerciseforWorkoutNew objectAtIndex:rowNumberNew]);
- //   self.exerciseDetails.text =[detailsforWorkout objectAtIndex:rowNumberNew];
-   // NSLog(@"Exercise is: %@",exerciseImageName);
-
+}
+-(void)showDetails{
+    [self performSegueWithIdentifier:@"showDetail" sender:self];
 }
 - (BOOL)checkIfNewWeek{
     NSString *dateString = [[NSUserDefaults standardUserDefaults] stringForKey:@"oldDate"];
@@ -282,11 +275,78 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+-(void) createViews{
+    CGFloat screenwidth = [UIScreen mainScreen].bounds.size.width;
+    CGFloat screenheight=[UIScreen mainScreen].bounds.size.height;
+    NSLog(@"ScreenWidth: %f",screenwidth);
+    CGFloat width = screenwidth/2;
+    CGFloat yValue=(100.0+width);
 
+    UIImageView *image1 =[[UIImageView alloc] initWithFrame:CGRectMake(0,67,width,width)];
+    UIImageView *image2 =[[UIImageView alloc] initWithFrame:CGRectMake(width,67, width,width)];
+    image1.image=[UIImage imageNamed:[thumbnailforWorkout objectAtIndex:rowNumberNew]];
+    image2.image=[UIImage imageNamed:[thumbnailforWorkout2 objectAtIndex:rowNumberNew]];
+    [self.view addSubview:image1];
+    [self.view addSubview:image2];
+    
+    self.exerciseImageView.image = [UIImage imageNamed:[thumbnailforWorkout objectAtIndex:rowNumberNew]];
+    self.exerciseImageView2.image= [UIImage imageNamed:[thumbnailforWorkout2 objectAtIndex:rowNumberNew]];
+    
 
+    
+    UIButton *button1 = [UIButton buttonWithType:UIButtonTypeCustom];
+    [button1 setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [button1 addTarget:self
+                action:@selector(passDataForward)
+      forControlEvents:UIControlEventTouchUpInside];
+    [button1 setTitle:@"SUBMIT" forState:UIControlStateNormal];
+    button1.frame = CGRectMake(0, yValue+200, screenwidth, 60.0);
+    [button1 setBackgroundColor:[UIColor redColor]];
+    button1.titleLabel.font = [UIFont boldSystemFontOfSize:24.0];
 
-- (IBAction)sendButton:(UIButton *)sender {
-    [self passDataForward];
+    [self.view addSubview:button1];
+    
+    UIButton *button2 = [UIButton buttonWithType:UIButtonTypeCustom];
+    [button2 setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [button2 addTarget:self
+                action:@selector(showDetails)
+      forControlEvents:UIControlEventTouchUpInside];
+    [button2 setTitle:@"DETAILS" forState:UIControlStateNormal];
+    [button2 setBackgroundColor:[UIColor redColor]];
+    
+    button2.frame = CGRectMake(0, yValue +100, screenwidth, 60.0);
+    button2.titleLabel.font = [UIFont boldSystemFontOfSize:24.0];
+
+    [self.view addSubview:button2];
+    CGRect frame = CGRectMake(50.0, yValue-25, screenwidth-100, 30);
+    repsField = [[UITextField alloc] initWithFrame:frame];
+    repsField.borderStyle = UITextBorderStyleRoundedRect;
+    repsField.textColor = [UIColor blackColor];
+    repsField.font = [UIFont systemFontOfSize:17.0];
+    repsField.placeholder = @"REPS";
+    repsField.backgroundColor = [UIColor clearColor];
+    repsField.autocorrectionType = UITextAutocorrectionTypeYes;
+    repsField.keyboardType = UIKeyboardTypeDefault;
+    repsField.clearButtonMode = UITextFieldViewModeWhileEditing;
+    repsField.delegate = self;
+    repsField.textAlignment = UITextAlignmentCenter;
+
+    [self.view addSubview:repsField];
+    
+    CGRect frame2 = CGRectMake(50.0, yValue+25, screenwidth-100.0, 30);
+    setsField = [[UITextField alloc] initWithFrame:frame2];
+    setsField.borderStyle = UITextBorderStyleRoundedRect;
+    setsField.textColor = [UIColor blackColor];
+    setsField.font = [UIFont systemFontOfSize:17.0];
+    setsField.placeholder = @"SETS";
+    setsField.backgroundColor = [UIColor clearColor];
+    setsField.autocorrectionType = UITextAutocorrectionTypeYes;
+    setsField.keyboardType = UIKeyboardTypeDefault;
+    setsField.clearButtonMode = UITextFieldViewModeWhileEditing;
+    setsField.delegate = self;
+    setsField.textAlignment = UITextAlignmentCenter;
+
+    [self.view addSubview:setsField];
 }
 @end
 

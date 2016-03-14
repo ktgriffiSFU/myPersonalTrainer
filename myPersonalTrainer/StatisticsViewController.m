@@ -9,6 +9,7 @@
 
 #import <Foundation/Foundation.h>
 #import "StatisticsViewController.h"
+#import "DetailWorkoutViewController.h"
 
 @interface StatisticsViewController()
 {
@@ -22,7 +23,7 @@
 @end
 
 @implementation StatisticsViewController
-@synthesize armsScore;
+@synthesize armsScore,rowNumber;
 @synthesize shoulderScore;
 @synthesize chestScore;
 @synthesize backScore;
@@ -41,7 +42,7 @@
 {
     [super viewDidLoad];
 
-    self.title = @"Weekly Statistics";
+
     self.view.backgroundColor = [UIColor whiteColor];
     NSLog(@"This runs viedidlow");
     [self gatherData];
@@ -56,7 +57,6 @@
     NSLog(@"Legs : %@",legsScore);
     [self gatherData];
     [self postData];
-
     
 }
 - (void)viewDidUnload
@@ -68,15 +68,8 @@
 - (void)gatherData
 {
     if (_newData) {
-        CGRect top, bottom;
-        CGRectDivide(self.view.bounds, &top, &bottom, self.view.bounds.size.height / 2, CGRectMinYEdge);
-        
-        _label = [[UILabel alloc] initWithFrame:CGRectInset(top, 5, 5)];
-        _label.autoresizingMask = UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth|
-        UIViewAutoresizingFlexibleBottomMargin;
-        _label.textAlignment = NSTextAlignmentCenter;
-        _label.text = @"Good Work, Keep on working out.";
-        [self.view addSubview:_label];
+        [self createViews];
+        self.title= @"Good Set!";
         [[NSUserDefaults standardUserDefaults] setObject:_arms forKey:@"ARMS"];
         [[NSUserDefaults standardUserDefaults] setObject:_legs forKey:@"LEGS"];
         [[NSUserDefaults standardUserDefaults] setObject:_chest forKey:@"CHEST"];
@@ -84,6 +77,8 @@
         [[NSUserDefaults standardUserDefaults] setObject:_shoulders forKey:@"SHOULDERS"];
         [[NSUserDefaults standardUserDefaults] setObject:_back forKey:@"BACK"];
         [[NSUserDefaults standardUserDefaults] setObject:_daysLeft forKey:@"DAYS"];
+    }else{
+            self.title = @"Weekly Statistics";
     }
     armsScore = [[NSUserDefaults standardUserDefaults] stringForKey:@"ARMS"];
     legsScore = [[NSUserDefaults standardUserDefaults] stringForKey:@"LEGS"];
@@ -102,7 +97,36 @@
     legsImage.image = [self determineStars:legsScore];
     coreImage.image = [self determineStars:coreScore];
 }
+-(void) createViews{
+    self.view.backgroundColor = [UIColor redColor];
 
+    CGRect top, bottom;
+    CGRectDivide(self.view.bounds, &top, &bottom, self.view.bounds.size.height / 2, CGRectMinYEdge);
+    
+    _label = [[UILabel alloc] initWithFrame:CGRectInset(top, 5, 5)];
+    [_label setFont:[UIFont fontWithName:@"Avenir" size:15]];
+    _label.textColor=[UIColor whiteColor];
+    _label.autoresizingMask = UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth|
+    UIViewAutoresizingFlexibleBottomMargin;
+    _label.numberOfLines =2;
+    _label.textAlignment = NSTextAlignmentCenter;
+    _label.text = @"Press back to keep on working out.              Your entry has been added to Statistics";
+    [self.view addSubview:_label];
+    
+    CGFloat screenwidth = [UIScreen mainScreen].bounds.size.width;
+    CGFloat screenheight=[UIScreen mainScreen].bounds.size.height;
+    NSLog(@"ScreenWidth: %f",screenwidth);
+    CGFloat width = 100.0;
+    CGFloat height= 124.0;
+    
+    UIImageView *image1 =[[UIImageView alloc] initWithFrame:CGRectMake(screenwidth/2-width/2,screenheight/2,width,height)];
+    image1.image=[UIImage imageNamed:@"ok-icon.png"];
+    [self.view addSubview:image1];
+    
+
+    
+
+}
 - (UIImage *) determineStars: (NSString *) score
 {
     UIImage *starValue;
@@ -122,4 +146,5 @@
     }
     return starValue;
 }
+
 @end
