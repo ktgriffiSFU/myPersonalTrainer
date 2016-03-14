@@ -34,8 +34,9 @@
     CGFloat y2Value=(100.0+width);
 
     //Big label
-    UILabel *countLabel = [[UILabel alloc]initWithFrame:CGRectMake(screenheight/6,screenheight/8,screenwidth*0.666,screenheight/3)];
+    UILabel *countLabel = [[UILabel alloc]initWithFrame:CGRectMake(screenwidth/6,screenheight/8,screenwidth*0.666,screenheight/3)];
     countLabel.text=@"0";
+    countLabel.backgroundColor =[UIColor yellowColor];
     [countLabel setFont:[UIFont fontWithName:@"American Typewriter" size:222]];
 
     //ADD MORE: when functionality works
