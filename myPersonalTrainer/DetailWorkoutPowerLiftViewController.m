@@ -11,6 +11,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import "DetailWorkoutPowerLiftViewController.h"
+#import "PowerLiftViewController.h"
 #import "DetailExerciseViewController.h"
 #import "SimpleTableCell.h"
 
@@ -94,7 +95,7 @@
     cell.accessoryType = UITableViewCellAccessoryCheckmark;
     rowNumber = indexPath.row;
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    [self performSegueWithIdentifier:@"showExercise" sender:self];
+    [self performSegueWithIdentifier:@"doSet" sender:self];
 }
 
 - (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -111,12 +112,11 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
-    if ([segue.identifier isEqualToString:@"showExercise"]) {
+    if ([segue.identifier isEqualToString:@"doSet"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-      //  DetailExerciseViewController *destViewController = segue.destinationViewController;
-        //        destViewController.exerciseImageView = [thumbnailforWorkout objectAtIndex:indexPath.row];
-     //   destViewController.rowNumberNew = rowNumber;
-     //   destViewController.rowNumberWorkout = rowNumberOld;
+        PowerLiftViewController *destViewController = segue.destinationViewController;
+                destViewController.exercise = [powerLiftingExercises objectAtIndex:indexPath.row];
+
     }
 }
 

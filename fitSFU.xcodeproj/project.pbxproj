@@ -73,9 +73,7 @@
 		273E48EA1C4C9B5600F56D57 /* IMG_1235.png in Resources */ = {isa = PBXBuildFile; fileRef = 273E48B81C4C9B5600F56D57 /* IMG_1235.png */; };
 		273E48EB1C4C9B5600F56D57 /* IMG_1236.png in Resources */ = {isa = PBXBuildFile; fileRef = 273E48B91C4C9B5600F56D57 /* IMG_1236.png */; };
 		273E48EC1C4C9B5600F56D57 /* IMG_1238.png in Resources */ = {isa = PBXBuildFile; fileRef = 273E48BA1C4C9B5600F56D57 /* IMG_1238.png */; };
-		2741FD5E1C2B0FF100D15A94 /* TipsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2741FD5D1C2B0FF100D15A94 /* TipsViewController.m */; };
 		2741FD611C2B105E00D15A94 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2741FD601C2B105E00D15A94 /* iAd.framework */; };
-		2741FD631C2B4F1900D15A94 /* Tips.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2741FD621C2B4F1900D15A94 /* Tips.plist */; };
 		2741FD7C1C3401A800D15A94 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2741FD7B1C3401A800D15A94 /* QuartzCore.framework */; };
 		2741FD7E1C3401D200D15A94 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2741FD7D1C3401D200D15A94 /* Accelerate.framework */; };
 		2741FD801C34027500D15A94 /* StatisticsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2741FD7F1C34027500D15A94 /* StatisticsViewController.m */; };
@@ -109,7 +107,6 @@
 		27784A4E1C432C9F00363198 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27784A4D1C432C9F00363198 /* FBSDKShareKit.framework */; };
 		27784A501C432CD300363198 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27784A4F1C432CD300363198 /* FBSDKCoreKit.framework */; };
 		2799F7261C7BC1C30041079B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2799F7251C7BC1C30041079B /* Main.storyboard */; };
-		2799F7281C7BE5B80041079B /* StatTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 2799F7271C7BE5B80041079B /* StatTable.m */; };
 		2799F72B1C7BE6040041079B /* CheckInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2799F72A1C7BE6040041079B /* CheckInViewController.m */; };
 		279B70A91C3D1FE00042BD93 /* 5Stars.png in Resources */ = {isa = PBXBuildFile; fileRef = 279B70A81C3D1FE00042BD93 /* 5Stars.png */; };
 		279B70B11C3D3F0F0042BD93 /* 1Stars.png in Resources */ = {isa = PBXBuildFile; fileRef = 279B70AD1C3D3F0F0042BD93 /* 1Stars.png */; };
@@ -119,24 +116,19 @@
 		279B70B81C3D3F290042BD93 /* 0Stars.png in Resources */ = {isa = PBXBuildFile; fileRef = 279B70B71C3D3F290042BD93 /* 0Stars.png */; };
 		27C6CB421C21D383009E5341 /* Workout.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C6CB411C21D383009E5341 /* Workout.m */; };
 		27C9F0291C952B8B0006261B /* DetailWorkoutPowerLiftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C9F0281C952B8B0006261B /* DetailWorkoutPowerLiftViewController.m */; };
-		27D694D31C4324FE00987C66 /* FriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D694D21C4324FE00987C66 /* FriendsViewController.m */; };
+		27C9F02C1C9661A10006261B /* ok-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 27C9F02B1C9661A10006261B /* ok-icon.png */; };
+		27C9F02F1C96678C0006261B /* PowerLiftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C9F02E1C96678C0006261B /* PowerLiftViewController.m */; };
 		27D96C4F1C3FE31B0055ADAF /* sidePlank1.png in Resources */ = {isa = PBXBuildFile; fileRef = 27D96C4D1C3FE31B0055ADAF /* sidePlank1.png */; };
 		27D96C501C3FE31B0055ADAF /* sidePlank2.png in Resources */ = {isa = PBXBuildFile; fileRef = 27D96C4E1C3FE31B0055ADAF /* sidePlank2.png */; };
-		27DAE14B1C22CE07002A03D5 /* arms.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 27DAE14A1C22CE07002A03D5 /* arms.jpg */; };
-		27DAE1521C230F70002A03D5 /* chest.png in Resources */ = {isa = PBXBuildFile; fileRef = 27DAE1511C230F70002A03D5 /* chest.png */; };
-		27DAE1541C230F82002A03D5 /* legs.png in Resources */ = {isa = PBXBuildFile; fileRef = 27DAE1531C230F82002A03D5 /* legs.png */; };
 		27DAE1561C25475E002A03D5 /* DetailWorkoutViewContoller.m in Sources */ = {isa = PBXBuildFile; fileRef = 27DAE1551C25475E002A03D5 /* DetailWorkoutViewContoller.m */; };
 		27DAE15A1C27D328002A03D5 /* DetailExerciseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27DAE1591C27D328002A03D5 /* DetailExerciseViewController.m */; };
 		27E116981C03ABB800E8E2AF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E116971C03ABB800E8E2AF /* main.m */; };
 		27E1169B1C03ABB800E8E2AF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E1169A1C03ABB800E8E2AF /* AppDelegate.m */; };
-		27E1169E1C03ABB800E8E2AF /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E1169D1C03ABB800E8E2AF /* MainViewController.m */; };
 		27E116A31C03ABB800E8E2AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27E116A21C03ABB800E8E2AF /* Assets.xcassets */; };
 		27E116A61C03ABB800E8E2AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27E116A41C03ABB800E8E2AF /* LaunchScreen.storyboard */; };
 		27E116B11C03ABB900E8E2AF /* myPersonalTrainerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E116B01C03ABB900E8E2AF /* myPersonalTrainerTests.m */; };
 		27E116BC1C03ABB900E8E2AF /* myPersonalTrainerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E116BB1C03ABB900E8E2AF /* myPersonalTrainerUITests.m */; };
 		27E116CD1C03B5D100E8E2AF /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27E116CC1C03B5D100E8E2AF /* FBSDKLoginKit.framework */; };
-		27E116CF1C03D19300E8E2AF /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E116CE1C03D19300E8E2AF /* LoginViewController.m */; };
-		27E116D31C03D2C000E8E2AF /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E116D21C03D2C000E8E2AF /* Settings.m */; };
 		27FA78B01C811DC6002FEC0B /* SuggestionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27FA78AF1C811DC6002FEC0B /* SuggestionsViewController.m */; };
 		27FA78B71C8189C3002FEC0B /* StatTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27FA78B61C8189C3002FEC0B /* StatTableCell.xib */; };
 		27FA78BC1C819D5E002FEC0B /* StatTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 27FA78BB1C819D5E002FEC0B /* StatTableCell.m */; };
@@ -235,10 +227,7 @@
 		273E48B81C4C9B5600F56D57 /* IMG_1235.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = IMG_1235.png; path = PhotosPNG/IMG_1235.png; sourceTree = SOURCE_ROOT; };
 		273E48B91C4C9B5600F56D57 /* IMG_1236.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = IMG_1236.png; path = PhotosPNG/IMG_1236.png; sourceTree = SOURCE_ROOT; };
 		273E48BA1C4C9B5600F56D57 /* IMG_1238.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = IMG_1238.png; path = PhotosPNG/IMG_1238.png; sourceTree = SOURCE_ROOT; };
-		2741FD5D1C2B0FF100D15A94 /* TipsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TipsViewController.m; sourceTree = "<group>"; };
-		2741FD5F1C2B100100D15A94 /* TipsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TipsViewController.h; sourceTree = "<group>"; };
 		2741FD601C2B105E00D15A94 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
-		2741FD621C2B4F1900D15A94 /* Tips.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Tips.plist; sourceTree = "<group>"; };
 		2741FD7B1C3401A800D15A94 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		2741FD7D1C3401D200D15A94 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		2741FD7F1C34027500D15A94 /* StatisticsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatisticsViewController.m; sourceTree = "<group>"; };
@@ -276,8 +265,6 @@
 		27784A4D1C432C9F00363198 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = ../../../FacebookSDK/FBSDKShareKit.framework; sourceTree = "<group>"; };
 		27784A4F1C432CD300363198 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = ../../../FacebookSDK/FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		2799F7251C7BC1C30041079B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		2799F7271C7BE5B80041079B /* StatTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatTable.m; sourceTree = "<group>"; };
-		2799F7291C7BE5C00041079B /* StatTable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StatTable.h; sourceTree = "<group>"; };
 		2799F72A1C7BE6040041079B /* CheckInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckInViewController.m; sourceTree = "<group>"; };
 		2799F72C1C7BE60E0041079B /* CheckInViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CheckInViewController.h; sourceTree = "<group>"; };
 		279B70A81C3D1FE00042BD93 /* 5Stars.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 5Stars.png; path = ../../../../Downloads/5Stars.png; sourceTree = "<group>"; };
@@ -290,13 +277,11 @@
 		27C6CB431C21D394009E5341 /* Workout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Workout.h; sourceTree = "<group>"; };
 		27C9F0281C952B8B0006261B /* DetailWorkoutPowerLiftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailWorkoutPowerLiftViewController.m; sourceTree = "<group>"; };
 		27C9F02A1C952B940006261B /* DetailWorkoutPowerLiftViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailWorkoutPowerLiftViewController.h; sourceTree = "<group>"; };
-		27D694D21C4324FE00987C66 /* FriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsViewController.m; sourceTree = "<group>"; };
-		27D694D41C43250B00987C66 /* FriendsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FriendsViewController.h; sourceTree = "<group>"; };
+		27C9F02B1C9661A10006261B /* ok-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ok-icon.png"; sourceTree = "<group>"; };
+		27C9F02D1C96677A0006261B /* PowerLiftViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PowerLiftViewController.h; sourceTree = "<group>"; };
+		27C9F02E1C96678C0006261B /* PowerLiftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PowerLiftViewController.m; sourceTree = "<group>"; };
 		27D96C4D1C3FE31B0055ADAF /* sidePlank1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sidePlank1.png; path = Photo/sidePlank1.png; sourceTree = SOURCE_ROOT; };
 		27D96C4E1C3FE31B0055ADAF /* sidePlank2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sidePlank2.png; path = Photo/sidePlank2.png; sourceTree = SOURCE_ROOT; };
-		27DAE14A1C22CE07002A03D5 /* arms.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = arms.jpg; sourceTree = SOURCE_ROOT; };
-		27DAE1511C230F70002A03D5 /* chest.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chest.png; sourceTree = SOURCE_ROOT; };
-		27DAE1531C230F82002A03D5 /* legs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = legs.png; sourceTree = SOURCE_ROOT; };
 		27DAE1551C25475E002A03D5 /* DetailWorkoutViewContoller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailWorkoutViewContoller.m; sourceTree = "<group>"; };
 		27DAE1571C2547AC002A03D5 /* DetailWorkoutViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailWorkoutViewController.h; sourceTree = "<group>"; };
 		27DAE1581C27D30C002A03D5 /* DetailExerciseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailExerciseViewController.h; sourceTree = "<group>"; };
@@ -305,8 +290,6 @@
 		27E116971C03ABB800E8E2AF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		27E116991C03ABB800E8E2AF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		27E1169A1C03ABB800E8E2AF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		27E1169C1C03ABB800E8E2AF /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
-		27E1169D1C03ABB800E8E2AF /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		27E116A21C03ABB800E8E2AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		27E116A51C03ABB800E8E2AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		27E116A71C03ABB800E8E2AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -317,10 +300,6 @@
 		27E116BB1C03ABB900E8E2AF /* myPersonalTrainerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = myPersonalTrainerUITests.m; sourceTree = "<group>"; };
 		27E116BD1C03ABB900E8E2AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		27E116CC1C03B5D100E8E2AF /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = ../../../FacebookSDK/FBSDKLoginKit.framework; sourceTree = "<group>"; };
-		27E116CE1C03D19300E8E2AF /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
-		27E116D01C03D1A600E8E2AF /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
-		27E116D11C03D29700E8E2AF /* Settings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
-		27E116D21C03D2C000E8E2AF /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Settings.m; sourceTree = "<group>"; };
 		27FA78AE1C811DB9002FEC0B /* SuggestionsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SuggestionsViewController.h; sourceTree = "<group>"; };
 		27FA78AF1C811DC6002FEC0B /* SuggestionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuggestionsViewController.m; sourceTree = "<group>"; };
 		27FA78B61C8189C3002FEC0B /* StatTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StatTableCell.xib; sourceTree = "<group>"; };
@@ -362,6 +341,7 @@
 		2798C0931C0D75EF0007D3BF /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				27C9F02B1C9661A10006261B /* ok-icon.png */,
 				27117ED31C585A1800EF4516 /* mpt2.jpg */,
 				279B70B71C3D3F290042BD93 /* 0Stars.png */,
 				279B70AD1C3D3F0F0042BD93 /* 1Stars.png */,
@@ -444,9 +424,6 @@
 				279B70AF1C3D3F0F0042BD93 /* 3Stars.png */,
 				279B70B01C3D3F0F0042BD93 /* 4Stars.png */,
 				279B70A81C3D1FE00042BD93 /* 5Stars.png */,
-				27DAE1531C230F82002A03D5 /* legs.png */,
-				27DAE1511C230F70002A03D5 /* chest.png */,
-				27DAE14A1C22CE07002A03D5 /* arms.jpg */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -480,27 +457,14 @@
 				2798C0931C0D75EF0007D3BF /* Images */,
 				27158D921C0A9A1A0002272B /* Exercises.plist */,
 				272A3F001C217C6C00AAF185 /* Workouts.plist */,
-				2741FD621C2B4F1900D15A94 /* Tips.plist */,
 				2741FD901C36752700D15A94 /* Muscles.plist */,
 				27E116A21C03ABB800E8E2AF /* Assets.xcassets */,
-				27E116D11C03D29700E8E2AF /* Settings.h */,
-				27E116D21C03D2C000E8E2AF /* Settings.m */,
-				27E116D01C03D1A600E8E2AF /* LoginViewController.h */,
-				27E116CE1C03D19300E8E2AF /* LoginViewController.m */,
-				27E1169C1C03ABB800E8E2AF /* MainViewController.h */,
-				27E1169D1C03ABB800E8E2AF /* MainViewController.m */,
-				27D694D21C4324FE00987C66 /* FriendsViewController.m */,
-				27D694D41C43250B00987C66 /* FriendsViewController.h */,
-				2741FD5F1C2B100100D15A94 /* TipsViewController.h */,
-				2741FD5D1C2B0FF100D15A94 /* TipsViewController.m */,
 				272BD16B1C4F31840006519D /* ViewController.m */,
 				272BD16D1C4F31910006519D /* ViewController.h */,
 				2720DB7B1C05341300B7F7CD /* TableViewController.h */,
 				2720DB7C1C05346E00B7F7CD /* TableViewController.m */,
 				272A3EFF1C2178DD00AAF185 /* WorkoutViewContoller.h */,
 				272A3EFD1C2178CB00AAF185 /* WorkoutViewContoller.m */,
-				2799F7271C7BE5B80041079B /* StatTable.m */,
-				2799F7291C7BE5C00041079B /* StatTable.h */,
 				2799F72A1C7BE6040041079B /* CheckInViewController.m */,
 				2799F72C1C7BE60E0041079B /* CheckInViewController.h */,
 				2741FD811C34028800D15A94 /* StatisticsViewController.h */,
@@ -509,6 +473,8 @@
 				27FA78AE1C811DB9002FEC0B /* SuggestionsViewController.h */,
 				2799F7251C7BC1C30041079B /* Main.storyboard */,
 				2754338C1C95286B001B5687 /* PowerLiftChoiceViewController.m */,
+				27C9F02D1C96677A0006261B /* PowerLiftViewController.h */,
+				27C9F02E1C96678C0006261B /* PowerLiftViewController.m */,
 				27C9F0281C952B8B0006261B /* DetailWorkoutPowerLiftViewController.m */,
 				27C9F02A1C952B940006261B /* DetailWorkoutPowerLiftViewController.h */,
 				2754338E1C95287A001B5687 /* PowerLiftChoiceViewController.h */,
@@ -708,6 +674,7 @@
 				273E48CF1C4C9B5600F56D57 /* IMG_1156.png in Resources */,
 				275433861C938477001B5687 /* IMG_1379.png in Resources */,
 				275433851C938477001B5687 /* IMG_1378.png in Resources */,
+				27C9F02C1C9661A10006261B /* ok-icon.png in Resources */,
 				273E48C71C4C9B5600F56D57 /* IMG_1142.png in Resources */,
 				275433791C938477001B5687 /* IMG_1356.png in Resources */,
 				273E48CE1C4C9B5600F56D57 /* IMG_1154.png in Resources */,
@@ -739,7 +706,6 @@
 				273E48DC1C4C9B5600F56D57 /* IMG_1186.png in Resources */,
 				273E48E21C4C9B5600F56D57 /* IMG_1198.png in Resources */,
 				273E48BE1C4C9B5600F56D57 /* IMG_1121.png in Resources */,
-				2741FD631C2B4F1900D15A94 /* Tips.plist in Resources */,
 				273E48CA1C4C9B5600F56D57 /* IMG_1145.png in Resources */,
 				273E48C41C4C9B5600F56D57 /* IMG_1139.png in Resources */,
 				273E48DE1C4C9B5600F56D57 /* IMG_1189.png in Resources */,
@@ -760,7 +726,6 @@
 				2754337E1C938477001B5687 /* IMG_1365.png in Resources */,
 				273E48CC1C4C9B5600F56D57 /* IMG_1150.png in Resources */,
 				270B88E31C826390009DE8B3 /* AnswerCell.xib in Resources */,
-				27DAE1521C230F70002A03D5 /* chest.png in Resources */,
 				275433871C938477001B5687 /* IMG_1385.png in Resources */,
 				27D96C501C3FE31B0055ADAF /* sidePlank2.png in Resources */,
 				273E48DF1C4C9B5600F56D57 /* IMG_1191.png in Resources */,
@@ -783,10 +748,8 @@
 				273E48BF1C4C9B5600F56D57 /* IMG_1125.png in Resources */,
 				273E48C11C4C9B5600F56D57 /* IMG_1129.png in Resources */,
 				273E48D31C4C9B5600F56D57 /* IMG_1169.png in Resources */,
-				27DAE14B1C22CE07002A03D5 /* arms.jpg in Resources */,
 				275433761C938477001B5687 /* IMG_1343.png in Resources */,
 				2754337F1C938477001B5687 /* IMG_1370.png in Resources */,
-				27DAE1541C230F82002A03D5 /* legs.png in Resources */,
 				273E48BB1C4C9B5600F56D57 /* IMG_1111.png in Resources */,
 				273E48E81C4C9B5600F56D57 /* IMG_1230.png in Resources */,
 			);
@@ -816,21 +779,16 @@
 				272BD16C1C4F31840006519D /* ViewController.m in Sources */,
 				270B88EF1C82D231009DE8B3 /* WinnerTableCell.m in Sources */,
 				272A3EFE1C2178CB00AAF185 /* WorkoutViewContoller.m in Sources */,
-				2799F7281C7BE5B80041079B /* StatTable.m in Sources */,
-				27E116CF1C03D19300E8E2AF /* LoginViewController.m in Sources */,
 				27764C981C055F8D002F9122 /* ExerciseTableViewCell.m in Sources */,
+				27C9F02F1C96678C0006261B /* PowerLiftViewController.m in Sources */,
 				2720DB7D1C05346E00B7F7CD /* TableViewController.m in Sources */,
-				27E1169E1C03ABB800E8E2AF /* MainViewController.m in Sources */,
 				2799F72B1C7BE6040041079B /* CheckInViewController.m in Sources */,
-				2741FD5E1C2B0FF100D15A94 /* TipsViewController.m in Sources */,
-				27E116D31C03D2C000E8E2AF /* Settings.m in Sources */,
 				270B88E01C8261F7009DE8B3 /* AskTrainerViewController.m in Sources */,
 				27E1169B1C03ABB800E8E2AF /* AppDelegate.m in Sources */,
 				270B88E61C8265C5009DE8B3 /* AnswerCell.m in Sources */,
 				27C9F0291C952B8B0006261B /* DetailWorkoutPowerLiftViewController.m in Sources */,
 				272A3F031C217F7700AAF185 /* WorkoutTableCell.m in Sources */,
 				27FA78B01C811DC6002FEC0B /* SuggestionsViewController.m in Sources */,
-				27D694D31C4324FE00987C66 /* FriendsViewController.m in Sources */,
 				2754338A1C951A0E001B5687 /* WorkoutChoiceViewController.m in Sources */,
 				27158D991C0AA8670002272B /* SimpleTableCell.m in Sources */,
 				27DAE1561C25475E002A03D5 /* DetailWorkoutViewContoller.m in Sources */,

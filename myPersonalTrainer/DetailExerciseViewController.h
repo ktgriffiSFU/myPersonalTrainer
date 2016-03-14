@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <iAd/iAd.h>
 #import "StatisticsViewController.h"
-@interface DetailExerciseViewController : UIViewController
+@interface DetailExerciseViewController : UIViewController <UITextFieldDelegate>
 
 
 @property (weak, nonatomic) IBOutlet UIImageView *exerciseImageView;
