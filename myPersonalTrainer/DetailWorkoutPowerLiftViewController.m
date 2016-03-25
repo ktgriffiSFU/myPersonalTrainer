@@ -115,7 +115,7 @@
     if ([segue.identifier isEqualToString:@"doSet"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         PowerLiftViewController *destViewController = segue.destinationViewController;
-                destViewController.exercise = [powerLiftingExercises objectAtIndex:indexPath.row];
+                destViewController.exercise = [powerLiftingExercises objectAtIndex:rowNumber];
 
     }
 }

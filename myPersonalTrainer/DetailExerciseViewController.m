@@ -59,7 +59,6 @@
 //@synthesize exerciseDetails;
 @synthesize rowNumberWorkout;
 @synthesize rowNumberNew;
-@synthesize repsText, setsText;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -155,8 +154,13 @@
     }
 }
 -(void)dismissKeyboard {
-    [repsText resignFirstResponder];
-    [setsText resignFirstResponder];
+    [repsField resignFirstResponder];
+    [setsField resignFirstResponder];
+}
+-(BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return YES;
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -165,6 +169,10 @@
                                    action:@selector(dismissKeyboard)];
     
     [self.view addGestureRecognizer:tap];
+
+
+    [repsField setDelegate:self];
+    [setsField setDelegate:self];
 
     armsString = [[NSUserDefaults standardUserDefaults] stringForKey:@"arms"];
     shouldersString = [[NSUserDefaults standardUserDefaults] stringForKey:@"shoulders"];
@@ -330,7 +338,7 @@
     repsField.clearButtonMode = UITextFieldViewModeWhileEditing;
     repsField.delegate = self;
     repsField.textAlignment = UITextAlignmentCenter;
-
+    [repsField setKeyboardType:UIKeyboardTypeNumberPad];
     [self.view addSubview:repsField];
     
     CGRect frame2 = CGRectMake(50.0, yValue+25, screenwidth-100.0, 30);
@@ -345,6 +353,7 @@
     setsField.clearButtonMode = UITextFieldViewModeWhileEditing;
     setsField.delegate = self;
     setsField.textAlignment = UITextAlignmentCenter;
+    [setsField setKeyboardType:UIKeyboardTypeNumberPad];
 
     [self.view addSubview:setsField];
 }

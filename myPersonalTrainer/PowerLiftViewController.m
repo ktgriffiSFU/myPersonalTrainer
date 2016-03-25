@@ -9,10 +9,10 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import "PowerLiftViewController.h"
-
 @interface PowerLiftViewController ()
 {
     UITextField *weightField;
+    UILabel *countLabel;
 
 }
 @end
@@ -23,8 +23,23 @@
 {
     [super viewDidLoad];
     self.title= exercise;
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
+                                   initWithTarget:self
+                                   action:@selector(dismissKeyboard)];
+    [self.view addGestureRecognizer:tap];
+    [weightField setKeyboardType:UIKeyboardTypeNumberPad];
+    [weightField setDelegate:self];
+
     [self createViews];
     
+}
+-(void)dismissKeyboard {
+    [weightField resignFirstResponder];
+}
+-(BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return YES;
 }
 -(void) createViews{
     CGFloat screenwidth = [UIScreen mainScreen].bounds.size.width;
@@ -34,10 +49,13 @@
     CGFloat y2Value=(100.0+width);
 
     //Big label
-    UILabel *countLabel = [[UILabel alloc]initWithFrame:CGRectMake(screenwidth/6,screenheight/8,screenwidth*0.666,screenheight/3)];
+    countLabel = [[UILabel alloc]initWithFrame:CGRectMake(screenwidth/6,screenheight/8,screenwidth*0.666,screenheight/3)];
     countLabel.text=@"0";
     countLabel.backgroundColor =[UIColor yellowColor];
-    [countLabel setFont:[UIFont fontWithName:@"American Typewriter" size:222]];
+    [countLabel setFont:[UIFont fontWithName:@"American Typewriter" size:200]];
+    countLabel.textAlignment = NSTextAlignmentCenter;
+    countLabel.adjustsFontSizeToFitWidth=YES;
+    countLabel.minimumScaleFactor=0.5;
 
     //ADD MORE: when functionality works
     [self.view addSubview:countLabel];
@@ -45,11 +63,11 @@
     
     
     //Big button X2
-    
+
     UIButton *plusButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [plusButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [plusButton addTarget:self
-                action:@selector(passDataForward)
+                action:@selector(increaseNumberLabel)
       forControlEvents:UIControlEventTouchUpInside];
     [plusButton setTitle:@"+" forState:UIControlStateNormal];
     plusButton.frame = CGRectMake(screenwidth*5/6,screenheight/8,screenwidth/6,screenheight/3);
@@ -60,8 +78,7 @@
     UIButton *minusButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [minusButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [minusButton addTarget:self
-                   action:@selector(passDataForward)
-         forControlEvents:UIControlEventTouchUpInside];
+                    action:@selector(decreaseNumberLabel) forControlEvents:UIControlEventTouchUpInside];
     [minusButton setTitle:@"-" forState:UIControlStateNormal];
     minusButton.frame = CGRectMake(0,screenheight/8,screenwidth/6,screenheight/3);
     [minusButton setBackgroundColor:[UIColor grayColor]];
@@ -80,8 +97,9 @@
     weightField.keyboardType = UIKeyboardTypeDefault;
     weightField.clearButtonMode = UITextFieldViewModeWhileEditing;
     weightField.delegate = self;
-    weightField.textAlignment = UITextAlignmentCenter;
-    
+    weightField.textAlignment = NSTextAlignmentCenter;
+    [weightField setKeyboardType:UIKeyboardTypeNumberPad];
+
     [self.view addSubview:weightField];
     
     
@@ -99,6 +117,25 @@
 
 }
 -(void)passDataForward{
+    //FOR SUBMIT BUTTON FROM DetailExerciseVC
+    NSString *weightInt = weightField.text;
     
+}
+-(void)increaseNumberLabel{
+    NSString *countString = countLabel.text;
+    int countInt = [countString integerValue];
+    countInt++;
+    countString=[@(countInt) stringValue];
+    countLabel.text=countString;
+
+}
+-(void)decreaseNumberLabel{
+    NSString *countString = countLabel.text;
+    int countInt = [countString integerValue];
+    if (countInt>0) {
+        countInt--;
+    }
+    countString=[@(countInt) stringValue];
+    countLabel.text=countString;
 }
 @end
