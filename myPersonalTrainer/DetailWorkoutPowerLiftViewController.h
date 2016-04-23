@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "PLStatisticsViewController.h"
 @interface DetailWorkoutPowerLiftViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource>
 @property(nonatomic, strong) IBOutlet UITableView *tableView;
 //@property (weak, nonatomic) IBOutlet UILabel *workoutName;

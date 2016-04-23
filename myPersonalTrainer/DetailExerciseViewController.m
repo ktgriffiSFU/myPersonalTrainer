@@ -27,13 +27,11 @@
 
 {
     NSArray *exercises,*pictures;
-    NSArray *targetedMuscle;
-    NSArray *details;
-    NSArray *exerciseName;
-    NSArray *thumbnails;
-    NSArray *thumbnails2;
-    NSArray *workoutNameP;
+    NSArray *exerciseName,*targetedMuscle,*details,*thumbnails,*thumbnails2;
+
     NSDictionary *workoutArray;
+    NSArray *workoutNameP;
+
     NSArray *exercisesforWorkout;
     NSMutableArray *targetedMuscleforWorkout;
     NSMutableArray *thumbnailforWorkout;
@@ -47,25 +45,18 @@
     int rowNumberNew;
     int reset;
     int totalScore;
-    NSString *daysToGo;
     NSInteger rowNumberDetails[8];
     bool newScore;
-    NSTimeInterval  *elapsedTime;
     
 }
 
 @synthesize exerciseImageView;
 @synthesize exerciseImageView2;
-//@synthesize exerciseDetails;
 @synthesize rowNumberWorkout;
 @synthesize rowNumberNew;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-        
-    }
     return self;
 }
 - (void)passDataForward
@@ -84,7 +75,7 @@
    [self.navigationController pushViewController:secondViewController animated:NO];
 }
 
-- (void)dataFromController:(NSString *)arms :(bool)newData :(NSString *)shoulders :(NSString *)chest :(NSString *)back :(NSString *)core :(NSString *)legs :(NSString *) daysLeft;
+- (void)dataFromController:(bool)newData;
 {
     newData=newScore;
 }
@@ -181,7 +172,6 @@
     coreString = [[NSUserDefaults standardUserDefaults] stringForKey:@"core"];
     legsString = [[NSUserDefaults standardUserDefaults] stringForKey:@"legs"];
     totalString =[[NSUserDefaults standardUserDefaults] stringForKey:@"total"];
-    NSLog(@"Saved:%@",armsString);
     totalScore = [totalString integerValue];
 
     
@@ -258,21 +248,24 @@
     [self performSegueWithIdentifier:@"showDetail" sender:self];
 }
 - (BOOL)checkIfNewWeek{
-    NSString *dateString = [[NSUserDefaults standardUserDefaults] stringForKey:@"oldDate"];
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
 
-    [dateFormatter setDateFormat:@"MMdd"];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    dateFormatter.dateFormat = @"dd-MMM-yy";
+    NSString *dateString1 = [[NSUserDefaults standardUserDefaults] stringForKey:@"oldDate"];
+
     NSDate *currentDate = [NSDate date];
-    NSDate *oldDate = [dateFormatter dateFromString:dateString];
+    NSDate *oldDate = [dateFormatter dateFromString:dateString1];
     NSDateComponents *comp = [[NSDateComponents alloc] init];
     [comp setWeekday:7];
     NSCalendar *calendar=[NSCalendar currentCalendar];
     NSDate *resetDate=[calendar dateByAddingComponents:comp toDate:oldDate options:0];
-    NSString *lastDayString =[dateFormatter stringFromDate:currentDate];
 
 
-    if(resetDate<=currentDate ||dateString==nil){
-    [[NSUserDefaults standardUserDefaults] setObject:lastDayString forKey:@"oldDate"];
+    if([resetDate compare:currentDate]==NSOrderedAscending ||dateString1==nil){
+        NSDate *oldDate=[NSDate date];
+        NSString *displayString = [dateFormatter stringFromDate:oldDate];
+
+    [[NSUserDefaults standardUserDefaults] setObject:displayString forKey:@"oldDate"];
         return true;
     }else{
         return false;
@@ -285,7 +278,6 @@
 }
 -(void) createViews{
     CGFloat screenwidth = [UIScreen mainScreen].bounds.size.width;
-    CGFloat screenheight=[UIScreen mainScreen].bounds.size.height;
     NSLog(@"ScreenWidth: %f",screenwidth);
     CGFloat width = screenwidth/2;
     CGFloat yValue=(100.0+width);
@@ -337,7 +329,7 @@
     repsField.keyboardType = UIKeyboardTypeDefault;
     repsField.clearButtonMode = UITextFieldViewModeWhileEditing;
     repsField.delegate = self;
-    repsField.textAlignment = UITextAlignmentCenter;
+    repsField.textAlignment = NSTextAlignmentCenter;
     [repsField setKeyboardType:UIKeyboardTypeNumberPad];
     [self.view addSubview:repsField];
     
@@ -352,7 +344,7 @@
     setsField.keyboardType = UIKeyboardTypeDefault;
     setsField.clearButtonMode = UITextFieldViewModeWhileEditing;
     setsField.delegate = self;
-    setsField.textAlignment = UITextAlignmentCenter;
+    setsField.textAlignment = NSTextAlignmentCenter;
     [setsField setKeyboardType:UIKeyboardTypeNumberPad];
 
     [self.view addSubview:setsField];

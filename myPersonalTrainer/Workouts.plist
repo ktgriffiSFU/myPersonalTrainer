@@ -49,12 +49,12 @@
 	</array>
 	<key>ThumbnailWorkout</key>
 	<array>
-		<string>arms.jpg</string>
-		<string>legs.png</string>
-		<string>chest.png</string>
-		<string>back.png</string>
-		<string>chest.png</string>
-		<string>core.png</string>
+		<string>IMG_1337.png</string>
+		<string>IMG_1356.png</string>
+		<string>IMG_1110.png</string>
+		<string>IMG_1139.png</string>
+		<string>IMG_1145.png</string>
+		<string>IMG_1397.png</string>
 	</array>
 	<key>WorkoutArray</key>
 	<dict>

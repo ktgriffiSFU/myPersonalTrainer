@@ -25,7 +25,7 @@
 {
     [super viewDidLoad];
 
-    workoutChoices= [[NSArray alloc] initWithObjects:@"General Fitness",@"Power Lifting", nil];
+    workoutChoices= [[NSArray alloc] initWithObjects:@"Bodybuilding",@"Power Lifting", nil];
 }
 - (void)viewDidUnload
 {

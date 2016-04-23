@@ -106,6 +106,15 @@
 		27764C981C055F8D002F9122 /* ExerciseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 27764C971C055F8D002F9122 /* ExerciseTableViewCell.m */; };
 		27784A4E1C432C9F00363198 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27784A4D1C432C9F00363198 /* FBSDKShareKit.framework */; };
 		27784A501C432CD300363198 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27784A4F1C432CD300363198 /* FBSDKCoreKit.framework */; };
+		27814A931CA766FA003DA2D2 /* IMG_1344.png in Resources */ = {isa = PBXBuildFile; fileRef = 27814A911CA766FA003DA2D2 /* IMG_1344.png */; };
+		27814A941CA766FA003DA2D2 /* IMG_1346.png in Resources */ = {isa = PBXBuildFile; fileRef = 27814A921CA766FA003DA2D2 /* IMG_1346.png */; };
+		27814AA01CA76983003DA2D2 /* IMG_1392.png in Resources */ = {isa = PBXBuildFile; fileRef = 27814A9E1CA76983003DA2D2 /* IMG_1392.png */; };
+		27814AA11CA76983003DA2D2 /* IMG_1393.png in Resources */ = {isa = PBXBuildFile; fileRef = 27814A9F1CA76983003DA2D2 /* IMG_1393.png */; };
+		27814AA41CA76C4A003DA2D2 /* IMG_1405.png in Resources */ = {isa = PBXBuildFile; fileRef = 27814AA21CA76C4A003DA2D2 /* IMG_1405.png */; };
+		27814AA51CA76C4A003DA2D2 /* IMG_1406.png in Resources */ = {isa = PBXBuildFile; fileRef = 27814AA31CA76C4A003DA2D2 /* IMG_1406.png */; };
+		27814AA81CA76D3C003DA2D2 /* IMG_1396.png in Resources */ = {isa = PBXBuildFile; fileRef = 27814AA61CA76D3C003DA2D2 /* IMG_1396.png */; };
+		27814AA91CA76D3C003DA2D2 /* IMG_1397.png in Resources */ = {isa = PBXBuildFile; fileRef = 27814AA71CA76D3C003DA2D2 /* IMG_1397.png */; };
+		27814AAB1CA79114003DA2D2 /* QA.plist in Resources */ = {isa = PBXBuildFile; fileRef = 27814AAA1CA79114003DA2D2 /* QA.plist */; };
 		2799F7261C7BC1C30041079B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2799F7251C7BC1C30041079B /* Main.storyboard */; };
 		2799F72B1C7BE6040041079B /* CheckInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2799F72A1C7BE6040041079B /* CheckInViewController.m */; };
 		279B70A91C3D1FE00042BD93 /* 5Stars.png in Resources */ = {isa = PBXBuildFile; fileRef = 279B70A81C3D1FE00042BD93 /* 5Stars.png */; };
@@ -317,6 +326,15 @@
 		27764C971C055F8D002F9122 /* ExerciseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExerciseTableViewCell.m; sourceTree = "<group>"; };
 		27784A4D1C432C9F00363198 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = ../../../FacebookSDK/FBSDKShareKit.framework; sourceTree = "<group>"; };
 		27784A4F1C432CD300363198 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = ../../../FacebookSDK/FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		27814A911CA766FA003DA2D2 /* IMG_1344.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = IMG_1344.png; path = SFUPhotos/IMG_1344.png; sourceTree = SOURCE_ROOT; };
+		27814A921CA766FA003DA2D2 /* IMG_1346.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = IMG_1346.png; path = SFUPhotos/IMG_1346.png; sourceTree = SOURCE_ROOT; };
+		27814A9E1CA76983003DA2D2 /* IMG_1392.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = IMG_1392.png; path = SFUPhotos/IMG_1392.png; sourceTree = SOURCE_ROOT; };
+		27814A9F1CA76983003DA2D2 /* IMG_1393.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = IMG_1393.png; path = SFUPhotos/IMG_1393.png; sourceTree = SOURCE_ROOT; };
+		27814AA21CA76C4A003DA2D2 /* IMG_1405.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = IMG_1405.png; path = SFUPhotos/IMG_1405.png; sourceTree = SOURCE_ROOT; };
+		27814AA31CA76C4A003DA2D2 /* IMG_1406.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = IMG_1406.png; path = SFUPhotos/IMG_1406.png; sourceTree = SOURCE_ROOT; };
+		27814AA61CA76D3C003DA2D2 /* IMG_1396.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = IMG_1396.png; path = SFUPhotos/IMG_1396.png; sourceTree = SOURCE_ROOT; };
+		27814AA71CA76D3C003DA2D2 /* IMG_1397.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = IMG_1397.png; path = SFUPhotos/IMG_1397.png; sourceTree = SOURCE_ROOT; };
+		27814AAA1CA79114003DA2D2 /* QA.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = QA.plist; sourceTree = "<group>"; };
 		2799F7251C7BC1C30041079B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2799F72A1C7BE6040041079B /* CheckInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckInViewController.m; sourceTree = "<group>"; };
 		2799F72C1C7BE60E0041079B /* CheckInViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CheckInViewController.h; sourceTree = "<group>"; };
@@ -407,7 +425,15 @@
 				279B70AD1C3D3F0F0042BD93 /* 1Stars.png */,
 				279B70AE1C3D3F0F0042BD93 /* 2Stars.png */,
 				27D96C4D1C3FE31B0055ADAF /* sidePlank1.png */,
+				27814A9E1CA76983003DA2D2 /* IMG_1392.png */,
+				27814A9F1CA76983003DA2D2 /* IMG_1393.png */,
 				273E48891C4C9B5600F56D57 /* IMG_1111.png */,
+				27814A911CA766FA003DA2D2 /* IMG_1344.png */,
+				27814AA61CA76D3C003DA2D2 /* IMG_1396.png */,
+				27814AA71CA76D3C003DA2D2 /* IMG_1397.png */,
+				27814A921CA766FA003DA2D2 /* IMG_1346.png */,
+				27814AA21CA76C4A003DA2D2 /* IMG_1405.png */,
+				27814AA31CA76C4A003DA2D2 /* IMG_1406.png */,
 				275433571C938477001B5687 /* IMG_1110.png */,
 				275433581C938477001B5687 /* IMG_1337.png */,
 				275433591C938477001B5687 /* IMG_1338.png */,
@@ -558,6 +584,7 @@
 				2754338B1C951A1A001B5687 /* WorkoutChoiceViewController.h */,
 				270B88E71C829F0F009DE8B3 /* AnswerTrainerViewController.m */,
 				270B88E91C829F1C009DE8B3 /* AnswerTrainerViewController.h */,
+				27814AAA1CA79114003DA2D2 /* QA.plist */,
 				270B88DF1C8261F7009DE8B3 /* AskTrainerViewController.m */,
 				270B88E11C826206009DE8B3 /* AskTrainerViewController.h */,
 				27DAE1551C25475E002A03D5 /* DetailWorkoutViewContoller.m */,
@@ -790,11 +817,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				273E48C51C4C9B5600F56D57 /* IMG_1140.png in Resources */,
+				27814AA41CA76C4A003DA2D2 /* IMG_1405.png in Resources */,
 				273E48DB1C4C9B5600F56D57 /* IMG_1184.png in Resources */,
 				275433821C938477001B5687 /* IMG_1374.png in Resources */,
 				273E48E61C4C9B5600F56D57 /* IMG_1204.png in Resources */,
 				279B70B11C3D3F0F0042BD93 /* 1Stars.png in Resources */,
 				273E48C61C4C9B5600F56D57 /* IMG_1141.png in Resources */,
+				27814AA01CA76983003DA2D2 /* IMG_1392.png in Resources */,
 				273E48E41C4C9B5600F56D57 /* IMG_1200.png in Resources */,
 				2799F7261C7BC1C30041079B /* Main.storyboard in Resources */,
 				272A3F011C217C6C00AAF185 /* Workouts.plist in Resources */,
@@ -805,6 +834,7 @@
 				273E48CF1C4C9B5600F56D57 /* IMG_1156.png in Resources */,
 				275433861C938477001B5687 /* IMG_1379.png in Resources */,
 				275433851C938477001B5687 /* IMG_1378.png in Resources */,
+				27814AA51CA76C4A003DA2D2 /* IMG_1406.png in Resources */,
 				27C9F02C1C9661A10006261B /* ok-icon.png in Resources */,
 				273E48C71C4C9B5600F56D57 /* IMG_1142.png in Resources */,
 				275433791C938477001B5687 /* IMG_1356.png in Resources */,
@@ -812,6 +842,7 @@
 				273E48D61C4C9B5600F56D57 /* IMG_1174.png in Resources */,
 				273E48BD1C4C9B5600F56D57 /* IMG_1117.png in Resources */,
 				275433731C938477001B5687 /* IMG_1340.png in Resources */,
+				27814AA81CA76D3C003DA2D2 /* IMG_1396.png in Resources */,
 				27E116A61C03ABB800E8E2AF /* LaunchScreen.storyboard in Resources */,
 				2741FD911C36752700D15A94 /* Muscles.plist in Resources */,
 				27E116A31C03ABB800E8E2AF /* Assets.xcassets in Resources */,
@@ -847,6 +878,7 @@
 				273E48E11C4C9B5600F56D57 /* IMG_1197.png in Resources */,
 				273E48D81C4C9B5600F56D57 /* IMG_1178.png in Resources */,
 				273E48EC1C4C9B5600F56D57 /* IMG_1238.png in Resources */,
+				27814AA11CA76983003DA2D2 /* IMG_1393.png in Resources */,
 				275433831C938477001B5687 /* IMG_1376.png in Resources */,
 				273E48D41C4C9B5600F56D57 /* IMG_1171.png in Resources */,
 				279B70B31C3D3F0F0042BD93 /* 3Stars.png in Resources */,
@@ -860,6 +892,9 @@
 				270B88E31C826390009DE8B3 /* AnswerCell.xib in Resources */,
 				275433871C938477001B5687 /* IMG_1385.png in Resources */,
 				27D96C501C3FE31B0055ADAF /* sidePlank2.png in Resources */,
+				27814AAB1CA79114003DA2D2 /* QA.plist in Resources */,
+				27814A931CA766FA003DA2D2 /* IMG_1344.png in Resources */,
+				27814AA91CA76D3C003DA2D2 /* IMG_1397.png in Resources */,
 				273E48DF1C4C9B5600F56D57 /* IMG_1191.png in Resources */,
 				2754337D1C938477001B5687 /* IMG_1363.png in Resources */,
 				27158D931C0A9A1A0002272B /* Exercises.plist in Resources */,
@@ -875,6 +910,7 @@
 				273E48C81C4C9B5600F56D57 /* IMG_1143.png in Resources */,
 				273E48BC1C4C9B5600F56D57 /* IMG_1115.png in Resources */,
 				275433881C938477001B5687 /* IMG_1386.png in Resources */,
+				27814A941CA766FA003DA2D2 /* IMG_1346.png in Resources */,
 				273E48E91C4C9B5600F56D57 /* IMG_1231.png in Resources */,
 				27D96C4F1C3FE31B0055ADAF /* sidePlank1.png in Resources */,
 				273E48BF1C4C9B5600F56D57 /* IMG_1125.png in Resources */,

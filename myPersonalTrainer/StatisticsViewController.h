@@ -9,12 +9,11 @@
 
 
 #import <UIKit/UIKit.h>
-#import <FBSDKShareKit/FBSDKShareKit.h>
 
 @protocol StatisticsViewControllerDelegate <NSObject>
 
 @required
-- (void)dataFromController:(NSString *)arms :(bool)newData :(NSString *)shoulders :(NSString *)chest :(NSString *)back :(NSString *)core :(NSString *)legs :(NSString *) daysLeft;
+- (void)dataFromController:(bool)newData;
 
 @end
 @interface StatisticsViewController : UIViewController

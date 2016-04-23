@@ -9,10 +9,12 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import "PowerLiftViewController.h"
-@interface PowerLiftViewController ()
+#import "PLStatisticsViewController.h"
+@interface PowerLiftViewController ()<PLStatisticsViewControllerDelegate>
 {
     UITextField *weightField;
     UILabel *countLabel;
+    bool newScore;
 
 }
 @end
@@ -32,6 +34,10 @@
 
     [self createViews];
     
+}
+- (void)dataFromController:(bool)newData;
+{
+    newData=newScore;
 }
 -(void)dismissKeyboard {
     [weightField resignFirstResponder];
@@ -117,9 +123,24 @@
 
 }
 -(void)passDataForward{
-    //FOR SUBMIT BUTTON FROM DetailExerciseVC
-    NSString *weightInt = weightField.text;
+    newScore=YES;
+    NSString *weightString = weightField.text;
+    NSString *repsString =countLabel.text;
+    PLStatisticsViewController *secondViewController= [[PLStatisticsViewController alloc] init];
+    secondViewController.newData=newScore;
+    secondViewController.exercise=exercise;
+    if ([exercise isEqualToString:@"Bench Press"]) {
+        secondViewController.benchReps=repsString;
+        secondViewController.benchWeight=weightString;
+    }else if ([exercise isEqualToString:@"Squats"]){
+        secondViewController.squatsReps=repsString;
+        secondViewController.squatsWeight=weightString;
+    }else{
+        secondViewController.deadliftReps=repsString;
+        secondViewController.deadliftWeight=weightString;
+    }
     
+       [self.navigationController pushViewController:secondViewController animated:NO];
 }
 -(void)increaseNumberLabel{
     NSString *countString = countLabel.text;

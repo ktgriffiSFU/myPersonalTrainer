@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Questions</key>
+	<array>
+		<string>How do I get my arms to be 18 inches.</string>
+		<string>How do I lose my belly in 12 weeks.</string>
+		<string>What kinds of exercises are good to develop nice legs.</string>
+	</array>
+	<key>Answers</key>
+	<array>
+		<string>Do workouts like Barbell Arms. The major exercises for developing triceps and biceps is there.</string>
+		<string>Getting in 20-30 minutes of cardio before resistance exercises can help maintain and lose weight.</string>
+		<string>Squats, Deadlifts and lunges are great exercising for strengthening muscles in the quadriceps, halmstrings and glutes.</string>
+	</array>
+</dict>
+</plist>

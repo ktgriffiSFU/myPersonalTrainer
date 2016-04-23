@@ -13,6 +13,7 @@
 #import "DetailWorkoutPowerLiftViewController.h"
 #import "PowerLiftViewController.h"
 #import "DetailExerciseViewController.h"
+#import "PLStatisticsViewController.h"
 #import "SimpleTableCell.h"
 
 @interface DetailWorkoutPowerLiftViewController ()

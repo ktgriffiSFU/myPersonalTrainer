@@ -24,7 +24,22 @@
 @synthesize tableView; // Add this line of code
 - (void)viewDidLoad{
     [super viewDidLoad];
-    NSMutableDictionary *dictQA = [self getFromDatabase];
+    [self createDictFromPlistandInitArrays];
+    //NSMutableDictionary *dictQA = [self getFromDatabase];
+    //[self initArrays:dictQA];
+    
+    
+
+    
+}
+-(void)createDictFromPlistandInitArrays{
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"QA" ofType:@"plist"];
+    NSDictionary *dictQA = [[NSDictionary alloc] initWithContentsOfFile:path];
+    answers= [dictQA objectForKey:@"Answers"];
+    questions=[dictQA objectForKey:@"Questions"];
+
+}
+-(void)initArrays:(NSMutableDictionary*)dictQA{
     NSMutableArray *questionsArray = [[NSMutableArray alloc] init];
     NSMutableArray *answersArray = [[NSMutableArray alloc] init];
     NSMutableArray *idArray = [[NSMutableArray alloc] init];
@@ -40,8 +55,8 @@
     answers =[[answersArray reverseObjectEnumerator]allObjects];
     questions =[[questionsArray reverseObjectEnumerator]allObjects];
     identitynumbers=[idArray copy];
-    
 }
+
 - (void)viewDidUnload
 {
     [super viewDidUnload];
@@ -55,7 +70,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [identitynumbers count];
+    return [questions count];
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -69,14 +84,12 @@
     AnswerCell *cell = (AnswerCell *)[self.tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
     if (cell == nil)
     {
-        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"AnswerCell" owner:self options:nil];
+        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:simpleTableIdentifier owner:self options:nil];
         cell = [nib objectAtIndex:0];
     }
     cell.accessoryType  = UITableViewCellAccessoryDisclosureIndicator;
     
     cell.QuestionLabel.text = [questions objectAtIndex:indexPath.row];
-   // cell.detailLabel.text=[detailOptions objectAtIndex:indexPath.row];
-    //     cell.thumbnail.image = [UIImage imageNamed:[thumbnail objectAtIndex:indexPath.row]];
     
     
     

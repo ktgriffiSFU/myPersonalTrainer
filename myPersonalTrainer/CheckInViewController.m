@@ -65,7 +65,8 @@
 
     }
         [self CheckNewMonth];
-    [self getCode];
+   // [self getCode];
+    signInKey = @"doyoueven";
     NSLog(@"%@",signInKey);
 }
 -(BOOL)textFieldShouldReturn:(UITextField *)textField

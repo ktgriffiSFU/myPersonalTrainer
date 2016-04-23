@@ -17,7 +17,6 @@
 
     
 }
-@property (nonatomic, strong) NSTimer *timer;
 
 
 @end
@@ -44,9 +43,8 @@
 
 
     self.view.backgroundColor = [UIColor whiteColor];
-    NSLog(@"This runs viedidlow");
-    [self gatherData];
-    [self postData];
+    NSLog(@"This runs viedidload");
+
 }
 - (void)viewDidAppear:(BOOL)animated
 {
@@ -133,15 +131,15 @@
     int scoreInt = [score integerValue];
     if (scoreInt==0) {
         starValue =[UIImage imageNamed:@"0Stars.png"];
-    }if (scoreInt>0 &&scoreInt <29) {
+    }else if (scoreInt>0 &&scoreInt <29) {
         starValue =[UIImage imageNamed:@"1Stars.png"];
-    }if (scoreInt>=29 &&scoreInt < 59) {
+    }else if (scoreInt>=29 &&scoreInt < 59) {
         starValue =[UIImage imageNamed:@"2Stars.png"];
-    }if (scoreInt>=59 &&scoreInt < 99) {
+    }else if (scoreInt>=59 &&scoreInt < 99) {
         starValue =[UIImage imageNamed:@"3Stars.png"];
-    }if (scoreInt>=99 &&scoreInt < 200) {
+    }else if (scoreInt>=99 &&scoreInt < 200) {
         starValue =[UIImage imageNamed:@"4Stars.png"];
-    }if (scoreInt>=200) {
+    }else if (scoreInt>=200) {
         starValue =[UIImage imageNamed:@"5Stars.png"];
     }
     return starValue;
