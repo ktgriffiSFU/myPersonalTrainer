@@ -20,19 +20,23 @@
     NSString *signInKey;
     int countInt;
 }
-@synthesize signInField,submitButton;
-@synthesize nameField,welcomeLabel,countLabel;
-
+@synthesize signInField,submitButton,countLabel;
+@synthesize nameField,welcomeLabel;
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+}
 - (void)viewDidLoad {
+    [super viewDidLoad];
+
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
                                    initWithTarget:self
                                    action:@selector(dismissKeyboard)];
     [self.view addGestureRecognizer:tap];
-    
+    [self initCountLabel];
     [signInField setDelegate:self];
     [nameField setDelegate:self ];
-
-    [super viewDidLoad];
     oldDate= [[NSUserDefaults standardUserDefaults] objectForKey:@"CONSCIENCE_START_DATE"];
 
     userName=[[NSUserDefaults standardUserDefaults] stringForKey:@"userName"];
@@ -65,9 +69,16 @@
 
     }
         [self CheckNewMonth];
-   // [self getCode];
-    signInKey = @"doyoueven";
+    [self getCode];
     NSLog(@"%@",signInKey);
+}
+-(void)initCountLabel{
+    [countLabel setFont:[UIFont fontWithName:@"Avenir" size:200]];
+    countLabel.textAlignment = NSTextAlignmentCenter;
+    countLabel.adjustsFontSizeToFitWidth=YES;
+    countLabel.minimumScaleFactor=0.5;
+    countLabel.textColor = [UIColor redColor];
+
 }
 -(BOOL)textFieldShouldReturn:(UITextField *)textField
 {

@@ -24,9 +24,8 @@
 @synthesize tableView; // Add this line of code
 - (void)viewDidLoad{
     [super viewDidLoad];
-    [self createDictFromPlistandInitArrays];
-    //NSMutableDictionary *dictQA = [self getFromDatabase];
-    //[self initArrays:dictQA];
+    NSMutableDictionary *dictQA = [self getFromDatabase];
+    [self initArrays:dictQA];
     
     
 

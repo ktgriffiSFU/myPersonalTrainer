@@ -11,11 +11,6 @@
 #import "StatisticsViewController.h"
 @interface DetailExerciseViewController : UIViewController <UITextFieldDelegate>
 
-
-@property (weak, nonatomic) IBOutlet UIImageView *exerciseImageView;
-
-@property (weak, nonatomic) IBOutlet UIImageView *exerciseImageView2;
-
 @property (weak, nonatomic) IBOutlet UIButton *detailButton;
 @property int rowNumberNew;
 @property int rowNumberWorkout;

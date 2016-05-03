@@ -28,14 +28,7 @@
 @synthesize backScore;
 @synthesize coreScore;
 @synthesize legsScore;
-@synthesize armsImage;
-@synthesize shoulderImage;
-@synthesize chestImage;
-@synthesize legsImage;
-@synthesize coreImage;
-@synthesize backImage;
-@synthesize daysToGo;
-@synthesize daysScore;
+
 
 - (void)viewDidLoad
 {
@@ -50,11 +43,8 @@
 {
     [super viewDidAppear:animated];
   
-
-    NSLog(@"Core : %@",coreScore);
-    NSLog(@"Legs : %@",legsScore);
     [self gatherData];
-    [self postData];
+    [self createStarViews];
     
 }
 - (void)viewDidUnload
@@ -66,7 +56,6 @@
 - (void)gatherData
 {
     if (_newData) {
-        [self createViews];
         self.title= @"Good Set!";
         [[NSUserDefaults standardUserDefaults] setObject:_arms forKey:@"ARMS"];
         [[NSUserDefaults standardUserDefaults] setObject:_legs forKey:@"LEGS"];
@@ -84,47 +73,71 @@
     coreScore = [[NSUserDefaults standardUserDefaults] stringForKey:@"CORE"];
     shoulderScore = [[NSUserDefaults standardUserDefaults] stringForKey:@"SHOULDERS"];
     backScore = [[NSUserDefaults standardUserDefaults] stringForKey:@"BACK"];
-    daysScore = [[NSUserDefaults standardUserDefaults] stringForKey:@"DAYS"];
 
 }
--(void)postData{
-    shoulderImage.image = [self determineStars:shoulderScore];
-    armsImage.image = [self determineStars:armsScore];
-    backImage.image = [self determineStars:backScore];
-    chestImage.image= [self determineStars:chestScore];
-    legsImage.image = [self determineStars:legsScore];
-    coreImage.image = [self determineStars:coreScore];
-}
--(void) createViews{
-    self.view.backgroundColor = [UIColor redColor];
-
-    CGRect top, bottom;
-    CGRectDivide(self.view.bounds, &top, &bottom, self.view.bounds.size.height / 2, CGRectMinYEdge);
-    
-    _label = [[UILabel alloc] initWithFrame:CGRectInset(top, 5, 5)];
-    [_label setFont:[UIFont fontWithName:@"Avenir" size:15]];
-    _label.textColor=[UIColor whiteColor];
-    _label.autoresizingMask = UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth|
-    UIViewAutoresizingFlexibleBottomMargin;
-    _label.numberOfLines =2;
-    _label.textAlignment = NSTextAlignmentCenter;
-    _label.text = @"Press back to keep on working out.              Your entry has been added to Statistics";
-    [self.view addSubview:_label];
-    
+-(void)createStarViews{
     CGFloat screenwidth = [UIScreen mainScreen].bounds.size.width;
-    CGFloat screenheight=[UIScreen mainScreen].bounds.size.height;
-    NSLog(@"ScreenWidth: %f",screenwidth);
-    CGFloat width = 100.0;
-    CGFloat height= 124.0;
+    CGFloat screenheight = [UIScreen mainScreen].bounds.size.height;
     
-    UIImageView *image1 =[[UIImageView alloc] initWithFrame:CGRectMake(screenwidth/2-width/2,screenheight/2,width,height)];
-    image1.image=[UIImage imageNamed:@"ok-icon.png"];
-    [self.view addSubview:image1];
-    
+    //make the Star images
+    UIImageView *armsStarsImage =[[UIImageView alloc] initWithFrame:CGRectMake(screenwidth/2.7,screenheight*3/16,screenwidth/1.9,screenheight/16)];
+    UIImageView *shoulderStarsImage =[[UIImageView alloc] initWithFrame:CGRectMake(screenwidth/2.7,screenheight*5/16,screenwidth/1.9,screenheight/16)];
+    UIImageView *chestStarsImage =[[UIImageView alloc] initWithFrame:CGRectMake(screenwidth/2.7,screenheight*7/16,screenwidth/1.9,screenheight/16)];
+    UIImageView *backStarsImage =[[UIImageView alloc] initWithFrame:CGRectMake(screenwidth/2.7,screenheight*9/16,screenwidth/1.9,screenheight/16)];
+    UIImageView *coreStarsImage =[[UIImageView alloc] initWithFrame:CGRectMake(screenwidth/2.7,screenheight*11/16,screenwidth/1.9,screenheight/16)];
+    UIImageView *legsStarsImage =[[UIImageView alloc] initWithFrame:CGRectMake(screenwidth/2.7,screenheight*13/16,screenwidth/1.9,screenheight/16)];
 
+    shoulderStarsImage.image=[self determineStars:shoulderScore];
+    armsStarsImage.image=[self determineStars:armsScore];
+    backStarsImage.image = [self determineStars:backScore];
+    chestStarsImage.image= [self determineStars:chestScore];
+    legsStarsImage.image = [self determineStars:legsScore];
+    coreStarsImage.image = [self determineStars:coreScore];
+    [self.view addSubview:shoulderStarsImage];
+    [self.view addSubview:armsStarsImage];
+    [self.view addSubview:backStarsImage];
+    [self.view addSubview:chestStarsImage];
+    [self.view addSubview:legsStarsImage];
+    [self.view addSubview:coreStarsImage];
+    //Make the labels
+    UILabel *armLabel = [[UILabel alloc]initWithFrame:CGRectMake(screenwidth/10,screenheight*3/16,screenwidth/1.9,screenheight/16)];
+    UILabel *shoulderLabel = [[UILabel alloc]initWithFrame:CGRectMake(screenwidth/10,screenheight*5/16,screenwidth/1.9,screenheight/16)];
+    UILabel *chestLabel = [[UILabel alloc]initWithFrame:CGRectMake(screenwidth/10,screenheight*7/16,screenwidth/1.9,screenheight/16)];
+    UILabel *backLabel = [[UILabel alloc]initWithFrame:CGRectMake(screenwidth/10,screenheight*9/16,screenwidth/1.9,screenheight/16)];
+    UILabel *coreLabel = [[UILabel alloc]initWithFrame:CGRectMake(screenwidth/10,screenheight*11/16,screenwidth/1.9,screenheight/16)];
+    UILabel *legsLabel = [[UILabel alloc]initWithFrame:CGRectMake(screenwidth/10,screenheight*13/16,screenwidth/1.9,screenheight/16)];
+
+    armLabel.text=@"Arms";
+    shoulderLabel.text=@"Shoulders";
+    chestLabel.text=@"Chest";
+    backLabel.text=@"Back";
+    coreLabel.text=@"Core";
+    legsLabel.text=@"Legs";
+
+    [armLabel setFont:[UIFont fontWithName:@"Avenir" size:17]];
+    [shoulderLabel setFont:[UIFont fontWithName:@"Avenir" size:17]];
+    [backLabel setFont:[UIFont fontWithName:@"Avenir" size:17]];
+    [chestLabel setFont:[UIFont fontWithName:@"Avenir" size:17]];
+    [coreLabel setFont:[UIFont fontWithName:@"Avenir" size:17]];
+    [legsLabel setFont:[UIFont fontWithName:@"Avenir" size:17]];
+
+    armLabel.textAlignment = NSTextAlignmentLeft;
+    backLabel.textAlignment = NSTextAlignmentLeft;
+    shoulderLabel.textAlignment = NSTextAlignmentLeft;
+    chestLabel.textAlignment = NSTextAlignmentLeft;
+    legsLabel.textAlignment = NSTextAlignmentLeft;
+    coreLabel.textAlignment = NSTextAlignmentLeft;
     
+    [self.view addSubview:armLabel];
+    [self.view addSubview:shoulderLabel];
+    [self.view addSubview:coreLabel];
+    [self.view addSubview:backLabel];
+    [self.view addSubview:chestLabel];
+    [self.view addSubview:armLabel];
+    [self.view addSubview:legsLabel];
 
 }
+
 - (UIImage *) determineStars: (NSString *) score
 {
     UIImage *starValue;

@@ -35,13 +35,7 @@
 @property (nonatomic) NSString* legsScore;
 @property (nonatomic) NSString* daysScore;
 @property (nonatomic) int*rowNumber;
-@property (weak, nonatomic) IBOutlet UIImageView *shoulderImage;
-@property (weak, nonatomic) IBOutlet UIImageView *chestImage;
-@property (weak, nonatomic) IBOutlet UIImageView *backImage;
-@property (weak, nonatomic) IBOutlet UIImageView *armsImage;
-@property (weak, nonatomic) IBOutlet UIImageView *coreImage;
-@property (weak, nonatomic) IBOutlet UIImageView *legsImage;
-@property (weak, nonatomic) IBOutlet UILabel *daysToGo;
+
 
 
 

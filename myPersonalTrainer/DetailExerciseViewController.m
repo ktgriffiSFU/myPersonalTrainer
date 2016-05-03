@@ -50,8 +50,7 @@
     
 }
 
-@synthesize exerciseImageView;
-@synthesize exerciseImageView2;
+
 @synthesize rowNumberWorkout;
 @synthesize rowNumberNew;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -278,20 +277,19 @@
 }
 -(void) createViews{
     CGFloat screenwidth = [UIScreen mainScreen].bounds.size.width;
+    CGFloat screenheight = [UIScreen mainScreen].bounds.size.height;
     NSLog(@"ScreenWidth: %f",screenwidth);
+    NSLog(@"ScreenHeight: %f",screenheight);
     CGFloat width = screenwidth/2;
     CGFloat yValue=(100.0+width);
-
-    UIImageView *image1 =[[UIImageView alloc] initWithFrame:CGRectMake(0,67,width,width)];
-    UIImageView *image2 =[[UIImageView alloc] initWithFrame:CGRectMake(width,67, width,width)];
+    CGFloat buttonHeight=screenheight*.105;
+    UIImageView *image1 =[[UIImageView alloc] initWithFrame:CGRectMake(0,screenheight/8.3,width,width)];
+    UIImageView *image2 =[[UIImageView alloc] initWithFrame:CGRectMake(width,screenheight/8.3, width,width)];
     image1.image=[UIImage imageNamed:[thumbnailforWorkout objectAtIndex:rowNumberNew]];
     image2.image=[UIImage imageNamed:[thumbnailforWorkout2 objectAtIndex:rowNumberNew]];
     [self.view addSubview:image1];
     [self.view addSubview:image2];
-    
-    self.exerciseImageView.image = [UIImage imageNamed:[thumbnailforWorkout objectAtIndex:rowNumberNew]];
-    self.exerciseImageView2.image= [UIImage imageNamed:[thumbnailforWorkout2 objectAtIndex:rowNumberNew]];
-    
+
 
     
     UIButton *button1 = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -300,7 +298,7 @@
                 action:@selector(passDataForward)
       forControlEvents:UIControlEventTouchUpInside];
     [button1 setTitle:@"SUBMIT" forState:UIControlStateNormal];
-    button1.frame = CGRectMake(0, yValue+200, screenwidth, 60.0);
+    button1.frame = CGRectMake(0, screenheight*.809, screenwidth,buttonHeight );
     [button1 setBackgroundColor:[UIColor redColor]];
     button1.titleLabel.font = [UIFont boldSystemFontOfSize:24.0];
 
@@ -313,12 +311,11 @@
       forControlEvents:UIControlEventTouchUpInside];
     [button2 setTitle:@"DETAILS" forState:UIControlStateNormal];
     [button2 setBackgroundColor:[UIColor redColor]];
-    
-    button2.frame = CGRectMake(0, yValue +100, screenwidth, 60.0);
+    button2.frame = CGRectMake(0, screenheight*.633, screenwidth, buttonHeight);
     button2.titleLabel.font = [UIFont boldSystemFontOfSize:24.0];
 
     [self.view addSubview:button2];
-    CGRect frame = CGRectMake(50.0, yValue-25, screenwidth-100, 30);
+    CGRect frame = CGRectMake(50.0, screenheight*.477   , screenwidth-100, buttonHeight/2);
     repsField = [[UITextField alloc] initWithFrame:frame];
     repsField.borderStyle = UITextBorderStyleRoundedRect;
     repsField.textColor = [UIColor blackColor];
@@ -333,7 +330,7 @@
     [repsField setKeyboardType:UIKeyboardTypeNumberPad];
     [self.view addSubview:repsField];
     
-    CGRect frame2 = CGRectMake(50.0, yValue+25, screenwidth-100.0, 30);
+    CGRect frame2 = CGRectMake(50.0, screenheight*.555, screenwidth-100.0, buttonHeight/2);
     setsField = [[UITextField alloc] initWithFrame:frame2];
     setsField.borderStyle = UITextBorderStyleRoundedRect;
     setsField.textColor = [UIColor blackColor];
