@@ -7,27 +7,27 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="WorkoutTableCell" rowHeight="75" id="AQc-Se-JYI" customClass="WinnerTableCell">
-            <rect key="frame" x="0.0" y="0.0" width="321" height="30"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="WorkoutTableCell" rowHeight="139" id="AQc-Se-JYI" customClass="WinnerTableCell">
+            <rect key="frame" x="0.0" y="0.0" width="321" height="94"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AQc-Se-JYI" id="SJs-wV-gXg">
-                <rect key="frame" x="0.0" y="0.0" width="321" height="29.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="321" height="93.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Patron Name" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S09-xx-hKu">
-                        <rect key="frame" x="46" y="0.0" width="154" height="30"/>
+                        <rect key="frame" x="8" y="3" width="154" height="30"/>
                         <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="n" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ML8-L7-FYA">
-                        <rect key="frame" x="256" y="1" width="57" height="30"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Desired time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OqP-6f-GPq">
+                        <rect key="frame" x="8" y="41" width="154" height="30"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OqP-6f-GPq">
-                        <rect key="frame" x="8" y="-1" width="30" height="30"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Goal" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ML8-L7-FYA">
+                        <rect key="frame" x="170" y="41" width="143" height="30"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
@@ -36,10 +36,13 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="countAtGym" destination="ML8-L7-FYA" id="VQ1-Ja-Dr8"/>
+                <outlet property="goalLabel" destination="ML8-L7-FYA" id="ZhV-uj-h7K"/>
+                <outlet property="memberNameLabel" destination="S09-xx-hKu" id="Daq-FU-XoU"/>
                 <outlet property="patronName" destination="S09-xx-hKu" id="Q6Y-8i-Ptk"/>
                 <outlet property="placeLabel" destination="OqP-6f-GPq" id="JUu-F7-foU"/>
+                <outlet property="timeLabel" destination="S09-xx-hKu" id="eDf-HD-dPv"/>
             </connections>
-            <point key="canvasLocation" x="353.5" y="204"/>
+            <point key="canvasLocation" x="353.5" y="236"/>
         </tableViewCell>
     </objects>
 </document>

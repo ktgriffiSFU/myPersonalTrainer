@@ -11,12 +11,13 @@
 #import <Foundation/Foundation.h>
 #import "DetailExerciseViewController.h"
 #import "StatisticsViewController.h"
+#import "SetSummaryViewController.h"
 #import "ViewController.h"
-@interface DetailExerciseViewController ()<StatisticsViewControllerDelegate>
+@interface DetailExerciseViewController ()<StatisticsViewControllerDelegate,SetSummaryViewControllerDelegate>
 {
     UILabel *_label;
     UITextField *repsField;
-    UITextField *setsField;
+    UITextField *weightField;
 }
 
 @end
@@ -47,7 +48,7 @@
     int totalScore;
     NSInteger rowNumberDetails[8];
     bool newScore;
-    
+    NSString *repsToSend,*weightToSend;
 }
 
 
@@ -62,6 +63,7 @@
 {
     [self submitButton];
     StatisticsViewController *secondViewController = [[StatisticsViewController alloc] init];
+    SetSummaryViewController *thirdViewController =[[SetSummaryViewController alloc] init];
     secondViewController.arms = armsString;
     secondViewController.legs = legsString;
     secondViewController.chest = chestString;
@@ -71,18 +73,32 @@
     secondViewController.newData=newScore;
     secondViewController.delegate = self;
     secondViewController.rowNumber =&(rowNumberNew);
-   [self.navigationController pushViewController:secondViewController animated:NO];
+    
+    thirdViewController.repsNew=repsToSend;
+    thirdViewController.weightNew=weightToSend;
+    thirdViewController.exercise=exerciseforWorkoutNew[rowNumberNew];
+    thirdViewController.newData=newScore;
+    thirdViewController.delegate=self;
+    [self.navigationController pushViewController:thirdViewController animated:NO];
+    //[self.navigationController pushViewController:secondViewController animated:NO];
 }
 
 - (void)dataFromController:(bool)newData;
 {
     newData=newScore;
 }
+-(void)dataFromDController:(bool)newData;
+{
+    newData=newScore;
+}
 
 - (void)submitButton {
     NSInteger repsInt = [repsField.text integerValue];
-    NSInteger setsInt = [setsField.text integerValue];
-    NSInteger scoreInt = setsInt*repsInt;
+    NSInteger scoreInt =repsInt;
+    weightToSend=weightField.text;
+    repsToSend=repsField.text;
+    [[NSUserDefaults standardUserDefaults] setObject:weightToSend forKey:@"weight"];
+    [[NSUserDefaults standardUserDefaults] setObject:repsToSend forKey:@"reps"];
 
 
     newScore=YES;
@@ -145,7 +161,7 @@
 }
 -(void)dismissKeyboard {
     [repsField resignFirstResponder];
-    [setsField resignFirstResponder];
+    [weightField resignFirstResponder];
 }
 -(BOOL)textFieldShouldReturn:(UITextField *)textField
 {
@@ -162,7 +178,7 @@
 
 
     [repsField setDelegate:self];
-    [setsField setDelegate:self];
+    [weightField setDelegate:self];
 
     armsString = [[NSUserDefaults standardUserDefaults] stringForKey:@"arms"];
     shouldersString = [[NSUserDefaults standardUserDefaults] stringForKey:@"shoulders"];
@@ -173,7 +189,6 @@
     totalString =[[NSUserDefaults standardUserDefaults] stringForKey:@"total"];
     totalScore = [totalString integerValue];
 
-    
     
 
     if ([self checkIfNewWeek]) {
@@ -239,7 +254,6 @@
             }
         }
     }
-
     [self createViews];
 
 }
@@ -251,8 +265,11 @@
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     dateFormatter.dateFormat = @"dd-MMM-yy";
     NSString *dateString1 = [[NSUserDefaults standardUserDefaults] stringForKey:@"oldDate"];
-
     NSDate *currentDate = [NSDate date];
+
+    if (dateString1 ==nil) {
+          dateString1= [dateFormatter stringFromDate:currentDate];
+    }
     NSDate *oldDate = [dateFormatter dateFromString:dateString1];
     NSDateComponents *comp = [[NSDateComponents alloc] init];
     [comp setWeekday:7];
@@ -278,10 +295,8 @@
 -(void) createViews{
     CGFloat screenwidth = [UIScreen mainScreen].bounds.size.width;
     CGFloat screenheight = [UIScreen mainScreen].bounds.size.height;
-    NSLog(@"ScreenWidth: %f",screenwidth);
-    NSLog(@"ScreenHeight: %f",screenheight);
+
     CGFloat width = screenwidth/2;
-    CGFloat yValue=(100.0+width);
     CGFloat buttonHeight=screenheight*.105;
     UIImageView *image1 =[[UIImageView alloc] initWithFrame:CGRectMake(0,screenheight/8.3,width,width)];
     UIImageView *image2 =[[UIImageView alloc] initWithFrame:CGRectMake(width,screenheight/8.3, width,width)];
@@ -331,20 +346,20 @@
     [self.view addSubview:repsField];
     
     CGRect frame2 = CGRectMake(50.0, screenheight*.555, screenwidth-100.0, buttonHeight/2);
-    setsField = [[UITextField alloc] initWithFrame:frame2];
-    setsField.borderStyle = UITextBorderStyleRoundedRect;
-    setsField.textColor = [UIColor blackColor];
-    setsField.font = [UIFont systemFontOfSize:17.0];
-    setsField.placeholder = @"SETS";
-    setsField.backgroundColor = [UIColor clearColor];
-    setsField.autocorrectionType = UITextAutocorrectionTypeYes;
-    setsField.keyboardType = UIKeyboardTypeDefault;
-    setsField.clearButtonMode = UITextFieldViewModeWhileEditing;
-    setsField.delegate = self;
-    setsField.textAlignment = NSTextAlignmentCenter;
-    [setsField setKeyboardType:UIKeyboardTypeNumberPad];
+    weightField = [[UITextField alloc] initWithFrame:frame2];
+    weightField.borderStyle = UITextBorderStyleRoundedRect;
+    weightField.textColor = [UIColor blackColor];
+    weightField.font = [UIFont systemFontOfSize:17.0];
+    weightField.placeholder = @"WEIGHT";
+    weightField.backgroundColor = [UIColor clearColor];
+    weightField.autocorrectionType = UITextAutocorrectionTypeYes;
+    weightField.keyboardType = UIKeyboardTypeDefault;
+    weightField.clearButtonMode = UITextFieldViewModeWhileEditing;
+    weightField.delegate = self;
+    weightField.textAlignment = NSTextAlignmentCenter;
+    [weightField setKeyboardType:UIKeyboardTypeNumberPad];
 
-    [self.view addSubview:setsField];
+    [self.view addSubview:weightField];
 }
 @end
 

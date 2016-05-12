@@ -10,8 +10,8 @@
 
 @interface WinnerTableCell: UITableViewCell
 
-@property (weak, nonatomic) IBOutlet UILabel *placeLabel;
-@property (weak, nonatomic) IBOutlet UILabel *patronName;
-@property (weak, nonatomic) IBOutlet UILabel *countAtGym;
+@property (weak, nonatomic) IBOutlet UILabel *timeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *memberNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *goalLabel;
 
 @end

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Names</key>
+	<array>
+		<string>Dara 
+Browne</string>
+		<string>Catherine
+Bunagan</string>
+	</array>
+	<key>Focus</key>
+	<array>
+		<string>Power Lifting</string>
+		<string>Bodybuilding</string>
+	</array>
+	<key>Fact Sheet</key>
+	<array>
+		<string>Dara is an accomplished power lifter with multiple competitions under his belt. With customer server as his priority he will make sure you get what you want, whether it be smashing your personal record on squats or just motivating you while you achieve an active lifestyle</string>
+		<string>Catherine is a fitness aficionado. She will get you over your fitness plateaus with a calculated regimen and a infection passion for fitness. Don&apos;t question her expertise or she&apos;ll make you pay in blood, sweat and tears. Catherine enjoys long walks on the beach with boyfriend and eating slightly overcooked pork adobo.</string>
+	</array>
+	<key>Contact Info</key>
+	<array>
+		<string>dbrowne@sfu.ca</string>
+		<string>cbunagan@sfu.ca</string>
+	</array>
+	<key>Icons</key>
+	<array>
+		<string>dara.png</string>
+		<string>cat.png</string>
+	</array>
+</dict>
+</plist>

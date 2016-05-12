@@ -1,22 +1,23 @@
 //
-//  WorkoutChoiceViewController.m
+//  MiscViewController.m
 //  fitSFU
 //
-//  Created by Kyle Griffith on 2016-03-12.
+//  Created by Kyle Griffith on 2016-05-05.
 //  Copyright © 2016 Kyle Griffith. All rights reserved.
 //
 
+
 #import <Foundation/Foundation.h>
-#import "WorkoutChoiceViewController.h"
+#import "MiscViewController.h"
 #import "AnswerCell.h"
-@interface WorkoutChoiceViewController()
+@interface MiscViewController()
 
 @end
 
-@implementation WorkoutChoiceViewController
+@implementation MiscViewController
 {
-
-    NSArray *workoutChoices;
+    
+    NSArray *miscChoices;
 }
 @synthesize tableView; // Add this line of code
 
@@ -24,8 +25,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    workoutChoices= [[NSArray alloc] initWithObjects:@"Weekly Progress",@"Sets Summary", nil];
+    
+    miscChoices= [[NSArray alloc] initWithObjects:@"Check In",@"Suggestions",@"Ask A Trainer",@"Find A Trainer", nil];
 }
 - (void)viewDidUnload
 {
@@ -40,11 +41,16 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [workoutChoices count];
+    return [miscChoices count];
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 100;
+    float statusBar=[UIApplication sharedApplication].statusBarFrame.size.height;
+    float navBar=self.navigationController.navigationBar.frame.size.height;
+    float screenheight = [UIScreen mainScreen].bounds.size.height;
+    float screenSpace= screenheight - (statusBar +navBar);
+
+    return screenSpace/([miscChoices count]+1);
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -56,10 +62,9 @@
     {
         NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"AnswerCell" owner:self options:nil];
         cell = [nib objectAtIndex:0];
-        // cell = [[WorkoutTableCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
     }
     cell.accessoryType  = UITableViewCellAccessoryDisclosureIndicator;
-    cell.QuestionLabel.text=[workoutChoices objectAtIndex:indexPath.row];
+    cell.QuestionLabel.text=[miscChoices objectAtIndex:indexPath.row];
     
     return cell;
 }
@@ -67,9 +72,13 @@
 {
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
     if (indexPath.row ==0) {
-        [self performSegueWithIdentifier:@"generalFit" sender:self];
-    }else{
-   [self performSegueWithIdentifier:@"powerLift" sender:self];
+        [self performSegueWithIdentifier:@"checkIn" sender:self];
+    }else if(indexPath.row==1){
+        [self performSegueWithIdentifier:@"suggestions" sender:self];
+    }else if(indexPath.row==2){
+        [self performSegueWithIdentifier:@"askATrainer" sender:self];
+    }else if(indexPath.row==3){
+        [self performSegueWithIdentifier:@"findATrainer" sender:self];
     }
 }
 - (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -80,11 +89,18 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
-    if ([segue.identifier isEqualToString:@"generalFit"]) {
-        NSLog(@"General fitness");
-    }else if ([segue.identifier isEqualToString:@"powerLift"])
+    if ([segue.identifier isEqualToString:@"checkIn"])
     {
-        NSLog(@"PowerLift");
+        NSLog(@"check in");
+    }else if ([segue.identifier isEqualToString:@"suggestions"])
+    {
+        NSLog(@"suggestions");
+    }else if([segue.identifier isEqualToString:@"askATrainer"])
+    {
+        NSLog(@"AskATrainer");
+    }else if ([segue.identifier isEqualToString:@"findATrainer"])
+    {
+        NSLog(@"FindATrainer");
     }
 }
 @end

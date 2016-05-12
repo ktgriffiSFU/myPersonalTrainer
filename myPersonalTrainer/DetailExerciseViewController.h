@@ -7,18 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <iAd/iAd.h>
 #import "StatisticsViewController.h"
+#import "SetSummaryViewController.h"
 @interface DetailExerciseViewController : UIViewController <UITextFieldDelegate>
 
-@property (weak, nonatomic) IBOutlet UIButton *detailButton;
 @property int rowNumberNew;
 @property int rowNumberWorkout;
-- (IBAction)sendButton:(UIButton *)sender;
-
-@property (weak, nonatomic) IBOutlet UITextField *repsText;
-@property (weak, nonatomic) IBOutlet UITextField *setsText;
-//@property (weak, nonatomic) IBOutlet UIButton *submitButton;
-@property (weak, nonatomic) IBOutlet UIButton *submitButton;
 
 @end

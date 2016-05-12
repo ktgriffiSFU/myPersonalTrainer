@@ -35,12 +35,4 @@
 @property (nonatomic) NSString* legsScore;
 @property (nonatomic) NSString* daysScore;
 @property (nonatomic) int*rowNumber;
-
-
-
-
-
-
-
-
 @end
