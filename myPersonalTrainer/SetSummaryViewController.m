@@ -80,9 +80,10 @@
 
     return [exercises count];
 }
+
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 100;
+    return 70;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -95,17 +96,44 @@
         NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"SetSummaryCell" owner:self options:nil];
         cell = [nib objectAtIndex:0];
     }
-    exercises = [self getSets:@"exercisesArray"];
-    NSArray *reps = [self getSets:@"repsArray"];
-    NSArray *weights = [self getSets:@"weightsArray"];
-    NSArray *reversedReps= [[reps reverseObjectEnumerator]allObjects];
-    NSArray *reversedWeight=[[weights reverseObjectEnumerator]allObjects];
-    NSArray *reversedExercises=[[exercises reverseObjectEnumerator]allObjects];
-    cell.exerciseLabel.text=[reversedExercises objectAtIndex:indexPath.row];
-    cell.repsLabel.text=[reversedReps objectAtIndex:indexPath.row];
-    cell.weightLabel.text=[reversedWeight objectAtIndex:indexPath.row];
-    
+        NSArray *reps = [self getSets:@"repsArray"];
+        NSArray *weights = [self getSets:@"weightsArray"];
+        NSArray *reversedReps= [[reps reverseObjectEnumerator]allObjects];
+        NSArray *reversedWeight=[[weights reverseObjectEnumerator]allObjects];
+        NSArray *reversedExercises=[[exercises reverseObjectEnumerator]allObjects];
+        cell.exerciseLabel.text=[reversedExercises objectAtIndex:indexPath.row];
+        cell.repsLabel.text=[reversedReps objectAtIndex:indexPath.row];
+        cell.weightLabel.text=[reversedWeight objectAtIndex:indexPath.row];
+
     return cell;
+}
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    CGFloat screenwidth = [UIScreen mainScreen].bounds.size.width;
+
+    UIButton *button1 = [UIButton buttonWithType:UIButtonTypeCustom];
+    [button1 setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [button1 addTarget:self
+                action:@selector(passDataForward)
+      forControlEvents:UIControlEventTouchUpInside];
+    [button1 setTitle:@"SUBMIT" forState:UIControlStateNormal];
+    button1.frame = CGRectMake(0,0, screenwidth,40 );
+    [button1 setBackgroundColor:[UIColor redColor]];
+    button1.titleLabel.font = [UIFont boldSystemFontOfSize:24.0];
+    
+    
+    CGRect frame = self.tableView.frame;
+    
+    UIButton *addButton = [[UIButton alloc] initWithFrame:CGRectMake(frame.size.width-60, 10, 50, 30)];
+    addButton.titleLabel.text = @"+";
+    addButton.backgroundColor = [UIColor greenColor];
+    
+    UILabel *title = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, 100, 30)];
+    title.text = @"Reminders";
+    
+    UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, frame.size.width, frame.size.height)];
+    [headerView addSubview:button1];
+    
+    return headerView;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
