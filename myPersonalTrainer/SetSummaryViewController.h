@@ -19,6 +19,7 @@
 @property (nonatomic) NSString* repsNew;
 @property (nonatomic) NSString* weightNew;
 @property (nonatomic) NSString *exercise;
+@property (nonatomic) NSString *muscle;
 @property (nonatomic) bool newData;
 
 @end

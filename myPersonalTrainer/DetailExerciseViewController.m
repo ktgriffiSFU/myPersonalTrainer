@@ -13,7 +13,7 @@
 #import "StatisticsViewController.h"
 #import "SetSummaryViewController.h"
 #import "ViewController.h"
-@interface DetailExerciseViewController ()<StatisticsViewControllerDelegate,SetSummaryViewControllerDelegate>
+@interface DetailExerciseViewController ()<SetSummaryViewControllerDelegate>
 {
     UILabel *_label;
     UITextField *repsField;
@@ -62,92 +62,31 @@
 - (void)passDataForward
 {
     [self submitButton];
-    StatisticsViewController *secondViewController = [[StatisticsViewController alloc] init];
     SetSummaryViewController *thirdViewController =[[SetSummaryViewController alloc] init];
-    secondViewController.arms = armsString;
-    secondViewController.legs = legsString;
-    secondViewController.chest = chestString;
-    secondViewController.back = backString;
-    secondViewController.shoulders= shouldersString;
-    secondViewController.core = coreString;
-    secondViewController.newData=newScore;
-    secondViewController.delegate = self;
-    secondViewController.rowNumber =&(rowNumberNew);
     
     thirdViewController.repsNew=repsToSend;
     thirdViewController.weightNew=weightToSend;
     thirdViewController.exercise=exerciseforWorkoutNew[rowNumberNew];
     thirdViewController.newData=newScore;
     thirdViewController.delegate=self;
+    thirdViewController.muscle=targetedMuscleforWorkout[rowNumberNew];
     [self.navigationController pushViewController:thirdViewController animated:NO];
-    //[self.navigationController pushViewController:secondViewController animated:NO];
 }
 
-- (void)dataFromController:(bool)newData;
-{
-    newData=newScore;
-}
+
 -(void)dataFromDController:(bool)newData;
 {
     newData=newScore;
 }
 
 - (void)submitButton {
-    NSInteger repsInt = [repsField.text integerValue];
-    NSInteger scoreInt =repsInt;
     weightToSend=weightField.text;
     repsToSend=repsField.text;
+    
     [[NSUserDefaults standardUserDefaults] setObject:weightToSend forKey:@"weight"];
     [[NSUserDefaults standardUserDefaults] setObject:repsToSend forKey:@"reps"];
-
-
     newScore=YES;
-    if ([targetedMuscleforWorkout[rowNumberNew] isEqual:@"triceps group"] ||[targetedMuscleforWorkout[rowNumberNew] isEqual:@"biceps group, wrist flexors"]) {
-        NSInteger oldScoreArms = [armsString integerValue];
-        scoreArms = scoreInt+oldScoreArms;
-        totalScore +=scoreArms;
-        armsString = [@(scoreArms) stringValue];
-        [[NSUserDefaults standardUserDefaults] setObject:armsString forKey:@"arms"];
 
-    }if ([targetedMuscleforWorkout[rowNumberNew] isEqual:@"anterior deltoids, pectoralis major, triceps group, trapezius"] ||[targetedMuscleforWorkout[rowNumberNew] isEqual:@"deltoid, trapezius"]) {
-        NSInteger oldScoreShoulders = [shouldersString integerValue];
-        scoreShoulders = scoreInt +oldScoreShoulders;
-        totalScore +=scoreShoulders;
-        shouldersString = [@(scoreShoulders) stringValue];
-        [[NSUserDefaults standardUserDefaults] setObject:shouldersString forKey:@"shoulders"];
-    }if ([targetedMuscleforWorkout[rowNumberNew] isEqual:@"pectoralis major, anterior deltoid, triceps group"] ||[targetedMuscleforWorkout[rowNumberNew] isEqual:@"pectoralis major, anterior deltoid"]) {
-        NSInteger oldScoreChest = [chestString integerValue];
-        scoreChest = scoreInt +oldScoreChest;
-        totalScore +=scoreChest;
-        chestString = [@(scoreChest) stringValue];
-        [[NSUserDefaults standardUserDefaults] setObject:chestString forKey:@"chest"];
-    }if ([targetedMuscleforWorkout[rowNumberNew] isEqual:@"latissimus dorsi, teres major, posterior deltoid, rhomboids"] ||[targetedMuscleforWorkout[rowNumberNew] isEqual:@"rhomboids, mid-trapezius, latissimus dorsi, teres major"] ||[targetedMuscleforWorkout[rowNumberNew] isEqual:@"levator scapulae, upper trapezius, mid-trapezius, rhomboids"]) {
-        NSInteger oldScoreBack =[backString integerValue];
-        scoreBack = scoreInt +oldScoreBack;
-        totalScore +=scoreBack;
-        backString = [@(scoreBack) stringValue];
-        [[NSUserDefaults standardUserDefaults] setObject:backString forKey:@"back"];
-    }if ([targetedMuscleforWorkout[rowNumberNew] isEqual:@"erector spinae"] ||[targetedMuscleforWorkout[rowNumberNew] isEqual:@"rectus abdominus, obliques"] ||[targetedMuscleforWorkout[rowNumberNew] isEqual:@"rectus abdominus"]||[targetedMuscleforWorkout[rowNumberNew] isEqual:@"core, hip extensors, sholder flexors, erector spinae"]) {
-        NSInteger oldScoreCore = [coreString integerValue];
-        scoreCore = scoreInt + oldScoreCore;
-        totalScore +=scoreCore;
-        coreString = [@(scoreCore) stringValue];
-        [[NSUserDefaults standardUserDefaults] setObject:coreString forKey:@"core"];
-    }if ([targetedMuscleforWorkout[rowNumberNew] isEqual:@"quadriceps, hamstrings, glutes"] ||[targetedMuscleforWorkout[rowNumberNew] isEqual:@"quadriceps"] ||[targetedMuscleforWorkout[rowNumberNew] isEqual:@"hamstrings"]||[targetedMuscleforWorkout[rowNumberNew] isEqual:@"hip adductors"]|| [targetedMuscleforWorkout[rowNumberNew] isEqual :@"gastrocnemius, soleus"]) {
-        NSInteger oldScoreLegs = [legsString integerValue];
-        scoreLegs = scoreInt +oldScoreLegs;
-        totalScore +=scoreLegs;
-        legsString = [@(scoreLegs) stringValue];
-        [[NSUserDefaults standardUserDefaults] setObject:legsString forKey:@"legs"];
-    }
-  
-
-
-
-    totalString = [@(totalScore) stringValue];
-    [[NSUserDefaults standardUserDefaults] setObject:totalString forKey:@"total"];
-
-   
 
 }
 
