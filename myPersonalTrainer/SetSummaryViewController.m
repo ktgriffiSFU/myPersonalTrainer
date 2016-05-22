@@ -33,7 +33,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    UIImage *infoImage=[UIImage imageNamed:@"info.png"];
+    UIBarButtonItem *infoButton = [[UIBarButtonItem alloc]
+                                   initWithImage:infoImage
+                                   style:UIBarButtonItemStylePlain
+                                   target:self
+                                   action:@selector(infoView)];
+    self.navigationItem.rightBarButtonItem = infoButton;
+
 }
 -(NSArray *)getSets :(NSString *)key{
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
@@ -229,5 +236,14 @@
 -(void)deleteArray :(NSString *)key{
     NSArray *emptyArray=[[NSArray alloc]init];
     [[NSUserDefaults standardUserDefaults] setObject:emptyArray forKey:key];
+}
+-(void)infoView{
+    UIAlertView *alert = [[UIAlertView alloc]
+                          initWithTitle:@"View Workout Summary"
+                          message:@"After doing a set, view your results here. This catalogue of sets updates every time you complete an entry. At the end of workout you can submit your sets to calculate Weekly Statistics."
+                          delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles:nil, nil];
+    [alert show];
+    
+    
 }
 @end

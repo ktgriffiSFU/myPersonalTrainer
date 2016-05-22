@@ -75,6 +75,15 @@
             }
         }
     }
+    UIImage *infoImage=[UIImage imageNamed:@"info.png"];
+
+    UIBarButtonItem *infoButton = [[UIBarButtonItem alloc]
+                                   initWithImage:infoImage
+                                   style:UIBarButtonItemStylePlain
+                                   target:self
+                                   action:@selector(infoView)];
+    
+    self.navigationItem.rightBarButtonItem = infoButton;
 }
 
 - (void)viewDidUnload
@@ -157,6 +166,15 @@
         destViewController.rowNumberNew = rowNumber;
         destViewController.rowNumberWorkout = rowNumberOld;
     }
+}
+-(void)infoView{
+    UIAlertView *alert = [[UIAlertView alloc]
+                          initWithTitle:@"Select an Exercise"
+                          message:@"This is where you can choose which exercise to do. Do all of them for the best results"
+                          delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles:nil, nil];
+    [alert show];
+    
+    
 }
 
 @end

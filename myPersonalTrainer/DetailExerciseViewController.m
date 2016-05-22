@@ -109,6 +109,14 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
+    UIImage *infoImage=[UIImage imageNamed:@"info.png"];
+    UIBarButtonItem *infoButton = [[UIBarButtonItem alloc]
+                                   initWithImage:infoImage
+                                   style:UIBarButtonItemStylePlain
+                                   target:self
+                                   action:@selector(infoView)];
+    
+    self.navigationItem.rightBarButtonItem = infoButton;
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
                                    initWithTarget:self
                                    action:@selector(dismissKeyboard)];
@@ -299,6 +307,15 @@
     [weightField setKeyboardType:UIKeyboardTypeNumberPad];
 
     [self.view addSubview:weightField];
+}
+-(void)infoView{
+    UIAlertView *alert = [[UIAlertView alloc]
+                          initWithTitle:@"Enter reps and weight"
+                          message:@"After doing a set, enter the reps and weight you performed. If you wish to see more information on the exercise; press the Details button. When you have finished entering reps and weight; press Submit to save your set."
+                          delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles:nil, nil];
+    [alert show];
+    
+    
 }
 @end
 

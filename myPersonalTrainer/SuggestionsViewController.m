@@ -23,8 +23,7 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
-    
-
+ 
     [suggestionField setDelegate:self];
     
     

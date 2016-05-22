@@ -27,6 +27,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    UIImage *infoImage=[UIImage imageNamed:@"info.png"];
+    UIBarButtonItem *infoButton = [[UIBarButtonItem alloc]
+                                   initWithImage:infoImage
+                                   style:UIBarButtonItemStylePlain
+                                   target:self
+                                   action:@selector(infoView)];
+    
+    self.navigationItem.rightBarButtonItem = infoButton;
     [self initView];
 }
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -61,6 +69,15 @@
     self.exerciseImageView2.image = [UIImage imageNamed:[pictures2 objectAtIndex:rowNumber]];
     self.exerciseDetails.text =[details objectAtIndex:rowNumber];
     self.title = [exercises objectAtIndex:rowNumber];
+}
+-(void)infoView{
+    UIAlertView *alert = [[UIAlertView alloc]
+                          initWithTitle:@"Learn Exercise"
+                          message:@"This is where you can gain information on the exercise."
+                          delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles:nil, nil];
+    [alert show];
+    
+    
 }
 
 @end

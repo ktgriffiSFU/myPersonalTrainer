@@ -8,6 +8,6 @@
 #import <UIKit/UIKit.h>
 
 @interface MenuCell: UICollectionViewCell
-@property (weak, nonatomic) IBOutlet UIImageView *iconImageView;
+@property (weak, nonatomic) IBOutlet UILabel *indexLabel;
 
 @end

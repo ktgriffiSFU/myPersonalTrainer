@@ -33,10 +33,17 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    UIImage *infoImage=[UIImage imageNamed:@"info.png"];
+    UIBarButtonItem *infoButton = [[UIBarButtonItem alloc]
+                                   initWithImage:infoImage
+                                   style:UIBarButtonItemStylePlain
+                                   target:self
+                                   action:@selector(infoView)];
+    self.navigationItem.rightBarButtonItem = infoButton;
+    
 
 
     self.view.backgroundColor = [UIColor whiteColor];
-    NSLog(@"This runs viedidload");
 
 }
 - (void)viewDidAppear:(BOOL)animated
@@ -141,21 +148,31 @@
 - (UIImage *) determineStars: (NSString *) score
 {
     UIImage *starValue;
-    int scoreInt = [score integerValue];
+    int scoreInt = [score intValue];
+    NSString *maxRepsString=[[NSUserDefaults standardUserDefaults]objectForKey:@"repWeekGoal"];
+    int maxRepsInt=[maxRepsString intValue];
     if (scoreInt==0) {
         starValue =[UIImage imageNamed:@"0Stars.png"];
-    }else if (scoreInt>0 &&scoreInt <29) {
+    }else if (scoreInt>0 &&scoreInt <maxRepsInt*.4) {
         starValue =[UIImage imageNamed:@"1Stars.png"];
-    }else if (scoreInt>=29 &&scoreInt < 59) {
+    }else if (scoreInt>=maxRepsInt*.4 &&scoreInt < maxRepsInt*.6) {
         starValue =[UIImage imageNamed:@"2Stars.png"];
-    }else if (scoreInt>=59 &&scoreInt < 99) {
+    }else if (scoreInt>=maxRepsInt*.6 &&scoreInt < maxRepsInt*.8) {
         starValue =[UIImage imageNamed:@"3Stars.png"];
-    }else if (scoreInt>=99 &&scoreInt < 200) {
+    }else if (scoreInt>=maxRepsInt*.8 &&scoreInt < maxRepsInt) {
         starValue =[UIImage imageNamed:@"4Stars.png"];
-    }else if (scoreInt>=200) {
+    }else if (scoreInt>=maxRepsInt) {
         starValue =[UIImage imageNamed:@"5Stars.png"];
     }
     return starValue;
 }
-
+-(void)infoView{
+    UIAlertView *alert = [[UIAlertView alloc]
+                          initWithTitle:@"View Weekly Statistics"
+                          message:@"Each time you enter a workout; the amount of reps that you recorded will be organized by muscle worked. By the end of the week the goal is to have 5 Stars for every muscle group. After a week, the stars are reset and you try again"
+                          delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles:nil, nil];
+    [alert show];
+    
+    
+}
 @end

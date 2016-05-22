@@ -44,6 +44,14 @@
     difficultyLevel = [dict objectForKey:@"DifficultyLevel"];
     equipmentRequired = [dict objectForKey:@"EquipmentRequired"];
     thumbnail = [dict objectForKey:@"ThumbnailWorkout"];
+    UIImage *infoImage=[UIImage imageNamed:@"info.png"];
+    UIBarButtonItem *infoButton = [[UIBarButtonItem alloc]
+                                   initWithImage:infoImage
+                                   style:UIBarButtonItemStylePlain
+                                   target:self
+                                    action:@selector(infoView)];
+                           
+    self.navigationItem.rightBarButtonItem = infoButton;
 
 }
 - (void)viewDidUnload
@@ -112,5 +120,14 @@
  //       destViewController.workoutName =[workoutName objectAtIndex:indexPath.row];
         destViewController.rowNumber = rowNumber;
     }
+}
+-(void)infoView{
+    UIAlertView *alert = [[UIAlertView alloc]
+                          initWithTitle:@"Select a Workout"
+                          message:@"This is where you can choose a workout to do"
+                          delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles:nil, nil];
+    [alert show];
+    
+
 }
 @end
