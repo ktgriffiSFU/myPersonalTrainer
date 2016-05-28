@@ -215,13 +215,7 @@
 
 -(void)viewDidDisappear:(BOOL)animated
 {
-    static const NSUInteger thisTabIndex = 1;
-    if (self.videoView &&
-        self.tabBarController.selectedIndex != thisTabIndex)
-    {
-        [self removeVideo];
-    }
-    
+
     [[NSNotificationCenter defaultCenter] removeObserver:UIDeviceOrientationDidChangeNotification];
     
     [super viewDidDisappear:animated];
