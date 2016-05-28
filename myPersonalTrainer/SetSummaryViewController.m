@@ -117,8 +117,13 @@
     cell.exerciseLabel.text=[reversedExercises objectAtIndex:indexPath.row];
     cell.repsLabel.text=[reversedReps objectAtIndex:indexPath.row];
     cell.weightLabel.text=[reversedWeight objectAtIndex:indexPath.row];
-    
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
+}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    NSLog(@"didSelectRowAtIndexPath");
 }
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     CGFloat screenwidth = [UIScreen mainScreen].bounds.size.width;
@@ -136,9 +141,6 @@
     
     CGRect frame = self.tableView.frame;
     
-    UIButton *addButton = [[UIButton alloc] initWithFrame:CGRectMake(frame.size.width-60, 10, 50, 30)];
-    addButton.titleLabel.text = @"+";
-    addButton.backgroundColor = [UIColor greenColor];
     
     UILabel *title = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, 100, 30)];
     title.text = @"Reminders";
@@ -148,10 +150,7 @@
     
     return headerView;
 }
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
 
-}
 - (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSLog(@"willSelectRowAtIndexPath");
@@ -183,6 +182,8 @@
         NSString *myMuscle = [muscles objectAtIndex:i];
         NSString *repCount = [reps objectAtIndex:i];
         [self addRepsForElement:repCount :myMuscle];
+    
+    
     }
     [self deleteArray:@"exercisesArray"];
     [self deleteArray:@"repsArray"];

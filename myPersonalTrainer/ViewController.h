@@ -6,17 +6,26 @@
 //  Copyright © 2016 Kyle Griffith. All rights reserved.
 //
 #import <UIKit/UIKit.h>
-#import <iAd/iAd.h>
 
 
+@protocol VideoViewControllerDelegate <NSObject>
 
-@interface ViewController : UIViewController <ADBannerViewDelegate>
-@property (weak, nonatomic) IBOutlet ADBannerView *adBanner;
+@optional
 
-@property (weak, nonatomic) IBOutlet UIImageView *exerciseImageView;
-@property (weak, nonatomic) IBOutlet UIImageView *exerciseImageView2;
+- (NSString*)videoIdForResourceAtIndexPath:(NSIndexPath*)indexPath;
+
+@end
+
+@interface ViewController : UIViewController
+
 
 //@property (weak, nonatomic) IBOutlet UILabel *exerciseImageName;
 @property (weak, nonatomic) IBOutlet UILabel *exerciseDetails;
 @property int rowNumber;
+@property (nonatomic, assign) BOOL showDoneButton;
+@property (nonatomic, weak) id<VideoViewControllerDelegate> videoDelegate;
+- (instancetype)initWithResource:(NSArray*)resource;
+@property (weak, nonatomic) IBOutlet UIImageView *exerciseImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *exerciseImageView2;
+
 @end

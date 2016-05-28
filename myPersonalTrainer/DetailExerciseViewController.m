@@ -242,7 +242,7 @@
 -(void) createViews{
     CGFloat screenwidth = [UIScreen mainScreen].bounds.size.width;
     CGFloat screenheight = [UIScreen mainScreen].bounds.size.height;
-
+    NSLog(@"ScreenWidth: %f",screenwidth);
     CGFloat width = screenwidth/2;
     CGFloat buttonHeight=screenheight*.105;
     UIImageView *image1 =[[UIImageView alloc] initWithFrame:CGRectMake(0,screenheight/8.3,width,width)];
@@ -277,11 +277,11 @@
     button2.titleLabel.font = [UIFont boldSystemFontOfSize:24.0];
 
     [self.view addSubview:button2];
-    CGRect frame = CGRectMake(50.0, screenheight*.477   , screenwidth-100, buttonHeight/2);
+    CGRect frame = CGRectMake(50.0, screenheight*.41,screenwidth-100, buttonHeight*.8);
     repsField = [[UITextField alloc] initWithFrame:frame];
     repsField.borderStyle = UITextBorderStyleRoundedRect;
     repsField.textColor = [UIColor blackColor];
-    repsField.font = [UIFont systemFontOfSize:17.0];
+    repsField.font = [UIFont systemFontOfSize:24.0];
     repsField.placeholder = @"REPS";
     repsField.backgroundColor = [UIColor clearColor];
     repsField.autocorrectionType = UITextAutocorrectionTypeYes;
@@ -291,12 +291,12 @@
     repsField.textAlignment = NSTextAlignmentCenter;
     [repsField setKeyboardType:UIKeyboardTypeNumberPad];
     [self.view addSubview:repsField];
-    
-    CGRect frame2 = CGRectMake(50.0, screenheight*.555, screenwidth-100.0, buttonHeight/2);
+
+    CGRect frame2 = CGRectMake(50.0, screenheight*.51, screenwidth-100.0, buttonHeight*.8);
     weightField = [[UITextField alloc] initWithFrame:frame2];
     weightField.borderStyle = UITextBorderStyleRoundedRect;
     weightField.textColor = [UIColor blackColor];
-    weightField.font = [UIFont systemFontOfSize:17.0];
+    weightField.font = [UIFont systemFontOfSize:24.0];
     weightField.placeholder = @"WEIGHT";
     weightField.backgroundColor = [UIColor clearColor];
     weightField.autocorrectionType = UITextAutocorrectionTypeYes;

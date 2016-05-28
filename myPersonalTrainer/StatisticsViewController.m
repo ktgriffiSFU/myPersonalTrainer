@@ -150,6 +150,9 @@
     UIImage *starValue;
     int scoreInt = [score intValue];
     NSString *maxRepsString=[[NSUserDefaults standardUserDefaults]objectForKey:@"repWeekGoal"];
+    if (maxRepsString ==nil) {
+        maxRepsString =@"70";
+    }
     int maxRepsInt=[maxRepsString intValue];
     if (scoreInt==0) {
         starValue =[UIImage imageNamed:@"0Stars.png"];

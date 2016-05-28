@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "0A0D3379D2FA61519EFEED6333127003CFC60050",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "D57A1BF21A03A3E5973BDE39A32FFAEA5EB8BE14" : 0,
+    "0A0D3379D2FA61519EFEED6333127003CFC60050" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "2D68FA06-6419-4E0C-8373-189928EF38DC",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "D57A1BF21A03A3E5973BDE39A32FFAEA5EB8BE14" : "..\/..\/bomb-timer",
+    "0A0D3379D2FA61519EFEED6333127003CFC60050" : "myPersonalTrainer\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "fitSFU",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "fitSFU.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/ktgriffiSFU\/myPersonalTrainer.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "0A0D3379D2FA61519EFEED6333127003CFC60050"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/bitbucket.org\/sdevaz\/bomb-timer.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "D57A1BF21A03A3E5973BDE39A32FFAEA5EB8BE14"
+    }
+  ]
+}

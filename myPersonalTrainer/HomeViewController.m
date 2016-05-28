@@ -35,17 +35,17 @@
     miscChoices= [[NSArray alloc]
                   initWithObjects:
                   @"Check In",@"Trainer \nAnswers",@"Code Of Conduct",
-                  @"Find a \nTrainer",@"Settings",@"Ask a \nTrainer",
-                  @"Find a \nPartner",@"Suggestions",@"Ask for \na Partner", nil];
+                  @"Find a \nTrainer",@"Settings",@"Group\nFitness",
+                  @"Find a \nPartner",@"Ask a \nTrainer",@"Ask for \na Partner", nil];
     choiceIcons=[[NSArray alloc]
                  initWithObjects:
                  @"CheckIn.png",@"TrainerAnswers.png",@"CodeOfConduct.png",
-                 @"FindATrainer.png",@"Settings.png",@"AskATrainer.png",
-                 @"FindAPartner.png",@"Suggestions.png",@"AskForAPartner.png",nil];
+                 @"FindATrainer.png",@"Settings.png",@"GroupFitness.png",
+                 @"FindAPartner.png",@"AskATrainer.png",@"AskForAPartner.png",nil];
     choiceIdentifier=[[NSArray alloc]
                  initWithObjects:
                  @"CheckIn",@"TrainerAnswers",@"CodeOfConduct",
-                 @"FindATrainer",@"Settings",@"AskATrainer",
+                 @"FindATrainer",@"Settings",@"GroupFitness",
                  @"FindAPartner",@"Suggestions",@"AskForAPartner",nil];
     [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"MenuCell"];
     self.collectionView.scrollEnabled = NO;
@@ -101,18 +101,18 @@
     
     [cell.contentView addSubview:imgView];
     
-//    UILabel *lable = [[UILabel alloc] initWithFrame:CGRectMake(10, 40, 80, 60)];
-//    lable.text=[miscChoices objectAtIndex:cellInt];
-//    [lable setFont:[UIFont fontWithName:@"Avenir" size:17]];
-//    lable.adjustsFontSizeToFitWidth=YES;
-//    lable.minimumScaleFactor=0.5;
-//
-//    lable.numberOfLines = 2;
+    UILabel *lable = [[UILabel alloc] initWithFrame:CGRectMake(10, 40, 80, 60)];
+    lable.text=[miscChoices objectAtIndex:cellInt];
+    [lable setFont:[UIFont fontWithName:@"Avenir" size:17]];
+    lable.adjustsFontSizeToFitWidth=YES;
+    lable.minimumScaleFactor=0.5;
+
+    lable.numberOfLines = 2;
 
     cellInt++;
 
-  //  lable.textColor=[UIColor blackColor];
-   // [cell.contentView addSubview:lable];
+    lable.textColor=[UIColor blackColor];
+    [cell.contentView addSubview:lable];
     cellNumberString = [@(cellInt) stringValue];
 
     [[NSUserDefaults standardUserDefaults] setObject:cellNumberString forKey:@"cellNumber"];

@@ -1,0 +1,5 @@
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Private" "${PODS_ROOT}/Headers/Private/XCDYouTubeKit" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/FLAnimatedImage" "${PODS_ROOT}/Headers/Public/Flurry-iOS-SDK" "${PODS_ROOT}/Headers/Public/RQShineLabel" "${PODS_ROOT}/Headers/Public/SIAlertView" "${PODS_ROOT}/Headers/Public/SoundManager" "${PODS_ROOT}/Headers/Public/SwipeView" "${PODS_ROOT}/Headers/Public/UAProgressView" "${PODS_ROOT}/Headers/Public/ViewUtils" "${PODS_ROOT}/Headers/Public/XCDYouTubeKit" "${PODS_ROOT}/Headers/Public/iRate"
+OTHER_LDFLAGS = -Wl,-U,_JSContextGetGlobalObject -Wl,-U,_JSEvaluateScript -Wl,-U,_JSGlobalContextCreate -Wl,-U,_JSGlobalContextRelease -Wl,-U,_JSObjectCallAsFunction -Wl,-U,_JSObjectIsFunction -Wl,-U,_JSObjectMake -Wl,-U,_JSObjectSetProperty -Wl,-U,_JSStringCopyCFString -Wl,-U,_JSStringCreateWithCFString -Wl,-U,_JSStringRelease -Wl,-U,_JSValueIsObject -Wl,-U,_JSValueIsString -Wl,-U,_JSValueMakeString -Wl,-U,_JSValueToStringCopy -framework "MediaPlayer"
+PODS_ROOT = ${SRCROOT}
+SKIP_INSTALL = YES

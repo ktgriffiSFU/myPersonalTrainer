@@ -1,0 +1,4 @@
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Private" "${PODS_ROOT}/Headers/Private/SoundManager" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/FLAnimatedImage" "${PODS_ROOT}/Headers/Public/Flurry-iOS-SDK" "${PODS_ROOT}/Headers/Public/RQShineLabel" "${PODS_ROOT}/Headers/Public/SIAlertView" "${PODS_ROOT}/Headers/Public/SoundManager" "${PODS_ROOT}/Headers/Public/SwipeView" "${PODS_ROOT}/Headers/Public/UAProgressView" "${PODS_ROOT}/Headers/Public/ViewUtils" "${PODS_ROOT}/Headers/Public/XCDYouTubeKit" "${PODS_ROOT}/Headers/Public/iRate"
+PODS_ROOT = ${SRCROOT}
+SKIP_INSTALL = YES
