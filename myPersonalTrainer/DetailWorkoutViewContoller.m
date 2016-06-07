@@ -84,6 +84,7 @@
                                    action:@selector(infoView)];
     
     self.navigationItem.rightBarButtonItem = infoButton;
+   
 }
 
 - (void)viewDidUnload

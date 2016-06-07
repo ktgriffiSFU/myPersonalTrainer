@@ -10,6 +10,10 @@
 		<string>Shoulders and Back</string>
 		<string>Upper Body</string>
 		<string>Core</string>
+		<string>Machines Core</string>
+		<string>Machines Arms</string>
+		<string>Machines Upper Body</string>
+		<string>Machines Legs</string>
 	</array>
 	<key>Time</key>
 	<array>
@@ -19,6 +23,10 @@
 		<string>30 minutes</string>
 		<string>50 minutes</string>
 		<string>20 minutes</string>
+		<string>20 minutes</string>
+		<string>20 minutes</string>
+		<string>40 minutes</string>
+		<string>40 minutes</string>
 	</array>
 	<key>DifficultyLevel</key>
 	<array>
@@ -28,6 +36,10 @@
 		<string>Novice</string>
 		<string>Advanced</string>
 		<string>Beginner</string>
+		<string>Beginner</string>
+		<string>Beginner</string>
+		<string>Beginner</string>
+		<string>Beginner</string>
 	</array>
 	<key>MusclesTargeted</key>
 	<array>
@@ -36,7 +48,11 @@
 		<string>Chest, Arms</string>
 		<string>Back, Shoulders</string>
 		<string>Arms, Shoulders, Chest, Back</string>
-		<string>Abdominals, Lower Back</string>
+		<string>Core</string>
+		<string>Core</string>
+		<string>Arms</string>
+		<string>Chest, Back, Shoulders</string>
+		<string>Legs</string>
 	</array>
 	<key>EquipmentRequired</key>
 	<array>
@@ -46,6 +62,10 @@
 		<string>Cables, Dumbells</string>
 		<string>Barbells, Dumbells, Cables</string>
 		<string>Mat</string>
+		<string>Machines</string>
+		<string>Machines</string>
+		<string>Machines</string>
+		<string>Machines</string>
 	</array>
 	<key>ThumbnailWorkout</key>
 	<array>
@@ -54,6 +74,10 @@
 		<string>IMG_1110.png</string>
 		<string>IMG_1139.png</string>
 		<string>IMG_1145.png</string>
+		<string>IMG_1397.png</string>
+		<string>IMG_1397.png</string>
+		<string>IMG_1397.png</string>
+		<string>IMG_1397.png</string>
 		<string>IMG_1397.png</string>
 	</array>
 	<key>WorkoutArray</key>
@@ -105,6 +129,37 @@
 			<string>Partial Abdominal Curl-Up</string>
 			<string>Plank</string>
 			<string>Side Plank</string>
+		</array>
+		<key>Machines Core</key>
+		<array>
+			<string>Lower Back Extension</string>
+			<string>Rotary Torso</string>
+			<string>Abdominal Curls</string>
+		</array>
+		<key>Machines Arms</key>
+		<array>
+			<string>Biceps Machine</string>
+			<string>Triceps Machine</string>
+			<string>Triceps Extension</string>
+		</array>
+		<key>Machines Upper Body</key>
+		<array>
+			<string>Rotary Chest</string>
+			<string>Rotary Shoulder</string>
+			<string>Seated Row</string>
+			<string>Pec Fly</string>
+			<string>Rear Delt</string>
+			<string>Shoulder Press</string>
+		</array>
+		<key>Machines Legs</key>
+		<array>
+			<string>Seated Leg Curls</string>
+			<string>Leg Extension</string>
+			<string>Glute Press</string>
+			<string>Leg Press</string>
+			<string>Leg Curl</string>
+			<string>Machine Hip Adduction</string>
+			<string>Machine Hip Abduction</string>
 		</array>
 	</dict>
 </dict>

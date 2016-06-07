@@ -110,9 +110,7 @@
     aboutEntryView.keyboardType = UIKeyboardTypeDefault;
     aboutEntryView.delegate = self;
     aboutEntryView.textAlignment = NSTextAlignmentLeft;
-    [aboutEntryView setKeyboardType:UIKeyboardTypeNumberPad];
-    aboutEntryView.layer.borderWidth = 5.0f;
-    aboutEntryView.layer.borderColor = [[UIColor grayColor] CGColor];
+    aboutEntryView.layer.borderWidth = 1.0f;
     [self.view addSubview:aboutEntryView];
     
     controlLabel = [[UILabel alloc]initWithFrame:CGRectMake(screenwidth/10,position,screenwidth*0.5,screenheight)];
@@ -137,10 +135,10 @@
     CGRect frame = CGRectMake(screenwidth*.75, position+.1*screenheight, screenwidth*.20, screenheight*.8);
     userEntryField = [[UITextField alloc] initWithFrame:frame];
     userEntryField.tag=index;
-  //  userEntryField.borderStyle = UITextBorderStyleRoundedRect;
+    userEntryField.borderStyle = UITextBorderStyleRoundedRect;
     userEntryField.textColor = [UIColor blackColor];
     userEntryField.font = [UIFont systemFontOfSize:17.0];
-    userEntryField.layer.borderWidth = 5.0f;
+    userEntryField.layer.borderWidth = 1.0f;
     userEntryField.placeholder = [[NSUserDefaults standardUserDefaults] objectForKey:[controlKeys objectAtIndex:rowNumber]];
     userEntryField.backgroundColor = [UIColor clearColor];
     userEntryField.autocorrectionType = UITextAutocorrectionTypeYes;
@@ -176,8 +174,8 @@
 }
 -(void)infoView{
     UIAlertView *alert = [[UIAlertView alloc]
-                          initWithTitle:@"Select a Workout"
-                          message:@"This is where you can choose a workout to do"
+                          initWithTitle:@"Find A Buddy"
+                          message:@"This is where you can request a buddy to workout. Enter the details and submit"
                           delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles:nil, nil];
     [alert show];
     

@@ -101,7 +101,7 @@
     
     [cell.contentView addSubview:imgView];
     
-    UILabel *lable = [[UILabel alloc] initWithFrame:CGRectMake(10, 40, 80, 60)];
+    UILabel *lable = [[UILabel alloc] initWithFrame:CGRectMake(10, 90, 80, 60)];
     lable.text=[miscChoices objectAtIndex:cellInt];
     [lable setFont:[UIFont fontWithName:@"Avenir" size:17]];
     lable.adjustsFontSizeToFitWidth=YES;
@@ -112,7 +112,7 @@
     cellInt++;
 
     lable.textColor=[UIColor blackColor];
-    [cell.contentView addSubview:lable];
+   // [cell.contentView addSubview:lable];
     cellNumberString = [@(cellInt) stringValue];
 
     [[NSUserDefaults standardUserDefaults] setObject:cellNumberString forKey:@"cellNumber"];

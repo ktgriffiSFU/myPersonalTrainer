@@ -16,6 +16,16 @@
 		270B88E81C829F0F009DE8B3 /* AnswerTrainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 270B88E71C829F0F009DE8B3 /* AnswerTrainerViewController.m */; };
 		270B88EF1C82D231009DE8B3 /* WinnerTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 270B88EE1C82D231009DE8B3 /* WinnerTableCell.m */; };
 		270B88F11C82D240009DE8B3 /* WinnerTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 270B88F01C82D240009DE8B3 /* WinnerTableCell.xib */; };
+		27102E971D03E1FB00B153CE /* DSC01697.png in Resources */ = {isa = PBXBuildFile; fileRef = 27102E931D03E1FB00B153CE /* DSC01697.png */; };
+		27102E981D03E1FB00B153CE /* DSC01699.png in Resources */ = {isa = PBXBuildFile; fileRef = 27102E941D03E1FB00B153CE /* DSC01699.png */; };
+		27102E991D03E1FB00B153CE /* DSC01701.png in Resources */ = {isa = PBXBuildFile; fileRef = 27102E951D03E1FB00B153CE /* DSC01701.png */; };
+		27102E9A1D03E1FB00B153CE /* DSC01703.png in Resources */ = {isa = PBXBuildFile; fileRef = 27102E961D03E1FB00B153CE /* DSC01703.png */; };
+		27102EA11D03EBFF00B153CE /* DSC01707.png in Resources */ = {isa = PBXBuildFile; fileRef = 27102E9B1D03EBFF00B153CE /* DSC01707.png */; };
+		27102EA21D03EBFF00B153CE /* DSC01709.png in Resources */ = {isa = PBXBuildFile; fileRef = 27102E9C1D03EBFF00B153CE /* DSC01709.png */; };
+		27102EA31D03EBFF00B153CE /* DSC01714.png in Resources */ = {isa = PBXBuildFile; fileRef = 27102E9D1D03EBFF00B153CE /* DSC01714.png */; };
+		27102EA41D03EBFF00B153CE /* DSC01716.png in Resources */ = {isa = PBXBuildFile; fileRef = 27102E9E1D03EBFF00B153CE /* DSC01716.png */; };
+		27102EA51D03EBFF00B153CE /* DSC01718.png in Resources */ = {isa = PBXBuildFile; fileRef = 27102E9F1D03EBFF00B153CE /* DSC01718.png */; };
+		27102EA61D03EBFF00B153CE /* DSC01720.png in Resources */ = {isa = PBXBuildFile; fileRef = 27102EA01D03EBFF00B153CE /* DSC01720.png */; };
 		27117ED41C585A1800EF4516 /* mpt2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 27117ED31C585A1800EF4516 /* mpt2.jpg */; };
 		27158D931C0A9A1A0002272B /* Exercises.plist in Resources */ = {isa = PBXBuildFile; fileRef = 27158D921C0A9A1A0002272B /* Exercises.plist */; };
 		27158D991C0AA8670002272B /* SimpleTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 27158D981C0AA8670002272B /* SimpleTableCell.m */; };
@@ -121,6 +131,7 @@
 		275B376F1CF1292B00BC9638 /* SettingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 275B376E1CF1292B00BC9638 /* SettingCell.m */; };
 		275B37721CF1298B00BC9638 /* SettingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 275B37711CF1298B00BC9638 /* SettingCell.xib */; };
 		275B37771CF3F70200BC9638 /* AskForBuddyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 275B37761CF3F70200BC9638 /* AskForBuddyViewController.m */; };
+		275F8A191D065B5200A9260D /* GroupFitnessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 275F8A181D065B5200A9260D /* GroupFitnessViewController.m */; };
 		27764C981C055F8D002F9122 /* ExerciseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 27764C971C055F8D002F9122 /* ExerciseTableViewCell.m */; };
 		27814A931CA766FA003DA2D2 /* IMG_1344.png in Resources */ = {isa = PBXBuildFile; fileRef = 27814A911CA766FA003DA2D2 /* IMG_1344.png */; };
 		27814A941CA766FA003DA2D2 /* IMG_1346.png in Resources */ = {isa = PBXBuildFile; fileRef = 27814A921CA766FA003DA2D2 /* IMG_1346.png */; };
@@ -139,6 +150,7 @@
 		279B70B31C3D3F0F0042BD93 /* 3Stars.png in Resources */ = {isa = PBXBuildFile; fileRef = 279B70AF1C3D3F0F0042BD93 /* 3Stars.png */; };
 		279B70B41C3D3F0F0042BD93 /* 4Stars.png in Resources */ = {isa = PBXBuildFile; fileRef = 279B70B01C3D3F0F0042BD93 /* 4Stars.png */; };
 		279B70B81C3D3F290042BD93 /* 0Stars.png in Resources */ = {isa = PBXBuildFile; fileRef = 279B70B71C3D3F290042BD93 /* 0Stars.png */; };
+		279BF67E1CFE8B2500EEB7A8 /* GroupFitness.png in Resources */ = {isa = PBXBuildFile; fileRef = 279BF67D1CFE8B2500EEB7A8 /* GroupFitness.png */; };
 		27C1BA811CD1B7A300B9C9FA /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C1BA801CD1B7A300B9C9FA /* Constants.m */; };
 		27C6CB421C21D383009E5341 /* Workout.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C6CB411C21D383009E5341 /* Workout.m */; };
 		27C9F02C1C9661A10006261B /* ok-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 27C9F02B1C9661A10006261B /* ok-icon.png */; };
@@ -205,6 +217,16 @@
 		270B88ED1C82D227009DE8B3 /* WinnerTableCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WinnerTableCell.h; sourceTree = "<group>"; };
 		270B88EE1C82D231009DE8B3 /* WinnerTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WinnerTableCell.m; sourceTree = "<group>"; };
 		270B88F01C82D240009DE8B3 /* WinnerTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WinnerTableCell.xib; sourceTree = "<group>"; };
+		27102E931D03E1FB00B153CE /* DSC01697.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = DSC01697.png; path = SFUPhotos3/DSC01697.png; sourceTree = SOURCE_ROOT; };
+		27102E941D03E1FB00B153CE /* DSC01699.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = DSC01699.png; path = SFUPhotos3/DSC01699.png; sourceTree = SOURCE_ROOT; };
+		27102E951D03E1FB00B153CE /* DSC01701.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = DSC01701.png; path = SFUPhotos3/DSC01701.png; sourceTree = SOURCE_ROOT; };
+		27102E961D03E1FB00B153CE /* DSC01703.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = DSC01703.png; path = SFUPhotos3/DSC01703.png; sourceTree = SOURCE_ROOT; };
+		27102E9B1D03EBFF00B153CE /* DSC01707.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = DSC01707.png; path = SFUPhotos3/DSC01707.png; sourceTree = SOURCE_ROOT; };
+		27102E9C1D03EBFF00B153CE /* DSC01709.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = DSC01709.png; path = SFUPhotos3/DSC01709.png; sourceTree = SOURCE_ROOT; };
+		27102E9D1D03EBFF00B153CE /* DSC01714.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = DSC01714.png; path = SFUPhotos3/DSC01714.png; sourceTree = SOURCE_ROOT; };
+		27102E9E1D03EBFF00B153CE /* DSC01716.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = DSC01716.png; path = SFUPhotos3/DSC01716.png; sourceTree = SOURCE_ROOT; };
+		27102E9F1D03EBFF00B153CE /* DSC01718.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = DSC01718.png; path = SFUPhotos3/DSC01718.png; sourceTree = SOURCE_ROOT; };
+		27102EA01D03EBFF00B153CE /* DSC01720.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = DSC01720.png; path = SFUPhotos3/DSC01720.png; sourceTree = SOURCE_ROOT; };
 		27117ED31C585A1800EF4516 /* mpt2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = mpt2.jpg; path = ../../../../Downloads/mpt2.jpg; sourceTree = "<group>"; };
 		27158D921C0A9A1A0002272B /* Exercises.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Exercises.plist; sourceTree = "<group>"; };
 		27158D971C0AA84B0002272B /* SimpleTableCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleTableCell.h; sourceTree = "<group>"; };
@@ -325,6 +347,8 @@
 		275B37711CF1298B00BC9638 /* SettingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingCell.xib; sourceTree = "<group>"; };
 		275B37751CF3F6DA00BC9638 /* AskForBuddyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AskForBuddyViewController.h; sourceTree = "<group>"; };
 		275B37761CF3F70200BC9638 /* AskForBuddyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AskForBuddyViewController.m; sourceTree = "<group>"; };
+		275F8A171D065B4400A9260D /* GroupFitnessViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GroupFitnessViewController.h; sourceTree = "<group>"; };
+		275F8A181D065B5200A9260D /* GroupFitnessViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupFitnessViewController.m; sourceTree = "<group>"; };
 		27764C961C055F8D002F9122 /* ExerciseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExerciseTableViewCell.h; sourceTree = "<group>"; };
 		27764C971C055F8D002F9122 /* ExerciseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExerciseTableViewCell.m; sourceTree = "<group>"; };
 		27784A4D1C432C9F00363198 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = ../../../FacebookSDK/FBSDKShareKit.framework; sourceTree = "<group>"; };
@@ -347,6 +371,7 @@
 		279B70AF1C3D3F0F0042BD93 /* 3Stars.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 3Stars.png; path = ../../../../Downloads/3Stars.png; sourceTree = "<group>"; };
 		279B70B01C3D3F0F0042BD93 /* 4Stars.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 4Stars.png; path = ../../../../Downloads/4Stars.png; sourceTree = "<group>"; };
 		279B70B71C3D3F290042BD93 /* 0Stars.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 0Stars.png; path = ../../../../Downloads/0Stars.png; sourceTree = "<group>"; };
+		279BF67D1CFE8B2500EEB7A8 /* GroupFitness.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = GroupFitness.png; path = Icons/GroupFitness.png; sourceTree = SOURCE_ROOT; };
 		27C1BA761CD1B70E00B9C9FA /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		27C1BA801CD1B7A300B9C9FA /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		27C1BA851CD2E7C400B9C9FA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -443,6 +468,7 @@
 		275B37501CE9011900BC9638 /* HomeScreenIcons */ = {
 			isa = PBXGroup;
 			children = (
+				279BF67D1CFE8B2500EEB7A8 /* GroupFitness.png */,
 				275B37691CE9256B00BC9638 /* CodeOfConduct.png */,
 				275B37671CE9248300BC9638 /* AskATrainer.png */,
 				275B37651CE923DB00BC9638 /* AskForAPartner.png */,
@@ -465,6 +491,16 @@
 				274A4B991CE7FCE600B4A9B2 /* info.png */,
 				275B37501CE9011900BC9638 /* HomeScreenIcons */,
 				27FE810E1CE2B2ED00C687D4 /* mPT2.png */,
+				27102E931D03E1FB00B153CE /* DSC01697.png */,
+				27102E9B1D03EBFF00B153CE /* DSC01707.png */,
+				27102E9C1D03EBFF00B153CE /* DSC01709.png */,
+				27102E9D1D03EBFF00B153CE /* DSC01714.png */,
+				27102E9E1D03EBFF00B153CE /* DSC01716.png */,
+				27102E9F1D03EBFF00B153CE /* DSC01718.png */,
+				27102EA01D03EBFF00B153CE /* DSC01720.png */,
+				27102E941D03E1FB00B153CE /* DSC01699.png */,
+				27102E951D03E1FB00B153CE /* DSC01701.png */,
+				27102E961D03E1FB00B153CE /* DSC01703.png */,
 				27FE80B41CDC752200C687D4 /* cat.png */,
 				27C9F02B1C9661A10006261B /* ok-icon.png */,
 				27117ED31C585A1800EF4516 /* mpt2.jpg */,
@@ -610,8 +646,10 @@
 				27FA78AF1C811DC6002FEC0B /* SuggestionsViewController.m */,
 				27FA78AE1C811DB9002FEC0B /* SuggestionsViewController.h */,
 				2799F7251C7BC1C30041079B /* Main.storyboard */,
-				274126EA1CF7FE4200DA2763 /* CodeOfConductViewController.m */,
+				275F8A171D065B4400A9260D /* GroupFitnessViewController.h */,
+				275F8A181D065B5200A9260D /* GroupFitnessViewController.m */,
 				274126EC1CF7FE5200DA2763 /* CodeOfConductViewController.h */,
+				274126EA1CF7FE4200DA2763 /* CodeOfConductViewController.m */,
 				27FE80A01CDC530A00C687D4 /* MiscViewController.m */,
 				27FE81111CE3B26E00C687D4 /* HomeViewController.m */,
 				27FE81101CE3B22F00C687D4 /* HomeViewController.h */,
@@ -842,6 +880,7 @@
 				27814AA41CA76C4A003DA2D2 /* IMG_1405.png in Resources */,
 				275B37721CF1298B00BC9638 /* SettingCell.xib in Resources */,
 				273E48DB1C4C9B5600F56D57 /* IMG_1184.png in Resources */,
+				27102E971D03E1FB00B153CE /* DSC01697.png in Resources */,
 				275433821C938477001B5687 /* IMG_1374.png in Resources */,
 				273E48E61C4C9B5600F56D57 /* IMG_1204.png in Resources */,
 				279B70B11C3D3F0F0042BD93 /* 1Stars.png in Resources */,
@@ -856,6 +895,7 @@
 				27FA78B71C8189C3002FEC0B /* StatTableCell.xib in Resources */,
 				275B37591CE904DF00BC9638 /* FindATrainer.png in Resources */,
 				275433721C938477001B5687 /* IMG_1338.png in Resources */,
+				27102EA41D03EBFF00B153CE /* DSC01716.png in Resources */,
 				273E48CF1C4C9B5600F56D57 /* IMG_1156.png in Resources */,
 				275433861C938477001B5687 /* IMG_1379.png in Resources */,
 				275433851C938477001B5687 /* IMG_1378.png in Resources */,
@@ -864,6 +904,7 @@
 				27C9F02C1C9661A10006261B /* ok-icon.png in Resources */,
 				275B375E1CE9098300BC9638 /* CheckIn.png in Resources */,
 				275B375C1CE904DF00BC9638 /* TrainerAnswers.png in Resources */,
+				27102EA51D03EBFF00B153CE /* DSC01718.png in Resources */,
 				273E48C71C4C9B5600F56D57 /* IMG_1142.png in Resources */,
 				275433791C938477001B5687 /* IMG_1356.png in Resources */,
 				273E48CE1C4C9B5600F56D57 /* IMG_1154.png in Resources */,
@@ -884,6 +925,7 @@
 				273E48CD1C4C9B5600F56D57 /* IMG_1152.png in Resources */,
 				273E48D11C4C9B5600F56D57 /* IMG_1163.png in Resources */,
 				275B37641CE9218F00BC9638 /* workout.png in Resources */,
+				27102EA61D03EBFF00B153CE /* DSC01720.png in Resources */,
 				273E48C91C4C9B5600F56D57 /* IMG_1144.png in Resources */,
 				27FE80B31CDC73E600C687D4 /* trainerProfile.plist in Resources */,
 				273E48D51C4C9B5600F56D57 /* IMG_1172.png in Resources */,
@@ -905,6 +947,7 @@
 				273E48C41C4C9B5600F56D57 /* IMG_1139.png in Resources */,
 				275B37601CE9205F00BC9638 /* star.png in Resources */,
 				275B37681CE9248300BC9638 /* AskATrainer.png in Resources */,
+				27102EA21D03EBFF00B153CE /* DSC01709.png in Resources */,
 				273E48DE1C4C9B5600F56D57 /* IMG_1189.png in Resources */,
 				273E48D91C4C9B5600F56D57 /* IMG_1180.png in Resources */,
 				275433711C938477001B5687 /* IMG_1337.png in Resources */,
@@ -913,14 +956,17 @@
 				273E48D81C4C9B5600F56D57 /* IMG_1178.png in Resources */,
 				273E48EC1C4C9B5600F56D57 /* IMG_1238.png in Resources */,
 				27814AA11CA76983003DA2D2 /* IMG_1393.png in Resources */,
+				279BF67E1CFE8B2500EEB7A8 /* GroupFitness.png in Resources */,
 				275433831C938477001B5687 /* IMG_1376.png in Resources */,
 				273E48D41C4C9B5600F56D57 /* IMG_1171.png in Resources */,
 				279B70B31C3D3F0F0042BD93 /* 3Stars.png in Resources */,
 				273E48C01C4C9B5600F56D57 /* IMG_1127.png in Resources */,
 				275B375A1CE904DF00BC9638 /* Settings.png in Resources */,
+				27102E991D03E1FB00B153CE /* DSC01701.png in Resources */,
 				279B70B41C3D3F0F0042BD93 /* 4Stars.png in Resources */,
 				27FE80B71CDC75BE00C687D4 /* dara.png in Resources */,
 				273E48E51C4C9B5600F56D57 /* IMG_1202.png in Resources */,
+				27102E981D03E1FB00B153CE /* DSC01699.png in Resources */,
 				279B70B21C3D3F0F0042BD93 /* 2Stars.png in Resources */,
 				273E48E31C4C9B5600F56D57 /* IMG_1199.png in Resources */,
 				2754337E1C938477001B5687 /* IMG_1365.png in Resources */,
@@ -928,6 +974,7 @@
 				273E48CC1C4C9B5600F56D57 /* IMG_1150.png in Resources */,
 				270B88E31C826390009DE8B3 /* AnswerCell.xib in Resources */,
 				275433871C938477001B5687 /* IMG_1385.png in Resources */,
+				27102EA11D03EBFF00B153CE /* DSC01707.png in Resources */,
 				27D96C501C3FE31B0055ADAF /* sidePlank2.png in Resources */,
 				27814AAB1CA79114003DA2D2 /* QA.plist in Resources */,
 				274A4B9A1CE7FCE600B4A9B2 /* info.png in Resources */,
@@ -950,11 +997,13 @@
 				273E48C31C4C9B5600F56D57 /* IMG_1133.png in Resources */,
 				27FE810F1CE2B2ED00C687D4 /* mPT2.png in Resources */,
 				273E48C81C4C9B5600F56D57 /* IMG_1143.png in Resources */,
+				27102EA31D03EBFF00B153CE /* DSC01714.png in Resources */,
 				273E48BC1C4C9B5600F56D57 /* IMG_1115.png in Resources */,
 				275433881C938477001B5687 /* IMG_1386.png in Resources */,
 				27814A941CA766FA003DA2D2 /* IMG_1346.png in Resources */,
 				273E48E91C4C9B5600F56D57 /* IMG_1231.png in Resources */,
 				27D96C4F1C3FE31B0055ADAF /* sidePlank1.png in Resources */,
+				27102E9A1D03E1FB00B153CE /* DSC01703.png in Resources */,
 				273E48BF1C4C9B5600F56D57 /* IMG_1125.png in Resources */,
 				273E48C11C4C9B5600F56D57 /* IMG_1129.png in Resources */,
 				273E48D31C4C9B5600F56D57 /* IMG_1169.png in Resources */,
@@ -1050,6 +1099,7 @@
 				270B88E01C8261F7009DE8B3 /* AskTrainerViewController.m in Sources */,
 				27E1169B1C03ABB800E8E2AF /* AppDelegate.m in Sources */,
 				27FE81091CE1A6C800C687D4 /* LaunchScreenViewController.m in Sources */,
+				275F8A191D065B5200A9260D /* GroupFitnessViewController.m in Sources */,
 				270B88E61C8265C5009DE8B3 /* AnswerCell.m in Sources */,
 				2707BD991CD86B0B00F10A57 /* SetSummaryViewController.m in Sources */,
 				27FE80B01CDC598D00C687D4 /* TrainerProfileViewController.m in Sources */,

@@ -29,6 +29,15 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
+    UIImage *infoImage=[UIImage imageNamed:@"info.png"];
+    UIBarButtonItem *infoButton = [[UIBarButtonItem alloc]
+                                   initWithImage:infoImage
+                                   style:UIBarButtonItemStylePlain
+                                   target:self
+                                   action:@selector(infoView)];
+    
+    self.navigationItem.rightBarButtonItem = infoButton;
+
 
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
                                    initWithTarget:self
@@ -229,5 +238,14 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+}
+-(void)infoView{
+    UIAlertView *alert = [[UIAlertView alloc]
+                          initWithTitle:@"Check In"
+                          message:@"Keep track of your attendance. Your name will be submitted to a draw held once a semester for cool prizes"
+                          delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles:nil, nil];
+    [alert show];
+    
+    
 }
 @end

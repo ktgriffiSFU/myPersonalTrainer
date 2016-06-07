@@ -67,6 +67,23 @@
 		<string>Reverse Abdominal Curl</string>
 		<string>Plank</string>
 		<string>Side Plank</string>
+		<string>Rotary Torso</string>
+		<string>Rotary Chest</string>
+		<string>Triceps Extension</string>
+		<string>Abdominal Curls</string>
+		<string>Seated Leg Curls</string>
+		<string>Leg Extension</string>
+		<string>Glute Press</string>
+		<string>Lower Back Extension</string>
+		<string>Leg Press</string>
+		<string>Rotary Shoulder</string>
+		<string>Seated Row</string>
+		<string>Pec Fly</string>
+		<string>Rear Delt</string>
+		<string>Shoulder Press</string>
+		<string>Leg Curl</string>
+		<string>Biceps Machine</string>
+		<string>Triceps Machine</string>
 	</array>
 	<key>TargetedMuscle</key>
 	<array>
@@ -130,6 +147,23 @@
 		<string>rectus abdominus</string>
 		<string>core, hip extensors, sholder flexors, erector spinae</string>
 		<string>core, hip extensors, sholder flexors, erector spinae</string>
+		<string>rectus abdominus, obliques</string>
+		<string>pectoralis major, anterior deltoid, triceps group</string>
+		<string>triceps group</string>
+		<string>rectus abdominus</string>
+		<string>hamstrings</string>
+		<string>biceps group, wrist flexors</string>
+		<string>quadriceps</string>
+		<string>gluteals</string>
+		<string>erector spinae</string>
+		<string>quadriceps, hamstrings, glutes</string>
+		<string>deltoid, trapezius</string>
+		<string>rhomboids, mid-trapezius, latissimus dorsi, teres major</string>
+		<string>pectoralis major, anterior deltoid, triceps group</string>
+		<string>posterior deltoid</string>
+		<string>deltoid, trapezius</string>
+		<string>biceps group, wrist flexors</string>
+		<string>triceps group</string>
 	</array>
 	<key>Details</key>
 	<array>
@@ -464,6 +498,23 @@
 •Toes should be pointing parallel to the floor
 •Lift the upper and lower body up by pushing up from the elbow and sides of feet
 •Lower body back to starting position</string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
 	</array>
 	<key>Thumbnail</key>
 	<array>
@@ -515,8 +566,8 @@
 		<string>s</string>
 		<string>IMG_1204.png</string>
 		<string>s</string>
-		<string>IMG_1198.png</string>
-		<string>IMG_1200.png</string>
+		<string>DSC01699.png</string>
+		<string>DSC01703.png</string>
 		<string>IMG_1386.png</string>
 		<string>s</string>
 		<string>s</string>
@@ -527,6 +578,23 @@
 		<string>IMG_1230.png</string>
 		<string>IMG_1373.png</string>
 		<string>sidePlank1.png</string>
+		<string>DSC01707.png</string>
+		<string>DSC01716.png</string>
+		<string>DSC01718.png</string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
 	</array>
 	<key>Thumbnail2</key>
 	<array>
@@ -578,8 +646,8 @@
 		<string></string>
 		<string>IMG_1206.png</string>
 		<string></string>
-		<string>IMG_1199.png</string>
-		<string>IMG_1202.png</string>
+		<string>DSC01697.png</string>
+		<string>DSC01701.png</string>
 		<string>IMG_1385.png</string>
 		<string></string>
 		<string></string>
@@ -590,10 +658,103 @@
 		<string>IMG_1231.png</string>
 		<string>IMG_1374</string>
 		<string>sidePlank2.png</string>
+		<string>DSC01707.png</string>
+		<string>DSC01714.png</string>
+		<string>DSC01720.png</string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
 	</array>
 	<key>VideoID</key>
 	<array>
 		<string>HFB6ps8xgwM</string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string>fmagx2fnhEQ</string>
+		<string>5_-0ejN00gU</string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string>__qGHWppjn0</string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
 	</array>
 </dict>
 </plist>

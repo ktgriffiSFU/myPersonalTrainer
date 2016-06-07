@@ -64,8 +64,8 @@
     }
 }
 -(void)viewDidAppear:(BOOL)animated{
-  //  NSString *appDomain = [[NSBundle mainBundle] bundleIdentifier];
-//[[NSUserDefaults standardUserDefaults] removePersistentDomainForName:appDomain];
+    NSString *appDomain = [[NSBundle mainBundle] bundleIdentifier];
+[[NSUserDefaults standardUserDefaults] removePersistentDomainForName:appDomain];
     [super viewDidAppear:animated];
     [self updateSets:@"exercisesArray" :exercise];
     [self updateSets:@"repsArray" :repsNew];
@@ -207,7 +207,7 @@
         armsString = [@(scoreArms) stringValue];
         [[NSUserDefaults standardUserDefaults] setObject:armsString forKey:@"arms"];
         
-    }if ([muscleValue isEqual:@"anterior deltoids, pectoralis major, triceps group, trapezius"] ||[muscleValue isEqual:@"deltoid, trapezius"]) {
+    }if ([muscleValue isEqual:@"anterior deltoids, pectoralis major, triceps group, trapezius"] ||[muscleValue isEqual:@"deltoid, trapezius"]||[muscleValue isEqual:@"posterior deltoid"]) {
         NSInteger oldScoreShoulders = [shouldersString integerValue];
         NSInteger scoreShoulders = repsInt +oldScoreShoulders;
         shouldersString = [@(scoreShoulders) stringValue];
@@ -227,7 +227,7 @@
         NSInteger scoreCore = repsInt + oldScoreCore;
         coreString = [@(scoreCore) stringValue];
         [[NSUserDefaults standardUserDefaults] setObject:coreString forKey:@"core"];
-    }if ([muscleValue isEqual:@"quadriceps, hamstrings, glutes"] ||[muscleValue isEqual:@"quadriceps"] ||[muscleValue isEqual:@"hamstrings"]||[muscleValue isEqual:@"hip adductors"]|| [muscleValue isEqual :@"gastrocnemius, soleus"]) {
+    }if ([muscleValue isEqual:@"quadriceps, hamstrings, glutes"]||[muscleValue isEqual:@"gluteals"] ||[muscleValue isEqual:@"quadriceps"] ||[muscleValue isEqual:@"hamstrings"]||[muscleValue isEqual:@"hip adductors"]||[muscleValue isEqual:@"hip abductors"]|| [muscleValue isEqual :@"gastrocnemius, soleus"]) {
         NSInteger oldScoreLegs = [legsString integerValue];
         NSInteger scoreLegs = repsInt +oldScoreLegs;
         legsString = [@(scoreLegs) stringValue];

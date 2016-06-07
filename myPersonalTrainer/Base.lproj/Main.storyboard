@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="aHg-53-ENy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="aHg-53-ENy">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -179,7 +179,7 @@
                                     <segue destination="dNu-zK-Nqd" kind="push" identifier="Settings" id="C0m-12-08O"/>
                                 </connections>
                             </collectionViewCell>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AskATrainer" id="WdQ-RS-eqs">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GroupFitness" id="WdQ-RS-eqs">
                                 <rect key="frame" x="220" y="214" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -187,6 +187,9 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
+                                <connections>
+                                    <segue destination="aY6-Yc-HK3" kind="push" identifier="GroupFitness" id="1qP-xZ-yAl"/>
+                                </connections>
                             </collectionViewCell>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FindAPartner" id="EwE-im-lmu">
                                 <rect key="frame" x="0.0" y="314" width="100" height="100"/>
@@ -197,7 +200,7 @@
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                             </collectionViewCell>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Suggestions" id="bGa-2i-4ut">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AskATrainer" id="bGa-2i-4ut">
                                 <rect key="frame" x="110" y="314" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -380,16 +383,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" keyboardDismissMode="interactive" translatesAutoresizingMaskIntoConstraints="NO" id="FaA-Bh-Ka2">
-                                <rect key="frame" x="20" y="200" width="280" height="221"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>
-                            </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pre-Kg-g0P">
-                                <rect key="frame" x="-3" y="64" width="330" height="106"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pre-Kg-g0P">
+                                <rect key="frame" x="0.0" y="64" width="320" height="106"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="106" id="Nz0-ha-vrn"/>
+                                    <constraint firstAttribute="height" constant="106" id="ck6-wS-eN0"/>
                                 </constraints>
                                 <string key="text">Have a question about fitness? 
 We are happy to help.
@@ -413,18 +410,24 @@ We are happy to help.
                                     <action selector="submitButton:" destination="bLS-6j-HvH" eventType="touchUpInside" id="HAp-2F-LTQ"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" keyboardDismissMode="interactive" translatesAutoresizingMaskIntoConstraints="NO" id="FaA-Bh-Ka2">
+                                <rect key="frame" x="20" y="186" width="280" height="221"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="0.9910022033" green="1" blue="0.99769507349999997" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="Pre-Kg-g0P" firstAttribute="trailing" secondItem="4JH-Bl-WNV" secondAttribute="trailing" id="1zM-1b-wyW"/>
                             <constraint firstAttribute="trailing" secondItem="4JH-Bl-WNV" secondAttribute="trailing" id="4Xn-pe-TxG"/>
-                            <constraint firstItem="Pre-Kg-g0P" firstAttribute="leading" secondItem="i1l-bB-6nq" secondAttribute="leadingMargin" constant="4" id="W77-7o-7IT"/>
-                            <constraint firstItem="FaA-Bh-Ka2" firstAttribute="top" secondItem="Pre-Kg-g0P" secondAttribute="bottom" constant="30" id="XQ2-Bq-VaO"/>
-                            <constraint firstItem="4JH-Bl-WNV" firstAttribute="top" secondItem="FaA-Bh-Ka2" secondAttribute="bottom" constant="40" id="bU1-xd-SiL"/>
-                            <constraint firstItem="FaA-Bh-Ka2" firstAttribute="leading" secondItem="Pre-Kg-g0P" secondAttribute="leading" id="jSg-VT-Q4k"/>
+                            <constraint firstItem="FaA-Bh-Ka2" firstAttribute="centerX" secondItem="4JH-Bl-WNV" secondAttribute="centerX" id="BpU-GW-hjJ"/>
+                            <constraint firstItem="4JH-Bl-WNV" firstAttribute="top" secondItem="FaA-Bh-Ka2" secondAttribute="bottom" constant="54" id="Oib-9u-3If"/>
+                            <constraint firstItem="Pre-Kg-g0P" firstAttribute="top" secondItem="wHA-3Q-tFg" secondAttribute="bottom" id="QgE-Nv-CuU"/>
+                            <constraint firstItem="Pre-Kg-g0P" firstAttribute="leading" secondItem="4JH-Bl-WNV" secondAttribute="leading" id="f1J-ec-qBy"/>
+                            <constraint firstItem="FaA-Bh-Ka2" firstAttribute="leading" secondItem="i1l-bB-6nq" secondAttribute="leadingMargin" constant="4" id="g8q-hV-7db"/>
                             <constraint firstItem="4JH-Bl-WNV" firstAttribute="leading" secondItem="i1l-bB-6nq" secondAttribute="leading" id="lmn-nO-zMJ"/>
-                            <constraint firstItem="Pre-Kg-g0P" firstAttribute="trailing" secondItem="i1l-bB-6nq" secondAttribute="trailingMargin" id="nZ9-WS-zvN"/>
-                            <constraint firstItem="Pre-Kg-g0P" firstAttribute="top" secondItem="wHA-3Q-tFg" secondAttribute="bottom" id="tZa-zu-f4e"/>
-                            <constraint firstItem="4JH-Bl-WNV" firstAttribute="centerX" secondItem="FaA-Bh-Ka2" secondAttribute="centerX" id="tbA-rV-wv0"/>
+                            <constraint firstItem="FaA-Bh-Ka2" firstAttribute="top" secondItem="Pre-Kg-g0P" secondAttribute="bottom" constant="16" id="tPb-mz-q41"/>
                             <constraint firstItem="c8Z-Nz-gVJ" firstAttribute="top" secondItem="4JH-Bl-WNV" secondAttribute="bottom" constant="8" symbolic="YES" id="veh-Qk-cG8"/>
                         </constraints>
                     </view>
@@ -677,7 +680,7 @@ We are happy to help.
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dVb-Na-25K">
                                 <rect key="frame" x="16" y="219" width="288" height="260"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.85570549240000005" green="0.1752523174" blue="0.11185606369999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mHv-cQ-HGP">
@@ -686,7 +689,7 @@ We are happy to help.
                                     <constraint firstAttribute="height" constant="115" id="5PX-F7-inD"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.85570549240000005" green="0.1752523174" blue="0.11185606369999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -710,6 +713,25 @@ We are happy to help.
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2O4-hc-MJo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2645" y="317"/>
+        </scene>
+        <!--Group Fitness View Controller-->
+        <scene sceneID="fhK-v9-0gK">
+            <objects>
+                <viewController id="aY6-Yc-HK3" customClass="GroupFitnessViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JCs-VA-146"/>
+                        <viewControllerLayoutGuide type="bottom" id="r3c-YL-ttG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4A6-eG-XlA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Rlu-3Y-Ugk"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="siD-bh-ngZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3065" y="395"/>
         </scene>
         <!--Code Of Conduct View Controller-->
         <scene sceneID="jyQ-oa-Ip2">
